@@ -1,0 +1,244 @@
+body {
+    background-color: #bdbde5;
+    margin: 0 0 0 0;
+}
+
+header {
+    height: 55px;
+}
+
+#banniere {
+    display: grid;
+    align-content: center;
+    justify-content: center;
+    grid-template-columns: 30% 40% 30%;
+}
+
+.media {
+    display: flex;
+    grid-column: 2/3;
+    flex-wrap: nowrap;
+    flex-direction: row;
+}
+
+#icone1 {
+    margin: 1% 0 0 16%;
+    width: 45px;
+    height: 45px;
+    border-radius: 43%;
+}
+
+#icone2, #icone3, #icone4 {
+    width: 45px;
+    height: 45px;
+    margin: 1% 1% 1%;
+    border-radius: 43%;
+}
+
+/****************************profil************************************/
+#person {
+    padding-top: 35px;
+    padding-left: 85%;
+    grid-column: 3/4;
+}
+#menu-person {
+    font-size: small;
+    font-weight: 900;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+.content {
+    z-index: 1;
+    position: absolute;
+    right: 1%;
+    top: 9%;
+    cursor: pointer;
+    background: black;
+    opacity: 0.75;
+    width: 260px;
+}
+.content ul{
+    padding: 0 0 0 0;
+    list-style-type: none;
+    margin: 0 0 0 0;
+}
+.content li {
+    display: table-cell;
+    padding: 1px 5px;
+}
+.content li a:link, .content li a:visited {
+    display: table-cell;
+    width: 65px;
+    font-size: 15px;
+    text-align: center;
+    list-style-type: none;
+    color: white;
+    text-decoration: none;
+}
+.content li a:hover{
+    color: red;
+}
+
+#closemenu {
+    position: absolute;
+    left: 94%;
+    color: white;
+}
+/******************fin profil************************************/
+#menu {
+    position: absolute;
+    right: 0%;
+    font-size: xx-large;
+    top: 9%;
+    font-weight: 900;
+    background: black;
+    opacity: 0.5;
+    width: 100%;
+    height: 5%;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+#menu li {
+    display: inline-block;
+    margin: 0 auto;
+}
+
+#menu li {
+    display: inline-block;
+    margin: 0 auto;
+}
+
+#menu li a:link, #menu li a:visited {
+    text-decoration: none;
+    color: white;
+    padding: 5px 0;
+    display: block;
+    width: 100px;
+    font-size: 20px;
+    text-align: center;
+}
+
+#menu li a:hover{
+    color: red;
+}
+
+#middle {
+    position: relative;
+    display: grid;
+    align-content: center;
+    grid-template-columns: 25% 1% 74%;
+    justify-content: center;
+    grid-template-rows: 40px repeat(9,100px);
+}
+
+p {
+    margin: 6px 0 0;
+}
+
+/*************************filtre pour recherche*************/
+.filter-bar {
+    grid-column: 1/4;
+    display: flex;
+    flex-direction: row;
+    margin-top: 18px;
+    margin-right: 10%;
+}
+.filter-item {
+    margin: 0px 2%;
+}
+
+/********************affichage carte streameurs**********/
+/* .resultat {
+    background: grey;
+    padding: 5px 10px;
+    height: 425px;
+    grid-column: 1/2;
+    grid-row: 6/11;
+    margin-top: 66px;
+} */
+
+/*********************contenu streameurs*******************/
+.contenu {
+    text-align: center;
+    background: #8d4745;
+    position: absolute;
+    top: 18px;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    flex-direction: row;
+    grid-column: 3/4;
+    grid-row: 2/6;
+}
+
+.card {
+    width: 21%;
+    background-color: #fff;
+    margin: 19px 15px 17px;
+    height: 140.5px;
+    border-radius: 10px;
+}
+
+nav {
+    z-index: 1;
+    display: grid;
+    align-content: center;
+    justify-content: center;
+    position: relative;
+    grid-template-columns: 32% 35% 33%;
+    grid-template-rows: repeat(3,33.33px);
+    grid-column: 1/4;
+    grid-row: 10/11;
+}
+
+.pagination {
+    display: flex;
+    list-style: none;
+    margin-left: 35%;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 0 0 0 0;
+    grid-column: 2/3;
+    grid-row: 3/4;
+    margin-top: 15px;
+    height: 16px;
+}
+
+.page-item {
+    margin-right: 0%; /* Espacement entre les éléments de la pagination */
+}
+
+.page-link {
+    text-decoration: none; /* Pour supprimer les soulignements des liens */
+    color: #fff;
+    padding: 0 10%;
+    margin: 0 15px 0 0;
+}
+.page-link:hover {
+    color: hsl(304, 80%, 39%); /* Couleur change lorsque la souris survole le lien */
+}
+
+/***********footer****************/
+.footer {
+    background: #d3e3fd;
+    height: 50px;
+    text-align: center;
+    padding: 25px 0 0 0;
+    margin: 18px 0 0 0;
+}
+
+a {
+    text-decoration: none;
+    margin: 2%;
+}
+
+.team {
+    margin: 10px;
+}

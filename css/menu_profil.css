@@ -1,0 +1,86 @@
+/* Cache le menu par défaut */
+#overlay {
+    position: fixed;
+    top: 0;
+    right: -250px; /* Cache le menu hors de la vue */
+    width: 260px;
+    height: 9%;
+    background: linear-gradient(270deg, #4747df, transparent); /* Fond légèrement bleuté/transparent */
+    transition: right 0.5s ease;
+    overflow: hidden; /* Pour empêcher le contenu de déborder */
+}
+
+#menu-person {
+    list-style-type: none;
+    padding: 8px 0 0 45px;
+    margin: 0;
+}
+
+#menu-person li {
+    margin: 7px 0;
+    font-size: x-large;
+}
+#menu-person li a:link, #menu-person li a:visited {
+    color: white;
+}
+/* Affiche le menu quand il est actif */
+#overlay.active {
+    right: 0;
+    height: 9%;
+    width: 260px;
+}
+
+#close-menu {
+    font-size: 20px;
+}
+
+
+body {
+    cursor: pointer;
+    justify-content: center;
+}
+/* formulaires */
+
+.form-container {
+    width: 100%;
+    max-width: 400px;
+    padding: 20px;
+    background: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    margin: 15px auto;
+}
+
+  .form-container form {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .form-container label {
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+
+  .form-container input[type="text"],
+  .form-container input[type="email"] {
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 90%;
+  }
+  
+  .form-container input[type="submit"] {
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    background-color: #28a745;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    margin: 0 18px 0 0;
+}
+
+  .form-container input[type="submit"]:hover {
+    background-color: #218838;
+  }

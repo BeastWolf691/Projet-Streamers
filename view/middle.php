@@ -14,28 +14,26 @@
     <div id="middle">
         <div class="filter-bar">
             <div class="filter-item">
-                <label for="viewers">Qt Viewers</label>
-                <select id="viewers" name="viewers">
+                <label id="category" for="type">Genre</label>
+                <select id="type" name="type">
                     <option value=""></option>
-                    <option value="5000">de 0 à 5000 viewers</option>
-                    <option value="50000">de 5001 à 50 000 viewers</option>
-                    <option value="500000">de 50 001 à 500 000 viewers</option>
-                    <option value="+">plus de 500 000 viewers</option>
-                </select>
-            </div>
-            <div class="filter-item">
-                <label for="category">Catégories</label>
-                <select id="category" name="category">
-                    <option value=""></option>
-                    <option value="gaming">gaming</option>
+                    <option value="sport">sport</option>
+                    <option value="cuisine">cuisine</option>
+                    <option value="jeux videos">jeux vidéos</option>
                     <option value="urbex">urbex</option>
-                    <option value="paranormal">paranormal</option>
-                    <option value="fashion">fashion</option>
                 </select>
             </div>
+
             <div class="filter-item">
-                <label for="year">Années de début</label>
-                <select id="year" name="year">
+                <label for="names">Streamers/euses&nbsp;</label>
+                <select id="names" name="names">
+                    <option value=""></option>
+                </select>
+            </div>
+
+            <div class="filter-item">
+                <label for="date">Date de création&nbsp;</label>
+                <select id="date" name="date">
                     <option value=""></option>
                     <option value="2005">depuis 2005</option>
                     <option value="2010">depuis 2010</option>
@@ -43,6 +41,18 @@
                     <option value="2020">depuis 2020</option>
                 </select>
             </div>
+
+            <div class="filter-item">
+                <label id="speak" for="languages">Langues</label>
+                <select id="languages" name="languages">
+                    <option value=""></option>
+                    <option value="fr">français</option>
+                    <option value="en">anglais</option>
+                    <option value="spa">espagnol</option>
+                    <option value="ita">italien</option>
+                </select>
+            </div>
+
             <div class="filter-item">
                 <button type="button" class="btn btn-primary">Appliquer</button>
             </div>

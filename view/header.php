@@ -27,8 +27,6 @@
                 <div class="item item2"><img src="./picture/youTube_logo.png" alt="youtube"></div>
                 <div class="item item3"><img src="./picture/tiktok_logo.png" alt="tiktok"></div>
                 <div class="item item4"><img src="./picture/instagram_logo.jpg" alt="instagram"></div>
-
-
             </div>
 
             <div id="person">

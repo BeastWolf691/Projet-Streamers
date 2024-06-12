@@ -13,9 +13,7 @@ header {
     align-content: center;
     justify-content: center;
     grid-template-columns: 30% 40% 30%;
- 
     position: relative;
-   
 }
 
 .wrapper{
@@ -161,11 +159,11 @@ p {
 /*********************affichage streameurs*******************/
 .resultat {
     background: grey;
-    padding: 5px 10px;
-    height: 425px;
-    grid-column: 1/2;
-    grid-row: 6/11;
-    margin-top: 66px;
+    width: 368px;
+    height: 860px;
+    position: absolute;
+    top: 30%;
+    margin: 0 0 0 10px;
 }
 /*********************contenu streameurs*******************/
 .contenu {

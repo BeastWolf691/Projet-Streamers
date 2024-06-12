@@ -15,26 +15,50 @@ header {
     grid-template-columns: 30% 40% 30%;
 }
 
-.media {
-    display: flex;
-    grid-column: 2/3;
-    flex-wrap: nowrap;
-    flex-direction: row;
+.wrapper{
+    border:1px solid black;
+    width: 30%;
+    margin: 0 auto;
+    position: relative;
+    height: 100px;
+    overflow: hidden;
 }
+.item{
+  
+    width: 200px;
+    height: 100px;
+    border-radius: 6px;
+    position: absolute;
+    right: 100%;
+    margin-right: 5px;
+    margin-left: 5px;
+    animation-name: scrollLeft;
+    animation-duration: 30s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+ }
 
-#icone1 {
-    margin: 1% 0 0 30%;
-    width: 70px;
-    height: 70px;
-    border-radius: 43%;
-}
 
-#icone2, #icone3, #icone4 {
-    width: 70px;
-    height: 70px;
-    margin: 1% 1% 1%;
-    border-radius: 43%;
-}
+ .item1{
+    animation-delay: 0;
+ }
+ .item2{
+    animation-delay: 7s;
+ }
+ .item3{
+    animation-delay: 14s;
+ }
+
+ .item4{
+    animation-delay: 21s;
+ }
+
+  @keyframes scrollLeft {
+    to{right: -500px;}
+ }
+.item img{
+    width: 200px;height: 100px;
+ }
 
 
 /****************************profil************************************/

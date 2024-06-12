@@ -22,11 +22,13 @@
     <header>
 
         <div id="banniere">
-            <div class="media">
-                <img src="../view/picture/twitch_logo.jpg" id="icone1" height="80%" width="80%" alt="twitch logo">
-                <img src="../view/picture/tiktok_logo.png" id="icone2" height="80%" width="80%" alt="titok logo">
-                <img src="../view/picture/youTube_logo.png" id="icone3" height="80%" width="80%" alt="youtube logo">
-                <img src="../view/picture/instagram_logo.jpg" alt="instagram logo" id="icone4" height="80%" width="80%">
+            <div class="wrapper">
+                <div class="item item1"><a href=""><img src="./picture/twitch_logo.jpg" alt="twitch"></a></div>
+                <div class="item item2"><img src="./picture/youTube_logo.png" alt="youtube"></div>
+                <div class="item item3"><img src="./picture/tiktok_logo.png" alt="tiktok"></div>
+                <div class="item item4"><img src="./picture/instagram_logo.jpg" alt="instagram"></div>
+
+
             </div>
 
             <div id="person">

@@ -1,7 +1,8 @@
-
 body {
     margin: 0;
     background: #b1b1b1;
+    height: 139vh;
+    position: relative;
 }
 
 header {
@@ -67,7 +68,9 @@ header {
     /* padding-top: 35px;
     padding-left: 85%; */
     /* grid-column: 3/4; */
-    position: absolute;top: 45%;right: 3%;
+    position: absolute;
+    top: 40%;
+    right: 3%;
     height: 30px;
  
 }
@@ -76,7 +79,7 @@ header {
     position: absolute;
     right: 0%;
     font-size: xx-large;
-    top: 12%;
+    top: 11%;
     font-weight: 900;
     background: black;
     opacity: 0.5;
@@ -96,7 +99,7 @@ header {
 #menu li a:link, #menu li a:visited {
     text-decoration: none;
     color: white;
-    padding: 5px 0;
+    padding: 16px 0;
     display: block;
     width: 152px;
     font-size: 20px;
@@ -107,30 +110,18 @@ header {
     color: red;
 }
 
-#middle {
-    position: relative;
-    display: grid;
-    align-content: center;
-    grid-template-columns: 49% 1% 50%;
-    justify-content: center;
-    grid-template-rows: 40px repeat(9,100px);
-}
-
-p {
-    margin: 6px 0 0;
-}
 
 /*************************filtre pour recherche*************/
 .filter-bar {
-    /* grid-column: 1/4; */
-    /* display: flex; */
-    flex-direction: row;
-    margin: 40px 10px 0;
+    margin: 0 25px 0;
     height: 175px;
     width: 350px;
     background: chocolate;
     padding: 20px 10px;
+    position: absolute;
+    top: 232px;
 }
+
 .filter-item {
     margin: 15px 2px;
 }
@@ -159,33 +150,37 @@ p {
 /*********************affichage streameurs*******************/
 .resultat {
     background: grey;
-    width: 368px;
+    width: 370px;
     height: 860px;
     position: absolute;
-    top: 30%;
-    margin: 0 0 0 10px;
+    top: 476px;
+    margin: 0 0 0 25px;
 }
+
 /*********************contenu streameurs*******************/
+#middle {
+    height: 132vh;
+}
+
 .contenu {
     text-align: center;
     background: #8d4745;
     position: absolute;
-    top: 18px;
-    width: 100%;
-    display: none;
+    top: 232px;
+    left: 425px;
+    right: 1%;
+    display: flex;
     flex-wrap: wrap;
-    justify-content: space-evenly;
-    flex-direction: row;
-    grid-column: 1/4;
-    grid-row: 2/11;
+    width: 72vw;
 }
 
 .card {
     width: 216px;
     background-color: #fff;
-    margin: 17px 10px 17px;
+    margin: 9px 11px 9px;
     height: 350px;
     border-radius: 10px;
+    padding: 0 0 0 2px;
 }
 
 

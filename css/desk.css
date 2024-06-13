@@ -167,11 +167,10 @@ header {
     background: #8d4745;
     position: absolute;
     top: 232px;
-    left: 425px;
-    right: 1%;
+    left: 27%;
     display: flex;
     flex-wrap: wrap;
-    width: 72vw;
+    width: 1200px;
 }
 
 .card {

@@ -1,7 +1,8 @@
-
 body {
     margin: 0;
     background: #b1b1b1;
+    height: 139vh;
+    position: relative;
 }
 
 header {
@@ -9,47 +10,76 @@ header {
 }
 
 #banniere {
-    display: grid;
+    /* display: grid; */
     align-content: center;
     justify-content: center;
     grid-template-columns: 30% 40% 30%;
+    position: relative;
 }
 
-.media {
-    display: flex;
-    grid-column: 2/3;
-    flex-wrap: nowrap;
-    flex-direction: row;
+.wrapper{
+    border:1px solid black;
+    width: 30%;
+    margin: 1% auto;
+    position: relative;
+    height: 100px;
+    overflow: hidden;
 }
+.item{
+  
+    width: 200px;
+    height: 100px;
+    border-radius: 6px;
+    position: absolute;
+    right: 100%;
+    margin-right: 5px;
+    margin-left: 5px;
+    animation-name: scrollLeft;
+    animation-duration: 30s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+ }
 
-#icone1 {
-    margin: 1% 0 0 30%;
-    width: 70px;
-    height: 70px;
-    border-radius: 43%;
-}
 
-#icone2, #icone3, #icone4 {
-    width: 70px;
-    height: 70px;
-    margin: 1% 1% 1%;
-    border-radius: 43%;
-}
+ .item1{
+    animation-delay: 0;
+ }
+ .item2{
+    animation-delay: 7s;
+ }
+ .item3{
+    animation-delay: 14s;
+ }
+
+ .item4{
+    animation-delay: 21s;
+ }
+
+  @keyframes scrollLeft {
+    to{right: -500px;}
+ }
+.item img{
+    width: 200px;height: 100px;
+ }
 
 
 /****************************profil************************************/
 #person {
-    padding-top: 35px;
-    padding-left: 85%;
-    grid-column: 3/4;
+    /* padding-top: 35px;
+    padding-left: 85%; */
+    /* grid-column: 3/4; */
+    position: absolute;
+    top: 40%;
+    right: 3%;
     height: 30px;
+ 
 }
 /******************fin profil************************************/
 #menu {
     position: absolute;
     right: 0%;
     font-size: xx-large;
-    top: 9%;
+    top: 11%;
     font-weight: 900;
     background: black;
     opacity: 0.5;
@@ -69,7 +99,7 @@ header {
 #menu li a:link, #menu li a:visited {
     text-decoration: none;
     color: white;
-    padding: 5px 0;
+    padding: 16px 0;
     display: block;
     width: 152px;
     font-size: 20px;
@@ -80,87 +110,78 @@ header {
     color: red;
 }
 
-#middle {
-    position: relative;
-    display: grid;
-    align-content: center;
-    grid-template-columns: 49% 1% 50%;
-    justify-content: center;
-    grid-template-rows: 40px repeat(9,100px);
-}
-
-p {
-    margin: 6px 0 0;
-}
 
 /*************************filtre pour recherche*************/
 .filter-bar {
-    grid-column: 1/4;
-    display: flex;
-    flex-direction: row;
-    margin-top: 18px;
-    margin-right: 10%;
+    margin: 0 25px 0;
+    height: 175px;
+    width: 350px;
+    background: chocolate;
+    padding: 20px 10px;
+    position: absolute;
+    top: 232px;
 }
+
 .filter-item {
-    margin: 0px 2%;
+    margin: 15px 2px;
+}
+#category {
+    margin: 0 68px 0 0;
+}
+#speak {
+    margin: 0 54px 0 0;
+}
+#type {
+    padding: 0px 64px;
+}
+#names {
+    padding: 0 97px;
+}
+#date {
+    padding: 0 59px;
+}
+#languages {
+    padding: 0 68px;
+}
+.btn-primary {
+    width: 326px;
+}
+
+/*********************affichage streameurs*******************/
+.resultat {
+    background: grey;
+    width: 370px;
+    height: 860px;
+    position: absolute;
+    top: 476px;
+    margin: 0 0 0 25px;
 }
 
 /*********************contenu streameurs*******************/
+#middle {
+    height: 132vh;
+}
+
 .contenu {
     text-align: center;
     background: #8d4745;
     position: absolute;
-    top: 18px;
-    width: 100%;
+    top: 232px;
+    left: 27%;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-evenly;
-    flex-direction: row;
-    grid-column: 1/4;
-    grid-row: 2/11;
+    width: 1200px;
 }
 
 .card {
-    width: 280px;
+    width: 216px;
     background-color: #fff;
-    margin: 17px 10px 17px;
-    height: 400px;
+    margin: 9px 11px 9px;
+    height: 350px;
     border-radius: 10px;
+    padding: 0 0 0 2px;
 }
 
-nav {
-    z-index: 1;
-    display: grid;
-    align-content: center;
-    justify-content: center;
-    position: relative;
-    grid-template-columns: 32% 35% 33%;
-    grid-template-rows: repeat(3,33.33px);
-    grid-column: 1/4;
-    grid-row: 10/11;
-}
-
-.pagination {
-    display: flex;
-    list-style: none;
-    margin-left: 35%;
-    flex-direction: row;
-    flex-wrap: wrap;
-    padding: 0 0 0 0;
-    grid-column: 2/3;
-    grid-row: 3/4;
-    margin-top: 15px;
-    height: 16px;
-}
-
-.page-link {
-    text-decoration: none; /* Pour supprimer les soulignements des liens */
-    color: #fff;
-    margin: 0 10px;
-}
-.page-link:hover {
-    color: hsl(304, 80%, 39%); /* Couleur change lorsque la souris survole le lien */
-}
 
 /***********footer****************/
 .footer {

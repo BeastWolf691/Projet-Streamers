@@ -80,8 +80,29 @@ $pdo->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_OBJ);
             $sql =  'SELECT pseudo, MainCat, Categories, picture, name, language, PYoutube,
             Ptwitch, PKick, PTwitter, PInstagram, PTiktok, videoOne, videoTwo, factOne, factTwo, factThree FROM cards ';
             $req = $pdo->query($sql);
-            while ($d = $req->fetch(PDO::FETCH_OBJ)) { // pour chaque ligne dans la BDD, on crée une carte?>
-                <div class="card">
+           
+
+            while ($d = $req->fetch(PDO::FETCH_OBJ)) { // pour chaque ligne dans la BDD, on crée une carte
+
+             $mainCat= $d->MainCat;
+             switch ($mainCat) {
+                case 'Gaming':
+                    $cssClass = 'cat_video';
+                    break;
+                case 'IRL':
+                    $cssClass = 'cat_real';
+                    break;
+                case 'Cooking':
+                    $cssClass = 'cat_cook';
+                    break;
+                default:
+                    $cssClass = '';
+                    break;
+            }
+            
+
+            ?>
+                <div class="card <?php echo $cssClass; ?>">
                     <p> <?php echo $d->pseudo; ?></p>
                     <p> <?php echo $d->MainCat; ?></p>
                     <p> <?php echo $d->Categories; ?></p>

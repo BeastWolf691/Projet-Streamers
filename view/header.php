@@ -44,8 +44,8 @@
             <ul id="menu">
                 <li><a href="./index.php">Accueil</a></li>
                 <li><a href="./contact.php">Contacts</a></li>
-                <li><a href="#" onclick="window.open(this.href, '_blank'); return false;">Qui sommes nous</a></li>
-                <li><a href="#" onclick="window.open(this.href, '_blank'); return false;">Historique</a></li>
+                <li><a href="#" onclick="window.open(this.href); return false;">Qui sommes nous</a></li>
+                <li><a href="#" onclick="window.open(this.href); return false;">Historique</a></li>
             </ul>
         </div>
 

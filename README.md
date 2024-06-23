@@ -12,6 +12,11 @@ Erreur normale: [ERROR] The database schema is not in sync with the current mapp
 
 php bin/doctrine orm:schema-tool:create   si c'est pas vert c'est que tu es daltonien 
 
+aller dans php my admin, ouvrir la base "stream"
+copier colle l'entieretée du fichier bss.sql dans l'onglet sql
+ceci crée 3 données de cartes (modèle)
+
+
 #Route suivie
 création d'un fichier  classes
 <ul>

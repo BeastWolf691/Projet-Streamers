@@ -1,3 +1,16 @@
+<?php
+//////////// connexion base de données////////////////////////////////////
+$pdo = new PDO('mysql:host=localhost;dbname=stream', 'root', '');
+
+$pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
+$pdo->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_OBJ);
+
+
+/////////////////////////////////////////////////////////////////////////////   
+
+?>
+
 <head>
     <meta charset="utf-8">
     <title>prototype V1</title>
@@ -62,21 +75,34 @@
         </div>
 
         <div class="contenu">
-            <div class="card"></div>
-            <div class="card"></div>
-            <div class="card"></div>
-            <div class="card"></div>
-            <div class="card"></div>
-            <div class="card"></div>
-            <div class="card"></div>
-            <div class="card"></div>
-            <div class="card"></div>
-            <div class="card"></div>
-            <div class="card"></div>
-            <div class="card"></div>
-            <div class="card"></div>
-            <div class="card"></div>
-            <div class="card"></div>
+            <!-- récupération -->
+            <?php 
+            $sql =  'SELECT pseudo, MainCat, Categories, picture, name, language, PYoutube,
+            Ptwitch, PKick, PTwitter, PInstagram, PTiktok, videoOne, videoTwo, factOne, factTwo, factThree FROM cards ';
+            $req = $pdo->query($sql);
+            while ($d = $req->fetch(PDO::FETCH_OBJ)) { // pour chaque ligne dans la BDD, on crée une carte?>
+                <div class="card">
+                    <p> <?php echo $d->pseudo; ?></p>
+                    <p> <?php echo $d->MainCat; ?></p>
+                    <p> <?php echo $d->Categories; ?></p>
+                    <p> <?php echo $d->picture; ?> </p>
+                    <p> <?php // echo $d->name; ?> </p>
+                    <p> <?php echo $d->language; ?> </p>
+                    <p> <?php echo $d->PYoutube; ?> </p>
+                    <p> <?php echo $d->Ptwitch; ?> </p>
+                    <p> <?php //echo $d->PKick; ?> </p>
+                    <p> <?php //echo $d->PTwitter; ?> </p>
+                    <p> <?php //echo $d->PInstagram; ?> </p>
+                    <p> <?php //echo $d->PTiktok; ?> </p>
+                    <p> <?php //echo $d->videoOne; ?> </p>
+                    <p> <?php //echo $d->videoTwo; ?> </p>
+                    <p> <?php //echo $d->factOne; ?> </p>
+                    <p> <?php //echo $d->factTwo; ?> </p>
+                    <p> <?php //echo $d->factThree; ?> </p>
+                    
+                </div>
+            <?php } ?>
+    
             <!--  ici se trouvera le contenu tableau des influenceurs
             avec les informations liées (profil, photo, date de naissance ?, récap du contenu qu'il fait,
             depuis quand il a commencé, liens + icones des différents réseaux qu'il a, et récap de son profil

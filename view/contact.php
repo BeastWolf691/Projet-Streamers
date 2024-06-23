@@ -6,17 +6,14 @@ include 'header.php';
         <label for="username">Pseudo</label><br>
         <input type="text" name="username" id="username" required placeholder="Pseudo"><br>
 
-        <!-- <label for="username">Prénom</label><br>
-        <input type="text" name="name" id="name" required style="width: 98%;"><br> -->
-
         <label for="username">Mail</label><br>
         <input type="text" name="name" id="name" required placeholder="Mail"><br>
 
-        <label for="category">Catégories</label><br>
+        <label for="category">Objet de la demande</label><br>
         <select class="form-select" style="width: 98%;">
-            <option value="1">Mot de passe oublié</option>
             <option value="2">Problème de connexion</option>
-            <option value="3">Desk invalide</option>
+            <option value="3">Deck invalide</option>
+            <option value="4">Autres</option>
         </select><br>
 
         <label for="feedback">Commentaire </label><br>

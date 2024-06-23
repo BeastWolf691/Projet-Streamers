@@ -1,7 +1,7 @@
 <?php 
 include 'header.php';
 ?>
-<form action="" method="post">
+<form action="" method="post" class="form-container">
 
     <label for="name">Nom</label>
     <input type="text" name="name" id="name">
@@ -10,16 +10,16 @@ include 'header.php';
     <input type="text" name="lastName" id="lastName">
 
     <label for="mail">Mail</label>
-    <input type="mail" name="mail" id="mail">
+    <input type="text" name="mail" id="mail">
 
     <label for="username">Pseudo</label>
     <input type="text" name="username" id="username">
 
     <label for="password">Mot de passe</label>
-    <input type="password" name="password" id="password">
+    <input type="text" name="password" id="password">
 
     <label for="confirmPassword">Confirmer mdp</label>
-    <input type="confirmPassword" name="confirmPassword" id="confirmPassword">
+    <input type="text" name="confirmPassword" id="confirmPassword">
 
     <input type="checkbox" name="cgu" id="cgu" require>J'ai lu les CGU
 

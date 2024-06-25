@@ -31,9 +31,7 @@ Création des namesspace
 
 mise en place de orm  & Mise en place des cardinalités 
 
-IL RESTE DES CARDINALITES A DEFINIR POUR CREER UNE BDD
-
-Création des constructeurs (il reste des attributs à définir)
+Création des constructeurs 
 
 Récupération du dossier bin et du fichier bootstrap.php ( ancien projet)
 

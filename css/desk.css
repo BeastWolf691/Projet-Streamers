@@ -182,9 +182,9 @@ header {
     padding: 0 0 0 2px;
 }
 
-.cat_video{background-color: blue;}
+.cat_video{background-color: #7C24A2;}
 .cat_real{background-color: red;}
-.cat_cook{background-color: green;}
+.cat_cook{background-color: #3A8720;}
 
 /***********footer****************/
 .footer {

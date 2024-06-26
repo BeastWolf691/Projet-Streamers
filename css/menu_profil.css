@@ -4,29 +4,30 @@
     top: 0;
     right: -250px; /* Cache le menu hors de la vue */
     width: 260px;
-    height: 9%;
+    height: 15.3%;
     background: linear-gradient(270deg, #4747df, transparent); /* Fond légèrement bleuté/transparent */
     transition: right 0.5s ease;
     overflow: hidden; /* Pour empêcher le contenu de déborder */
 }
 
 #menu-person {
-    list-style-type: none;
-    padding: 8px 0 0 45px;
-    margin: 0;
+  list-style-type: none;
+  padding: 10px 0 0 15px;
+  margin: 0;
 }
 
 #menu-person li {
-    margin: 7px 0;
-    font-size: x-large;
+  margin: 18px 0;
+  font-size: xx-large;
 }
+
 #menu-person li a:link, #menu-person li a:visited {
     color: white;
 }
 /* Affiche le menu quand il est actif */
 #overlay.active {
     right: 0;
-    height: 9%;
+    height: 15.3%;
     width: 260px;
 }
 

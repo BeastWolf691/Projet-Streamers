@@ -4,7 +4,7 @@
     top: 0;
     right: -250px; /* Cache le menu hors de la vue */
     width: 260px;
-    height: 15.3%;
+    height: 13.6%;
     background: linear-gradient(270deg, #4747df, transparent); /* Fond légèrement bleuté/transparent */
     transition: right 0.5s ease;
     overflow: hidden; /* Pour empêcher le contenu de déborder */
@@ -17,7 +17,7 @@
 }
 
 #menu-person li {
-  margin: 18px 0;
+  margin: 13px 0;
   font-size: xx-large;
 }
 
@@ -27,7 +27,7 @@
 /* Affiche le menu quand il est actif */
 #overlay.active {
     right: 0;
-    height: 15.3%;
+    height: 13.6%;
     width: 260px;
 }
 

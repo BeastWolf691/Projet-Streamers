@@ -131,6 +131,9 @@ header {
 #speak {
     margin: 0 54px 0 0;
 }
+#type, #names, #date, #languages, .btn-primary {
+    border-radius: 25px;
+}
 #type {
     padding: 0px 64px;
 }

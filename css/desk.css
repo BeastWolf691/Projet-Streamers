@@ -173,7 +173,7 @@ header {
     left: 27%;
     display: flex;
     flex-wrap: wrap;
-    width: 1200px;
+    /* width: 1200px; */
 }
 
 .card {

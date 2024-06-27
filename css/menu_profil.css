@@ -4,7 +4,7 @@
     top: 0;
     right: -250px; /* Cache le menu hors de la vue */
     width: 260px;
-    height: 13.6%;
+    height: 15.3%;
     background: linear-gradient(270deg, #4747df, transparent); /* Fond légèrement bleuté/transparent */
     transition: right 0.5s ease;
     overflow: hidden; /* Pour empêcher le contenu de déborder */
@@ -27,7 +27,7 @@
 /* Affiche le menu quand il est actif */
 #overlay.active {
     right: 0;
-    height: 13.6%;
+    height: 15.3%;
     width: 260px;
 }
 
@@ -49,7 +49,7 @@ body {
     background: white;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
-    margin: 15px auto;
+    margin: 125px auto;
 }
 
   .form-container form {

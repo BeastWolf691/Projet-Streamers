@@ -15,27 +15,6 @@ php bin/doctrine orm:schema-tool:create   si c'est pas vert c'est que tu es dalt
 aller dans php my admin, 
 -- créer la database "stream"
 
--- Créer la table 'cards'
-CREATE TABLE cards (
-    id INT AUTO_INCREMENT PRIMARY KEY,
-    pseudo VARCHAR(50),
-    MainCat VARCHAR(50),
-    Categories VARCHAR(50),
-    picture VARCHAR(255),
-    name VARCHAR(50),
-    language VARCHAR(50),
-    PYoutube VARCHAR(255),
-    Ptwitch VARCHAR(255),
-    PKick VARCHAR(255),
-    PTwitter VARCHAR(255),
-    PInstagram VARCHAR(255),
-    PTiktok VARCHAR(255),
-    videoOne VARCHAR(255),
-    videoTwo VARCHAR(255),
-    factOne TEXT,
-    factTwo TEXT,
-    factThree TEXT
-);
 copier colle l'entieretée du fichier bdd.sql dans l'onglet sql
 ceci crée 3 données de cartes (modèle)
 

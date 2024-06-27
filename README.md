@@ -6,6 +6,8 @@ CREER SI IL NEXISTE PAS UN .GITIGNORE AVEC  /vendor/                 !!!
 aller dans php my admin     create database stream
 
 retour dans vscode
+ATTENTION DEUX LIGNES DE CODES IMPORTAAAANNNNTTTTTEEESSSSSS validate et tool create
+
 php bin/doctrine orm:validate-schema
 
 Erreur normale: [ERROR] The database schema is not in sync with the current mapping file.

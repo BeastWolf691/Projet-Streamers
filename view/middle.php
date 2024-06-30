@@ -1,31 +1,4 @@
-<?php
-//////////// connexion base de données////////////////////////////////////
-$pdo = new PDO('mysql:host=localhost;dbname=stream', 'root', '');
-
-$pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-
-$pdo->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_OBJ);
-
-
-/////////////////////////////////////////////////////////////////////////////   
-
-?>
-<!--
-<head>
-  inutile vue qu'on les appel deja dans headers
-     <meta charset="utf-8">
-    <title>prototype V1</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <script src="https://kit.fontawesome.com/e2e1900fed.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" media="screen and (min-width: 981px)" href="../css/desk.css" />
-    <link rel="stylesheet" media="screen and (max-width: 980px)" href="../css/tablet.css" />
-    <link rel="stylesheet" media="screen and (max-width: 600px)" href="../css/mobil.css" /> -->
-
-<body>
-    <div id="middle">
+<div id="middle">
         <div class="filter-bar">
             <div class="filter-item">
                 <label id="category" for="type">Genre</label>

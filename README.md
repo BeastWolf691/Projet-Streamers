@@ -6,7 +6,6 @@ CREER SI IL NEXISTE PAS UN .GITIGNORE AVEC  /vendor/                 !!!
 aller dans php my admin     create database stream
 
 retour dans vscode
-ATTENTION DEUX LIGNES DE CODES IMPORTAAAANNNNTTTTTEEESSSSSS validate et tool create
 
 php bin/doctrine orm:validate-schema
 
@@ -65,5 +64,5 @@ pour ajouter un changement de couleur il faut ajouter ces lignes dans ici que j'
 
 let truk = document.querySelector('.filter-bar')
  truk.classList.toggle('dark')
- 
+
 

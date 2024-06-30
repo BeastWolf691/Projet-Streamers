@@ -1,3 +1,9 @@
+<!-- pour windows 11 il faut garder les lignes 2-5 -->
+<?php 
+include'bdd.php';
+?>
+    <link rel="stylesheet" media="screen and (min-width: 981px)" href="../css/desk.css" />
+    
 <div id="middle">
         <div class="filter-bar">
             <div class="filter-item">
@@ -172,7 +178,7 @@
         </div>
     </div>
     <!-- /*--------------------js du switch, ne marche pas si on le met dans le .js ------------------------*/ -->
-    <script>
+    <!-- <script>
         // Fonction pour appliquer la classe en fonction du mode
         function appliquerMode() {
             // Vérifie si le navigateur est en mode sombre
@@ -199,7 +205,7 @@
             //ICI
         }
 
-        btn.addEventListener('click', toggleDark)
+        btn.addEventListener('click', toggleDark);
 
         function toggleBtn() {
             let btnElement = document.getElementById("switch")
@@ -207,4 +213,4 @@
         }
 
         btn.addEventListener('click', toggleBtn)
-    </script>
+    </script> -->

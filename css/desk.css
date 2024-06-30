@@ -1,6 +1,6 @@
 body {
     margin: 0;
-    background: #b1b1b1;
+    background: #10051d;
     height: 139vh;
     position: relative;
 }
@@ -72,6 +72,7 @@ header {
     top: 40%;
     right: 3%;
     height: 30px;
+    color: white;
  
 }
 /******************fin profil************************************/

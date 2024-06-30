@@ -10,18 +10,19 @@ $pdo->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_OBJ);
 /////////////////////////////////////////////////////////////////////////////   
 
 ?>
-
+<!--
 <head>
-    <meta charset="utf-8">
+  inutile vue qu'on les appel deja dans headers
+     <meta charset="utf-8">
     <title>prototype V1</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <script src="https://kit.fontawesome.com/e2e1900fed.js" crossorigin="anonymous"></script><!--permet d'avoir accès à des icones gratuites-->
+    <script src="https://kit.fontawesome.com/e2e1900fed.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" media="screen and (min-width: 981px)" href="../css/desk.css" />
     <link rel="stylesheet" media="screen and (max-width: 980px)" href="../css/tablet.css" />
-    <link rel="stylesheet" media="screen and (max-width: 600px)" href="../css/mobil.css" />
+    <link rel="stylesheet" media="screen and (max-width: 600px)" href="../css/mobil.css" /> -->
 
 <body>
     <div id="middle">
@@ -76,30 +77,30 @@ $pdo->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_OBJ);
 
         <div class="contenu">
             <!-- récupération -->
-            <?php 
+            <?php
             $sql =  'SELECT pseudo, MainCat, Categories, picture, name, language, PYoutube,
             Ptwitch, PKick, PTwitter, PInstagram, PTiktok, videoOne, videoTwo, factOne, factTwo, factThree FROM cards ';
             $req = $pdo->query($sql);
-           
+
 
             while ($d = $req->fetch(PDO::FETCH_OBJ)) { // pour chaque ligne dans la BDD, on crée une carte
 
-             $mainCat= $d->MainCat;
-             switch ($mainCat) {
-                case 'Gaming':
-                    $cssClass = 'cat_video';
-                    break;
-                case 'IRL':
-                    $cssClass = 'cat_real';
-                    break;
-                case 'Cooking':
-                    $cssClass = 'cat_cook';
-                    break;
-                default:
-                    $cssClass = '';
-                    break;
-            }
-            
+                $mainCat = $d->MainCat;
+                switch ($mainCat) {
+                    case 'Gaming':
+                        $cssClass = 'cat_video';
+                        break;
+                    case 'IRL':
+                        $cssClass = 'cat_real';
+                        break;
+                    case 'Cooking':
+                        $cssClass = 'cat_cook';
+                        break;
+                    default:
+                        $cssClass = '';
+                        break;
+                }
+
 
             ?>
                 <div class="card <?php echo $cssClass; ?>">
@@ -107,23 +108,33 @@ $pdo->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_OBJ);
                     <p> <?php echo $d->MainCat; ?></p>
                     <p> <?php echo $d->Categories; ?></p>
                     <p> <?php echo $d->picture; ?> </p>
-                    <p> <?php // echo $d->name; ?> </p>
+                    <p> <?php // echo $d->name; 
+                        ?> </p>
                     <p> <?php echo $d->language; ?> </p>
                     <p> <?php echo $d->PYoutube; ?> </p>
                     <p> <?php echo $d->Ptwitch; ?> </p>
-                    <p> <?php //echo $d->PKick; ?> </p>
-                    <p> <?php //echo $d->PTwitter; ?> </p>
-                    <p> <?php //echo $d->PInstagram; ?> </p>
-                    <p> <?php //echo $d->PTiktok; ?> </p>
-                    <p> <?php //echo $d->videoOne; ?> </p>
-                    <p> <?php //echo $d->videoTwo; ?> </p>
-                    <p> <?php //echo $d->factOne; ?> </p>
-                    <p> <?php //echo $d->factTwo; ?> </p>
-                    <p> <?php //echo $d->factThree; ?> </p>
-                    
+                    <p> <?php //echo $d->PKick; 
+                        ?> </p>
+                    <p> <?php //echo $d->PTwitter; 
+                        ?> </p>
+                    <p> <?php //echo $d->PInstagram; 
+                        ?> </p>
+                    <p> <?php //echo $d->PTiktok; 
+                        ?> </p>
+                    <p> <?php //echo $d->videoOne; 
+                        ?> </p>
+                    <p> <?php //echo $d->videoTwo; 
+                        ?> </p>
+                    <p> <?php //echo $d->factOne; 
+                        ?> </p>
+                    <p> <?php //echo $d->factTwo; 
+                        ?> </p>
+                    <p> <?php //echo $d->factThree; 
+                        ?> </p>
+
                 </div>
             <?php } ?>
-    
+
             <!--  ici se trouvera le contenu tableau des influenceurs
             avec les informations liées (profil, photo, date de naissance ?, récap du contenu qu'il fait,
             depuis quand il a commencé, liens + icones des différents réseaux qu'il a, et récap de son profil
@@ -187,3 +198,40 @@ $pdo->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_OBJ);
             Clara Marz 1,1 M<br> -->
         </div>
     </div>
+    <!-- /*--------------------js du switch, ne marche pas si on le met dans le .js ------------------------*/ -->
+    <script>
+        // Fonction pour appliquer la classe en fonction du mode
+        function appliquerMode() {
+            // Vérifie si le navigateur est en mode sombre
+            if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+                document.body.classList.add('darker');
+                document.body.classList.remove('light');
+            } else {
+                document.body.classList.add('light');
+                document.body.classList.remove('darker');
+            }
+        }
+
+        appliquerMode();
+        window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', appliquerMode);
+//--------------------------------------------------------------------------------------------------
+        // quand on clique sur # switch on ajoute la classe dark à #menu.
+        let btn = document.querySelector('#switch')
+
+        function toggleDark() {
+            let element = document.querySelector('#menu')
+            let test = document.querySelector('.filter-bar')
+            element.classList.toggle('dark')
+            test.classList.toggle('dark')
+            //ICI
+        }
+
+        btn.addEventListener('click', toggleDark)
+
+        function toggleBtn() {
+            let btnElement = document.getElementById("switch")
+            btnElement.classList.toggle('btn-dark') // ajoute la classe btn dark au bouton switch ( j'ai pas mis de css encore)
+        }
+
+        btn.addEventListener('click', toggleBtn)
+    </script>

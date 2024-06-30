@@ -1,3 +1,5 @@
+<link rel="stylesheet" media="screen and (min-width: 981px)" href="../css/desk.css" />
+
 <footer>
     <a href="">Mentions légales</a>
     <a href="">Politique de confidentialité</a>&nbsp;

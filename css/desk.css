@@ -217,13 +217,8 @@ header {
 .cat_cook{background-color: #3A8720;}
 
 /***********footer****************/
-<<<<<<< HEAD
-.footer {
-    background: #44484f;
-=======
 footer {
     background: #d3e3fd;
->>>>>>> 4a291aeb3749851435a4f396cd49764b032ce106
     height: 50px;
     text-align: center;
     padding: 25px 0 0 0;

@@ -120,6 +120,7 @@ header {
     padding: 20px 10px;
     position: absolute;
     top: 232px;
+    border-radius: 10px;
 }
 
 .filter-item {
@@ -158,6 +159,7 @@ header {
     position: absolute;
     top: 476px;
     margin: 0 0 0 25px;
+    border-radius: 10px;
 }
 
 /*********************contenu streameurs*******************/

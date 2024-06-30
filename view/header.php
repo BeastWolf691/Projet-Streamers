@@ -23,10 +23,11 @@
 
         <div id="banniere">
             <div class="wrapper">
-                <div class="item item1"><a href=""><img src="./picture/twitch_logo.jpg" alt="twitch"></a></div>
-                <div class="item item2"><img src="./picture/youTube_logo.png" alt="youtube"></div>
-                <div class="item item3"><img src="./picture/tiktok_logo.png" alt="tiktok"></div>
-                <div class="item item4"><img src="./picture/instagram_logo.jpg" alt="instagram"></div>
+                <div class="item item1"><a href=""><img src="./picture/logo-twitch1.png" alt="twitch"></a></div>
+                <div class="item item2"><img src="./picture/logo-youtube1.png" alt="youtube"></div>
+                <div class="item item3"><img src="./picture/logo-tiktok1.png" alt="tiktok"></div>
+                <div class="item item4"><img src="./picture/logo-instagram1.png" alt="instagram"></div>
+                
             </div>
 
             <div id="person">
@@ -47,6 +48,7 @@
                 <li><a href="#" onclick="window.open(this.href); return false;">Qui sommes nous</a></li>
                 <li><a href="#" onclick="window.open(this.href); return false;">Historique</a></li>
             </ul>
+            <button id="switch">Toggle Dark Mode</button>
         </div>
 
     </header>

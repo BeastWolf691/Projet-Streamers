@@ -52,3 +52,18 @@ Erreur normale: [ERROR] The database schema is not in sync with the current mapp
 
 php bin/doctrine orm:schema-tool:create
 
+30.06
+J'ai mis des couleurs dégueulasses poour voir si cela fonctionne, je laisserais mettre les bonnes.
+
+Le code javascript qui fonctionne que dans middle.php ( j'ai essaié de le mettre en .js mais ca ne marchait pas)
+
+Le code détecte que je suis en mode sombre ou clair. les classes darker et light
+
+J'ai ensuite fait un bouton (#switch) qui quand on appuie change la couleur du menu et du filtre.
+
+pour ajouter un changement de couleur il faut ajouter ces lignes dans ici que j'ai commenté en JS
+
+let truk = document.querySelector('.filter-bar')
+ truk.classList.toggle('dark')
+ 
+

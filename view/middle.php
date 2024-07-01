@@ -1,4 +1,4 @@
-<!-- pour windows 11 il faut garder les lignes 2-5 -->
+<!-- pour compatibiliter il faut garder les lignes 2-5 -->
 <?php 
 include'bdd.php';
 ?>

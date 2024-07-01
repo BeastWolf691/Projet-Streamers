@@ -39,6 +39,8 @@ class Cards
     #[ORM\Column()]
     private string $PTiktok;
     #[ORM\Column()]
+    private string $PSnapchat;
+    #[ORM\Column()]
     private string $videoOne;
     #[ORM\Column()]
     private string $videoTwo;
@@ -76,6 +78,7 @@ class Cards
         string $PTwitter,
         string $PInstagram,
         string $PTiktok,
+        string $PSnapchat,
         string $videoOne,
         string $videoTwo,
         string $factOne,
@@ -94,6 +97,8 @@ class Cards
         $this->PTwitter = $PTwitter;
         $this->PInstagram = $PInstagram;
         $this->PTiktok = $PTiktok;
+        $this->PSnapchat = $PSnapchat;
+
         $this->videoOne = $videoOne;
         $this->videoTwo = $videoTwo;
         $this->factOne = $factOne;

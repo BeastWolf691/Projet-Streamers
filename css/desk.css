@@ -71,7 +71,7 @@ header {
     top: 50%;
     right: 3%;
     height: 30px;
-    color: white;
+    color: black;
  
 }
 
@@ -82,7 +82,7 @@ header {
     font-size: xx-large;
     top: 9.7%;
     font-weight: 900;
-    background: black;
+    background-color: #57155D;
     width: 100%;
     height: 5%;
     list-style-type: none;
@@ -113,10 +113,10 @@ header {
 /*************************filtre pour recherche*************/
 .filter-bar {
     margin: 0 25px 0;
-    height: 175px;
+    height: 220px;
     width: 350px;
-    background: chocolate;
-    padding: 20px 10px;
+    background: #9FF0F7;
+    padding: 0px 10px;
     position: absolute;
     top: 232px;
     border-radius: 10px;
@@ -125,14 +125,17 @@ header {
 .filter-item {
     margin: 15px 2px;
 }
-#category {
+#category{
     margin: 0 68px 0 0;
 }
 #speak {
     margin: 0 54px 0 0;
 }
-#type, #names, #date, #languages, .btn-primary {
+#type, #names, #date, #languages, .btn-primary, #alphabet {
     border-radius: 25px;
+}
+#alphabet{
+    padding: 0px 79px;
 }
 #type {
     padding: 0px 64px;
@@ -152,7 +155,7 @@ header {
 
 /*********************affichage streameurs*******************/
 .resultat {
-    background: grey;
+    background: #57155D;
     width: 370px;
     height: 570px;
     position: absolute;
@@ -168,7 +171,7 @@ header {
 
 .contenu {
     text-align: center;
-    background: #8d4745;
+    background: #9FF0F7;
     position: absolute;
     top: 232px;
     left: 410px;
@@ -193,7 +196,7 @@ header {
 
 /***********footer****************/
 footer {
-    background: #d3e3fd;
+    background: #57155D;
     height: 50px;
     text-align: center;
     padding: 25px 0 0 0;
@@ -212,7 +215,6 @@ a {
 /*-------------------------switch effet sombre et clair----------------------------*/
 
 .dark {
-    background-color: #333;
     color: #fff;
 }
 
@@ -221,7 +223,7 @@ a {
     color: #fff;
 }
 .darker {
-    background-color: #121212;
+    background-color: #10051D;
     color: #42187e;
 }
 
@@ -229,17 +231,18 @@ a {
     background-color: #ffffff;
     color: #000000;
 }
-
-#menu.dark {
-    background-color: #333;
-    color: #ffffff;
-    opacity: 1;
+#person.dark {
+    color: white !important;
 }
 
 .filter-bar.dark {
-    background-color: #333;
+    background-color: #57155D;
     color: #42187e;
+}
 
+.contenu.dark {
+    background-color: #10051D;
+    color: #42187e;
 }
 
 .btn-dark {
@@ -252,12 +255,7 @@ a {
 }
 
 .light header {
-    background-color: #e1e1e1;
-    color: #000;
-}
-
-.light footer {
-    background-color: #e1e1e1;
+    background-color: #fffefe;
     color: #000;
 }
 
@@ -266,11 +264,11 @@ a {
 }
 
 .darker header {
-    background-color: #444;
+    background-color: #10051D;
     color: #fff;
 }
 
 .darker footer {
-    background-color: #444;
+    background-color: #10051D;
     color: #fff;
 }

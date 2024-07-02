@@ -42,10 +42,14 @@ $(document).ready(function () {
     let btn = document.querySelector('#switch');
 
     function toggleDark() {
-        let element = document.querySelector('#menu');
         let filterBar = document.querySelector('.filter-bar');
-        element.classList.toggle('dark');
+        let contenu = document.querySelector('.contenu');
+        let person = document.querySelector('#person');
+
         filterBar.classList.toggle('dark');
+        contenu.classList.toggle('dark');
+        person.classList.toggle('dark');
+
         document.body.classList.toggle('darker');
         document.body.classList.toggle('light');
     }

@@ -25,3 +25,4 @@ $connection = DriverManager::getConnection(
 
 // obtaining the entity manager
 $entityManager = new EntityManager($connection, $config);
+//si souci voir si version php en 8.2.18 a mettre et faire composer update, php-v et modifier dans wamp et path

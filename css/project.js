@@ -22,7 +22,7 @@ $(document).ready(function () {
         // Actualise la page
         window.location.href = $(this).attr("href");
     });
-    
+
 
     // Fonction pour appliquer la classe en fonction du mode
 
@@ -54,7 +54,7 @@ $(document).ready(function () {
 
     function toggleDark() {
         let contenu = document.querySelector('.contenu');
-        let person = document.querySelector('#person');
+        let person = document.querySelector('#menu-person');
 
         contenu.classList.toggle('dark');
         person.classList.toggle('dark');

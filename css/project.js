@@ -22,9 +22,10 @@ $(document).ready(function () {
         // Actualise la page
         window.location.href = $(this).attr("href");
     });
-
+    
 
     // Fonction pour appliquer la classe en fonction du mode
+
     // document.getElementById('toggle-dark-mode').addEventListener('change', function() {
     //     var menu = document.querySelector('nav');
     //     if (this.checked) {
@@ -33,7 +34,7 @@ $(document).ready(function () {
     //         menu.classList.remove('darker');
     //     }
     // });
-    
+
     function appliquerMode() {
         // Vérifie si le navigateur est en mode sombre
         if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {

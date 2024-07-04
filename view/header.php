@@ -1,5 +1,5 @@
-<?php 
-include'bdd.php';
+<?php
+include 'bdd.php';
 ?>
 <!DOCTYPE html>
 <html lang="fr">
@@ -30,10 +30,10 @@ include'bdd.php';
                 <div class="item item2"><img src="./picture/logo-youtube1.png" alt="youtube"></div>
                 <div class="item item3"><img src="./picture/logo-tiktok1.png" alt="tiktok"></div>
                 <div class="item item4"><img src="./picture/logo-instagram1.png" alt="instagram"></div>
-                
+
             </div>
 
-            
+
             <div id="person">
                 <i class="fa-solid fa-user fa-2xl" id="menu1"></i>
                 <div id="overlay">
@@ -45,7 +45,7 @@ include'bdd.php';
             </div>
 
         </div>
-        <div id="menu_type">
+        <nav>
             <ul id="menu">
                 <li><a href="./index.php">Accueil</a></li>
                 <li><a href="./contact.php">Contacts</a></li>
@@ -53,6 +53,6 @@ include'bdd.php';
                 <li><a href="#" onclick="window.open(this.href); return false;">Les plateformes</a></li>
             </ul>
             <button id="switch">Toggle Dark Mode</button>
-        </div>
+        </nav>
 
     </header>

@@ -25,6 +25,15 @@ $(document).ready(function () {
 
 
     // Fonction pour appliquer la classe en fonction du mode
+    // document.getElementById('toggle-dark-mode').addEventListener('change', function() {
+    //     var menu = document.querySelector('nav');
+    //     if (this.checked) {
+    //         menu.classList.add('darker');
+    //     } else {
+    //         menu.classList.remove('darker');
+    //     }
+    // });
+    
     function appliquerMode() {
         // Vérifie si le navigateur est en mode sombre
         if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {

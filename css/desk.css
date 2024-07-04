@@ -71,7 +71,7 @@ header {
     top: 50%;
     right: 3%;
     height: 30px;
-    color: black;
+    color: purple;
  
 }
 
@@ -279,11 +279,11 @@ input[type=checkbox]:checked::after {
     background-color: #ffffff;
     color: #000000;
 }
-#person.dark {
-    color: white !important;
+.darker #person{
+    color: white;
 }
 
-.contenu.dark {
+.darker .contenu{
     background-color: #10051D;
     color: black;
 }

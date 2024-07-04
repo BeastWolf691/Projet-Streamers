@@ -16,7 +16,7 @@ header {
 
 .wrapper {
     width: 320px;
-    margin: 1.5% auto 0.5%;
+    margin: 25px auto 5px;
     position: relative;
     height: 70px;
     overflow: hidden;
@@ -79,13 +79,14 @@ header {
 nav {
     width: 100%;
     background-color: purple;
-    height: 90px;
+    height: 70px;
     position: relative;
 }
+
 #searchbar input[type="search"]{
     border-radius: 25px;
     position: absolute;
-    top: 25px;
+    top: 20px;
     left: 30px;
     width: 275px;
     height: 30px;
@@ -113,7 +114,7 @@ nav {
 #menu li a:link, #menu li a:visited {
     text-decoration: none;
     color: white;
-    padding: 16px 0;
+    padding: 10px 0;
     display: block;
     width: 152px;
     font-size: 20px;
@@ -236,8 +237,8 @@ input[type=checkbox] {
     transition: background-color .2s;
     box-shadow: 0 0 15px rgba(52, 52, 52, 0.354);
     position: absolute;
-    right: 25px;
-    top: 35px;
+    right: 2.5%;
+    top: 25px;
 }
 
 input[type=checkbox]::after {

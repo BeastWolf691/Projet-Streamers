@@ -310,3 +310,11 @@ input[type=checkbox]:checked::after {
     background-color: #9FF0F7;
     color: #000;
 }
+
+/****************Page Mentions Légales*************/
+p.mention {
+    margin: 25px 175px;
+}
+h1 {
+    color: white;
+}

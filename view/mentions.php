@@ -1,20 +1,26 @@
-<?php 
+<?php
 include "header.php";
 ?>
 
-<p>Définitions
-Client : tout professionnel ou personne physique capable au sens des articles 1123 et suivants du Code civil, ou personne morale, qui visite le Site objet des présentes conditions générales.
-Prestations et Services : https://creatordeck.fr/ met à disposition des Clients :
+<p class="mention">
+<h1>Définitions</h1><br>
+<strong>Client :</strong> tout professionnel ou personne physique capable au sens des articles 1123 et suivants du Code civil, ou personne morale, qui visite le Site <br>
+objet des présentes conditions générales.<br>
 
-Contenu : Ensemble des éléments constituants l’information présente sur le Site, notamment textes – images – vidéos.
+<strong>Prestations et Services : </strong> https://creatordeck.fr/ met à disposition des Clients :<br>
 
-Informations clients : Ci après dénommé « Information (s) » qui correspondent à l’ensemble des données personnelles susceptibles d’être détenues par https://creatordeck.fr/ pour la gestion de votre compte, de la gestion de la relation client et à des fins d’analyses et de statistiques.
+<strong>Contenu : </strong> Ensemble des éléments constituants l’information présente sur le Site, notamment textes – images – vidéos.<br>
 
-Utilisateur : Internaute se connectant, utilisant le site susnommé.
+<strong>Informations clients : </strong> Ci après dénommé « Information (s) » qui correspondent à l’ensemble des données personnelles susceptibles d’être détenues par <br>
+https://creatordeck.fr/ pour la gestion de votre compte, de la gestion de la relation client et à des fins d’analyses et de statistiques.<br>
 
-Informations personnelles : « Les informations qui permettent, sous quelque forme que ce soit, directement ou non, l’identification des personnes physiques auxquelles elles s’appliquent » (article 4 de la loi n° 78-17 du 6 janvier 1978).
+<strong>Utilisateur : </strong> Internaute se connectant, utilisant le site susnommé.<br>
 
-Les termes « données à caractère personnel », « personne concernée », « sous traitant » et « données sensibles » ont le sens défini par le Règlement Général sur la Protection des Données (RGPD : n° 2016-679)
+<strong>Informations personnelles : </strong> « Les informations qui permettent, sous quelque forme que ce soit, directement ou non, l’identification des personnes physiques <br>
+auxquelles elles s’appliquent » (article 4 de la loi n° 78-17 du 6 janvier 1978).<br>
+
+Les termes « données à caractère personnel », « personne concernée », « sous traitant » et « données sensibles » ont le sens défini par le Règlement Général sur la <br>
+Protection des Données (RGPD : n° 2016-679)<br>
 
 1. Présentation du site internet.
 En vertu de l’article 6 de la loi n° 2004-575 du 21 juin 2004 pour la confiance dans l’économie numérique, il est précisé aux utilisateurs du site internet https://creatordeck.fr/ l’identité des différents intervenants dans le cadre de sa réalisation et de son suivi:
@@ -118,7 +124,11 @@ Pour assurer la sécurité et la confidentialité des Données Personnelles, htt
 
 Lors du traitement des Données Personnelles, https://creatordeck.fr/prend toutes les mesures raisonnables visant à les protéger contre toute perte, utilisation détournée, accès non autorisé, divulgation, altération ou destruction.
 
-9. 
+9. Liens hypertextes « cookies » et balises (“tags”) internet
+si vous décidez de désactiver les cookies, vous acceptez que le site puisse les utiliser. Vous pouvez à tout moment désactiver ces cookies et ce gratuitement à
+partir des possibilités de désactivation qui vous sont offertes et rappelées ci-après, sachant que cela peut réduire ou empêcher l’accessibilité à tout ou partie
+des Services proposés par le site.
+
 9.1. « COOKIES »
 Un « cookie » est un petit fichier d’information envoyé sur le navigateur de l’Utilisateur et enregistré au sein du terminal de l’Utilisateur (ex : ordinateur, smartphone), (ci-après « Cookies »). Ce fichier comprend des informations telles que le nom de domaine de l’Utilisateur, le fournisseur d’accès Internet de l’Utilisateur, le système d’exploitation de l’Utilisateur, ainsi que la date et l’heure d’accès. Les Cookies ne risquent en aucun cas d’endommager le terminal de l’Utilisateur.
 
@@ -149,21 +159,15 @@ Le prestataire externe pourra éventuellement recueillir des informations sur le
 Tout litige en relation avec l’utilisation du site https://creatordeck.fr/ est soumis au droit français.
 En dehors des cas où la loi ne le permet pas, il est fait attribution exclusive de juridiction aux tribunaux compétents de Paris
 
- 
+
 
 11. Réclamations
-Toute réclamation relative à une réservation doit être adressée par le Client par courrier à l’adresse postale de l’Hôtel ou par courriel. A défaut de réponse satisfaisante dans un délai d’un mois, le client peut saisir le Médiateur du Tourisme et du Voyage, dont les coordonnées sont :
-
-MTV Médiation Tourisme Voyage
-BP 80 303
-75823 Paris Cedex
-Email : info@mtv.travel
-Pour plus d’informations, le Client peut consulter son site Internet : www.mtv.travel.
-
+Toute réclamation relative à une réservation doit être adressée par le Client par formulaire Contact disponible sur le site.
 
 12. Dispositif BLOCTEL
 Pour ne plus recevoir des appels téléphoniques commerciaux non sollicités, vous pouvez vous inscrire sur la liste Bloctel (www.bloctel.gouv.fr).
 
 
 13. Litiges
-Pour tout litige, rendez-vous sur la plateforme de règlement en ligne des litiges européens : ec.europa.eu/consumers/odr </p>
+Pour tout litige, rendez-vous sur la plateforme de règlement en ligne des litiges européens : ec.europa.eu/consumers/odr
+</p>

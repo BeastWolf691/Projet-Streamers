@@ -23,6 +23,7 @@ $(document).ready(function () {
         window.location.href = $(this).attr("href");
     });
 
+
     // Fonction pour appliquer la classe en fonction du mode
     function appliquerMode() {
         // Vérifie si le navigateur est en mode sombre
@@ -38,15 +39,13 @@ $(document).ready(function () {
     appliquerMode();
     window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', appliquerMode);
 
-    // Quand on clique sur #switch on ajoute la classe dark à #menu.
+    // // Quand on clique sur #switch on ajoute la classe dark à #menu.
     let btn = document.querySelector('#switch');
 
     function toggleDark() {
-        let filterBar = document.querySelector('.filter-bar');
         let contenu = document.querySelector('.contenu');
         let person = document.querySelector('#person');
 
-        filterBar.classList.toggle('dark');
         contenu.classList.toggle('dark');
         person.classList.toggle('dark');
 

@@ -55,7 +55,7 @@ include 'bdd.php';
                 <li><a href="#" onclick="window.open(this.href); return false;">Qui sommes nous</a></li>
                 <li><a href="#" onclick="window.open(this.href); return false;">Les plateformes</a></li>
             </ul>
-            <button id="switch">Toggle Dark Mode</button>
+            <input type="checkbox" name="" id="switch">
         </nav>
 
     </header>

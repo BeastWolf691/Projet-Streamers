@@ -80,6 +80,17 @@ nav {
     width: 100%;
     background-color: purple;
     height: 90px;
+    position: relative;
+}
+#searchbar input[type="search"]{
+    border-radius: 25px;
+    position: absolute;
+    top: 25px;
+    left: 30px;
+    width: 275px;
+    height: 30px;
+    padding-left: 10px;
+    border: none;
 }
 
 #menu {
@@ -215,8 +226,40 @@ a {
     margin: 10px;
 }
 
-/*-------------------------switch effet sombre et clair----------------------------*/
+/*-------------------------bouton sombre clair----------------------------*/
+input[type=checkbox] {
+    appearance: none;
+    position: relative;
+    width: 88px;
+    height: 50px;
+    background-color: whitesmoke;
+    border-radius: 5rem;
+    transition: background-color .2s;
+    box-shadow: 0 0 15px rgba(52, 52, 52, 0.354);
+}
 
+input[type=checkbox]::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 30%;
+    transform: translate(-50%, -50%);
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    background-color: #57155D;
+    transition: left .2s;
+}
+
+input[type=checkbox]:checked {
+    background-color: #9FF0F7;
+}
+
+input[type=checkbox]:checked::after {
+    left: 70%;
+}
+
+/*******************************effet sombre clair***********************/
 .dark {
     color: #fff;
 }

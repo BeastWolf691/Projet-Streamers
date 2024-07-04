@@ -5,7 +5,7 @@ include 'bdd.php';
 <link rel="stylesheet" media="screen and (min-width: 981px)" href="../css/desk.css" />
 
 <div id="middle">
-    <div class="filter-bar">
+    <aside class="filter-bar">
         <div class="filter-item">
             <label for="alphabet">Tranche alphabet</label>
             <select id="alphabet" name="alphabet">
@@ -61,10 +61,11 @@ include 'bdd.php';
         <div class="filter-item">
             <button type="button" class="btn btn-primary">Appliquer</button>
         </div>
-    </div>
-    <div class="resultat">
+    </aside>
+    
+    <aside class="resultat">
         Résultat + infos
-    </div>
+    </aside>
 
     <div class="contenu">
         <!-- récupération -->

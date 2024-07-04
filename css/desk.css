@@ -6,7 +6,7 @@ body {
 }
 
 header {
-    height: 195px;
+    height: 170px;
 }
 
 #banniere {
@@ -71,14 +71,15 @@ header {
     top: 50%;
     right: 3%;
     height: 30px;
-    color: purple;
+    color:  #57155D;
  
 }
 
 /******************fin profil************************************/
 nav {
     width: 100%;
-    background-color: purple;
+    background-color: #57155D;
+    ;
     height: 70px;
     position: relative;
 }
@@ -133,7 +134,7 @@ nav {
     background: #9FF0F7;
     padding: 0px 10px;
     position: absolute;
-    top: 232px;
+    top: 185px;
     border-radius: 10px;
 }
 
@@ -174,7 +175,7 @@ nav {
     width: 370px;
     height: 570px;
     position: absolute;
-    top: 476px;
+    top: 428px;
     margin: 0 0 0 25px;
     border-radius: 10px;
 }
@@ -188,7 +189,7 @@ nav {
     text-align: center;
     background: #9FF0F7;
     position: absolute;
-    top: 232px;
+    top: 185px;
     left: 410px;
     display: flex;
     flex-wrap: wrap;
@@ -218,9 +219,10 @@ footer {
     margin: 18px 0 0 0;
 }
 
-a {
+footer a {
     text-decoration: none;
     margin: 2%;
+    color: white;
 }
 
 .team {
@@ -263,9 +265,6 @@ input[type=checkbox]:checked::after {
 }
 
 /*******************************effet sombre clair***********************/
-/* .dark {
-    color: #fff;
-} */
 
 .btn-dark {
     background-color: #555;
@@ -281,17 +280,12 @@ input[type=checkbox]:checked::after {
     color: #000000;
 }
 .darker #person{
-    color: white;
+    color: #9FF0F7;;
 }
 
 .darker .contenu{
     background-color: #10051D;
     color: black;
-}
-
-.btn-dark {
-    background-color: #555;
-    color: #fff;
 }
 
 .light .item img {
@@ -313,6 +307,6 @@ input[type=checkbox]:checked::after {
 }
 
 .darker footer {
-    background-color: #10051D;
-    color: #fff;
+    background-color: #9FF0F7;
+    color: #000;
 }

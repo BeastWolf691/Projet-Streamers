@@ -230,7 +230,7 @@ footer a {
 }
 
 /*-------------------------bouton sombre clair----------------------------*/
-input[type=checkbox] {
+#switch {
     appearance: none;
     width: 44px;
     height: 12px;
@@ -243,7 +243,7 @@ input[type=checkbox] {
     top: 25px;
 }
 
-input[type=checkbox]::after {
+#switch::after {
     content: '';
     position: absolute;
     top: 50%;
@@ -256,11 +256,11 @@ input[type=checkbox]::after {
     transition: left .2s;
 }
 
-input[type=checkbox]:checked {
+#switch:checked {
     background-color: #9FF0F7;
 }
 
-input[type=checkbox]:checked::after {
+#switch:checked::after {
     left: 70%;
 }
 

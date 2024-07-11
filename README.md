@@ -7,14 +7,16 @@ aller dans php my admin     create database stream
 
 retour dans vscode
 
+aller dans php my admin, 
+-- créer la database "stream"
+
 php bin/doctrine orm:validate-schema
 
 Erreur normale: [ERROR] The database schema is not in sync with the current mapping file.
 
-php bin/doctrine orm:schema-tool:create   si c'est pas vert c'est que tu es daltonien 
+php bin/doctrine orm:schema-tool:create  
 
-aller dans php my admin, 
--- créer la database "stream"
+
 
 copier colle l'entieretée du fichier bdd.sql dans l'onglet sql
 ceci crée 3 données de cartes (modèle)

@@ -6,3 +6,6 @@
     <strong>Design &amp; dev :</strong><a href="" class="team">StreamFish.Dev</a>
 
 </footer>
+</body>
+
+</html>

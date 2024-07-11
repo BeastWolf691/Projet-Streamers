@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="fr">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <style>
         body {
             margin: 0;
@@ -38,7 +38,8 @@
             transition: filter 0.5s;
             cursor: pointer;
             transform: scale(1);
-            margin-top: 20px; margin-bottom: 20px;
+            margin-top: 20px;
+            margin-bottom: 20px;
         }
 
         .slider .list .item img {
@@ -51,7 +52,6 @@
             from {
                 transform: translateX(0);
             }
-
             to {
                 transform: translateX(calc(-1 * (var(--width) + var(--spacing)) * var(--quantity)));
             }
@@ -68,34 +68,37 @@
 </head>
 
 <body>
+    <div class="banniere">
+   
+    </div>
     <script>
-        // Création des éléments dynamiquement
-        const images = ["logo-instagram2.png", "logo-kick2.png", "logo-tiktok2.png", "logo-snap2.png",
-            "logo-twitch2.png", "logo-x2.png", "logo-youtube2.png"
-        ];
-        const carousel = document.createElement('div');
-        carousel.className = 'carousel';
+        $(document).ready(function() {
+            const images = ["logo-instagram2neon.png", "logo-kick2neon.png", "logo-tiktok2neon.png", "logo-snap2neon.png",
+                "logo-twitch2neon.png", "logo-x2neon.png", "logo-youtube2neon.png"
+            ];
 
-        const slider = document.createElement('div');
-        slider.className = 'slider';
-        slider.style.cssText = '--width: 75px; --height: 75px; --quantity: 7; --spacing: 40px;';
+            const $carousel = $('<div>').addClass('carousel');
 
-        const list = document.createElement('div');
-        list.className = 'list';
+            const $slider = $('<div>').addClass('slider').css({
+                '--width': '75px',
+                '--height': '75px',
+                '--quantity': images.length,
+                '--spacing': '40px'
+            });
 
-        images.forEach((src, i) => {
-            const item = document.createElement('div');
-            item.className = 'item';
-            const img = document.createElement('img');
-            img.src = `images/${src}`;
-            item.appendChild(img);
-            list.appendChild(item);
+            const $list = $('<div>').addClass('list');
+
+            $.each(images, function (i, src) {
+                const $item = $('<div>').addClass('item');
+                const $img = $('<img>').attr('src', `images/${src}`);
+                $item.append($img);
+                $list.append($item);
+            });
+
+            $slider.append($list);
+            $carousel.append($slider);
+            $('.banniere').append($carousel);
         });
-
-        slider.appendChild(list);
-        carousel.appendChild(slider);
-        document.body.appendChild(carousel);
     </script>
 </body>
-
 </html>

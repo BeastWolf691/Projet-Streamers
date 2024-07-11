@@ -68,13 +68,17 @@
 </head>
 
 <body>
-    <div class="banniere">
-   
-    </div>
+    <div class="banniere"></div>
     <script>
         $(document).ready(function() {
-            const images = ["logo-instagram2neon.png", "logo-kick2neon.png", "logo-tiktok2neon.png", "logo-snap2neon.png",
-                "logo-twitch2neon.png", "logo-x2neon.png", "logo-youtube2neon.png"
+            const images = [
+                { src: "logo-instagram2neon.png", link: "https://www.instagram.com" },
+                { src: "logo-kick2neon.png", link: "https://www.kick.com" },
+                { src: "logo-tiktok2neon.png", link: "https://www.tiktok.com" },
+                { src: "logo-snap2neon.png", link: "https://www.snapchat.com" },
+                { src: "logo-twitch2neon.png", link: "https://www.twitch.tv" },
+                { src: "logo-x2neon.png", link: "https://www.twitter.com" },
+                { src: "logo-youtube2neon.png", link: "https://www.youtube.com" }
             ];
 
             const $carousel = $('<div>').addClass('carousel');
@@ -88,10 +92,12 @@
 
             const $list = $('<div>').addClass('list');
 
-            $.each(images, function (i, src) {
+            $.each(images, function (i, image) {
                 const $item = $('<div>').addClass('item');
-                const $img = $('<img>').attr('src', `images/${src}`);
-                $item.append($img);
+                const $link = $('<a>').attr('href', image.link).attr('target', '_blank');
+                const $img = $('<img>').attr('src', `images/${image.src}`);
+                $link.append($img);
+                $item.append($link);
                 $list.append($item);
             });
 

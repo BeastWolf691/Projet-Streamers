@@ -20,7 +20,7 @@ class Users
     private string  $lastName;
 
     #[ORM\Column()]
-    private string  $username; //pseudo
+    private string  $nickname; //pseudo
 
     #[ORM\Column()]
     private string  $password;
@@ -49,7 +49,7 @@ class Users
     public function __construct(
         string $name,
         string $lastName,
-        string $username,
+        string $nickname,
         string $mail,
         DateTime $birthday,
         DateTime $dateToSign,
@@ -59,7 +59,7 @@ class Users
     ) {
         $this->name = $name;
         $this->lastName = $lastName;
-        $this->username = $username;
+        $this->nickname = $nickname;
         $this->mail = $mail;
         $this->birthday = $birthday;
         $this->dateToSign = $dateToSign;

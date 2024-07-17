@@ -15,11 +15,11 @@ class Cards
     private int $id;
 
     #[ORM\Column()]
-    private string $pseudo;
+    private string $nickname;
     #[ORM\Column()]
-    private string $MainCat;
+    private string $mainCat;
     #[ORM\Column()]
-    private string $Categories;
+    private string $categories;
     #[ORM\Column()]
     private string $picture;
     #[ORM\Column()]
@@ -27,19 +27,19 @@ class Cards
     #[ORM\Column()]
     private string $language;
     #[ORM\Column()]
-    private string $PYoutube;
+    private string $pYoutube;
     #[ORM\Column()]
-    private string $Ptwitch;
+    private string $ptwitch;
     #[ORM\Column()]
-    private string $PKick;
+    private string $pKick;
     #[ORM\Column()]
-    private string $PTwitter;
+    private string $pTwitter;
     #[ORM\Column()]
-    private string $PInstagram;
+    private string $pInstagram;
     #[ORM\Column()]
-    private string $PTiktok;
+    private string $pTiktok;
     #[ORM\Column()]
-    private string $PSnapchat;
+    private string $pSnapchat;
     #[ORM\Column()]
     private string $videoOne;
     #[ORM\Column()]
@@ -57,7 +57,7 @@ class Cards
 
     // 1 carte peu avoir plusieurs categories 
     #[ORM\OneToMany(targetEntity: Categories::class, mappedBy: 'cards')]
-    private Collection $categories;
+    private Collection $Categories;
 
     // plujsieurs cartes peuvent avoir plusieurs categories ??????
     // #[ORM\ManyToMany(targetEntity : Services ::class, inversedBy : 'hotelList')]
@@ -66,8 +66,8 @@ class Cards
 
     // Constructor
     public function __construct(
-        string $pseudo,
-        string $MainCat,
+        string $nickname,
+        string $mainCat,
         string $Categories,
         string $picture,
         string $name,
@@ -85,19 +85,19 @@ class Cards
         string $factTwo,
         string $factThree
     ) {
-        $this->pseudo = $pseudo;
-        $this->MainCat = $MainCat;
-        $this->Categories = $Categories;
+        $this->nickname = $nickname;
+        $this->mainCat = $mainCat;
+        $this->categories = $Categories;
         $this->picture = $picture;
         $this->name = $name;
         $this->language = $language;
-        $this->PYoutube = $PYoutube;
-        $this->Ptwitch = $Ptwitch;
-        $this->PKick = $PKick;
-        $this->PTwitter = $PTwitter;
-        $this->PInstagram = $PInstagram;
-        $this->PTiktok = $PTiktok;
-        $this->PSnapchat = $PSnapchat;
+        $this->pYoutube = $PYoutube;
+        $this->ptwitch = $Ptwitch;
+        $this->pKick = $PKick;
+        $this->pTwitter = $PTwitter;
+        $this->pInstagram = $PInstagram;
+        $this->pTiktok = $PTiktok;
+        $this->pSnapchat = $PSnapchat;
 
         $this->videoOne = $videoOne;
         $this->videoTwo = $videoTwo;

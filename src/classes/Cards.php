@@ -19,7 +19,7 @@ class Cards
     #[ORM\Column()]
     private string $mainCat;
     #[ORM\Column()]
-    private string $categories;
+    private string $thematic;
     #[ORM\Column()]
     private string $picture;
     #[ORM\Column()]
@@ -57,7 +57,7 @@ class Cards
 
     // 1 carte peu avoir plusieurs categories 
     #[ORM\OneToMany(targetEntity: Categories::class, mappedBy: 'cards')]
-    private Collection $Categories;
+    private Collection $Thematic;
 
     // plujsieurs cartes peuvent avoir plusieurs categories ??????
     // #[ORM\ManyToMany(targetEntity : Services ::class, inversedBy : 'hotelList')]
@@ -68,7 +68,7 @@ class Cards
     public function __construct(
         string $nickname,
         string $mainCat,
-        string $Categories,
+        string $thematic,
         string $picture,
         string $name,
         string $language,
@@ -87,7 +87,7 @@ class Cards
     ) {
         $this->nickname = $nickname;
         $this->mainCat = $mainCat;
-        $this->categories = $Categories;
+        $this->thematic = $thematic;
         $this->picture = $picture;
         $this->name = $name;
         $this->language = $language;

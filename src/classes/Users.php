@@ -36,7 +36,7 @@ class Users
 
     // 1 carte peu avoir plusieurs categories 
     #[ORM\OneToMany(targetEntity: Categories::class, mappedBy: 'Users')]
-    private Collection $categories;
+    private Collection $thematic;
 
     // 1 carte peu avoir plusieurs categories 
     #[ORM\OneToMany(targetEntity: Cards::class, mappedBy: 'Users')]
@@ -53,7 +53,7 @@ class Users
         string $mail,
         DateTime $birthday,
         DateTime $dateToSign,
-        Collection $categories,
+        Collection $thematic,
         string $deck,
         Collection $cards
     ) {
@@ -63,7 +63,7 @@ class Users
         $this->mail = $mail;
         $this->birthday = $birthday;
         $this->dateToSign = $dateToSign;
-        $this->categories = $categories;
+        $this->thematic = $thematic;
         $this->deck = $deck;
         $this->cards = $cards;
     }

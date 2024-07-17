@@ -70,7 +70,7 @@ include 'bdd.php';
     <div class="contenu">
         <!-- récupération -->
         <?php
-        $sql =  'SELECT nickname, mainCat, categories, picture, name, language, pYoutube,
+        $sql =  'SELECT nickname, mainCat, thematic, picture, name, language, pYoutube,
             ptwitch, pKick, pTwitter, pInstagram, pTiktok, videoOne, videoTwo, factOne, factTwo, factThree FROM cards ';
         $req = $pdo->query($sql);
 

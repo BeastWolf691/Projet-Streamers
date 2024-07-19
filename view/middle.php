@@ -2,10 +2,11 @@
 <?php
 include 'bdd.php';
 ?>
-<link rel="stylesheet" media="screen and (min-width: 981px)" href="../css/desk.css" />
+<link rel="stylesheet" media="screen and (min-width: 981px)" href="../css/desk/index.css" />
 
 <div id="middle">
     <aside class="filter-bar">
+        <div class="test"></div>
         <div class="filter-item">
             <label for="alphabet">Tranche alphabet</label>
             <select id="alphabet" name="alphabet">
@@ -63,11 +64,11 @@ include 'bdd.php';
         </div>
     </aside>
     
-    <aside class="resultat">
+    <aside class="result">
         Résultat + infos
     </aside>
 
-    <div class="contenu">
+    <div class="content">
         <!-- récupération -->
         <?php
         $sql =  'SELECT pseudo, MainCat, Categories, picture, name, language, PYoutube,

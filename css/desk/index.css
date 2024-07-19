@@ -9,12 +9,13 @@ header {
     height: 170px;
 }
 
-#banniere {
+#banner {
     align-content: center;
     position: relative;
 }
 
-.wrapper {
+@import url('carousel.css');
+/* .wrapper {
     width: 320px;
     margin: 25px auto 5px;
     position: relative;
@@ -62,7 +63,7 @@ header {
     height: 70px;
     cursor: pointer;
     
- }
+ } */
 
 
 /****************************profil************************************/
@@ -107,6 +108,14 @@ nav {
     display: flex;
 }
 
+.neonone {
+    text-shadow: 0px 8px 8px rgba(63,224,237,0.8);
+}
+
+.neontwo {
+    text-shadow: 0px 8px 8px rgba(236,96,203,0.8);
+}
+
 #menu li {
     display: inline-block;
     margin: 0 auto;
@@ -132,45 +141,35 @@ nav {
     height: 220px;
     width: 350px;
     background: #9FF0F7;
-    padding: 0px 10px;
+    padding: 10px 5px 0 15px;
     position: absolute;
     top: 185px;
+    display: flex;
+    flex-direction: column;
     border-radius: 10px;
 }
 
+.test {
+    width: 13px;
+    height: 100%;
+    background-color: rgba(255, 0, 0, 0.299);
+    position: absolute;
+    right: 0;
+}
+
 .filter-item {
-    margin: 15px 2px;
+    display: flex;
+    justify-content: space-between;
+    margin: 8px;
 }
-#category{
-    margin: 0 68px 0 0;
-}
-#speak {
-    margin: 0 54px 0 0;
-}
-#type, #names, #date, #languages, .btn-primary, #alphabet {
+
+#type, #names, #date, #languages, #alphabet,.btn-primary {
     border-radius: 25px;
-}
-#alphabet{
-    padding: 0px 79px;
-}
-#type {
-    padding: 0px 64px;
-}
-#names {
-    padding: 0 97px;
-}
-#date {
-    padding: 0 59px;
-}
-#languages {
-    padding: 0 68px;
-}
-.btn-primary {
-    width: 326px;
+    width: 210px;
 }
 
 /*********************affichage streameurs*******************/
-.resultat {
+.result {
     background: #57155D;
     width: 370px;
     height: 570px;
@@ -180,12 +179,16 @@ nav {
     border-radius: 10px;
 }
 
+.btn-primary {
+    width: 340px;
+}
+
 /*********************contenu streameurs*******************/
 #middle {
     height: 132vh;
 }
 
-.contenu {
+.content {
     text-align: center;
     background: #9FF0F7;
     position: absolute;
@@ -283,7 +286,7 @@ footer a {
     color: #9FF0F7;;
 }
 
-.darker .contenu{
+.darker .content{
     background-color: #10051D;
     color: black;
 }

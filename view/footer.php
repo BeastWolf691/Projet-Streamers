@@ -1,4 +1,4 @@
-<link rel="stylesheet" media="screen and (min-width: 981px)" href="../css/desk.css" />
+<link rel="stylesheet" media="screen and (min-width: 981px)" href="../css/desk/index.css" />
 
 <footer>
     <a href="./mentions.php">Mentions légales</a>

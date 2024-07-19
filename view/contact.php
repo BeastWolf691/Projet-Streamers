@@ -1,3 +1,4 @@
+
 <?php
 include 'header.php';
 ?>
@@ -10,7 +11,7 @@ include 'header.php';
         <input type="text" name="name" id="name" required placeholder="Mail"><br>
 
         <label for="category">Objet de la demande</label><br>
-        <select class="form-select" style="width: 98%;">
+        <select id="category" class="form-select" style="width: 98%;">
             <option value="2">Problème de connexion</option>
             <option value="3">Deck invalide</option>
             <option value="4">Autres</option>

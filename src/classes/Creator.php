@@ -30,7 +30,7 @@ class Creator{
 
     //1 creator peut avoirplusieurs categories 
     #[ORM\OneToMany(targetEntity : Categories::class, mappedBy : 'creator')]
-    private Collection $categories;        
+    private Collection $thematic;        
 
      //1 createur peut avoir plusieurs cartes
     // #[ORM\OneToMany(targetEntity : Cards::class, mappedBy : 'creator')]
@@ -41,13 +41,13 @@ class Creator{
 
 
     // Constructor
-    public function __construct(string $name,string $lastName,string $username,string $mail,DateTime $birthday,Collection $categories,string $cards) {
+    public function __construct(string $name,string $lastName,string $username,string $mail,DateTime $birthday,Collection $thematic,string $cards) {
         $this->name = $name;
         $this->lastName = $lastName;
         $this->username = $username;
         $this->mail = $mail;
         $this->birthday = $birthday;
-        $this->categories = $categories;
+        $this->thematic = $thematic;
         $this->cards = $cards;
     }
 }

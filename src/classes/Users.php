@@ -20,7 +20,7 @@ class Users
     private string  $lastName;
 
     #[ORM\Column()]
-    private string  $username; //pseudo
+    private string  $nickname; //pseudo
 
     #[ORM\Column()]
     private string  $password;
@@ -36,7 +36,7 @@ class Users
 
     // 1 carte peu avoir plusieurs categories 
     #[ORM\OneToMany(targetEntity: Categories::class, mappedBy: 'Users')]
-    private Collection $categories;
+    private Collection $thematic;
 
     // 1 carte peu avoir plusieurs categories 
     #[ORM\OneToMany(targetEntity: Cards::class, mappedBy: 'Users')]
@@ -49,21 +49,21 @@ class Users
     public function __construct(
         string $name,
         string $lastName,
-        string $username,
+        string $nickname,
         string $mail,
         DateTime $birthday,
         DateTime $dateToSign,
-        Collection $categories,
+        Collection $thematic,
         string $deck,
         Collection $cards
     ) {
         $this->name = $name;
         $this->lastName = $lastName;
-        $this->username = $username;
+        $this->nickname = $nickname;
         $this->mail = $mail;
         $this->birthday = $birthday;
         $this->dateToSign = $dateToSign;
-        $this->categories = $categories;
+        $this->thematic = $thematic;
         $this->deck = $deck;
         $this->cards = $cards;
     }

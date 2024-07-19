@@ -22,8 +22,10 @@ class Categories{
 
     
     // Constructor
-    public function __construct(string $name) {
+    public function __construct(string $name,string $icon) {
         $this->name = $name;
+        $this->icon = $icon;
+
      
       
     }

@@ -1,18 +1,16 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <style>
-        body {
-            margin: 0;
-            background-color: #e5e5e5;
-        }
+
 
         .carousel {
-            width: min(400px, 50vw);
+            width: min(600px, 50vw);
             margin: 15px auto;
         }
 
@@ -26,15 +24,16 @@
 
         .slider .list {
             display: flex;
-            width: calc(100% + var(--spacing));
+            justify-content: space-between;
+            width: calc(110% + var(--spacing));
             position: relative;
-            animation: autoRun 15s linear infinite;
+            animation: autoRun 24s linear infinite;
+            padding-left: 100px;
         }
 
         .slider .list .item {
             flex: 0 0 var(--width);
             height: var(--height);
-            margin-right: var(--spacing);
             transition: filter 0.5s;
             cursor: pointer;
             transform: scale(1);
@@ -48,12 +47,14 @@
             object-fit: contain;
         }
 
+
         @keyframes autoRun {
-            from {
-                transform: translateX(0);
-            }
-            to {
+            0% {
                 transform: translateX(calc(-1 * (var(--width) + var(--spacing)) * var(--quantity)));
+            }
+
+            100% {
+                transform: translateX(0);
             }
         }
 
@@ -70,15 +71,35 @@
 <body>
     <div class="banniere"></div>
     <script>
-        $(document).ready(function() {
-            const images = [
-                { src: "logo-instagram2neon.png", link: "https://www.instagram.com" },
-                { src: "logo-kick2neon.png", link: "https://www.kick.com" },
-                { src: "logo-tiktok2neon.png", link: "https://www.tiktok.com" },
-                { src: "logo-snap2neon.png", link: "https://www.snapchat.com" },
-                { src: "logo-twitch2neon.png", link: "https://www.twitch.tv" },
-                { src: "logo-x2neon.png", link: "https://www.twitter.com" },
-                { src: "logo-youtube2neon.png", link: "https://www.youtube.com" }
+        $(document).ready(function () {
+            const images = [{
+                    src: "logo-instagram2neon.png",
+                    link: "https://www.instagram.com"
+                },
+                {
+                    src: "logo-kick2neon.png",
+                    link: "https://www.kick.com"
+                },
+                {
+                    src: "logo-tiktok2neon.png",
+                    link: "https://www.tiktok.com"
+                },
+                {
+                    src: "logo-snap2neon.png",
+                    link: "https://www.snapchat.com"
+                },
+                {
+                    src: "logo-twitch2neon.png",
+                    link: "https://www.twitch.tv"
+                },
+                {
+                    src: "logo-x2neon.png",
+                    link: "https://www.twitter.com"
+                },
+                {
+                    src: "logo-youtube2neon.png",
+                    link: "https://www.youtube.com"
+                }
             ];
 
             const $carousel = $('<div>').addClass('carousel');
@@ -107,4 +128,5 @@
         });
     </script>
 </body>
+
 </html>

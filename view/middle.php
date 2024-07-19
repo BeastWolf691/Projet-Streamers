@@ -71,14 +71,14 @@ include 'bdd.php';
     <div class="content">
         <!-- récupération -->
         <?php
-        $sql =  'SELECT pseudo, MainCat, Categories, picture, name, language, PYoutube,
-            Ptwitch, PKick, PTwitter, PInstagram, PTiktok, videoOne, videoTwo, factOne, factTwo, factThree FROM cards ';
+        $sql =  'SELECT nickname, mainCat, thematic, picture, name, language, pYoutube,
+            ptwitch, pKick, pTwitter, pInstagram, pTiktok, videoOne, videoTwo, factOne, factTwo, factThree FROM cards ';
         $req = $pdo->query($sql);
 
 
         while ($d = $req->fetch(PDO::FETCH_OBJ)) { // pour chaque ligne dans la BDD, on crée une carte
 
-            $mainCat = $d->MainCat;
+            $mainCat = $d->mainCat;
             switch ($mainCat) {
                 case 'Gaming':
                     $cssClass = 'cat_video';
@@ -97,22 +97,22 @@ include 'bdd.php';
 
         ?>
             <div class="card <?php echo $cssClass; ?>">
-                <p> <?php echo $d->pseudo; ?></p>
-                <p> <?php echo $d->MainCat; ?></p>
-                <p> <?php echo $d->Categories; ?></p>
+                <p> <?php echo $d->nickname; ?></p>
+                <p> <?php echo $d->mainCat; ?></p>
+                <p> <?php echo $d->categories; ?></p>
                 <p> <?php echo $d->picture; ?> </p>
                 <p> <?php // echo $d->name; 
                     ?> </p>
                 <p> <?php echo $d->language; ?> </p>
-                <p> <?php echo $d->PYoutube; ?> </p>
-                <p> <?php echo $d->Ptwitch; ?> </p>
-                <p> <?php //echo $d->PKick; 
+                <p> <?php echo $d->pYoutube; ?> </p>
+                <p> <?php echo $d->ptwitch; ?> </p>
+                <p> <?php //echo $d->pKick; 
                     ?> </p>
-                <p> <?php //echo $d->PTwitter; 
+                <p> <?php //echo $d->pTwitter; 
                     ?> </p>
-                <p> <?php //echo $d->PInstagram; 
+                <p> <?php //echo $d->pInstagram; 
                     ?> </p>
-                <p> <?php //echo $d->PTiktok; 
+                <p> <?php //echo $d->pTiktok; 
                     ?> </p>
                 <p> <?php //echo $d->videoOne; 
                     ?> </p>

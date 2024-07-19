@@ -69,8 +69,8 @@ include 'bdd.php';
     </aside>
 
     <div class="content">
-        <!-- récupération -->
-        <?php
+<!-- récupération -->
+<?php
         $sql =  'SELECT nickname, mainCat, thematic, picture, name, language, pYoutube,
             ptwitch, pKick, pTwitter, pInstagram, pTiktok, videoOne, videoTwo, factOne, factTwo, factThree FROM cards ';
         $req = $pdo->query($sql);

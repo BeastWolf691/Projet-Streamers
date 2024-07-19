@@ -144,7 +144,7 @@ nav {
     background: #9FF0F7;
     padding: 10px 5px 0 15px;
     position: absolute;
-    top: 185px;
+    top: 195px;
     display: flex;
     flex-direction: column;
     border-radius: 10px;
@@ -175,7 +175,7 @@ nav {
     width: 370px;
     height: 570px;
     position: absolute;
-    top: 428px;
+    top: 438px;
     margin: 0 0 0 25px;
     border-radius: 10px;
 }
@@ -193,7 +193,7 @@ nav {
     text-align: center;
     background: #9FF0F7;
     position: absolute;
-    top: 185px;
+    top: 195px;
     left: 410px;
     display: flex;
     flex-wrap: wrap;

@@ -99,7 +99,7 @@ include 'bdd.php';
             <div class="card <?php echo $cssClass; ?>">
                 <p> <?php echo $d->nickname; ?></p>
                 <p> <?php echo $d->mainCat; ?></p>
-                <p> <?php echo $d->categories; ?></p>
+                <p> <?php echo $d->thematic; ?></p>
                 <p> <?php echo $d->picture; ?> </p>
                 <p> <?php // echo $d->name; 
                     ?> </p>

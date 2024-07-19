@@ -15,6 +15,7 @@ include 'bdd.php';
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <script src="../project.js"></script>
     <link rel="stylesheet" media="screen and (min-width: 981px)" href="../css/desk/index.css" />
+    <!-- <link rel="stylesheet" media="screen and (min-width: 981px)" href="../css/desk/carousel.css" /> -->
     <link rel="stylesheet" media="screen and (max-width: 980px)" href="../css/tablet.css" />
     <link rel="stylesheet" media="screen and (max-width: 600px)" href="../css/mobil.css" />
     <link rel="stylesheet" media="screen and (min-width: 900px)" href="../css/menu_profil.css" />

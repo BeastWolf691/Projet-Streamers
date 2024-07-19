@@ -19,10 +19,10 @@ $(document).ready(function () {
     const $carousel = $('<div>').addClass('carousel');
 
     const $slider = $('<div>').addClass('slider').css({
-        // '--width': '75px',
-        // '--height': '75px',
-        // '--quantity': images.length,
-        // '--spacing': '40px'
+        '--width': '75px',
+        '--height': '75px',
+        '--quantity': images.length,
+        '--spacing': '40px'
     });
 
     const $list = $('<div>').addClass('list');

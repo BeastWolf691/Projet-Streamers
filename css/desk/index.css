@@ -1,3 +1,4 @@
+@import url('./carousel.css');
 body {
     margin: 0;
     background: #10051d;
@@ -14,7 +15,7 @@ header {
     position: relative;
 }
 
-@import url('carousel.css');
+
 /* .wrapper {
     width: 320px;
     margin: 25px auto 5px;

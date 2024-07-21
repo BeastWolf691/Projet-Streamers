@@ -34,11 +34,11 @@ class Users
     #[ORM\Column()]
     private   DateTime $dateToSign;
 
-    // 1 carte peu avoir plusieurs categories 
+    // 1 carte peut avoir plusieurs catégories 
     #[ORM\OneToMany(targetEntity: Categories::class, mappedBy: 'Users')]
     private Collection $thematic;
 
-    // 1 carte peu avoir plusieurs categories 
+    // 1 carte peut avoir plusieurs catégories 
     #[ORM\OneToMany(targetEntity: Cards::class, mappedBy: 'Users')]
     private Collection $cards;
 

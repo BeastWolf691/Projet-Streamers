@@ -1,6 +1,6 @@
 .carousel {
     width: min(400px, 50vw);
-    margin: 15px auto;
+    margin: 0px auto;
 }
 
 .slider {
@@ -15,7 +15,7 @@
     display: flex;
     width: calc(100% + var(--spacing));
     position: relative;
-    animation: autoRun 15s linear infinite;
+    animation: autoRun 15s linear infinite reverse;
 }
 
 .slider .list .item {

@@ -51,15 +51,15 @@ class Cards
     #[ORM\Column()]
     private string $factThree;
 
-    // plusieurs cartes peuvent concernées 1 createur
+    // plusieurs cartes peuvent concerner 1 créateur
     // #[ORM\ManyToOne(targetEntity : Creator::class, inversedBy: 'cards')]
     // private Categories $creator;
 
-    // 1 carte peu avoir plusieurs categories 
+    // 1 carte peut avoir plusieurs catégories 
     #[ORM\OneToMany(targetEntity: Categories::class, mappedBy: 'cards')]
     private Collection $Thematic;
 
-    // plujsieurs cartes peuvent avoir plusieurs categories ??????
+    // plusieurs cartes peuvent avoir plusieurs catégories ??
     // #[ORM\ManyToMany(targetEntity : Services ::class, inversedBy : 'hotelList')]
     // #[JoinTable(name: 'service_hotel')]
 

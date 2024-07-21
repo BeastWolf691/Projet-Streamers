@@ -29,7 +29,7 @@ class Cards
     #[ORM\Column()]
     private string $pYoutube;
     #[ORM\Column()]
-    private string $ptwitch;
+    private string $pTwitch;
     #[ORM\Column()]
     private string $pKick;
     #[ORM\Column()]
@@ -51,15 +51,15 @@ class Cards
     #[ORM\Column()]
     private string $factThree;
 
-    // plusieurs cartes peuvent concernées 1 createur
+    // plusieurs cartes peuvent concerner 1 créateur
     // #[ORM\ManyToOne(targetEntity : Creator::class, inversedBy: 'cards')]
     // private Categories $creator;
 
-    // 1 carte peu avoir plusieurs categories 
+    // 1 carte peut avoir plusieurs catégories 
     #[ORM\OneToMany(targetEntity: Categories::class, mappedBy: 'cards')]
     private Collection $Thematic;
 
-    // plujsieurs cartes peuvent avoir plusieurs categories ??????
+    // plusieurs cartes peuvent avoir plusieurs catégories ??
     // #[ORM\ManyToMany(targetEntity : Services ::class, inversedBy : 'hotelList')]
     // #[JoinTable(name: 'service_hotel')]
 
@@ -72,13 +72,13 @@ class Cards
         string $picture,
         string $name,
         string $language,
-        string $PYoutube,
-        string $Ptwitch,
-        string $PKick,
-        string $PTwitter,
-        string $PInstagram,
-        string $PTiktok,
-        string $PSnapchat,
+        string $pYoutube,
+        string $pTwitch,
+        string $pKick,
+        string $pTwitter,
+        string $pInstagram,
+        string $pTiktok,
+        string $pSnapchat,
         string $videoOne,
         string $videoTwo,
         string $factOne,
@@ -91,13 +91,13 @@ class Cards
         $this->picture = $picture;
         $this->name = $name;
         $this->language = $language;
-        $this->pYoutube = $PYoutube;
-        $this->ptwitch = $Ptwitch;
-        $this->pKick = $PKick;
-        $this->pTwitter = $PTwitter;
-        $this->pInstagram = $PInstagram;
-        $this->pTiktok = $PTiktok;
-        $this->pSnapchat = $PSnapchat;
+        $this->pYoutube = $pYoutube;
+        $this->pTwitch = $pTwitch;
+        $this->pKick = $pKick;
+        $this->pTwitter = $pTwitter;
+        $this->pInstagram = $pInstagram;
+        $this->pTiktok = $pTiktok;
+        $this->pSnapchat = $pSnapchat;
 
         $this->videoOne = $videoOne;
         $this->videoTwo = $videoTwo;

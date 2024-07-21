@@ -29,7 +29,7 @@ class Cards
     #[ORM\Column()]
     private string $pYoutube;
     #[ORM\Column()]
-    private string $ptwitch;
+    private string $pTwitch;
     #[ORM\Column()]
     private string $pKick;
     #[ORM\Column()]
@@ -72,13 +72,13 @@ class Cards
         string $picture,
         string $name,
         string $language,
-        string $PYoutube,
-        string $Ptwitch,
-        string $PKick,
-        string $PTwitter,
-        string $PInstagram,
-        string $PTiktok,
-        string $PSnapchat,
+        string $pYoutube,
+        string $pTwitch,
+        string $pKick,
+        string $pTwitter,
+        string $pInstagram,
+        string $pTiktok,
+        string $pSnapchat,
         string $videoOne,
         string $videoTwo,
         string $factOne,
@@ -91,13 +91,13 @@ class Cards
         $this->picture = $picture;
         $this->name = $name;
         $this->language = $language;
-        $this->pYoutube = $PYoutube;
-        $this->ptwitch = $Ptwitch;
-        $this->pKick = $PKick;
-        $this->pTwitter = $PTwitter;
-        $this->pInstagram = $PInstagram;
-        $this->pTiktok = $PTiktok;
-        $this->pSnapchat = $PSnapchat;
+        $this->pYoutube = $pYoutube;
+        $this->pTwitch = $pTwitch;
+        $this->pKick = $pKick;
+        $this->pTwitter = $pTwitter;
+        $this->pInstagram = $pInstagram;
+        $this->pTiktok = $pTiktok;
+        $this->pSnapchat = $pSnapchat;
 
         $this->videoOne = $videoOne;
         $this->videoTwo = $videoTwo;

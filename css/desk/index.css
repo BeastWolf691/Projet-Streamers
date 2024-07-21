@@ -1,3 +1,4 @@
+@import url('./carousel.css');
 body {
     margin: 0;
     background: #10051d;
@@ -14,7 +15,7 @@ header {
     position: relative;
 }
 
-@import url('carousel.css');
+
 /* .wrapper {
     width: 320px;
     margin: 25px auto 5px;
@@ -143,7 +144,7 @@ nav {
     background: #9FF0F7;
     padding: 10px 5px 0 15px;
     position: absolute;
-    top: 185px;
+    top: 195px;
     display: flex;
     flex-direction: column;
     border-radius: 10px;
@@ -174,7 +175,7 @@ nav {
     width: 370px;
     height: 570px;
     position: absolute;
-    top: 428px;
+    top: 438px;
     margin: 0 0 0 25px;
     border-radius: 10px;
 }
@@ -192,7 +193,7 @@ nav {
     text-align: center;
     background: #9FF0F7;
     position: absolute;
-    top: 185px;
+    top: 195px;
     left: 410px;
     display: flex;
     flex-wrap: wrap;

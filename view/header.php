@@ -24,6 +24,7 @@ include 'bdd.php';
 
 <body>
 
+
     <header>
 
         <div id="banner">

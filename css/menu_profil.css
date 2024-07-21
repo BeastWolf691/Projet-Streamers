@@ -9,6 +9,7 @@
     transition: right 0.5s ease;
     overflow: hidden; /* Pour empêcher le contenu de déborder */
 }
+
 #person {
   position: absolute;
   right: 2%;

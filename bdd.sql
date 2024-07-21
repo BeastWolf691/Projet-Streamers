@@ -9,3 +9,4 @@ INSERT INTO cards (nickname, mainCat, thematic, picture, name, language, pYoutub
 ('Streamer6', 'Voyages', 'Tourisme', 'picture6.jpg', 'Nom6', 'Portugais', 'youtube.com/streamer6', 'twitch.tv/streamer6', 'kick.com/streamer6', 'twitter.com/streamer6', 'instagram.com/streamer6', 'tiktok.com/streamer6', 'video6_1.mp4', 'video6_2.mp4', 'Fait intéressant 1', 'Fait intéressant 2', 'Fait intéressant 3'),
 ('Streamer7', 'Beauté', 'Mode', 'picture7.jpg', 'Nom7', 'Français', 'youtube.com/streamer7', 'twitch.tv/streamer7', 'kick.com/streamer7', 'twitter.com/streamer7', 'instagram.com/streamer7', 'tiktok.com/streamer7', 'video7_1.mp4', 'video7_2.mp4', 'Fait intéressant 1', 'Fait intéressant 2', 'Fait intéressant 3');
 
+

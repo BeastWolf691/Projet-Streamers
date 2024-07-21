@@ -4,7 +4,6 @@ $(document).ready(function () {
     const menu = $("#menu-person");
 
 
-
     //Caroussel
     const images = [
         { src: "./logo-instagram2neon.png", link: "https://www.instagram.com" },

@@ -8,6 +8,18 @@ include 'bdd.php';
 <div id="middle">
     <aside class="filter-bar">
         <div class="test"></div>
+
+        <div class="filter-item">
+            <label id="category" for="type">Catégories</label>
+            <select id="type" name="type">
+                <option value=""></option>
+                <option value="sport">sport</option>
+                <option value="cuisine">cuisine</option>
+                <option value="jeux videos">jeux vidéos</option>
+                <option value="urbex">urbex</option>
+            </select>
+        </div>
+
         <div class="filter-item">
             <label for="alphabet">Tranche alphabet</label>
             <select id="alphabet" name="alphabet">
@@ -20,16 +32,7 @@ include 'bdd.php';
             </select>
         </div>
 
-        <div class="filter-item">
-            <label id="category" for="type">Genre</label>
-            <select id="type" name="type">
-                <option value=""></option>
-                <option value="sport">sport</option>
-                <option value="cuisine">cuisine</option>
-                <option value="jeux videos">jeux vidéos</option>
-                <option value="urbex">urbex</option>
-            </select>
-        </div>
+
 
         <div class="filter-item">
             <label for="names">Streamers/euses&nbsp;</label>

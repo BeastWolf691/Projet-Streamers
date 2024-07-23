@@ -1,19 +1,32 @@
 <?php
 include 'header.php';
+
+if (!empty($_POST)) {
+        // $nickname = $_POST['nickname'];
+        // $mail = $_POST['mail'];
+        // $subject = $_POST['subject'];
+        // $commentaire = $_POST['feedback'];
+
+        $req = $pdo->prepare("INSERT INTO contact SET nickname=?,mail=?,subject=?,feedback=?");
+        $req->execute([$_POST['nickname'], $_POST['mail'],$_POST['subject'], $_POST['feedback']]);
+        echo "<div class=\"alert alert-success\" role=\"alert\">Ajout réussie</div>";
+        sleep(1);
+        header('location:index.php');  
+     }
 ?>
 <div class="form-container">
-    <form>
-        <label for="username">Pseudo</label><br>
-        <input type="text" name="username" id="username" required placeholder="Pseudo"><br>
+    <form action="" method="post">
+        <label for="nickname">Pseudo</label><br>
+        <input type="text" name="nickname" id="nickname" required placeholder="Pseudo"><br>
 
-        <label for="username">Mail</label><br>
-        <input type="text" name="name" id="name" required placeholder="Mail"><br>
+        <label for="mail">Mail</label><br>
+        <input type="mail" name="mail" id="mail" required placeholder="Mail"><br>
 
-        <label for="category">Objet de la demande</label><br>
-        <select id="category" class="form-select" style="width: 98%;">
-            <option value="2">Problème de connexion</option>
-            <option value="3">Deck invalide</option>
-            <option value="4">Autres</option>
+        <label for="subject">Objet de la demande</label><br>
+        <select id="subject" name="subject" class="form-select" style="width: 98%;" required>
+            <option value="problem">Problème de connexion</option>
+            <option value="deck">Deck invalide</option>
+            <option value="other">Autres</option>
         </select><br>
 
         <label for="feedback">Commentaire </label><br>
@@ -26,3 +39,4 @@ include 'header.php';
 <?php
 include 'footer.php';
 ?>
+

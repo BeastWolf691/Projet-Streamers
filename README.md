@@ -67,4 +67,6 @@ pour ajouter un changement de couleur il faut ajouter ces lignes dans ici que j'
 let truk = document.querySelector('.filter-bar')
  truk.classList.toggle('dark')
 
+23.07
+Création de la classe/table contact,   il faut donc refaire la base de données
 

@@ -70,3 +70,10 @@ let truk = document.querySelector('.filter-bar')
 23.07
 Création de la classe/table contact,   il faut donc refaire la base de données
 
+Pour ne pas avoir une BDD vide et un middle vierge
+
+Copier coller bdd.sql
+
+Aller sur inscription et remplir le formulaire ( on ne peut pas se connecter sans être inscrit)
+
+

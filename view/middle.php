@@ -97,10 +97,10 @@ include 'bdd.php';
                     $cssClass = '';
                     break;
             }
-            $cardInfo = strtolower($d->nickname . ' ' . $d->mainCat . ' ' . $d->thematic . ' ' . $d->language);
+            $mainCat = strtolower($d->nickname . ' ' . $d->mainCat . ' ' . $d->thematic . ' ' . $d->language);
 
         ?>
-            <div class="card <?php echo $cssClass; ?>" data-info="<?php echo $cardInfo; ?>">
+            <div class="card <?php echo $cssClass; ?>" data-info="<?php echo $mainCat; ?>">
                 <p> <?php echo $d->nickname; ?></p>
                 <p> <?php echo $d->mainCat; ?></p>
                 <p> <?php echo $d->thematic; ?></p>

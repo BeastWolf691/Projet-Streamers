@@ -62,8 +62,8 @@ $(document).ready(function () {
     $('#search-input').on('input', function() {
         let searchTerm = $(this).val().toLowerCase();
         $('.card').each(function() {
-            let cardInfo = $(this).data('info');
-            if (cardInfo.includes(searchTerm)) {
+            let mainCat = $(this).data('info');
+            if (mainCat.includes(searchTerm)) {
                 $(this).show();
             } else {
                 $(this).hide();

@@ -74,8 +74,8 @@ header {
     top: 50%;
     right: 3%;
     height: 30px;
-    color:  #57155D;
- 
+    color: #57155D;
+
 }
 
 /******************fin profil************************************/
@@ -87,7 +87,7 @@ nav {
     position: relative;
 }
 
-#searchbar input[type="search"]{
+#searchbar input[type="search"] {
     border-radius: 25px;
     position: absolute;
     top: 20px;
@@ -111,11 +111,11 @@ nav {
 }
 
 .neonone {
-    text-shadow: 0px 8px 8px rgba(63,224,237,0.8);
+    text-shadow: 0px 8px 8px rgba(63, 224, 237, 0.8);
 }
 
 .neontwo {
-    text-shadow: 0px 8px 8px rgba(236,96,203,0.8);
+    text-shadow: 0px 8px 8px rgba(236, 96, 203, 0.8);
 }
 
 #menu li {
@@ -123,7 +123,8 @@ nav {
     margin: 0 auto;
 }
 
-#menu li a:link, #menu li a:visited {
+#menu li a:link,
+#menu li a:visited {
     text-decoration: none;
     color: white;
     padding: 10px 0;
@@ -133,7 +134,7 @@ nav {
     text-align: center;
 }
 
-#menu li a:hover{
+#menu li a:hover {
     color: red;
 }
 
@@ -165,7 +166,12 @@ nav {
     margin: 8px;
 }
 
-#type, #names, #date, #languages, #alphabet,.btn-primary {
+#type,
+#names,
+#date,
+#languages,
+#alphabet,
+.btn-primary {
     border-radius: 25px;
     width: 210px;
 }
@@ -211,9 +217,17 @@ nav {
     padding: 0 0 0 2px;
 }
 
-.cat_video{background-color: #7C24A2;}
-.cat_real{background-color: red;}
-.cat_cook{background-color: #3A8720;}
+.cat_video {
+    background-color: #7C24A2;
+}
+
+.cat_real {
+    background-color: red;
+}
+
+.cat_cook {
+    background-color: #3A8720;
+}
 
 /***********footer****************/
 footer {
@@ -275,6 +289,7 @@ footer a {
     background-color: #555;
     color: #fff;
 }
+
 .darker {
     background-color: #10051D;
     color: black;
@@ -284,11 +299,13 @@ footer a {
     background-color: #ffffff;
     color: #000000;
 }
-.darker #menu1{
-    color: #9FF0F7;;
+
+.darker #menu1 {
+    color: #9FF0F7;
+    ;
 }
 
-.darker .content{
+.darker .content {
     background-color: #10051D;
     color: black;
 }
@@ -320,6 +337,31 @@ footer a {
 p.mention {
     margin: 25px 175px;
 }
+
 h1 {
     color: white;
+}
+
+/*************test formulaire contact**************apparait que si le formulaire est faux********/
+.alert,
+.succes {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    height: 50px;
+    margin: 0 auto;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.success {
+    background-color: rgba(32, 118, 8, 0.449);
+    border: 1px solid green;
+}
+
+.alert {
+    background-color: rgba(255, 0, 0, 0.449);
+    border: 1px solid red;
 }

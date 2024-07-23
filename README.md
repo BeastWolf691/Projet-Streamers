@@ -73,6 +73,3 @@ Création de la classe/table contact,   il faut donc refaire la base de données
 contact.php est soumis uniquement si le pseudo et le mail sont connus de notre base de donnée
 
 dans le css à la fin j'ai ajouté une classe pour gérer les erreurs php.
-
-
-test gitamere

@@ -58,6 +58,22 @@ $(document).ready(function () {
         window.location.href = $(this).attr("href");
     });
 
+    //Systeme de filtre par searchbar
+    $('#search-input').on('input', function() {
+        let searchTerm = $(this).val().toLowerCase();
+        $('.card').each(function() {
+            let cardInfo = $(this).data('info');
+            if (cardInfo.includes(searchTerm)) {
+                $(this).show();
+            } else {
+                $(this).hide();
+            }
+        });
+    });
+
+
+
+
     function appliquerMode() {
         const theme = localStorage.getItem('theme');
         if (theme === 'dark') {

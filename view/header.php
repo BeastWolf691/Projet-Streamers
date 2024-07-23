@@ -41,7 +41,7 @@ include 'bdd.php';
 
         <nav>
             <div id="searchbar">
-                <input id="searchbar" type="search" placeholder="Recherche">
+                <input id="search-input" type="search" placeholder="Recherche">
             </div>
             <ul id="menu">
                 <li><a href="./index.php" class="neonone">Accueil</a></li>

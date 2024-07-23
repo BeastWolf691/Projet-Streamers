@@ -87,7 +87,7 @@ nav {
     position: relative;
 }
 
-#searchbar input[type="search"] {
+#search-input {
     border-radius: 25px;
     position: absolute;
     top: 20px;

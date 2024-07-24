@@ -15,58 +15,12 @@ header {
     align-content: center;
     position: relative;
 }
-
-
-/* .wrapper {
-    width: 320px;
-    margin: 25px auto 5px;
-    position: relative;
-    height: 70px;
-    overflow: hidden;
-}
-
-.item{
-    width: 50px;
-    height: 50px;
+img.logo {
+    width: 175px;
     position: absolute;
-    right: 100%;
-    animation-name: scrollLeft;
-    animation-duration: 30s;
-    animation-iteration-count: infinite;
-    animation-timing-function: linear;
- }
- .item:hover{
-    animation-play-state: paused;
- }
-
- .item1{
-    animation-delay: 0;
- }
- .item2{
-    animation-delay: 6s;
- }
- .item3{
-    animation-delay: 12s;
- }
-
- .item4{
-    animation-delay: 18s;
- }
-
-  @keyframes scrollLeft {
-    to{right: -85px;}
- }
-.item img{
-    width: 50px;
-    height: 50px;
- }
-.item img:hover{
-    width: 70px;
-    height: 70px;
-    cursor: pointer;
-    
- } */
-
+    z-index: 1;
+    margin: 15px 0 0 15px;
+}
 
 /****************************profil************************************/
 #menu1 {

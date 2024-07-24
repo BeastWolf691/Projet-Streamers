@@ -27,7 +27,9 @@ include 'bdd.php';
     <header>
 
         <div id="banner">
-
+            <div class="img">
+                <img src="../view/picture/logo-cd-dark.png" alt="Logo" class="logo">
+            </div>
             <div id="person">
                 <i class="fa-solid fa-user fa-2xl" id="menu-top"></i>
                 <div id="overlay">

@@ -183,6 +183,13 @@ nav {
     background-color: #3A8720;
 }
 
+
+
+/*formulaires*/
+input[type=password],input[type=date],input[type=text],input[type=mail] {
+    width: 100%;
+    margin-bottom: 10px;
+}
 /***********footer****************/
 footer {
     background: #57155D;

@@ -22,19 +22,19 @@ if (!empty($_POST)) {
     <input type="text" name="lastName" id="lastName" required>
 
     <label for="mail">Mail</label>
-    <input type="text" name="mail" id="mail">
+    <input type="mail" name="mail" id="mail">
 
     <label for="nickname">Pseudo</label>
     <input type="text" name="nickname" id="nickname" required>
 
-    <label for="birthday">Anniversaire</label><br>
-    <input type="date" name="birthday" id="birthday"><br><br>
+    <label for="birthday">Anniversaire</label>
+    <input type="date" name="birthday" id="birthday">
 
-    <label for="dateToSign">Date d'enregistrement'</label><br>
-    <input type="date" name="dateToSign" id="dateToSign"><br><br>
+    <label for="dateToSign">Date d'enregistrement'</label>
+    <input type="date" name="dateToSign" id="dateToSign">
 
-    <label for="password">Mot de passe</label><br>
-    <input type="password" name="password" id="password" required><br><br>
+    <label for="password">Mot de passe</label>
+    <input type="password" name="password" id="password" required>
 
     <label for="deck">deck</label>
     <input type="text" name="deck" id="deck">

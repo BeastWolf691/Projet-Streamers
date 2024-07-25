@@ -60,7 +60,7 @@ Le code javascript qui fonctionne que dans middle.php ( j'ai essaié de le mettr
 
 Le code détecte que je suis en mode sombre ou clair. les classes darker et light
 
-J'ai ensuite fait un bouton (#switch) qui quand on appuie change la couleur du menu et du filtre.
+J'ai ensuite fait un bouton (#switch) qui quand on appuie change la couleur du menu, du filtre, middle, footer et logo person. Cela garde en mémoire grace a LocalStorage qui "enregistre" le choix de l'user.
 
 pour ajouter un changement de couleur il faut ajouter ces lignes dans ici que j'ai commenté en JS
 
@@ -73,3 +73,7 @@ Création de la classe/table contact,   il faut donc refaire la base de données
 contact.php est soumis uniquement si le pseudo et le mail sont connus de notre base de donnée
 
 dans le css à la fin j'ai ajouté une classe pour gérer les erreurs php.
+Ajout de l'action que la searchbar permet de chercher directement dans les card les informations souhaitées.
+
+24.07 et 25/07
+ajout case CGV et préparation du fichier CGV pour consultation

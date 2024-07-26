@@ -44,7 +44,7 @@ if (!empty($_POST)) {
 
     <!-- <input type="checkbox" name="cgu" id="cgu" require>J'ai lu les CGU -->
     <input type="checkbox" id="cgu" name="cgu" required>
-        <label for="cgu">J'accepte les <a href="cgu.php" target="_blank">Conditions Générales d'Utilisation</a></label>
+        <label for="cgu">J'accepte les <a href="cgu.php">Conditions Générales d'Utilisation</a></label>
        
     <input type="submit">
 

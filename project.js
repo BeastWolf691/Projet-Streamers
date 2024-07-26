@@ -2,7 +2,7 @@ $(document).ready(function () {
     const menuButton = $("#menu-top");
     const overlay = $("#overlay");
     const menu = $("#menu-person");
-
+    const logo = $("#logo");
 
     //Caroussel
     const images = [
@@ -59,9 +59,22 @@ $(document).ready(function () {
     });
 
     //Systeme de filtre par searchbar
-    $('#search-input').on('input', function() {
+    $('#search-input').on('input', function () {
         let searchTerm = $(this).val().toLowerCase();
-        $('.card').each(function() {
+        $('.card').each(function () {
+            let mainCat = $(this).data('info');
+            if (mainCat.includes(searchTerm)) {
+                $(this).show();
+            } else {
+                $(this).hide();
+            }
+        });
+    });
+
+    //Systeme de recherche par les options de filtre
+    $('.filter-item select').on('change', function () {
+        let searchTerm = $(this).val().toLowerCase();
+        $('.card').each(function () {
             let mainCat = $(this).data('info');
             if (mainCat.includes(searchTerm)) {
                 $(this).show();

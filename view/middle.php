@@ -14,9 +14,15 @@ include 'bdd.php';
             <select id="type" name="type">
                 <option value=""></option>
                 <option value="sport">sport</option>
-                <option value="cuisine">cuisine</option>
-                <option value="jeux videos">jeux vidéos</option>
+                <option value="food">cuisine</option>
+                <option value="gaming">gaming</option>
                 <option value="urbex">urbex</option>
+                <option value="musique">musique</option>
+                <option value="art">art</option>
+                <option value="fitness">fitness</option>
+                <option value="tourisme">tourisme</option>
+                <option value="beauté">beauté</option>
+                <option value="mode">mode</option>
             </select>
         </div>
 

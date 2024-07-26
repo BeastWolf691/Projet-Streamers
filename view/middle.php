@@ -23,12 +23,12 @@ include 'bdd.php';
         <div class="filter-item">
             <label for="alphabet">Tranche alphabet</label>
             <select id="alphabet" name="alphabet">
-                <option value=""></option>
-                <option value="A - E">A - E</option>
-                <option value="F - J">F - J</option>
-                <option value="K - O">K - O</option>
-                <option value="P - T">P - T</option>
-                <option value="U - Z">U - Z</option>
+                <option></option>
+                <option>A - E</option>
+                <option>F - J</option>
+                <option>K - O</option>
+                <option>P - T</option>
+                <option>U - Z</option>
             </select>
         </div>
 
@@ -37,29 +37,29 @@ include 'bdd.php';
         <div class="filter-item">
             <label for="names">Streamers/euses&nbsp;</label>
             <select id="names" name="names">
-                <option value=""></option>
+                <option></option>
             </select>
         </div>
 
         <div class="filter-item">
             <label for="date">Date de création&nbsp;</label>
             <select id="date" name="date">
-                <option value=""></option>
-                <option value="2005">depuis 2005</option>
-                <option value="2010">depuis 2010</option>
-                <option value="2015">depuis 2015</option>
-                <option value="2020">depuis 2020</option>
+                <option></option>
+                <option>depuis 2005</option>
+                <option>depuis 2010</option>
+                <option>depuis 2015</option>
+                <option>depuis 2020</option>
             </select>
         </div>
 
         <div class="filter-item">
             <label id="speak" for="languages">Langues</label>
             <select id="languages" name="languages">
-                <option value=""></option>
-                <option value="fr">français</option>
-                <option value="en">anglais</option>
-                <option value="spa">espagnol</option>
-                <option value="ita">italien</option>
+                <option></option>
+                <option>français</option>
+                <option>anglais</option>
+                <option>espagnol</option>
+                <option>italien</option>
             </select>
         </div>
 

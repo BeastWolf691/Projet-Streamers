@@ -43,8 +43,8 @@ if (!empty($_POST)) {
     <input type="text" name="confirmPassword" id="confirmPassword"> -->
 
     <!-- <input type="checkbox" name="cgu" id="cgu" require>J'ai lu les CGU -->
-    <input type="checkbox" id="cgv" name="cgv" required>
-        <label for="cgv">J'accepte les <a href="cgv.html" target="_blank">Conditions Générales de Vente</a></label>
+    <input type="checkbox" id="cgu" name="cgu" required>
+        <label for="cgu">J'accepte les <a href="cgu.php" target="_blank">Conditions Générales d'Utilisation</a></label>
        
     <input type="submit">
 

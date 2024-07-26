@@ -16,8 +16,6 @@ Erreur normale: [ERROR] The database schema is not in sync with the current mapp
 
 php bin/doctrine orm:schema-tool:create  
 
-
-
 copier colle l'entieretée du fichier bdd.sql dans l'onglet sql
 ceci crée 3 données de cartes (modèle)
 
@@ -63,6 +61,7 @@ Le code détecte que je suis en mode sombre ou clair. les classes darker et ligh
 J'ai ensuite fait un bouton (#switch) qui quand on appuie change la couleur du menu, du filtre, middle, footer et logo person. Cela garde en mémoire grace a LocalStorage qui "enregistre" le choix de l'user.
 
 pour ajouter un changement de couleur il faut ajouter ces lignes dans ici que j'ai commenté en JS
+
 
 let truk = document.querySelector('.filter-bar')
  truk.classList.toggle('dark')

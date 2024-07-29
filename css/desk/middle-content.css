@@ -1,0 +1,67 @@
+/*********************contenu streameurs*******************/
+#middle {
+    height: 120vh;
+}
+
+.content {
+    text-align: center;
+    background: #9FF0F7;
+    position: absolute;
+    top: 195px;
+    left: 410px;
+    display: flex;
+    flex-wrap: wrap;
+    right: 40px;
+    border-radius: 10px;
+}
+
+.card {
+    width: 216px;
+    background-color: #fff;
+    margin: 28px 11px 28px;
+    height: 350px;
+    border-radius: 10px;
+    padding: 0 0 0 2px;
+}
+
+.cat_video {
+    background-color: #7C24A2;
+}
+
+.cat_real {
+    background-color: red;
+}
+
+.cat_cook {
+    background-color: #3A8720;
+}
+
+/******************************formulaires***************************/
+input[type=password],input[type=date],input[type=text],input[type=mail] {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+/*************test formulaire contact**************apparait que si le formulaire est faux********/
+.alert,
+.succes {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    height: 50px;
+    margin: 0 auto;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.success {
+    background-color: rgba(32, 118, 8, 0.449);
+    border: 1px solid green;
+}
+
+.alert {
+    background-color: rgba(255, 0, 0, 0.449);
+    border: 1px solid red;
+}

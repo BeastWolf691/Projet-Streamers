@@ -1,0 +1,53 @@
+
+/*************************filtre pour recherche*************/
+.filter-bar {
+    margin: 0 25px 0;
+    height: 220px;
+    width: 350px;
+    background: #9FF0F7;
+    padding: 10px 5px 0 15px;
+    position: absolute;
+    top: 195px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+}
+
+.test {
+    width: 13px;
+    height: 100%;
+    background-color: rgba(255, 0, 0, 0.299);
+    position: absolute;
+    right: 0;
+}
+
+.filter-item {
+    display: flex;
+    justify-content: space-between;
+    margin: 8px;
+}
+
+#type,
+#names,
+#date,
+#languages,
+#alphabet,
+.btn-primary {
+    border-radius: 25px;
+    width: 210px;
+}
+
+/*********************affichage streameurs*******************/
+.result {
+    background: #57155D;
+    width: 370px;
+    height: 570px;
+    position: absolute;
+    top: 438px;
+    margin: 0 0 0 25px;
+    border-radius: 10px;
+}
+
+.btn-primary {
+    width: 340px;
+}

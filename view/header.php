@@ -17,7 +17,6 @@ include 'bdd.php';
     <link rel="stylesheet" media="screen and (min-width: 981px)" href="../css/desk/index.css" />
     <link rel="stylesheet" media="screen and (max-width: 980px)" href="../css/tablet.css" />
     <link rel="stylesheet" media="screen and (max-width: 600px)" href="../css/mobil.css" />
-    <link rel="stylesheet" media="screen and (min-width: 900px)" href="../css/menu_profil.css" />
 
 </head>
 
@@ -27,9 +26,7 @@ include 'bdd.php';
     <header>
 
         <div id="banner">
-            <div class="img">
-                <img src="../view/picture/logo-cd-dark.png" alt="Logo" class="logo">
-            </div>
+            <div class="img" id="logo-container"></div>
             <div id="person">
                 <i class="fa-solid fa-user fa-2xl" id="menu-top"></i>
                 <div id="overlay">

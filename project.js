@@ -2,8 +2,8 @@ $(document).ready(function () {
     const menuButton = $("#menu-top");
     const overlay = $("#overlay");
     const menu = $("#menu-person");
-    const logo = $("#logo");
-
+    const logoContainer = $('#logo-container');
+    
     //Caroussel
     const images = [
         { src: "./logo-instagram1neon.png", link: "https://www.instagram.com" },
@@ -84,6 +84,9 @@ $(document).ready(function () {
         });
     });
 
+        // changement thème logo avec action sombre clair
+        const themeDark = "./picture/logo-cd-light.png"; // Logo for light theme
+        const themeLight = "./picture/logo-cd-dark.png"; // Logo for dark theme
 
     function appliquerMode() {
         const theme = localStorage.getItem('theme');
@@ -93,11 +96,13 @@ $(document).ready(function () {
             $('.content').addClass('dark');
             $('#menu-person').addClass('dark');
             $('#switch').prop('checked', true);
+            logoContainer.html(`<img src="${themeLight}" alt="Logo dark">`);
         } else {
             $('body').addClass('light').removeClass('darker');
             $('.content').removeClass('dark');
             $('#menu-person').removeClass('dark');
             $('#switch').prop('checked', false);
+            logoContainer.html(`<img src="${themeDark}" alt="Logo light">`);
         }
     }
 

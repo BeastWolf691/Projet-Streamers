@@ -1,54 +1,109 @@
 <?php
 include 'header.php';
-if (!empty($_POST)) {
-    $password = $_POST['password'];
-    $passwordHache = password_hash($password, PASSWORD_DEFAULT);
 
+// Initialisation des variables d'erreurs et de saisie
+$errors = [];
+$name = $lastName = $nickname = $mail = $birthday = $dateToSign = $deck = '';
+
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    // Récupération et sanitisation des données du formulaire
+    $name = htmlspecialchars(trim($_POST['name']));
+    $lastName = htmlspecialchars(trim($_POST['lastName']));
+    $nickname = htmlspecialchars(trim($_POST['nickname']));
+    $mail = filter_var(trim($_POST['mail']), FILTER_SANITIZE_EMAIL);
+    $birthday = htmlspecialchars(trim($_POST['birthday']));
+    $dateToSign = htmlspecialchars(trim($_POST['dateToSign']));
+    $deck = htmlspecialchars(trim($_POST['deck']));
+    $password = $_POST['password'];
+    $cgu = isset($_POST['cgu']) ? true : false;
+
+    // Validation des champs
+    if (empty($name)) {
+        $errors['name'] = "Le nom est requis.";
+    }
+    if (empty($lastName)) {
+        $errors['lastName'] = "Le prénom est requis.";
+    }
+    if (empty($nickname)) {
+        $errors['nickname'] = "Le pseudo est requis.";
+    }
+    if (empty($mail) || !filter_var($mail, FILTER_VALIDATE_EMAIL)) {
+        $errors['mail'] = "Un mail valide est requis.";
+    }
+    if (empty($password)) {
+        $errors['password'] = "Le mot de passe est requis.";
+    }
+  
+    // Si aucune erreur, on continue avec le hashage du mot de passe et l'insertion dans la base de données
     if (empty($errors)) {
-        $req = $pdo->prepare("INSERT INTO users SET name=?,lastName=?,nickname=?,password=?,mail=?,birthday=?,dateToSign=?,deck=?");
-        $req->execute([$_POST['name'], $_POST['lastName'], $_POST['nickname'], $passwordHache, $_POST['mail'], $_POST['birthday'],  $_POST['dateToSign'], $_POST['deck']]);
-        sleep(1);
-        header('location:logIn.php');
+        $passwordHache = password_hash($password, PASSWORD_DEFAULT);
+
+        // Requête préparée pour éviter les injections SQL
+        $req = $pdo->prepare("INSERT INTO users (name, lastName, nickname, password, mail, birthday, dateToSign, deck) VALUES (:name, :lastName, :nickname, :password, :mail, :birthday, :dateToSign, :deck)");
+        $req->execute([
+            'name' => $name,
+            'lastName' => $lastName,
+            'nickname' => $nickname,
+            'password' => $passwordHache,
+            'mail' => $mail,
+            'birthday' => $birthday,
+            'dateToSign' => $dateToSign,
+            'deck' => $deck
+        ]);
+
+        // Redirection après insertion
+        header('Location: logIn.php');
+        exit();
     }
 }
 ?>
 
-<form action="" method="post" class="form-container">
+<div class="form-container">
+    <?php if (!empty($errors)) : ?>
+        <div class="erreur">
+            <div class="alert alert-secondary" role="alert">
+                Vous n'avez pas rempli le formulaire correctement
+            </div>
+            <?php foreach ($errors as $error) : ?>
+                <div><?php echo "<div class=\"alert alert-danger\" role=\"alert\">$error</div>"; ?></div>
+            <?php endforeach; ?>
+        </div>
+    <?php endif; ?>
+    <form action="" method="post" class="form-container">
+        <label for="name">Nom</label>
+        <input type="text" name="name" id="name" value="<?php echo htmlspecialchars($name, ENT_QUOTES); ?>" required>
 
-    <label for="name">Nom</label>
-    <input type="text" name="name" id="name" required>
+        <label for="lastName">Prénom</label>
+        <input type="text" name="lastName" id="lastName" value="<?php echo htmlspecialchars($lastName, ENT_QUOTES); ?>" required>
 
-    <label for="lastName">Prénom</label>
-    <input type="text" name="lastName" id="lastName" required>
+        <label for="mail">Mail</label>
+        <input type="email" name="mail" id="mail" value="<?php echo htmlspecialchars($mail, ENT_QUOTES); ?>">
 
-    <label for="mail">Mail</label>
-    <input type="mail" name="mail" id="mail">
+        <label for="nickname">Pseudo</label>
+        <input type="text" name="nickname" id="nickname" value="<?php echo htmlspecialchars($nickname, ENT_QUOTES); ?>" required>
 
-    <label for="nickname">Pseudo</label>
-    <input type="text" name="nickname" id="nickname" required>
+        <label for="birthday">Anniversaire</label>
+        <input type="date" name="birthday" id="birthday" value="<?php echo htmlspecialchars($birthday, ENT_QUOTES); ?>">
 
-    <label for="birthday">Anniversaire</label>
-    <input type="date" name="birthday" id="birthday">
+        <label for="dateToSign">Date d'enregistrement</label>
+        <input type="date" name="dateToSign" id="dateToSign" value="<?php echo htmlspecialchars($dateToSign, ENT_QUOTES); ?>">
 
-    <label for="dateToSign">Date d'enregistrement'</label>
-    <input type="date" name="dateToSign" id="dateToSign">
+        <label for="password">Mot de passe</label>
+        <input type="password" name="password" id="password" required>
 
-    <label for="password">Mot de passe</label>
-    <input type="password" name="password" id="password" required>
+        <label for="deck">Deck</label>
+        <input type="text" name="deck" id="deck" value="<?php echo htmlspecialchars($deck, ENT_QUOTES); ?>">
 
-    <label for="deck">deck</label>
-    <input type="text" name="deck" id="deck">
-
-    <!--  <label for="confirmPassword">Confirmer mdp</label>
-    <input type="text" name="confirmPassword" id="confirmPassword"> -->
-
-    <!-- <input type="checkbox" name="cgu" id="cgu" require>J'ai lu les CGU -->
-    <input type="checkbox" id="cgu" name="cgu" required>
+        <input type="checkbox" id="cgu" name="cgu"  required>
         <label for="cgu">J'accepte les <a href="cgu.php">Conditions Générales d'Utilisation</a></label>
        
-    <input type="submit">
+        <input type="submit" value="Soumettre">
 
-</form>
+  
+
+    </form>
+</div>
+
 <?php
 include 'footer.php';
 ?>

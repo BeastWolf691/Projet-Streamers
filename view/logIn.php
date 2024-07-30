@@ -1,39 +1,52 @@
 <?php
 include 'header.php';
 
+// Initialisation de la variable d'erreurs
+$errors = array();
+
 if (!empty($_POST)) {
+    // Récupération et sanitisation des données du formulaire
+    $nickname = htmlspecialchars(trim($_POST['nickname']));
+    $password = htmlspecialchars(trim($_POST['password']));
 
+    // Validation des données du formulaire
+    if (empty($nickname)) {
+        $errors['nickname'] = "Le pseudo est requis.";
+    }
 
+    if (empty($password)) {
+        $errors['password'] = "Le mot de passe est requis.";
+    }
 
-    $errors = array();
+    if (empty($errors)) {
+        // Requête préparée pour éviter les injections SQL
+        $sql = "SELECT nickname, password FROM users WHERE nickname=:nickname";
+        $pdoStatement = $pdo->prepare($sql);
 
-    $nickname = htmlspecialchars($_POST['nickname']);
-    $password = htmlspecialchars($_POST['password']);
-    $sql = "SELECT nickname, password FROM users WHERE nickname=:val"; // val  est un motif
+        if ($pdoStatement) {
+            $pdoStatement->execute(['nickname' => $nickname]);
+            $result = $pdoStatement->fetch(PDO::FETCH_ASSOC);
 
-    $pdoStatement = $pdo->prepare($sql);
-    if ($pdoStatement) {
-        $pdoStatement->execute(['val' => $nickname]); // transforme le motif
-        $result = $pdoStatement->fetch();
-        // on veut comparer le mot de passe saisie depuis le formulaire avec
-        // le mot de passe haché récupéré depuis la base de do nnées
-
-        if ($result) {
-            if (password_verify($password, $result->password)) {
-                echo "<div class=\"alert alert-success\" role=\"alert\">Connexion réussie</div>";
-
-                sleep(1);
-                header('location:index.php');
+            if ($result) {
+                // Vérification du mot de passe
+                if (password_verify($password, $result['password'])) {
+                    echo "<div class=\"alert alert-success\" role=\"alert\">Connexion réussie</div>";
+                    sleep(1);
+                    header('Location: index.php');
+                    exit();
+                } else {
+                    $errors['password'] = "Mot de passe invalide.";
+                }
             } else {
-                $errors['password'] = "Mot de passe invalide";
+                $errors['nickname'] = "Pseudo ou mot de passe invalide.";
             }
         } else {
-            $errors['name'] = "Identifiant invalide";
+            $errors['database'] = "Erreur de connexion à la base de données.";
         }
     }
 }
-
 ?>
+
 <div class="form-container">
     <?php if (!empty($errors)) : ?>
         <div class="erreur">
@@ -47,15 +60,11 @@ if (!empty($_POST)) {
         </div>
     <?php endif; ?>
     <form method="post" action="">
-
         <label for="nickname">Pseudo :</label><br>
-        <input type="text" id="nickname" name="nickname" required placeholder="Pseudo">
+        <input type="text" id="nickname" name="nickname" required placeholder="Pseudo" value="<?php echo htmlspecialchars($nickname ?? '', ENT_QUOTES); ?>"><br>
 
         <label for="password">Mot de passe :</label><br>
-        <input type="password" id="password" name="password" required placeholder="Mot de passe">
-
-        <!--   <label for="feedback">Commentaires :</label><br>
-        <input type="text" id="feedback" name="feedback" required><br> -->
+        <input type="password" id="password" name="password" required placeholder="Mot de passe"><br>
 
         <input type="submit" value="Soumettre"><br>
     </form>

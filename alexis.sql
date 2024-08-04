@@ -1,0 +1,13 @@
+USE stream;
+INSERT INTO cards (nickname, mainCat, thematic, picture, name, language, pYoutube, pTwitch, pKick, pTwitter,pInstagram, pTiktok,
+videoOne, videoTwo, factOne, factTwo, factThree) VALUES
+
+('Etoiles', 'Jeu Vidéo', 'Gaming, Talk-show', 'etoiles.jpg', 'Corentin', 'Français', 'Etoiles', 'Etoiles_TV' , 'test', 'NULL', 'Etoiles_TV', 'etoiles_tv','video1.mp4', 'video2.mp4', 'Fan de jeux de société', 'A travaillé pour LeStream', 'Participe souvent aux émissions de Domingo'),
+('Gotaga', 'Jeu Vidéo', 'Gaming, Esport', 'gotaga.jpg', 'Corentin Houssein', 'Français', 'Gotaga', 'Gotaga', NULL, NULL, 'Gotaga', 'gotaga', 'video1.mp4', 'video2.mp4', 'Champion du monde de Call of Duty', 'Fondateur de Vitality', 'Organise le Gotaga Show'),
+('HugoDécrypte', 'Actualités', 'Informations, Société', 'hugodecrypte.jpg', 'Hugo Travers', 'Français', 'HugoDécrypte',  'hugodecrypte',  NULL, NULL, 'hugodecrypte',  'hugodecrypte',  'video1.mp4', 'video2.mp4', 'Interviewe des personnalités politiques', 'Analyse l’actualité', 'A une chaîne secondaire de vulgarisation'),
+('Inoxtag', 'Jeu Vidéo', 'Gaming, Vlog', 'inoxtag.jpg', 'Inès Benazzouz', 'Français', 'Inoxtag', 'Inoxtag', NULL, NULL, 'Inoxtag',  'inox_tag',  'video1.mp4', 'video2.mp4', 'Membre du groupe Team Crouton', 'Aventurier dans l’âme', 'Participe à des challenges extrêmes'),
+('Jeel', 'Jeu Vidéo', 'Gaming, Vlog', 'jeel.jpg', 'Julie', 'Français', 'Jeel TV',  'Jeel TV',  NULL, NULL, 'jeel_tv',  'jeel_tv',  'video1.mp4', 'video2.mp4', 'Fan de cosplay', 'Participe à des conventions geek', 'Organise des streams caritatifs'),
+('KennyStream', 'Jeu Vidéo', 'Gaming', 'kennystream.jpg', 'Kenny', 'Français', 'KennyStream', 'KennyStream', NULL, NULL, 'KennyStream_',  'kennystream', 'video1.mp4', 'video2.mp4', 'Fan de jeux rétro', 'Aime les jeux de stratégie', 'Organise des tournois entre abonnés'),
+('Grafikart', 'Formation', 'Développement Web, Tutoriels', 'grafikart.jpg', 'Jonathan Boyer', 'Français', 'Grafikart', 'Grafikart',  NULL, NULL, 'Grafikart_fr', 'grafikart_fr',  'video1.mp4', 'video2.mp4', 'Expert en développement web', 'Créateur de nombreux tutoriels', 'A une communauté de développeurs fidèles'),
+('Ethieen', 'Jeu Vidéo', 'Gaming, RPG', 'ethieen.jpg', 'Etienne', 'Français', 'Ethieen',  'Ethieen',  NULL, NULL, 'Ethieen', 'ethieen_','video1.mp4', 'video2.mp4', 'Spécialiste des jeux de rôle', 'Aime les jeux narratifs', 'Organise des streams immersifs'),
+('HortyUnderscore', 'Jeu Vidéo', 'Gaming, Diversité', 'hortyunderscore.jpg', 'Hortense', 'Français', 'HortyUnderscore',NULL, NULL, 'Horty_Underscore',  'horty_underscore', NULL, 'video1.mp4', 'video2.mp4', 'Promoteur de la diversité dans le gaming', 'Participe à des débats et discussions', 'Anime une communauté inclusive');

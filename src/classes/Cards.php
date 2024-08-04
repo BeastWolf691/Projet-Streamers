@@ -28,27 +28,27 @@ class Cards
     private string $language;
     #[ORM\Column()]
     private string $pYoutube;
-    #[ORM\Column()]
+    #[ORM\Column(nullable:true)]
     private string $pTwitch;
-    #[ORM\Column()]
+    #[ORM\Column(nullable:true)]
     private string $pKick;
-    #[ORM\Column()]
+    #[ORM\Column(nullable:true)]
     private string $pTwitter;
-    #[ORM\Column()]
+    #[ORM\Column(nullable:true)]
     private string $pInstagram;
-    #[ORM\Column()]
+    #[ORM\Column(nullable:true)]
     private string $pTiktok;
-    #[ORM\Column()]
+    #[ORM\Column(nullable:true)]
     private string $pSnapchat;
-    #[ORM\Column()]
+    #[ORM\Column(nullable:true)]
     private string $videoOne;
-    #[ORM\Column()]
+    #[ORM\Column(nullable:true)]
     private string $videoTwo;
-    #[ORM\Column()]
+    #[ORM\Column(nullable:true)]
     private string $factOne;
-    #[ORM\Column()]
+    #[ORM\Column(nullable:true)]
     private string $factTwo;
-    #[ORM\Column()]
+    #[ORM\Column(nullable:true)]
     private string $factThree;
 
     // plusieurs cartes peuvent concerner 1 créateur

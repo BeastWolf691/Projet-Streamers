@@ -38,16 +38,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $checkUser->execute(['nickname' => $nickname, 'mail' => $mail]);
         $user = $checkUser->fetch();
 
-        if ($user) {
-            // Si l'utilisateur existe, insérer les données dans la table contact
-            $req = $pdo->prepare("INSERT INTO contact (nickname, mail, subject, feedback) VALUES (:nickname, :mail, :subject, :feedback)");
-            $req->execute(['nickname' => $nickname, 'mail' => $mail, 'subject' => $subject, 'feedback' => $feedback]);
-            echo "<div class=\"alert alert-success\" role=\"alert\">Ajout réussi</div>";
-            header('Location: index.php');
-            exit();
-        } else {
-            $errors['login'] = "Pseudo ou mail incorrect.";
-        }
+        // Si l'utilisateur existe, insérer les données dans la table contact
+        $req = $pdo->prepare("INSERT INTO contact (nickname, mail, subject, feedback) VALUES (:nickname, :mail, :subject, :feedback)");
+        $req->execute(['nickname' => $nickname, 'mail' => $mail, 'subject' => $subject, 'feedback' => $feedback]);
+        echo "<div class=\"alert alert-success\" role=\"alert\">Ajout réussi</div>";
+        header('Location: index.php');
+        exit();
     }
 }
 ?>

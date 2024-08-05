@@ -56,7 +56,7 @@
 }
 
 .light .item img {
-    filter: brightness(0);
+    filter: brightness(0.55);
 }
 
 .light header {

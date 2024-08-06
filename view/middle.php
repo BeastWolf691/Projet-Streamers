@@ -66,7 +66,7 @@
         </div>
 
         <div class="filter-item">
-            <button type="button" class="btn btn-primary">Appliquer</button>
+            <button type="button" class="btn btn-primary">Rechercher</button>
         </div>
     </aside>
     

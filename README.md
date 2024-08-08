@@ -75,4 +75,4 @@ dans le css à la fin j'ai ajouté une classe pour gérer les erreurs php.
 Ajout de l'action que la searchbar permet de chercher directement dans les card les informations souhaitées.
 
 24.07 et 25/07
-ajout case CGV et préparation du fichier CGV pour consultation
+ajout case CGU et préparation du fichier CGU pour consultation

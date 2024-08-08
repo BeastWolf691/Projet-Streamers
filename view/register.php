@@ -58,7 +58,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 }
 ?>
 
-<div class="form-container">
+<div class="form">
     <?php if (!empty($errors)) : ?>
         <div class="erreur">
             <div class="alert alert-secondary" role="alert">

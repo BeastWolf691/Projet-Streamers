@@ -2,6 +2,7 @@
 
 namespace App\Classes;
 
+use DateTime;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 
@@ -50,18 +51,15 @@ class Cards
     private string $factTwo;
     #[ORM\Column(nullable:true)]
     private string $factThree;
-
-    // plusieurs cartes peuvent concerner 1 créateur
-    // #[ORM\ManyToOne(targetEntity : Creator::class, inversedBy: 'cards')]
-    // private Categories $creator;
+    #[ORM\Column()]
+    private DateTime $birthdate;
+        
 
     // 1 carte peut avoir plusieurs catégories 
     #[ORM\OneToMany(targetEntity: Categories::class, mappedBy: 'cards')]
     private Collection $Thematic;
 
-    // plusieurs cartes peuvent avoir plusieurs catégories ??
-    // #[ORM\ManyToMany(targetEntity : Services ::class, inversedBy : 'hotelList')]
-    // #[JoinTable(name: 'service_hotel')]
+
 
 
     // Constructor

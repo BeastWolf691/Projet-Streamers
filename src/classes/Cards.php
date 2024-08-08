@@ -66,6 +66,7 @@ class Cards
 
     // Constructor
     public function __construct(
+        int $id,
         string $nickname,
         string $mainCat,
         string $thematic,
@@ -85,6 +86,7 @@ class Cards
         string $factTwo,
         string $factThree
     ) {
+        $this->id = $id;
         $this->nickname = $nickname;
         $this->mainCat = $mainCat;
         $this->thematic = $thematic;

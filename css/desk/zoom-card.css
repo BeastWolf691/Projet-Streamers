@@ -1,0 +1,229 @@
+
+.zoomCard {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #10051D;
+    background-color: #10051D;
+    background: rgb(233,206,244);
+    background: linear-gradient(0deg, rgba(233,206,244,1) 0%, rgba(240,222,248,1) 100%);
+    width: 100%;
+    height: 570px;
+    overflow: hidden;
+    margin: auto;
+    padding: 10px;
+    box-sizing: border-box;
+    border-radius: 5px;
+    border: 5px solid #333;
+}
+
+.cardHeader {
+    background: #10051D;
+    padding: 5px 25px;
+    box-sizing: border-box;
+    height: 40px;
+    border-radius: 0 50px 50px 0;
+}
+
+.cardPseudo {
+    margin: 3px 0;
+    font-size: 1.4em;
+    font-weight: 700;
+    color: #eee;
+}
+
+.cardPhoto {
+    margin: 8px 0;
+    box-sizing: border-box;
+    margin: 8px 0;
+    height: 197px;
+    width: 340px;
+    background: #AC17A9;
+}
+
+.cardInfo {
+    margin: 8px 0;
+    box-sizing: border-box;
+    height: 305px;
+}
+
+.cardInfoRow {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 45%;
+    height: 305px;
+    padding: 0 5px;
+    box-sizing: border-box;
+}
+
+.cardInfoTitle {
+    margin-bottom: 0.5em;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.8em;
+    font-weight: 800;
+    color: #57155D;
+}
+
+.cardInfoValue {
+    font-family: 'Caviar Dreams';
+    font-size: 1em;
+    font-weight: 900;
+    color : #10051D;
+}
+
+.countryFlag img {
+    width: 15px;
+    height: 15px;
+}
+
+.cardInfoUrl {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.cardUrl {
+    margin: 0 8px 4px 0;
+    width: 35px;
+    height: 35px;
+    box-sizing: border-box;
+    border-radius: 30px;
+    border: 1px solid;
+    font-weight: 600;
+    color: #eee;
+    background: aquamarine;
+}
+
+.cardUrl:hover {
+    cursor: pointer;
+}
+
+.cardYoutube {
+    background: center no-repeat url("./picture/icons/icon-youtube1.png"),
+        content-box radial-gradient(circle, rgb(255, 0, 0) 0%, rgb(180, 4, 4) 100%);
+    border-color: #5f0404;
+}
+
+.cardYoutube:hover {
+    background: center no-repeat url("./picture/icons/icon-youtube1.png"),
+        content-box radial-gradient(circle, rgb(255, 56, 56) 0%, rgb(212, 37, 37) 100%);
+    border-color: #922323;
+}
+
+.cardTwitch {
+    background: center no-repeat url("./picture/icons/icon-twitch1.png"),
+        content-box radial-gradient(circle, rgb(134,82,246) 0%, rgb(73,44,135) 100%);
+    border-color: #311e5b;
+}
+
+.cardTwitch:hover {
+    background: center no-repeat url("./picture/icons/icon-twitch1.png"),
+        content-box radial-gradient(circle, rgb(151, 107, 247) 0%, rgb(106, 71, 180) 100%);
+    border-color: #462e79;
+}
+
+.cardKick {
+    background: center no-repeat url("./picture/icons/icon-kick1.png"),
+        content-box radial-gradient(circle, rgb(83,252,24) 0%, rgb(55, 167, 15) 100%);
+    border-color: #2e8b0c;
+}
+
+.cardKick:hover {
+    background: center no-repeat url("./picture/icons/icon-kick1.png"),
+        content-box radial-gradient(circle, rgb(131, 255, 86) 0%, rgb(80, 180, 44) 100%);
+    border-color: #47af21;
+}
+
+.cardX {
+    background: center no-repeat url("./picture/icons/icon-x1.png"),
+        content-box radial-gradient(circle, rgb(27, 27, 27) 0%, rgb(0, 0, 0) 100%);
+    border-color: #000000;
+}
+
+.cardX:hover {
+    background: center no-repeat url("./picture/icons/icon-x1.png"),
+        content-box radial-gradient(circle, rgb(44, 44, 44) 0%, rgb(22, 22, 22) 100%);
+    border-color: #000000;
+}
+
+.cardInstagram {
+    background: center no-repeat url("./picture/icons/icon-insta1.png"),
+        content-box radial-gradient(circle, rgb(222, 40, 120) 0%, rgb(168, 29, 90) 100%);
+    border-color: #8F184E;
+}
+
+.cardInstagram:hover {
+    background: center no-repeat url("./picture/icons/icon-insta1.png"),
+        content-box radial-gradient(circle, rgb(226, 67, 136) 0%, rgb(179, 39, 100) 100%);
+    border-color: #a82560;
+}
+
+.cardTiktok {
+    background: center no-repeat url("./picture/icons/icon-tiktok1.png"),
+        content-box radial-gradient(circle, rgb(101, 195, 201) 0%, rgb(64, 136, 141) 100%);
+    border-color: #22696e;
+}
+
+.cardTiktok:hover {
+    background: center no-repeat url("./picture/icons/icon-tiktok1.png"),
+        content-box radial-gradient(circle, rgb(126, 219, 226) 0%, rgb(66, 138, 143) 100%);
+    border-color: #32858b;
+}
+
+.cardSnapchat {
+    background: center no-repeat url("./picture/icons/icon-snap1.png"),
+        content-box radial-gradient(circle, rgb(252, 252, 2) 0%, rgb(161, 161, 2) 100%);
+    border-color: #888801;
+}
+
+.cardSnapchat:hover {
+    background: center no-repeat url("./picture/icons/icon-snap1.png"),
+        content-box radial-gradient(circle, rgb(255, 255, 49) 0%, rgb(185, 185, 7) 100%);
+    border-color: #bbbb01;
+}
+
+.cardSlot {
+    border: 2px solid #10051D;
+    margin-bottom: 10px;
+    padding: 5px 8px;
+    box-sizing: border-box;
+}
+
+.slotTitle {
+    margin-bottom: 0.6em;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.8em;
+    font-weight: 800;
+    color: #57155D;
+}
+
+.slotContent {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    font-family: 'Caviar Dreams';
+    font-size: 0.9em;
+    font-weight: 800;
+}
+
+.cardFact {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.cardBulletInfo {
+    margin: 4px 8px 4px 0;
+    width: 35px;
+    height: 35px;
+    box-sizing: border-box;
+    border-radius: 35px;
+    border: 1px solid #10051D;
+    color: #FFFFFF;
+    font-weight: 900;
+    background: center no-repeat url("icons/icon-info1.png"),
+        content-box radial-gradient(circle, rgb(122, 38, 129) 0%, rgb(87, 21, 93) 100%);
+    border-color: #10051D;
+}
+
+
+

@@ -6,13 +6,13 @@ $(document).ready(function () {
     
     //Caroussel
     const images = [
-        { src: "./logo-instagram1neon.png", link: "https://www.instagram.com" },
-        { src: "./logo-kick1neon.png", link: "https://www.kick.com" },
-        { src: "./logo-tiktok1neon.png", link: "https://www.tiktok.com" },
-        { src: "./logo-snap1neon.png", link: "https://www.snapchat.com" },
-        { src: "./logo-twitch1neon.png", link: "https://www.twitch.tv" },
-        { src: "./logo-x1neon.png", link: "https://www.twitter.com" },
-        { src: "./logo-youtube1neon.png", link: "https://www.youtube.com" }
+        { src: "./logo-instagram2neon.png", link: "https://www.instagram.com" },
+        { src: "./logo-kick2neon.png", link: "https://www.kick.com" },
+        { src: "./logo-tiktok2neon.png", link: "https://www.tiktok.com" },
+        { src: "./logo-snap2neon.png", link: "https://www.snapchat.com" },
+        { src: "./logo-twitch2neon.png", link: "https://www.twitch.tv" },
+        { src: "./logo-x2neon.png", link: "https://www.twitter.com" },
+        { src: "./logo-youtube2neon.png", link: "https://www.youtube.com" }
     ];
 
     const $carousel = $('<div>').addClass('carousel');

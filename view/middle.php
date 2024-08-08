@@ -77,9 +77,10 @@
     <div class="content">
 <!-- récupération -->
 <?php
+include 'bdd.php';
       $sql = 'SELECT id, nickname, mainCat, thematic, picture, name, language, pYoutube,
       ptwitch, pKick, pTwitter, pInstagram, pTiktok, videoOne, videoTwo, factOne, factTwo, factThree, birthdate FROM cards';
-$req = $pdo->query($sql);
+        $req = $pdo->query($sql);
 
         while ($d = $req->fetch(PDO::FETCH_OBJ)) { // pour chaque ligne dans la BDD, on crée une carte
 

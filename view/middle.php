@@ -77,13 +77,13 @@
     <div class="content">
 <!-- récupération -->
 <?php
-        $sql =  'SELECT id, nickname, mainCat, thematic, picture, name, language, pYoutube,
-            ptwitch, pKick, pTwitter, pInstagram, pTiktok, videoOne, videoTwo, factOne, factTwo, factThree FROM cards ';
-        $req = $pdo->query($sql);
-
+      $sql = 'SELECT id, nickname, mainCat, thematic, picture, name, language, pYoutube,
+      ptwitch, pKick, pTwitter, pInstagram, pTiktok, videoOne, videoTwo, factOne, factTwo, factThree, birthdate FROM cards';
+$req = $pdo->query($sql);
 
         while ($d = $req->fetch(PDO::FETCH_OBJ)) { // pour chaque ligne dans la BDD, on crée une carte
 
+             // Calcul de l'âge à partir de la date de naissance
             $mainCat = $d->mainCat;
             switch ($mainCat) {
                 case 'Gaming':
@@ -100,6 +100,10 @@
                     break;
             }
             $mainCat = strtolower($d->nickname . ' ' . $d->mainCat . ' ' . $d->thematic . ' ' . $d->language);
+
+            $birthdate = new DateTime($d->birthdate);
+            $now = new DateTime(); 
+            $age = $now->diff($birthdate)->y; 
 
         ?>
             <div class="card <?php echo $cssClass; ?>" data-id="<?php echo $d->id; ?>" data-info="<?php echo $mainCat; ?>">
@@ -130,6 +134,7 @@
                     ?> </p>
                 <p> <?php //echo $d->factThree; 
                     ?> </p>
+                <p>Âge : <?php echo $age; ?> ans</p>
 
             </div>
         <?php } ?>

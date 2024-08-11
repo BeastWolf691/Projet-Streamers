@@ -33,13 +33,10 @@ videoOne, videoTwo, factOne, factTwo, factThree, birthdate) VALUES
 ('loupiote3','Jeu Vidéo', 'Gaming, FPS','loupiote3.jpg','Lou Henguelle','Française','loupiote3','loupiote3','','louhngle','louhng','', 'video1.mp4', 'video2.mp4','streameuse, joueuse et commentatrice sur le jeu Valorant','25 septembre 2023 elle est recrutée en tant que joueuse Valorant par l\'équipe esport Zerance','','2002-08-20'),
 ('maghla','Jeu Vidéo', 'Manga','maghla.jpg','Barbara','Française','maghla','maghla','','maghla','maghla','maghla', 'video1.mp4', 'video2.mp4','streameuse francaise ayant le plus de followers sur Twitch','','','1993-11-08'),
 ('michou','Jeu Vidéo', 'Gaming','michou.jpg','Miguel Mattioli','Français','michou','michou','','Michoucroute_','michou','', 'video1.mp4', 'video2.mp4','il a fait Danse avec les Stars et a fini 3ème','il a commencé sur youtube à l\'age de 13 ans','','2001-10-02'),
-('moman','Jeu Vidéo', 'Gaming, FPS','moman.jpg','Emmanuel Marquez','Français','momanus','MoMan','','MoMaNuS','moman_us','', 'video1.mp4', 'video2.mp4','','','',''),
-('','Jeu Vidéo', 'Gaming','.jpg','','Français','','','','','','', 'video1.mp4', 'video2.mp4','','','',''),
-('','Jeu Vidéo', 'Gaming','.jpg','','Français','','','','','','', 'video1.mp4', 'video2.mp4','','','',''),
-('','Jeu Vidéo', 'Gaming','.jpg','','Français','','','','','','', 'video1.mp4', 'video2.mp4','','','',''),
-('','Jeu Vidéo', 'Gaming','.jpg','','Français','','','','','','', 'video1.mp4', 'video2.mp4','','','',''),
-
-
+('moman','Jeu Vidéo', 'Gaming, FPS','moman.jpg','Emmanuel Marquez','Français','momanus','MoMan','','MoMaNuS','moman_us','', 'video1.mp4', 'video2.mp4','','','','1982-12-27'),
+('nahomay','Jeu Vidéo', 'LifeStyle','nahomay.jpg','Marion','Française','NahoMay','nahomay','','Naho_May','_nahomay','nahomay', 'video1.mp4', 'video2.mp4','ancienne infirmière','','','1989-05-16'),
+('niemesia','Jeu Vidéo', 'Gaming','niemesia.jpg','marie N.','Française','','niemesia','','niemesia','niemesia','', 'video1.mp4', 'video2.mp4','','','','1994-05-02'),
+('Oceane Amsler','React', 'Gaming','oceane.jpg','Oceane Amsler','Française','Oceane','OceaneAmsler','','','oceaneamsler','oceaneamsler', 'video1.mp4', 'video2.mp4','a participé aux Anges 11 sur NRJ12','','','1992-12-29'),
 ('Rakin', 'Gaming', 'Esport', 'rakin.jpg', 'Rafael Knittel', 'Portugais', 'Rakin', 'Rakin', '', 'Rakin', 'rakin', '', 'video1_url', 'video2_url', 'Connu pour ses streams sur LoL', 'Ancien joueur pro', 'Très actif sur Twitch', '1996-11-23'),
 ('Rekkles', 'Gaming', 'Esport', 'rekkles.jpg', 'Carl Martin Erik Larsson', 'Suédois', 'Rekkles', 'Rekkles', '', 'RekklesLoL', 'rekkleslol', '', 'video1_url', 'video2_url', 'Joueur professionnel de League of Legends', 'A joué pour Fnatic et G2 Esports', 'Connu pour son style de jeu précis', '1996-09-20'),
 ('Reynad', 'Gaming', 'Esport', 'reynad.jpg', 'Andrey Yanyuk', 'Anglais', 'Reynad', 'Reynad', '', 'Reynad29', 'reynad29', '', 'video1_url', 'video2_url', 'Fondateur de Tempo Storm', 'Streamer Hearthstone', 'Connu pour ses analyses de jeu', '1992-01-27'),

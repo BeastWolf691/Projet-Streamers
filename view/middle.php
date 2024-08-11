@@ -102,7 +102,7 @@ include 'bdd.php';
             }
             $mainCat = strtolower($d->nickname . ' ' . $d->mainCat . ' ' . $d->thematic . ' ' . $d->language);
 
-            $birthdate = new DateTime($d->birthdate);
+            $birthdate = new DateTime();
             $now = new DateTime(); 
             $age = $now->diff($birthdate)->y; 
 

@@ -1,6 +1,6 @@
 USE stream;
-INSERT INTO cards (nickname, mainCat, thematic, picture, name, language, pYoutube, pTwitch, pKick, pTwitter,pInstagram, pTiktok,
-videoOne, videoTwo, factOne, factTwo, factThree) VALUES
+INSERT INTO cards (nickname, mainCat, thematic, picture, name, language, pYoutube, pTwitch, pKick, pTwitter, pInstagram, pTiktok,
+videoOne, videoTwo, factOne, factTwo, factThree, birthdate) VALUES
 
 ('Etoiles', 'Jeu Vidéo', 'Gaming, Talk-show', 'etoiles.jpg', 'Corentin', 'Français', 'Etoiles', 'Etoiles_TV' , 'test', 'NULL', 'Etoiles_TV', 'etoiles_tv','video1.mp4', 'video2.mp4', 'Fan de jeux de société', 'A travaillé pour LeStream', 'Participe souvent aux émissions de Domingo'),
 ('Gotaga', 'Jeu Vidéo', 'Gaming, Esport', 'gotaga.jpg', 'Corentin Houssein', 'Français', 'Gotaga', 'Gotaga', NULL, NULL, 'Gotaga', 'gotaga', 'video1.mp4', 'video2.mp4', 'Champion du monde de Call of Duty', 'Fondateur de Vitality', 'Organise le Gotaga Show'),

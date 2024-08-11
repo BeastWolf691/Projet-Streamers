@@ -141,5 +141,3 @@ include 'bdd.php';
         <?php } ?>
     </div>
 </div>
-
-<script type="text/javascript" src="js/scroll.js"></script>

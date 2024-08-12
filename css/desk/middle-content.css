@@ -13,8 +13,6 @@
     flex-wrap: wrap;
     right: 40px;
     border-radius: 10px;
-    overflow-x: auto;
-    white-space: nowrap;
 }
 
 .card {

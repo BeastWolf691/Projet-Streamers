@@ -75,7 +75,6 @@
     </aside>
 
     <div class="content">
-
 <!-- récupération -->
 <?php
 include 'bdd.php';

@@ -84,7 +84,7 @@ include 'bdd.php';
 
         while ($d = $req->fetch(PDO::FETCH_OBJ)) { // pour chaque ligne dans la BDD, on crée une carte
 
-             // Calcul de l'âge à partir de la date de naissance
+            
             $mainCat = $d->mainCat;
             switch ($mainCat) {
                 case 'Gaming':
@@ -101,7 +101,7 @@ include 'bdd.php';
                     break;
             }
             $mainCat = strtolower($d->nickname . ' ' . $d->mainCat . ' ' . $d->thematic . ' ' . $d->language);
-
+ // Calcul de l'âge à partir de la date de naissance
             $birthdate = new DateTime($d->birthdate);
             $now = new DateTime(); 
             $age = $now->diff($birthdate)->y; 

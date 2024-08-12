@@ -84,13 +84,16 @@ $(document).ready(function () {
         $('.card').each(function() {
             let mainCat = $(this).data('info').toLowerCase();
             let thematic = $(this).data('info').toLowerCase();
-            
+       
             // Vérifier si la carte correspond à tous les filtres
             let match = true;
     
-            if (type && !mainCat.includes(type)|| thematic && !thematic.includes(type)) {
+            // Comparaison stricte pour la catégorie dans 'mainCat' et 'thematic'
+            if (type && type !== category && !mainCat.includes(type) && !thematic.includes(type)) {
                 match = false;
             }
+    
+            // Comparaison partielle pour les autres filtres
             if (alphabet && !mainCat.includes(alphabet)) {
                 match = false;
             }

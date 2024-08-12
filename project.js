@@ -83,11 +83,12 @@ $(document).ready(function () {
         // Parcourir chaque carte
         $('.card').each(function() {
             let mainCat = $(this).data('info').toLowerCase();
+            let thematic = $(this).data('info').toLowerCase();
             
             // Vérifier si la carte correspond à tous les filtres
             let match = true;
     
-            if (type && !mainCat.includes(type)) {
+            if (type && !mainCat.includes(type)|| thematic && !thematic.includes(type)) {
                 match = false;
             }
             if (alphabet && !mainCat.includes(alphabet)) {

@@ -4,25 +4,43 @@
 }
 
 .content {
-    text-align: center;
+    display: grid;
     background: #9FF0F7;
     position: absolute;
     top: 195px;
     left: 410px;
-    display: flex;
-    flex-wrap: wrap;
     right: 40px;
+    border-radius: 10px;
+    height: 925px;
+    overflow-x: auto;
+    justify-content: start;
+    grid-template-columns: repeat(60, 1fr); /* 60 colonnes de largeur égale */
+    grid-template-rows: repeat(2, auto); /* 2 rangées avec une hauteur automatique */
+}
+::-webkit-scrollbar {
+    height: 12px;
+}
+
+/* La partie de la barre de défilement où le curseur glisse */
+::-webkit-scrollbar-track {
+    background: #57155d;
+}
+
+/* La partie de la barre de défilement qui déplace le contenu */
+::-webkit-scrollbar-thumb {
+    background: #000000;
     border-radius: 10px;
 }
 
 .card {
     width: 216px;
     background-color: #fff;
-    margin: 28px 11px 28px;
-    height: 350px;
+    margin: 28px 11px;
+    height: 400px;
     border-radius: 10px;
     padding: 0 0 0 2px;
 }
+
 
 .cat_video {
     background-color: #7C24A2;

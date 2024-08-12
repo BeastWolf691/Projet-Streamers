@@ -71,18 +71,49 @@ $(document).ready(function () {
         });
     });
 
-    //systeme de recherche parmi les filtres
+    //------------------------systeme de recherche parmi les filtres---------------------------------------------------------
     $('.filter-item select').on('change', function() {
-        let searchTerm = $(this).val().toLowerCase();
+        // Récupérer les valeurs des filtres
+        let type = $('#type').val().toLowerCase();
+        let alphabet = $('#alphabet').val().toLowerCase();
+        let names = $('#names').val().toLowerCase();
+        let date = $('#date').val().toLowerCase();
+        let languages = $('#languages').val().toLowerCase();
+    
+        // Parcourir chaque carte
         $('.card').each(function() {
-            let mainCat = $(this).data('info');
-            if (mainCat.includes(searchTerm)) {
+            let mainCat = $(this).data('info').toLowerCase();
+            
+            // Vérifier si la carte correspond à tous les filtres
+            let match = true;
+    
+            if (type && !mainCat.includes(type)) {
+                match = false;
+            }
+            if (alphabet && !mainCat.includes(alphabet)) {
+                match = false;
+            }
+            if (names && !mainCat.includes(names)) {
+                match = false;
+            }
+            if (date && !mainCat.includes(date)) {
+                match = false;
+            }
+            if (languages && !mainCat.includes(languages)) {
+                match = false;
+            }
+    
+            // Afficher ou masquer la carte en fonction des résultats
+            if (match) {
                 $(this).show();
             } else {
                 $(this).hide();
             }
         });
     });
+    
+      
+//-----------------------------------FIN FILTRRES ----------------------------------------------------------------------------------
 
         // changement thème logo avec action sombre clair
         const themeDark = "./picture/logo-cd-light.png"; // Logo for light theme

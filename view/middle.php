@@ -10,6 +10,7 @@
             <select id="type" name="type">
                 <option value=""></option>
                 <option value="sport">sport</option>
+                <option value="sport">esport</option>
                 <option value="food">cuisine</option>
                 <option value="gaming">gaming</option>
                 <option value="urbex">urbex</option>
@@ -65,9 +66,9 @@
             </select>
         </div>
 
-        <div class="filter-item">
+      <!--   <div class="filter-item">
             <button type="button" class="btn btn-primary">Rechercher</button>
-        </div>
+        </div> -->
     </aside>
     
     <aside class="result">

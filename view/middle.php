@@ -1,4 +1,3 @@
-
 <link rel="stylesheet" media="screen and (min-width: 981px)" href="../css/desk/index.css" />
 
 <div id="middle">
@@ -9,19 +8,36 @@
             <label id="category" for="type">Catégories</label>
             <select id="type" name="type">
                 <option value=""></option>
-                <option value="sport">sport</option>
-                <option value="esport">esport</option>
-                <option value="food">cuisine</option>
-                <option value="gaming">gaming</option>
-                <option value="urbex">urbex</option>
-                <option value="musique">musique</option>
-                <option value="art">art</option>
-                <option value="fitness">fitness</option>
-                <option value="tourisme">tourisme</option>
-                <option value="beauté">beauté</option>
-                <option value="mode">mode</option>
+                <option value="gaming">Gaming</option>
+                <option value="divers">Divers</option>
+                <option value="jeu-video">Jeu Vidéo</option>
+                <option value="actualite-esport">Actualité Esport</option>
+                <option value="fps">FPS</option>
+                <option value="sport">Sport</option>
+                <option value="cuisine">Cuisine</option>
+                <option value="talk-show">Talk-show</option>
+                <option value="rpg">RPG</option>
+                <option value="formation">Formation</option>
+                <option value="developpement-web-tutoriels">Développement Web Tutoriels</option>
+                <option value="diversite">Diversité</option>
+                <option value="actualites">Actualités</option>
+                <option value="informations">Informations</option>
+                <option value="societe">Société</option>
+                <option value="vlog">Vlog</option>
+                <option value="irl">IRL</option>
+                <option value="vintage">Vintage</option>
+                <option value="aventure">Aventure</option>
+                <option value="politique">Politique</option>
+                <option value="manga">Manga</option>
+                <option value="lifestyle">LifeStyle</option>
+                <option value="react">React</option>
+                <option value="esport">Esport</option>
+                <option value="humour">Humour</option>
+                <option value="divertissement">Divertissement</option>
+                <option value="varietes">Variétés</option>
             </select>
         </div>
+
 
         <div class="filter-item">
             <label for="alphabet">Tranche alphabet</label>
@@ -66,47 +82,36 @@
             </select>
         </div>
 
-      <!--   <div class="filter-item">
+        <!--   <div class="filter-item">
             <button type="button" class="btn btn-primary">Rechercher</button>
         </div> -->
     </aside>
-    
+
     <aside class="result">
-        <?php require_once "zoomCard.php";?>
+        <?php require_once "zoomCard.php"; ?>
     </aside>
 
     <div class="content">
-<!-- récupération -->
-<?php
-include 'bdd.php';
-      $sql = 'SELECT id, nickname, mainCat, thematic, picture, name, language, pYoutube,
+        <!-- récupération -->
+        <?php
+        include 'bdd.php';
+        $sql = 'SELECT id, nickname, mainCat, thematic, picture, name, language, pYoutube,
       ptwitch, pKick, pTwitter, pInstagram, pTiktok, videoOne, videoTwo, factOne, factTwo, factThree, birthdate FROM cards ORDER BY nickname ASC';
         $req = $pdo->query($sql);
 
         while ($d = $req->fetch(PDO::FETCH_OBJ)) { // pour chaque ligne dans la BDD, on crée une carte
 
-            
+            // Pour chaque valeur de mainCat et de thematic, j'applique un css différent
             $mainCat = $d->mainCat;
-            switch ($mainCat) {
-                case 'Gaming':
-                    $cssClass = 'cat_video';
-                    break;
-                case 'IRL':
-                    $cssClass = 'cat_real';
-                    break;
-                case 'Cooking':
-                    $cssClass = 'cat_cook';
-                    break;
-                default:
-                    $cssClass = '';
-                    break;
-            }
+           
+            // Remplacement des espaces et caractères spéciaux pour créer une classe CSS valide
+            $cssClass = 'cat_' . strtolower(str_replace([' ', '-', ','], '_', $mainCat));
             $mainCat = strtolower($d->nickname . ' ' . $d->mainCat . ' ' . $d->thematic . ' ' . $d->language);
- // Calcul de l'âge à partir de la date de naissance
-            $birthdate = new DateTime($d->birthdate);
-            $now = new DateTime(); 
-            $age = $now->diff($birthdate)->y; 
 
+            // Calcul de l'âge à partir de la date de naissance
+            $birthdate = new DateTime($d->birthdate);
+            $now = new DateTime();
+            $age = $now->diff($birthdate)->y;
         ?>
             <div class="card <?php echo $cssClass; ?>" data-id="<?php echo $d->id; ?>" data-info="<?php echo $mainCat; ?>">
                 <p> <?php echo $d->nickname; ?></p>

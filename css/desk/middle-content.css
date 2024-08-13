@@ -31,7 +31,7 @@
     background: #bac30a;
     border-radius: 10px;
 }
-
+/*-----------------------------cartes------------------------------*/
 .card {
     width: 216px;
     background-color: #fff;
@@ -41,18 +41,118 @@
     padding: 0 0 0 2px;
 }
 
-
 .cat_video {
     background-color: #7C24A2;
 }
 
-.cat_real {
-    background-color: red;
+.cat_gaming {
+    background-color: #ff5733;
 }
 
-.cat_cook {
-    background-color: #3A8720;
+.cat_divers {
+    background-color: #33ff57; 
 }
+
+.cat_jeu_video {
+    background-color: #3357ff; 
+}
+
+.cat_actualite_esport {
+    background-color: #ff33a8; 
+}
+
+.cat_fps {
+    background-color: #ffb833; 
+}
+
+.cat_sport {
+    background-color: #33fff2; 
+}
+
+.cat_cuisine {
+    background-color: #ff3333; 
+}
+
+.cat_talk_show {
+    background-color: #a833ff; 
+}
+
+.cat_rpg {
+    background-color: #57ff33;
+}
+
+.cat_formation {
+    background-color: #ff3357; 
+}
+
+.cat_developpement_web_tutoriels {
+    background-color: #3333ff; 
+}
+
+.cat_diversite {
+    background-color: #33a8ff; 
+}
+
+.cat_actualites {
+    background-color: #ffd433; 
+}
+
+.cat_informations {
+    background-color: #33ffad; 
+}
+
+.cat_societe {
+    background-color: #ff9d33; 
+}
+
+.cat_vlog {
+    background-color: #ff3369; 
+}
+
+.cat_irl {
+    background-color: #57a8ff; 
+}
+
+.cat_vintage {
+    background-color: #ff336d;
+}
+
+.cat_aventure {
+    background-color: #a8ff33; 
+}
+
+.cat_politique {
+    background-color: #ff57a8; 
+}
+
+.cat_manga {
+    background-color: #a8ff57; 
+}
+
+.cat_lifestyle {
+    background-color: #ff33f5;
+}
+
+.cat_react {
+    background-color: #57ffad; 
+}
+
+.cat_esport {
+    background-color: #3357a8;
+}
+
+.cat_humour {
+    background-color: #ff33a2; 
+}
+
+.cat_divertissement {
+    background-color: #a83357; 
+}
+
+.cat_varietes {
+    background-color: #33ff99; 
+}
+
 
 /******************************formulaires***************************/
 input[type=password],input[type=date],input[type=text],input[type=mail] {

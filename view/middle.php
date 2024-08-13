@@ -54,7 +54,7 @@
                
             </select>
         </div>
-
+<!-- 
         <div class="filter-item">
             <label for="date">Date de création&nbsp;</label>
             <select id="date" name="date">
@@ -64,7 +64,7 @@
                 <option>depuis 2015</option>
                 <option>depuis 2020</option>
             </select>
-        </div>
+        </div> -->
 
         <div class="filter-item">
             <label id="speak" for="languages">Langues</label>

@@ -10,7 +10,7 @@
             <select id="type" name="type">
                 <option value=""></option>
                 <option value="sport">sport</option>
-                <option value="sport">esport</option>
+                <option value="esport">esport</option>
                 <option value="food">cuisine</option>
                 <option value="gaming">gaming</option>
                 <option value="urbex">urbex</option>

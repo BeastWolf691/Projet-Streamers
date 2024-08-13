@@ -28,7 +28,7 @@
 
 /* La partie de la barre de défilement qui déplace le contenu */
 ::-webkit-scrollbar-thumb {
-    background: #000000;
+    background: #bac30a;
     border-radius: 10px;
 }
 

@@ -7,33 +7,16 @@
             <label id="category" for="type">Catégories</label>
             <select id="type" name="type">
                 <option value=""></option>
-                <option value="gaming">Gaming</option>
-                <option value="divers">Divers</option>
-                <option value="jeu-video">Jeu Vidéo</option>
-                <option value="actualite-esport">Actualité Esport</option>
-                <option value="fps">FPS</option>
-                <option value="sport">Sport</option>
-                <option value="cuisine">Cuisine</option>
-                <option value="talk-show">Talk-show</option>
-                <option value="rpg">RPG</option>
-                <option value="formation">Formation</option>
-                <option value="developpement-web-tutoriels">Développement Web Tutoriels</option>
-                <option value="diversite">Diversité</option>
-                <option value="actualites">Actualités</option>
-                <option value="informations">Informations</option>
-                <option value="societe">Société</option>
-                <option value="vlog">Vlog</option>
-                <option value="irl">IRL</option>
-                <option value="vintage">Vintage</option>
-                <option value="aventure">Aventure</option>
-                <option value="politique">Politique</option>
-                <option value="manga">Manga</option>
-                <option value="lifestyle">LifeStyle</option>
-                <option value="react">React</option>
-                <option value="esport">Esport</option>
-                <option value="humour">Humour</option>
-                <option value="divertissement">Divertissement</option>
-                <option value="varietes">Variétés</option>
+                <?php
+               
+                $sqlCat = 'SELECT DISTINCT mainCat FROM cards ORDER BY mainCat ASC';
+                $reqCat = $pdo->query($sqlCat);
+        
+                while ($d = ($reqCat->fetch(PDO::FETCH_OBJ)))   { 
+                         echo '<option value="' . $d->mainCat . '">' . $d->mainCat . '</option>'; 
+                }
+                 ?>
+           
             </select>
         </div>
 
@@ -55,7 +38,20 @@
         <div class="filter-item">
             <label for="names">Streamers/euses&nbsp;</label>
             <select id="names" name="names">
-                <option></option>
+            <option value=""></option>
+            <?php
+               
+               $sqlNick = 'SELECT DISTINCT nickname FROM cards ORDER BY nickname ASC';
+               $reqNick = $pdo->query($sqlNick);
+               
+               while ($d = $reqNick->fetch(PDO::FETCH_OBJ)) { 
+                   // Supprimer les caractères speciaux du nickname
+                   $nicknameCleaned = str_replace(['_', '.','/','@','#'], '', $d->nickname);
+                   
+                   echo '<option value="' . $nicknameCleaned . '">' . $nicknameCleaned . '</option>'; 
+               }
+               ?>
+               
             </select>
         </div>
 
@@ -74,10 +70,15 @@
             <label id="speak" for="languages">Langues</label>
             <select id="languages" name="languages">
                 <option></option>
-                <option>français</option>
-                <option>anglais</option>
-                <option>espagnol</option>
-                <option>italien</option>
+                <?php
+               
+               $sqlLang = 'SELECT DISTINCT language FROM cards ORDER BY language ASC';
+               $reqLang = $pdo->query($sqlLang);
+               
+               while ($d = $reqLang->fetch(PDO::FETCH_OBJ)) { 
+                   echo '<option value="' . $d->language . '">' . $d->language . '</option>'; 
+               }
+               ?>
             </select>
         </div>
 
@@ -93,7 +94,7 @@
     <div class="content">
         <!-- récupération -->
         <?php
-        include 'bdd.php';
+        
         $sql = 'SELECT id, nickname, mainCat, thematic, picture, name, language, pYoutube,
       ptwitch, pKick, pTwitter, pInstagram, pTiktok, videoOne, videoTwo, factOne, factTwo, factThree, birthdate FROM cards ORDER BY nickname ASC';
         $req = $pdo->query($sql);

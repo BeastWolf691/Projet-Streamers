@@ -1,4 +1,3 @@
-<link rel="stylesheet" media="screen and (min-width: 981px)" href="../css/desk/index.css" />
 
 <div id="middle">
     <aside class="filter-bar">

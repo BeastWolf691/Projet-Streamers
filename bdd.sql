@@ -1,7 +1,6 @@
-USE stream;
+USE stream
 INSERT INTO cards (nickname, mainCat, thematic, picture, name, language, pYoutube, pTwitch, pKick, pTwitter, pInstagram, pTiktok,
 videoOne, videoTwo, factOne, factTwo, factThree, birthdate) VALUES
-
 ('AkiWizard', 'Gaming', 'Divers', '_default_', 'Axel', 'Français', 'AkiWizard', 'akiwizard', 'akiwizard', 'AkiWizard', 'akiwizard', 'akiwizard', '', '', 'AkiWizard a contribué à construire le site Creator Deck !', '', '', '1990-01-06'),
 ('AmineMaTué', 'Gaming', 'Divers', '_default_', 'Mohammed Amine Mahmoud', 'Français', 'Aminematue', 'Aminematue', 'kick.com/streamer1', 'twitter.com/streamer1', 'instagram.com/streamer1', 'tiktok.com/streamer1', '', '', "AmineMaTué est l'organisateur du Eleven All-Stars, le match de football qui oppose streamers français et espagnols.", 'Le 19 novembre 2022, il bat le record de viewers simultanés sur Twitch (plus de 1,1 million), détenu auparavant par Sueezie (puis repris par celui-ci depuis).', '','1994-07-21'),
 ('Anas_Off', 'Gaming', 'Divers', '_default_', 'Anas Morine', 'Français', 'Anas170QI', 'anas_off', '', 'anas_offf', 'anas__officiel__', '', '', '', '', '', '', '1989-10-24'),
@@ -79,4 +78,4 @@ videoOne, videoTwo, factOne, factTwo, factThree, birthdate) VALUES
 ('ZeratoR', 'Gaming', 'Esport', '_default_', 'Adrien Nougaret', 'Français', 'ZeratoR', 'ZeratoR', '', 'ZeratoRSC2', 'zeratohr', '', 'video1_url', 'video2_url', 'Créateur du ZEvent', 'Stream depuis 2010', 'A travaillé chez Millenium', '1989-03-01'),
 ('Zerkaa', 'Gaming', 'Variétés', '_default_', 'Josh Bradley', 'Anglais', 'Zerkaa', 'Zerkaa', '', 'ZerkaaHD', 'zerkaa', 'zerkaa', 'video1_url', 'video2_url', 'Membre des Sidemen', 'Connu pour ses vlogs et gameplay', 'Très suivi sur YouTube', '1992-09-04'),
 ('Zfg', 'Gaming', 'Speedrunning', '_default_', 'Zfg', 'Anglais', 'Zfg', 'Zfg', '', 'Zfg', 'zfg', '', 'video1_url', 'video2_url', 'Connu pour ses speedruns de Zelda', 'Joueur expérimenté', 'Très respecté dans la communauté', '1995-12-17'),
-('Zylbrad', 'Gaming', 'Variétés', '_default_', 'Brad', 'Anglais', 'Zylbrad', 'Zylbrad', '', 'Zylbrad', 'zylbrad', '', 'video1_url', 'video2_url', 'Connu pour ses vidéos sur Apex Legends', 'Fan de FPS', 'Attitude humoristique', '1997-03-23');
+('Zylbrad', 'Gaming', 'Variétés', '_default_', 'Brad', 'Anglais', 'Zylbrad', 'Zylbrad', '', 'Zylbrad', 'zylbrad', '', 'video1_url', 'video2_url', 'Connu pour ses vidéos sur Apex Legends', 'Fan de FPS', 'Attitude humoristique', '1997-03-23'),

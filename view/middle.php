@@ -4,7 +4,7 @@
         <div class="test"></div>
 
         <div class="filter-item">
-            <label id="category" for="type">Catégories</label>
+            <label id="category" for="type">Thèmes</label>
             <select id="type" name="type">
                 <option value=""></option>
                 <?php
@@ -14,6 +14,22 @@
         
                 while ($d = ($reqCat->fetch(PDO::FETCH_OBJ)))   { 
                          echo '<option value="' . $d->mainCat . '">' . $d->mainCat . '</option>'; 
+                }
+                 ?>
+           
+            </select>
+        </div>
+        <div class="filter-item">
+            <label id="thematic" for="thematic">Catégories</label>
+            <select id="thematic" name="thematic">
+                <option value=""></option>
+                <?php
+               
+                $sqlThem = 'SELECT DISTINCT thematic FROM cards ORDER BY thematic ASC';
+                $reqThem = $pdo->query($sqlThem);
+        
+                while ($d = ($reqThem->fetch(PDO::FETCH_OBJ)))   { 
+                         echo '<option value="' . $d->thematic . '">' . $d->thematic . '</option>'; 
                 }
                  ?>
            

@@ -77,7 +77,7 @@ $(document).ready(function () {
         let type = $('#type').val().toLowerCase();
         let alphabet = $('#alphabet').val().toLowerCase();
         let names = $('#names').val().toLowerCase();
-        let date = $('#date').val().toLowerCase();
+        let date = $('#date').val();
         let languages = $('#languages').val().toLowerCase();
     
         // Parcourir chaque carte

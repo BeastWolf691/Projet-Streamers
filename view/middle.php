@@ -4,7 +4,7 @@
         <div class="test"></div>
 
         <div class="filter-item">
-            <label id="category" for="type">Thèmes</label>
+            <label id="category" for="type">Catégorie</label>
             <select id="type" name="type">
                 <option value=""></option>
                 <?php
@@ -19,8 +19,26 @@
            
             </select>
         </div>
+
         <div class="filter-item">
-            <label id="thematic" for="thematic">Catégories</label>
+            <label id="category" for="categoryS">Categorie 2</label>
+            <select id="categoryS" name="categoryS">
+                <option value=""></option>
+                <?php
+               
+                $sqlCatSecondary = 'SELECT DISTINCT secondCat FROM cards ORDER BY secondCat ASC';
+                $reqCatSecondary = $pdo->query($sqlCatSecondary);
+        
+                while ($d = ($reqCatSecondary->fetch(PDO::FETCH_OBJ)))   { 
+                         echo '<option value="' . $d->secondCat . '">' . $d->secondCat . '</option>'; 
+                }
+                 ?>
+           
+            </select>
+        </div>
+
+        <div class="filter-item">
+            <label id="thematic" for="thematic">Thèmes</label>
             <select id="thematic" name="thematic">
                 <option value=""></option>
                 <?php
@@ -111,7 +129,7 @@
         <!-- récupération -->
         <?php
         
-        $sql = 'SELECT id, nickname, mainCat, thematic, picture, name, language, pYoutube,
+        $sql = 'SELECT id, nickname, mainCat, secondCat,thematic, picture, name, language, pYoutube,
       ptwitch, pKick, pTwitter, pInstagram, pTiktok, videoOne, videoTwo, factOne, factTwo, factThree, birthdate FROM cards ORDER BY nickname ASC';
         $req = $pdo->query($sql);
 
@@ -133,6 +151,7 @@
                 <p> <?php echo $d->nickname; ?></p>
                 <img src="picture/photos/photo-<?php echo $d->picture; ?>.jpg" alt="<?php echo $nickname; ?>" title="<?php echo $nickname; ?>">
                 <p> <?php echo $d->mainCat; ?></p>
+                <p> <?php echo $d->secondCat; ?></p>
                 <p> <?php echo $d->thematic; ?></p>
                 <p> <?php // echo $d->name; 
                     ?> </p>

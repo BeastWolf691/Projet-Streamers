@@ -20,6 +20,8 @@ class Cards
     #[ORM\Column()]
     private string $mainCat;
     #[ORM\Column()]
+    private string $secondCat;
+    #[ORM\Column()]
     private string $thematic;
     #[ORM\Column()]
     private string $picture;
@@ -67,6 +69,7 @@ class Cards
         int $id,
         string $nickname,
         string $mainCat,
+        string $secondCat,
         string $thematic,
         string $picture,
         string $name,
@@ -87,6 +90,7 @@ class Cards
         $this->id = $id;
         $this->nickname = $nickname;
         $this->mainCat = $mainCat;
+        $this->secondCat = $secondCat;
         $this->thematic = $thematic;
         $this->picture = $picture;
         $this->name = $name;

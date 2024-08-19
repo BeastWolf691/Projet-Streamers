@@ -41,7 +41,7 @@
             <select id="thematic" name="thematic">
                 <option value=""></option>
                 <?php
-                // Requête SQL modifiée pour exclure les valeurs nulles ou vides
+        
                 $sqlThem = "SELECT DISTINCT thematic FROM cards WHERE thematic IS NOT NULL AND thematic != '' ORDER BY thematic ASC";
                 $reqThem = $pdo->query($sqlThem);
 
@@ -97,17 +97,6 @@
 
             </select>
         </div>
-        <!-- 
-        <div class="filter-item">
-            <label for="date">Date de création&nbsp;</label>
-            <select id="date" name="date">
-                <option></option>
-                <option>depuis 2005</option>
-                <option>depuis 2010</option>
-                <option>depuis 2015</option>
-                <option>depuis 2020</option>
-            </select>
-        </div> -->
 
         <div class="filter-item">
             <label id="speak" for="languages">Langues</label>
@@ -167,24 +156,6 @@
                 <p> <?php echo $d->language; ?> </p>
                 <p> <?php echo $d->pYoutube; ?> </p>
                 <p> <?php echo $d->ptwitch; ?> </p>
-                <p> <?php //echo $d->pKick; 
-                    ?> </p>
-                <p> <?php //echo $d->pTwitter; 
-                    ?> </p>
-                <p> <?php //echo $d->pInstagram; 
-                    ?> </p>
-                <p> <?php //echo $d->pTiktok; 
-                    ?> </p>
-                <p> <?php //echo $d->videoOne; 
-                    ?> </p>
-                <p> <?php //echo $d->videoTwo; 
-                    ?> </p>
-                <p> <?php //echo $d->factOne; 
-                    ?> </p>
-                <p> <?php //echo $d->factTwo; 
-                    ?> </p>
-                <p> <?php //echo $d->factThree; 
-                    ?> </p>
                 <p>Âge : <?php echo $age; ?> ans</p>
 
             </div>

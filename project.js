@@ -3,16 +3,36 @@ $(document).ready(function () {
     const overlay = $("#overlay");
     const menu = $("#menu-person");
     const logoContainer = $('#logo-container');
-    
+
     //Caroussel
-    const images = [
-        { src: "./logo-instagram2neon.png", link: "https://www.instagram.com" },
-        { src: "./logo-kick2neon.png", link: "https://www.kick.com" },
-        { src: "./logo-tiktok2neon.png", link: "https://www.tiktok.com" },
-        { src: "./logo-snap2neon.png", link: "https://www.snapchat.com" },
-        { src: "./logo-twitch2neon.png", link: "https://www.twitch.tv" },
-        { src: "./logo-x2neon.png", link: "https://www.twitter.com" },
-        { src: "./logo-youtube2neon.png", link: "https://www.youtube.com" }
+    const images = [{
+            src: "./logo-instagram2neon.png",
+            link: "https://www.instagram.com"
+        },
+        {
+            src: "./logo-kick2neon.png",
+            link: "https://www.kick.com"
+        },
+        {
+            src: "./logo-tiktok2neon.png",
+            link: "https://www.tiktok.com"
+        },
+        {
+            src: "./logo-snap2neon.png",
+            link: "https://www.snapchat.com"
+        },
+        {
+            src: "./logo-twitch2neon.png",
+            link: "https://www.twitch.tv"
+        },
+        {
+            src: "./logo-x2neon.png",
+            link: "https://www.twitter.com"
+        },
+        {
+            src: "./logo-youtube2neon.png",
+            link: "https://www.youtube.com"
+        }
     ];
 
     const $carousel = $('<div>').addClass('carousel');
@@ -59,9 +79,9 @@ $(document).ready(function () {
     });
 
     //Systeme de filtre par searchbar
-    $('#search-input').on('input', function() {
+    $('#search-input').on('input', function () {
         let searchTerm = $(this).val().toLowerCase();
-        $('.card').each(function() {
+        $('.card').each(function () {
             let mainCat = $(this).data('info');
             if (mainCat.includes(searchTerm)) {
                 $(this).show();
@@ -72,36 +92,51 @@ $(document).ready(function () {
     });
 
     //------------------------systeme de recherche parmi les filtres---------------------------------------------------------
-    $('.filter-item select').on('change', function() {
+    $('.filter-item select').on('change', function () {
         // Récupérer les valeurs des filtres
         let type = $('#type').val().toLowerCase();
+        let categoryS = $('#categoryS').val().toLowerCase();
+        let thematic = $('#thematic').val().toLowerCase();
+        let ageFilter = $('#age').val();
         let names = $('#names').val().toLowerCase();
-        let date = $('#date').val();
         let languages = $('#languages').val().toLowerCase();
+        
     
         // Parcourir chaque carte
-        $('.card').each(function() {
+        $('.card').each(function () {
             let mainCat = $(this).data('info').toLowerCase();
-            let thematic = $(this).data('info').toLowerCase();
-       
-            // Vérifier si la carte correspond à tous les filtres
-            let match = true;
+            let age = parseInt($(this).data('age')); 
     
-            // Comparaison stricte pour la catégorie dans 'mainCat' et 'thematic'
-            if (type && type !== category && !mainCat.includes(type) && !thematic.includes(type)) {
+            let match = true;
+
+            if (type && !mainCat.includes(type)) {
+                match = false;
+            }
+            if (categoryS && !mainCat.includes(categoryS)) {
+                match = false;
+            }
+            if (thematic && !mainCat.includes(thematic)) {
                 match = false;
             }
     
-            // Comparaison partielle pour les autres filtres
-
+      
             if (names && !mainCat.includes(names)) {
                 match = false;
             }
-            if (date && !mainCat.includes(date)) {
-                match = false;
-            }
+    
             if (languages && !mainCat.includes(languages)) {
                 match = false;
+            }
+    
+            // Filtrage par tranche d'âge
+            if (ageFilter) {
+                if (ageFilter === 'young' && age >= 18) {
+                    match = false;
+                } else if (ageFilter === 'normal' && (age < 18 || age > 35)) {
+                    match = false;
+                } else if (ageFilter === 'old' && age <= 35) {
+                    match = false;
+                }
             }
     
             // Afficher ou masquer la carte en fonction des résultats
@@ -113,12 +148,12 @@ $(document).ready(function () {
         });
     });
     
-      
-//-----------------------------------FIN FILTRRES ----------------------------------------------------------------------------------
 
-        // changement thème logo avec action sombre clair
-        const themeDark = "./picture/logo-cd-light.png"; // Logo for light theme
-        const themeLight = "./picture/logo-cd-dark.png"; // Logo for dark theme
+    //-----------------------------------FIN FILTRRES ----------------------------------------------------------------------------------
+
+    // changement thème logo avec action sombre clair
+    const themeDark = "./picture/logo-cd-light.png"; // Logo for light theme
+    const themeLight = "./picture/logo-cd-dark.png"; // Logo for dark theme
 
     function appliquerMode() {
         const theme = localStorage.getItem('theme');

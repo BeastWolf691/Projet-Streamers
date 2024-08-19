@@ -52,15 +52,62 @@
             </select>
 
             <div class="filter-item">
-                <label id="age" for="age">Tranche d'âge</label>
-                <select id="age" name="age">
-                    <option value=""></option>
-                    <option value="young">Moins de 18 ans</option>
-                    <option value="normal">De 18 à 35 ans</option>
-                    <option value="old">Plus de 35 ans</option>
-                </select>
-            </div>
-        </div>
+    <label id="age" for="age">Tranche d'âge</label>
+    <select id="age" name="age">
+        <option value=""></option>
+        <optgroup label="Moins de 18 ans">
+        <?php
+        $sqlBirth = 'SELECT birthdate FROM cards';
+        $reqBirth = $pdo->query($sqlBirth);
+
+        while ($d = $reqBirth->fetch(PDO::FETCH_OBJ)) {
+            $birthdate = new DateTime($d->birthdate);
+            $now = new DateTime();
+            $age = $now->diff($birthdate)->y;
+
+            if ($age < 18) {
+                echo '<option value="' . $age . '">' . $age . ' ans</option>';
+            }
+        }
+        ?>
+        </optgroup>
+        
+        <optgroup label="De 18 à 35 ans">
+        <?php
+        // Réinitialiser le curseur de la requête
+        $reqBirth->execute();
+
+        while ($d = $reqBirth->fetch(PDO::FETCH_OBJ)) {
+            $birthdate = new DateTime($d->birthdate);
+            $now = new DateTime();
+            $age = $now->diff($birthdate)->y;
+
+            if ($age >= 18 && $age <= 35) {
+                echo '<option value="' . $age . '">' . $age . ' ans</option>';
+            }
+        }
+        ?>
+        </optgroup>
+        
+        <optgroup label="Plus de 35 ans">
+        <?php
+        // Réinitialiser le curseur de la requête
+        $reqBirth->execute();
+
+        while ($d = $reqBirth->fetch(PDO::FETCH_OBJ)) {
+            $birthdate = new DateTime($d->birthdate);
+            $now = new DateTime();
+            $age = $now->diff($birthdate)->y;
+
+            if ($age > 35) {
+                echo '<option value="' . $age . '">' . $age . ' ans</option>';
+            }
+        }
+        ?>
+        </optgroup>
+    </select>
+</div>
+
 
 
 
@@ -93,6 +140,7 @@
 
                     echo '<option value="' . $nicknameCleaned . '">' . $nicknameCleaned . '</option>';
                 }
+             
                 ?>
 
             </select>

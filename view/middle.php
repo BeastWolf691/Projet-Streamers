@@ -55,7 +55,7 @@
         </div>
 
 
-        <div class="filter-item">
+        <!-- <div class="filter-item">
             <label for="alphabet">Tranche alphabet</label>
             <select id="alphabet" name="alphabet">
                 <option></option>
@@ -65,7 +65,7 @@
                 <option>P - T</option>
                 <option>U - Z</option>
             </select>
-        </div>
+        </div> -->
 
 
 

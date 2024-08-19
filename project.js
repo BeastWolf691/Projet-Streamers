@@ -75,7 +75,6 @@ $(document).ready(function () {
     $('.filter-item select').on('change', function() {
         // Récupérer les valeurs des filtres
         let type = $('#type').val().toLowerCase();
-        let alphabet = $('#alphabet').val().toLowerCase();
         let names = $('#names').val().toLowerCase();
         let date = $('#date').val();
         let languages = $('#languages').val().toLowerCase();
@@ -94,9 +93,7 @@ $(document).ready(function () {
             }
     
             // Comparaison partielle pour les autres filtres
-            if (alphabet && !mainCat.includes(alphabet)) {
-                match = false;
-            }
+
             if (names && !mainCat.includes(names)) {
                 match = false;
             }

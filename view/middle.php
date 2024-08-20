@@ -50,6 +50,8 @@
                 }
                 ?>
             </select>
+        </div>
+        
 
             <div class="filter-item">
     <label id="age" for="age">Tranche d'âge</label>

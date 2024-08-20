@@ -94,12 +94,16 @@ $(document).ready(function () {
     //------------------------systeme de recherche parmi les filtres---------------------------------------------------------
     $('.filter-item select').on('change', function () {
         // Récupérer les valeurs des filtres
+        //fonctionnent
         let type = $('#type').val().toLowerCase();
         let categoryS = $('#categoryS').val().toLowerCase();
-        let thematic = $('#thematic').val().toLowerCase();
-        let ageFilter = $('#age').val();
         let names = $('#names').val().toLowerCase();
         let languages = $('#languages').val().toLowerCase();
+
+//fonctionnent pas
+        let thematic = $('#thematic').val().toLowerCase();
+        let ageFilter = $('#age').val();
+        
         
     
         // Parcourir chaque carte

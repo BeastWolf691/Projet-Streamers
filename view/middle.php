@@ -37,7 +37,7 @@
         </div>
 
         <div class="filter-item">
-            <label id="thematic" for="thematic">Thèmes</label>
+            <label id="thematics" for="thematic">Thèmes</label>
             <select id="thematic" name="thematic">
                 <option value=""></option>
                 <?php
@@ -51,7 +51,7 @@
                 ?>
             </select>
         </div>
-        
+
 
             <div class="filter-item">
     <label id="age" for="age">Tranche d'âge</label>
@@ -195,7 +195,8 @@
             $now = new DateTime();
             $age = $now->diff($birthdate)->y;
         ?>
-            <div class="card <?php echo $cssClass; ?>" data-id="<?php echo $d->id; ?>" data-info="<?php echo $mainCat; ?>" data-age="<?php echo $age; ?>">
+            <div class="card <?php echo $cssClass; ?>" data-id="<?php echo $d->id; ?>" data-info="<?php echo $mainCat; ?>" data-thematic="<?php echo strtolower($d->thematic); ?>" data-age="<?php echo $age; ?>">
+
                 <p> <?php echo $d->nickname; ?></p>
                 <img src="picture/photos/photo-<?php echo $d->picture; ?>.jpg" alt="<?php echo $nickname; ?>" title="<?php echo $nickname; ?>">
                 <p> <?php echo $d->mainCat; ?></p>

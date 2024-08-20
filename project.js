@@ -94,53 +94,34 @@ $(document).ready(function () {
     //------------------------systeme de recherche parmi les filtres---------------------------------------------------------
     $('.filter-item select').on('change', function () {
         // Récupérer les valeurs des filtres
-        //fonctionnent
         let type = $('#type').val().toLowerCase();
         let categoryS = $('#categoryS').val().toLowerCase();
         let names = $('#names').val().toLowerCase();
         let languages = $('#languages').val().toLowerCase();
-
-//fonctionnent pas
         let thematic = $('#thematic').val().toLowerCase();
-        let ageFilter = $('#age').val();
-        
-        
     
         // Parcourir chaque carte
         $('.card').each(function () {
             let mainCat = $(this).data('info').toLowerCase();
-            let age = parseInt($(this).data('age')); 
+            let cardThematic = $(this).data('thematic') ? $(this).data('thematic').toLowerCase() : ''; // Récupérer la thématique de la carte, avec une vérification de null/undefined
     
             let match = true;
-
+    
+            // Conditions de filtrage
             if (type && !mainCat.includes(type)) {
                 match = false;
             }
             if (categoryS && !mainCat.includes(categoryS)) {
                 match = false;
             }
-            if (thematic && !mainCat.includes(thematic)) {
+            if (thematic && thematic !== cardThematic) { // Comparaison stricte avec la thématique de la carte
                 match = false;
             }
-    
-      
             if (names && !mainCat.includes(names)) {
                 match = false;
             }
-    
             if (languages && !mainCat.includes(languages)) {
                 match = false;
-            }
-    
-            // Filtrage par tranche d'âge
-            if (ageFilter) {
-                if (ageFilter === 'young' && age >= 18) {
-                    match = false;
-                } else if (ageFilter === 'normal' && (age < 18 || age > 35)) {
-                    match = false;
-                } else if (ageFilter === 'old' && age <= 35) {
-                    match = false;
-                }
             }
     
             // Afficher ou masquer la carte en fonction des résultats
@@ -152,7 +133,6 @@ $(document).ready(function () {
         });
     });
     
-
     //-----------------------------------FIN FILTRRES ----------------------------------------------------------------------------------
 
     // changement thème logo avec action sombre clair

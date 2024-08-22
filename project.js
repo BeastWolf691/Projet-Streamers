@@ -96,9 +96,11 @@ $(document).ready(function () {
         
         let type = $('#type').val().toLowerCase();
         let categoryS = $('#categoryS').val().toLowerCase();
+        let thematic = $('#thematic').val().toLowerCase();
+        let age = $('#age').val();
         let names = $('#names').val().toLowerCase();
         let languages = $('#languages').val().toLowerCase();
-        let thematic = $('#thematic').val().toLowerCase();
+
     
         
         $('.card').each(function () {
@@ -117,6 +119,9 @@ $(document).ready(function () {
             if (thematic && thematic !== cardThematic) { 
                 match = false;
             }
+            if (age && !mainCat.includes(age)) {
+                match = false;
+            }
             if (names && !mainCat.includes(names)) {
                 match = false;
             }
@@ -133,6 +138,22 @@ $(document).ready(function () {
     });
     
     //-----------------------------------FIN FILTRRES ----------------------------------------------------------------------------------
+
+    //------------------------réinitialiser les filtres---------------------------------------------------------
+    $('#filterForm').on('reset',function() {
+      // Réinitialise le contenu de middle
+      $('.card').show();
+
+      // Remise à zéro des différents filtres
+      $('#type').val('');
+      $('#categoryS').val('');
+      $('#thematic').val('');
+      $('#age').val('');
+      $('#names').val('');
+      $('#languages').val('');
+
+  });
+
 
     // changement thème logo avec action sombre clair
     const themeDark = "./picture/logo-cd-light.png"; // Logo for light theme

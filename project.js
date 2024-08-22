@@ -93,28 +93,28 @@ $(document).ready(function () {
 
     //------------------------systeme de recherche parmi les filtres---------------------------------------------------------
     $('.filter-item select').on('change', function () {
-        // Récupérer les valeurs des filtres
+        
         let type = $('#type').val().toLowerCase();
         let categoryS = $('#categoryS').val().toLowerCase();
         let names = $('#names').val().toLowerCase();
         let languages = $('#languages').val().toLowerCase();
         let thematic = $('#thematic').val().toLowerCase();
     
-        // Parcourir chaque carte
+        
         $('.card').each(function () {
             let mainCat = $(this).data('info').toLowerCase();
+            let secondCat = $(this).data('second').toLowerCase(); 
             let cardThematic = $(this).data('thematic') ? $(this).data('thematic').toLowerCase() : ''; // Récupérer la thématique de la carte, avec une vérification de null/undefined
     
             let match = true;
     
-            // Conditions de filtrage
             if (type && !mainCat.includes(type)) {
                 match = false;
             }
-            if (categoryS && !mainCat.includes(categoryS)) {
+            if (categoryS && !secondCat.includes(categoryS)) { 
                 match = false;
             }
-            if (thematic && thematic !== cardThematic) { // Comparaison stricte avec la thématique de la carte
+            if (thematic && thematic !== cardThematic) { 
                 match = false;
             }
             if (names && !mainCat.includes(names)) {
@@ -123,8 +123,7 @@ $(document).ready(function () {
             if (languages && !mainCat.includes(languages)) {
                 match = false;
             }
-    
-            // Afficher ou masquer la carte en fonction des résultats
+            
             if (match) {
                 $(this).show();
             } else {

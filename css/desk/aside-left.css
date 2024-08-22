@@ -24,14 +24,15 @@
 .filter-item {
     display: flex;
     justify-content: space-between;
-    margin: 8px;
+    margin: 6px;
 }
 
 #type,
+#categoryS,
+#thematic,
+#age,
 #names,
-#date,
 #languages,
-#alphabet,
 .btn-primary {
     border-radius: 25px;
     width: 210px;

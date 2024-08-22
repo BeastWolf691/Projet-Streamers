@@ -32,10 +32,15 @@
 #thematic,
 #age,
 #names,
-#languages,
-.btn-primary {
+#languages {
     border-radius: 25px;
     width: 210px;
+}
+
+input[type=reset] {
+    width: 345px;
+    margin: 10px 0;
+    border-radius: 25px;
 }
 
 /*********************affichage streameurs*******************/

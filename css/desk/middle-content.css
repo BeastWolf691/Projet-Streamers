@@ -5,7 +5,6 @@
 
 .content {
     display: grid;
-    background: #9FF0F7;
     position: absolute;
     top: 195px;
     left: 410px;
@@ -23,14 +22,20 @@
 
 /* La partie de la barre de défilement où le curseur glisse */
 ::-webkit-scrollbar-track {
-    background: #57155d;
+    background: #9FF0F7;
 }
 
 /* La partie de la barre de défilement qui déplace le contenu */
 ::-webkit-scrollbar-thumb {
-    background: #bac30a;
+    background: #57155d ;
     border-radius: 10px;
 }
+
+::-webkit-scrollbar-thumb:hover {
+    background: #ec60cb;
+  }
+
+
 /*-----------------------------cartes------------------------------*/
 .card {
     width: 216px;

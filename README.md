@@ -1,27 +1,30 @@
-#Route à suivre pour que le projet fonctionne
+# Initialisation du projet
 
-Démarrage
-composer install    -> création du dossier vendor
-CREER SI IL NEXISTE PAS UN .GITIGNORE AVEC  /vendor/                 !!!
-aller dans php my admin     create database stream
+## Création de la base de données (BDD)
 
-retour dans vscode
+#### 1) Dans Visual Studio, créer le dossier "vendor" :
+<b>[Terminal]</b> composer install
 
-aller dans php my admin, 
--- créer la database "stream"
+#### 2) /!\ IMPORTANT /!\ CRÉER, S'IL N'EXISTE PAS, UN .GITIGNORE :
+Inclure <b>/vendor/</b> dans le .gitignore
 
-php bin/doctrine orm:validate-schema
+#### 3) Dans phpMyAdmin, entrer la commande :
+<b>[SQL]</b> CREATE DATABASE stream;
 
-Erreur normale: [ERROR] The database schema is not in sync with the current mapping file.
+#### 4) Dans Visual Studio, valider le schéma pour la BDD :
+<b>[Terminal]</b> php bin/doctrine orm:validate-schema
 
-php bin/doctrine orm:schema-tool:create  
+<i><b>Remarque :</b> Ne pas tenir compte de l'erreur suivante : <b>[ERROR] The database schema is not in sync with the current mapping file</b></i>
 
-copier colle l'entieretée du fichier bdd.sql dans l'onglet sql
-ceci crée 3 données de cartes (modèle)
+#### 5) Créer la BDD sur phpMyAdmin :
+<b>[Terminal]</b> php bin/doctrine orm:schema-tool:create
+
+#### 6) Remplir la BDD :
+Copier-coller l'entièreté du fichier <b>bdd.sql</b> dans l'onglet "SQL"
 
 
-#Route suivie
-création d'un fichier  classes
+## Route suivie
+création d'un fichier classes
 <ul>
     <li>Admin</li>
     <li>Cards</li>

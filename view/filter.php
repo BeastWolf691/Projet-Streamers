@@ -53,7 +53,7 @@
 
     <div class="filter-item">
         <label id="age" for="age">Tranche d'âge</label>
-        <select id="age" name="age">
+        <select id="ages" name="age">
             <option value=""></option>
             <optgroup label="Moins de 18 ans">
                 <?php

@@ -55,54 +55,9 @@
         <label id="age" for="age">Tranche d'âge</label>
         <select id="ages" name="age">
             <option value=""></option>
-            <optgroup label="Moins de 18 ans">
-                <?php
-                $sqlBirth = 'SELECT birthdate FROM cards';
-                $reqBirth = $pdo->query($sqlBirth);
-
-                while ($d = $reqBirth->fetch(PDO::FETCH_OBJ)) {
-                    $birthdate = new DateTime($d->birthdate);
-                    $now = new DateTime();
-                    $age = $now->diff($birthdate)->y;
-
-                    if ($age < 18) {
-                        echo '<option value="' . $age . '">' . $age . ' ans</option>';
-                    }
-                }
-                ?>
-            </optgroup>
-
-            <optgroup label="De 18 à 35 ans">
-                <?php
-                $reqBirth->execute();
-
-                while ($d = $reqBirth->fetch(PDO::FETCH_OBJ)) {
-                    $birthdate = new DateTime($d->birthdate);
-                    $now = new DateTime();
-                    $age = $now->diff($birthdate)->y;
-
-                    if ($age >= 18 && $age <= 35) {
-                        echo '<option value="' . $age . '">' . $age . ' ans</option>';
-                    }
-                }
-                ?>
-            </optgroup>
-
-            <optgroup label="Plus de 35 ans">
-                <?php
-                $reqBirth->execute();
-
-                while ($d = $reqBirth->fetch(PDO::FETCH_OBJ)) {
-                    $birthdate = new DateTime($d->birthdate);
-                    $now = new DateTime();
-                    $age = $now->diff($birthdate)->y;
-
-                    if ($age > 35) {
-                        echo '<option value="' . $age . '">' . $age . ' ans</option>';
-                    }
-                }
-                ?>
-            </optgroup>
+            <option value="under18"> Moins de 18 ans</option>
+            <option value="18-35">De 18 à 35 ans</option>
+            <option value="over35"> Plus de 35 ans</option>
         </select>
     </div>
 

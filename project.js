@@ -1,8 +1,9 @@
 $(document).ready(function () {
+    const logoContainer = $('#logo-container');
     const menuButton = $("#menu-top");
     const overlay = $("#overlay");
     const menu = $("#menu-person");
-    const logoContainer = $('#logo-container');
+    
 
     //Caroussel
     const images = [{
@@ -76,6 +77,59 @@ $(document).ready(function () {
         event.preventDefault();
         // Actualise la page
         window.location.href = $(this).attr("href");
+    });
+
+    // changement thème logo avec action sombre clair
+    const themeDark = "./picture/logo-cd-light.png"; // Logo for light theme
+    const themeLight = "./picture/logo-cd-dark.png"; // Logo for dark theme
+
+    function appliquerMode() {
+        const theme = localStorage.getItem('theme');
+        if (theme === 'dark') {
+            //localStorage permet d'enregistrer directement dans le navigateur de l'utilisateur s'il a choisi sombre ou clair sur une page et répercute sur les autres son choix
+            $('body').addClass('darker').removeClass('light');
+            $('.content').addClass('dark');
+            $('#menu-person').addClass('dark');
+            $('#switch').prop('checked', true);
+            logoContainer.html(`<img src="${themeLight}" alt="Logo dark">`);
+        } else {
+            $('body').addClass('light').removeClass('darker');
+            $('.content').removeClass('dark');
+            $('#menu-person').removeClass('dark');
+            $('#switch').prop('checked', false);
+            logoContainer.html(`<img src="${themeDark}" alt="Logo light">`);
+        }
+    }
+
+    appliquerMode();
+
+    $('#switch').on('change', function () {
+        if (this.checked) {
+            localStorage.setItem('theme', 'dark');
+        } else {
+            localStorage.setItem('theme', 'light');
+        }
+        appliquerMode();
+    });
+
+    if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        if (!localStorage.getItem('theme')) {
+            localStorage.setItem('theme', 'dark');
+            $('#switch').prop('checked', true);
+        }
+    }
+
+    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', function (e) {
+        if (!localStorage.getItem('theme')) {
+            if (e.matches) {
+                localStorage.setItem('theme', 'dark');
+                $('#switch').prop('checked', true);
+            } else {
+                localStorage.setItem('theme', 'light');
+                $('#switch').prop('checked', false);
+            }
+            appliquerMode();
+        }
     });
 
     //Systeme de filtre par searchbar
@@ -162,56 +216,5 @@ $(document).ready(function () {
     });
 
 
-    // changement thème logo avec action sombre clair
-    const themeDark = "./picture/logo-cd-light.png"; // Logo for light theme
-    const themeLight = "./picture/logo-cd-dark.png"; // Logo for dark theme
 
-    function appliquerMode() {
-        const theme = localStorage.getItem('theme');
-        if (theme === 'dark') {
-            //localStorage permet d'enregistrer directement dans le navigateur de l'utilisateur s'il a choisi sombre ou clair sur une page et répercute sur les autres son choix
-            $('body').addClass('darker').removeClass('light');
-            $('.content').addClass('dark');
-            $('#menu-person').addClass('dark');
-            $('#switch').prop('checked', true);
-            logoContainer.html(`<img src="${themeLight}" alt="Logo dark">`);
-        } else {
-            $('body').addClass('light').removeClass('darker');
-            $('.content').removeClass('dark');
-            $('#menu-person').removeClass('dark');
-            $('#switch').prop('checked', false);
-            logoContainer.html(`<img src="${themeDark}" alt="Logo light">`);
-        }
-    }
-
-    appliquerMode();
-
-    $('#switch').on('change', function () {
-        if (this.checked) {
-            localStorage.setItem('theme', 'dark');
-        } else {
-            localStorage.setItem('theme', 'light');
-        }
-        appliquerMode();
-    });
-
-    if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-        if (!localStorage.getItem('theme')) {
-            localStorage.setItem('theme', 'dark');
-            $('#switch').prop('checked', true);
-        }
-    }
-
-    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', function (e) {
-        if (!localStorage.getItem('theme')) {
-            if (e.matches) {
-                localStorage.setItem('theme', 'dark');
-                $('#switch').prop('checked', true);
-            } else {
-                localStorage.setItem('theme', 'light');
-                $('#switch').prop('checked', false);
-            }
-            appliquerMode();
-        }
-    });
 });

@@ -33,6 +33,7 @@
         ?>
             <div class="card <?php echo $cssClass; ?>" data-id="<?php echo $d->id; ?>" data-second="<?php echo $d->secondCat; ?>" data-info="<?php echo $mainCat; ?>" data-thematic="<?php echo strtolower($d->thematic); ?>" data-age="<?php echo $age; ?>">
 
+                <i class="fa-sharp-duotone fa-solid fa-plus"></i>
                 <p> <?php echo $d->nickname; ?></p>
                 <img src="picture/photos/photo-<?php echo $d->picture; ?>.jpg" alt="<?php echo $nickname; ?>" title="<?php echo $nickname; ?>">
                 <p> <?php echo $d->mainCat; ?></p>
@@ -43,7 +44,8 @@
                 <p> <?php echo $d->language; ?> </p>
                 <p> <?php echo $d->pYoutube; ?> </p>
                 <p> <?php echo $d->ptwitch; ?> </p>
-                <p>Âge : <?php echo $age; ?> ans</p>
+                <p>Âge : <?php echo $age; ?> ans
+                <i class="fa-sharp-duotone fa-solid fa-ellipsis"></i></p> 
 
             </div>
         <?php } ?>

@@ -6,8 +6,8 @@
     width: 350px;
     background: #9FF0F7;
     padding: 10px 5px 0 15px;
-    position: absolute;
-    top: 195px;
+    position: relative;
+    top: 20px;
     display: flex;
     flex-direction: column;
     border-radius: 10px;
@@ -48,8 +48,8 @@ input[type=reset] {
     background: #57155D;
     width: 370px;
     height: 570px;
-    position: absolute;
-    top: 438px;
+    position: relative;
+    top: 35px;
     margin: 0 0 0 25px;
     border-radius: 10px;
 }

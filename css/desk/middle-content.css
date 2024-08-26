@@ -46,6 +46,15 @@
     padding: 0 ;
 }
 
+.fa-plus {
+    margin: 15px 0 0 190px; 
+    position:absolute
+}
+
+.fa-ellipsis {
+    position: absolute;
+    margin: 0 0 0 110px
+}
 .cat_video {
     background-color: #7C24A2;
 }

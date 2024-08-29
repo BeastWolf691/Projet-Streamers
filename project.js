@@ -1,3 +1,6 @@
+// import ('./carousel.css'); exemple pour lié les différents fichier js
+
+
 $(document).ready(function () {
     const logoContainer = $('#logo-container');
     const menuButton = $("#menu-top");

@@ -1,4 +1,3 @@
-
 document.addEventListener('DOMContentLoaded', function() {
     document.querySelectorAll('.card').forEach(function(card) {
         card.addEventListener('click', function() {
@@ -11,14 +10,15 @@ document.addEventListener('DOMContentLoaded', function() {
                 },
                 body: 'id=' + cardId
             })
-            .then(response => response.text())
+            .then(response => response.text())//response.json())
             .then(data => {
-                console.log(data);
+                console.log(data);//sur le fichier zip recu au lieu de date y'a ('data received:', data)
+                
                 if (data.error) {
                     console.error(data.error);
                 } else {
                     document.querySelector('.result').innerHTML = `
-                        <div class="card">
+                        <div class="zoomCard">
                             <div class="cardHeader">
                                 <div class="cardPseudo">${data.nickname}</div>
                                 <div class="cardCategorieMain">${data.mainCat}</div>

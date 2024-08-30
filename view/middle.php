@@ -6,7 +6,7 @@
     </aside>
 
     <aside class="result">
-        <?php require_once "zoomCard.php"; ?>
+       <?php require_once "zoomCard.php"; ?> 
     </aside>
 
     <div class="content">

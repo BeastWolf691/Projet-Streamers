@@ -99,85 +99,85 @@
 }
 
 .cardYoutube {
-    background: center no-repeat url("./picture/icons/icon-youtube1.png"),
+    background: center no-repeat url("../../picture/icons/icon-youtube1.png"),
         content-box radial-gradient(circle, rgb(255, 0, 0) 0%, rgb(180, 4, 4) 100%);
     border-color: #5f0404;
 }
 
 .cardYoutube:hover {
-    background: center no-repeat url("./picture/icons/icon-youtube1.png"),
+    background: center no-repeat url("../../picture/icons/icon-youtube1.png"),
         content-box radial-gradient(circle, rgb(255, 56, 56) 0%, rgb(212, 37, 37) 100%);
     border-color: #922323;
 }
 
 .cardTwitch {
-    background: center no-repeat url("./picture/icons/icon-twitch1.png"),
+    background: center no-repeat url("../../picture/icons/icon-twitch1.png"),
         content-box radial-gradient(circle, rgb(134,82,246) 0%, rgb(73,44,135) 100%);
     border-color: #311e5b;
 }
 
 .cardTwitch:hover {
-    background: center no-repeat url("./picture/icons/icon-twitch1.png"),
+    background: center no-repeat url("../../picture/icons/icon-twitch1.png"),
         content-box radial-gradient(circle, rgb(151, 107, 247) 0%, rgb(106, 71, 180) 100%);
     border-color: #462e79;
 }
 
 .cardKick {
-    background: center no-repeat url("./picture/icons/icon-kick1.png"),
+    background: center no-repeat url("../../picture/icons/icon-kick1.png"),
         content-box radial-gradient(circle, rgb(83,252,24) 0%, rgb(55, 167, 15) 100%);
     border-color: #2e8b0c;
 }
 
 .cardKick:hover {
-    background: center no-repeat url("./picture/icons/icon-kick1.png"),
+    background: center no-repeat url("../../picture/icons/icon-kick1.png"),
         content-box radial-gradient(circle, rgb(131, 255, 86) 0%, rgb(80, 180, 44) 100%);
     border-color: #47af21;
 }
 
 .cardX {
-    background: center no-repeat url("./picture/icons/icon-x1.png"),
+    background: center no-repeat url("../../picture/icons/icon-x1.png"),
         content-box radial-gradient(circle, rgb(27, 27, 27) 0%, rgb(0, 0, 0) 100%);
     border-color: #000000;
 }
 
 .cardX:hover {
-    background: center no-repeat url("./picture/icons/icon-x1.png"),
+    background: center no-repeat url("../../picture/icons/icon-x1.png"),
         content-box radial-gradient(circle, rgb(44, 44, 44) 0%, rgb(22, 22, 22) 100%);
     border-color: #000000;
 }
 
 .cardInstagram {
-    background: center no-repeat url("./picture/icons/icon-insta1.png"),
+    background: center no-repeat url("../../picture/icons/icon-insta1.png"),
         content-box radial-gradient(circle, rgb(222, 40, 120) 0%, rgb(168, 29, 90) 100%);
     border-color: #8F184E;
 }
 
 .cardInstagram:hover {
-    background: center no-repeat url("./picture/icons/icon-insta1.png"),
+    background: center no-repeat url("../../picture/icons/icon-insta1.png"),
         content-box radial-gradient(circle, rgb(226, 67, 136) 0%, rgb(179, 39, 100) 100%);
     border-color: #a82560;
 }
 
 .cardTiktok {
-    background: center no-repeat url("./picture/icons/icon-tiktok1.png"),
+    background: center no-repeat url("../../picture/icons/icon-tiktok1.png"),
         content-box radial-gradient(circle, rgb(101, 195, 201) 0%, rgb(64, 136, 141) 100%);
     border-color: #22696e;
 }
 
 .cardTiktok:hover {
-    background: center no-repeat url("./picture/icons/icon-tiktok1.png"),
+    background: center no-repeat url("../../picture/icons/icon-tiktok1.png"),
         content-box radial-gradient(circle, rgb(126, 219, 226) 0%, rgb(66, 138, 143) 100%);
     border-color: #32858b;
 }
 
 .cardSnapchat {
-    background: center no-repeat url("./picture/icons/icon-snap1.png"),
+    background: center no-repeat url("../../picture/icons/icon-snap1.png"),
         content-box radial-gradient(circle, rgb(252, 252, 2) 0%, rgb(161, 161, 2) 100%);
     border-color: #888801;
 }
 
 .cardSnapchat:hover {
-    background: center no-repeat url("./picture/icons/icon-snap1.png"),
+    background: center no-repeat url("../../picture/icons/icon-snap1.png"),
         content-box radial-gradient(circle, rgb(255, 255, 49) 0%, rgb(185, 185, 7) 100%);
     border-color: #bbbb01;
 }

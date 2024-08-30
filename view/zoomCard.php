@@ -1,4 +1,4 @@
-<link rel="stylesheet" media="screen and (min-width: 981px)" href="../css/desk/zoom-card.css" />
+<!-- <link rel="stylesheet" media="screen and (min-width: 981px)" href="../css/desk/zoom-card.css" /> --> <!-- inutile -->
 
 <?php
 

@@ -1,5 +1,4 @@
 $(document).ready(function () {
-    console.log('aside.js')
     $('.filter-item select').on('change', function () {
 
         let type = $('#type').val().toLowerCase();

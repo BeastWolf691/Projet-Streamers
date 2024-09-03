@@ -1,5 +1,4 @@
 $(document).ready(function () {
-    console.log('header.js')
     const logoContainer = $('#logo-container');
     const menuButton = $("#menu-top");
     const overlay = $("#overlay");

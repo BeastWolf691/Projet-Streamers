@@ -1,3 +1,9 @@
+#star {
+  position: absolute;
+  top: 50%;
+  right: 4%;
+}
+
 /* Cache le menu par défaut */
 #overlay {
     position: fixed;

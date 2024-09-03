@@ -45,7 +45,7 @@
                 <p> <?php echo $d->pYoutube; ?> </p>
                 <p> <?php echo $d->ptwitch; ?> </p>
                 <p>Âge : <?php echo $age; ?> ans
-                <i class="fa-sharp-duotone fa-solid fa-ellipsis"></i></p> 
+                <i class="fa-solid fa-magnifying-glass"></i></p> 
 
             </div>
         <?php } ?>

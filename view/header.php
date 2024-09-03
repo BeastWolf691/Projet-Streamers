@@ -16,7 +16,7 @@ session_start();
     <script src="https://kit.fontawesome.com/e2e1900fed.js" crossorigin="anonymous"></script><!--permet d'avoir accès à des icones gratuites-->
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <script type="module" src="zoomPost.js"></script>
-    <script  type="module" src="js/index.js"></script><!-- type module TRES IMPORTANTS, SINON LES IMPORT NE FONCTIONNENT PAS, c'est une norme ES6 -->
+    <script type="module" src="js/index.js"></script><!-- type module TRES IMPORTANTS, SINON LES IMPORT NE FONCTIONNENT PAS, c'est une norme ES6 -->
     <link rel="stylesheet" media="screen and (min-width: 981px)" href="css/desk/index.css" />
     <link rel="stylesheet" media="screen and (max-width: 980px)" href="css/tablet.css" />
     <link rel="stylesheet" media="screen and (max-width: 600px)" href="css/mobil.css" />
@@ -26,7 +26,12 @@ session_start();
 <body>
     <header>
         <div id="banner">
-           <a href="#"> <div class="img" id="logo-container"></div></a><!-- ajout du lien -->
+            <a href="#">
+                <div class="img" id="logo-container"></div>
+            </a><!-- ajout du lien -->
+            <div id="star">
+                <i class="fa-regular fa-star fa-lg"></i>
+            </div>
             <div id="person">
                 <i class="fa-solid fa-user fa-2xl" id="menu-top"></i>
                 <div id="overlay">

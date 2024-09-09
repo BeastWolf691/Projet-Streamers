@@ -1,4 +1,5 @@
 <?php
+session_start();
 include 'bdd.php';
 ?>
 
@@ -35,8 +36,12 @@ include 'bdd.php';
                 <i class="fa-solid fa-user fa-2xl" id="menu-top"></i>
                 <div id="overlay">
                     <ul id="menu-person">
-                        <li><a href="./logIn.php">Connexion</a></li>
-                        <li><a href="./register.php">Inscription</a></li>
+                        <?php if (isset($_SESSION['compte'])) { ?>
+                            <li><a href="./logout.php">Déconnexion</a></li>
+                        <?php } else { ?>
+                            <li><a href="./logIn.php">Connexion</a></li>
+                            <li><a href="./register.php">Inscription</a></li>
+                        <?php } ?>
 
                     </ul>
                 </div>

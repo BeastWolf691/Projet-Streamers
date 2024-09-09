@@ -1,3 +1,18 @@
+<?php
+session_start(); 
+
+?>
+<div class="bienvenue">
+    <?php
+    if (isset($_SESSION['compte'])) {
+        $compte = $_SESSION['compte'];
+            echo "<p> Bonjour $compte !</p>";
+        } else {
+            echo "<p> </p>";
+        }
+   
+    ?>
+</div>
 <div class="test"></div>
 <form id="filterForm">
     <div class="filter-item">

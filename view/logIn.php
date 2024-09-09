@@ -1,4 +1,5 @@
 <?php
+session_start();
 include 'header.php';
 
 // Initialisation de la variable d'erreurs
@@ -33,6 +34,9 @@ if (!empty($_POST)) {
                     echo "<div class=\"alert alert-success\" role=\"alert\">Connexion réussie</div>";
                     sleep(1);
                     header('Location: index.php');
+                    if (!isset($_SESSION['compte'])) $_SESSION['compte'] = "";
+                    $_SESSION['compte'] = $_POST['email'];
+                    $_SESSION['compte'] = $nickname;// récupère le psuedo et le met dans session comppte
                     exit();
                 } else {
                     $errors['password'] = "Mot de passe invalide.";

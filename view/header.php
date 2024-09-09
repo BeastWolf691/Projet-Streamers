@@ -1,6 +1,5 @@
 <?php
 include 'bdd.php';
-session_start();
 ?>
 
 <!DOCTYPE html>
@@ -36,13 +35,9 @@ session_start();
                 <i class="fa-solid fa-user fa-2xl" id="menu-top"></i>
                 <div id="overlay">
                     <ul id="menu-person">
-                        <?php if (isset($_SESSION['user_id'])) : ?>
-                            <li>Bonjour, <?php echo htmlspecialchars($_SESSION['nickname']); ?></li>
-                            <li><a href="./logout.php">Déconnexion</a></li>
-                        <?php else : ?>
-                            <li><a href="./logIn.php">Connexion</a></li>
-                            <li><a href="./register.php">Inscription</a></li>
-                        <?php endif; ?>
+                        <li><a href="./logIn.php">Connexion</a></li>
+                        <li><a href="./register.php">Inscription</a></li>
+
                     </ul>
                 </div>
             </div>

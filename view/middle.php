@@ -6,7 +6,7 @@
     </aside>
 
     <aside class="result">
-       <?php require_once "zoomCard.php"; ?> 
+        <?php include 'zoomCard.php' ?>
     </aside>
 
     <div class="content">
@@ -26,26 +26,101 @@
             $cssClass = 'cat_' . strtolower(str_replace([' ', '-', ','], '_', $mainCat));
             $mainCat = strtolower($d->nickname . ' ' . $d->mainCat . ' ' . $d->thematic . ' ' . $d->language);
 
+
+            //lien générer pour les réseaux sociaux
+            $pseudoYoutube = $d->pYoutube;
+            $pseudoTwitch = $d->ptwitch;
+            $pseudoKick = $d->pKick;
+            $pseudoTwitter = $d->pTwitter;
+            $pseudoInstagram = $d->pInstagram;
+            $pseudoTiktok = $d->pTiktok;
+
+            $youtubeUrl = !empty($pseudoYoutube) ? "https://www.youtube.com/c/{$pseudoYoutube}" : null;
+            $twitchUrl = !empty($pseudoTwitch) ? "https://www.twitch.tv/{$pseudoTwitch}" : null;
+            $kickUrl = !empty($pseudoKick) ? "https://www.kick.com/{$pseudoKick}" : null;
+            $twitterUrl = !empty($pseudoTwitter) ? "https://www.twitter.com/{$pseudoTwitter}" : null;
+            $instagramUrl = !empty($pseudoInstagram) ? "https://www.instagram.com/{$pseudoInstagram}" : null;
+            $tiktokUrl = !empty($pseudoTiktok) ? "https://www.tiktok.com/{$pseudoTiktok}" : null;
+
             // Calcul de l'âge à partir de la date de naissance
             $birthdate = new DateTime($d->birthdate);
             $now = new DateTime();
             $age = $now->diff($birthdate)->y;
         ?>
-            <div class="card <?php echo $cssClass; ?>" data-id="<?php echo $d->id; ?>" data-second="<?php echo $d->secondCat; ?>" data-info="<?php echo $mainCat; ?>" data-thematic="<?php echo strtolower($d->thematic); ?>" data-age="<?php echo $age; ?>">
+            <div class="card <?php echo $cssClass; ?>" data-id="<?php echo $d->id; ?>"
+                data-nickname="<?php echo $d->nickname; ?>"
+                data-maincat="<?php echo $d->mainCat; ?>"
+                data-secondcat="<?php echo $d->secondCat; ?>"
+                data-thematic="<?php echo strtolower($d->thematic); ?>"
+                data-age="<?php echo $age; ?>"
+                data-picture="<?php echo !empty($d->picture) ? $d->picture : 'undefined'; ?>"
+                data-name="<?php echo $d->name; ?>"
+                data-language="<?php echo $d->language; ?>"
+                data-pyoutube="<?php echo $youtubeUrl; ?>"
+                data-ptwitch="<?php echo $twitchUrl; ?>"
+                data-pkick="<?php echo $kickUrl; ?>"
+                data-ptwitter="<?php echo $twitterUrl; ?>"
+                data-pinstagram="<?php echo $instagramUrl; ?>"
+                data-ptiktok="<?php echo $tiktokUrl; ?>"
+                data-factone="<?php echo $d->factOne; ?>"
+                data-facttwo="<?php echo $d->factTwo; ?>"
+                data-factthree="<?php echo $d->factThree; ?>">
 
                 <i class="fa-sharp-duotone fa-solid fa-plus"></i>
                 <p> <?php echo $d->nickname; ?></p>
-                <img src="picture/photos/photo-<?php echo $d->picture; ?>.jpg" alt="<?php echo $nickname; ?>" title="<?php echo $nickname; ?>">
+
+                <!--echo !empty($d->picture) ? $d->picture cela sert à vérifier si picture contient une image, 
+                si cela n'est pas le cas alors image par défaut undefined-->
+                <img src="picture/photos/photo-<?php echo !empty($d->picture) ? $d->picture : 'undefined' ?>.jpg"
+                    alt="<?php echo $d->nickname; ?>"
+                    title="<?php echo $d->nickname; ?>">
+
                 <p> <?php echo $d->mainCat; ?></p>
                 <p> <?php echo $d->secondCat; ?></p>
                 <p> <?php echo $d->thematic; ?></p>
                 <p> <?php // echo $d->name; 
                     ?> </p>
                 <p> <?php echo $d->language; ?> </p>
-                <p> <?php echo $d->pYoutube; ?> </p>
-                <p> <?php echo $d->ptwitch; ?> </p>
+                <div class="cardInfoRow cardInfoUrl">
+                    <?php if ($youtubeUrl): ?>
+                        <a href="<?php echo $youtubeUrl; ?>" target="_blank" class="cardUrl cardYoutube">
+                        </a>
+                    <?php endif; ?>
+                    <?php if ($twitchUrl): ?>
+                        <a href="<?php echo $twitchUrl; ?>" target="_blank" class="cardUrl cardTwitch">
+
+                        </a>
+                    <?php endif; ?>
+
+                    <?php if ($kickUrl): ?>
+                        <a href="<?php echo $kickUrl; ?>" target="_blank" class="cardUrl cardKick">
+
+                        </a>
+                    <?php endif; ?>
+
+                    <?php if ($twitterUrl): ?>
+                        <a href="<?php echo $twitterUrl; ?>" target="_blank" class="cardUrl cardTwitter">
+                            <i class="fa-brands fa-x-twitter"></i>
+                        </a>
+                    <?php endif; ?>
+
+                    <?php if ($instagramUrl): ?>
+                        <a href="<?php echo $instagramUrl; ?>" target="_blank" class="cardUrl cardInstagram">
+
+                        </a>
+                    <?php endif; ?>
+
+                    <?php if ($tiktokUrl): ?>
+                        <a href="<?php echo $tiktokUrl; ?>" target="_blank" class="cardUrl cardTiktok">
+
+                        </a>
+                    <?php endif; ?>
+                </div>
                 <p>Âge : <?php echo $age; ?> ans
-                <i class="fa-solid fa-magnifying-glass"></i></p> 
+                    <i class="fa-solid fa-magnifying-glass">
+                        <a href="zoomCard.php?id=<?php echo $d->id; ?>" class="view-details"></a>
+                    </i>
+                </p>
 
             </div>
         <?php } ?>

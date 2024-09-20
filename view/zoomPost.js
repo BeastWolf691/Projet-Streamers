@@ -12,7 +12,7 @@
                 zoomCard.querySelector('img').src = `picture/photos/photo-${data.picture}.jpg`;
                 zoomCard.querySelector('#valueCivil').textContent = data.name;
                 zoomCard.querySelector('#valueAge').textContent = `${data.age} ans`;
-                zoomCard.querySelector('#valueFromCountry').textContent = data.mainCat;
+                zoomCard.querySelector('#valueFromCountry').textContent = data.language;
                 zoomCard.querySelector('#valueLanguage').textContent = data.language;
 
                 // Liens URL

@@ -13,6 +13,8 @@ $(document).ready(function () {
             let secondCat = $(this).data('second').toLowerCase();
             let cardThematic = $(this).data('thematic') ? $(this).data('thematic').toLowerCase() : ''; // Récupérer la thématique de la carte, avec une vérification de null/undefined
             let cardAge = parseInt($(this).data('age')); 
+            let cardNickname = $(this).data('nickname').toLowerCase();
+            let cardLanguage = $(this).data('languages').toLowerCase();
 
             let match = true;
 
@@ -34,10 +36,11 @@ $(document).ready(function () {
                     match = false;
                 }
             }
-            if (names && !mainCat.includes(names)) {
+            if (names && !cardNickname.includes(names)) {
                 match = false;
             }
-            if (languages && !mainCat.includes(languages)) {
+            
+            if (languages && !cardLanguage.includes(languages)) {
                 match = false;
             }
 

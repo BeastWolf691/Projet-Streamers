@@ -104,3 +104,8 @@ body {
   .form-container input[type="submit"]:hover {
     background-color: #218838;
   }
+  .bienvenue{
+    position: absolute;
+    right:37px;
+    top: 59px;
+  }

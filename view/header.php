@@ -23,6 +23,18 @@ include 'bdd.php';
 <body>
     <header>
         <div id="banner">
+        <div class="bienvenue">
+                    <?php
+                    if (isset($_SESSION['compte'])) {
+                        $compte = ucfirst($_SESSION['compte']);
+                       ?><p> Bonjour <?= $compte ?> ! <a href="./logout.php">Déconnexion</a></p>;
+                       <?php
+                    } else {
+                        echo "<p> </p>";
+                    }
+
+                    ?>
+                </div>
             <a href="#">
                 <div class="img" id="logo-container"></div>
             </a><!-- ajout du lien -->
@@ -42,6 +54,7 @@ include 'bdd.php';
 
                     </ul>
                 </div>
+              
             </div>
         </div>
 

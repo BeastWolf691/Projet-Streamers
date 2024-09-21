@@ -7,6 +7,15 @@
 @import url('./dark-light.css');
 @import url('./zoom-card.css');
 
+@font-face {
+    font-family: 'CaviarDreams';
+    src: url('../../font/CaviarDreams.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+*{
+    font-family: 'CaviarDreams';
+}
 body {
     margin: 0;
     background: #10051d;

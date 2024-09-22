@@ -38,17 +38,17 @@
 
 /*-----------------------------cartes------------------------------*/
 .card {
-    width: 216px;
+    width: 225px;
     background-color: #fff;
     margin: 20px 11px;
-    height: 425px;
+    height: 440px;
     border-radius: 10px;
-    padding: 0 ;
+    padding: 0;
 }
 
 .fa-plus {
-    margin: 15px 0 0 190px; 
-    position:absolute
+    margin: 15px 0 0 205px;
+    position: absolute;
 }
 
 .fa-magnifying-glass {

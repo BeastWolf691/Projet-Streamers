@@ -56,7 +56,7 @@
 
 
     <div class="filter-item">
-        <label id="age" for="age">Tranche d'âge</label>
+        <label id="age" for="ages">Tranche d'âge</label>
         <select id="ages" name="age">
             <option value=""></option>
             <option value="under18"> Moins de 18 ans</option>

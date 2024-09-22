@@ -17,6 +17,7 @@ include 'bdd.php';
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <script type="module" src="./zoomPost.js"></script>
     <script type="module" src="js/index.js"></script><!-- type module TRES IMPORTANTS, SINON LES IMPORT NE FONCTIONNENT PAS, c'est une norme ES6 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/css/flag-icon.min.css">
     <link rel="stylesheet" media="screen and (min-width: 981px)" href="css/desk/index.css" />
 </head>
 

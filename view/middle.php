@@ -16,9 +16,10 @@
         $sql = 'SELECT id, nickname, mainCat, secondCat,thematic, picture, name, language, pYoutube,
       ptwitch, pKick, pTwitter, pInstagram, pTiktok, videoOne, videoTwo, factOne, factTwo, factThree, birthdate FROM cards ORDER BY nickname ASC';
         $req = $pdo->query($sql);
-
+        include 'flags.php';
         while ($d = $req->fetch(PDO::FETCH_OBJ)) { // pour chaque ligne dans la BDD, on crée une carte
 
+            $flagIcon = getFlagIcon($d->language);
             // Pour chaque valeur de mainCat et de thematic, j'applique un css différent
             $mainCat = $d->mainCat;
 
@@ -67,7 +68,10 @@
                 data-factthree="<?php echo $d->factThree; ?>">
 
                 <i class="fa-sharp-duotone fa-solid fa-plus"></i>
-                <p> <?php echo $d->nickname; ?></p>
+                <p> <?php echo $d->nickname; ?>
+                <i class="flag-icon flag-icon-<?php echo $flagIcon; ?>"></i>
+
+            </p>
 
                 <!--echo !empty($d->picture) ? $d->picture cela sert à vérifier si picture contient une image, 
                 si cela n'est pas le cas alors image par défaut undefined-->

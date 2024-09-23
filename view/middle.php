@@ -119,6 +119,7 @@
 
                         </a>
                     <?php endif; ?>
+
                 </div>
                 <p>Âge : <?php echo $age; ?> ans
                     <i class="fa-solid fa-magnifying-glass">

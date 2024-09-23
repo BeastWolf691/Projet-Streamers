@@ -1,7 +1,6 @@
 
 document.addEventListener('DOMContentLoaded', () => {
     document.querySelectorAll('.card').forEach(card => {
-        // card.addEventListener('click', function() {
         card.querySelector('.fa-magnifying-glass').addEventListener('click', function (event) {
         
 
@@ -16,16 +15,16 @@ document.addEventListener('DOMContentLoaded', () => {
             zoomCard.querySelector('img').src = data.picture !== 'undefined' ? `picture/photos/photo-${data.picture}.jpg` : 'picture/photos/default.jpg';
             zoomCard.querySelector('#valueCivil').textContent = data.name;
             zoomCard.querySelector('#valueAge').textContent = `${data.age} ans`;
-            zoomCard.querySelector('#valueFromCountry').textContent = data.language;
-            zoomCard.querySelector('#valueLanguage').textContent = data.language;
+            zoomCard.querySelector('#valueFromCountry').textContent = data.languages;
+            zoomCard.querySelector('#valueLanguage').textContent = data.languages;
 
             // Liens URL
-            zoomCard.querySelector('#cardYoutube').href = data.pYoutube || '#';
-            zoomCard.querySelector('#cardTwitch').href = data.pTwitch || '#';
-            zoomCard.querySelector('#cardKick').href = data.pKick || '#';
-            zoomCard.querySelector('#cardX').href = data.pTwitter || '#';
-            zoomCard.querySelector('#cardInstagram').href = data.pInstagram || '#';
-            zoomCard.querySelector('#cardTiktok').href = data.pTiktok || '#';
+            zoomCard.querySelector('#cardYoutube').href = data.pyoutube || '#';
+            zoomCard.querySelector('#cardTwitch').href = data.ptwitch || '#';
+            zoomCard.querySelector('#cardKick').href = data.pkick || '#';
+            zoomCard.querySelector('#cardX').href = data.ptwitter || '#';
+            zoomCard.querySelector('#cardInstagram').href = data.pinstagram || '#';
+            zoomCard.querySelector('#cardTiktok').href = data.ptiktok || '#';
 
             // Faits
             zoomCard.querySelector('#fact1').textContent = data.factone || 'Pas d\'anecdote disponible';

@@ -31,6 +31,7 @@ document.addEventListener('DOMContentLoaded', () => {
             zoomCard.querySelector('#fact2').textContent = data.facttwo || 'Pas d\'anecdote disponible';
             zoomCard.querySelector('#fact3').textContent = data.factthree || 'Pas d\'anecdote disponible';
 
+            
             // Afficher la carte zoom (si elle est cachée)
             zoomCard.style.display = 'block';
         });

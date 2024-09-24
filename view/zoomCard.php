@@ -37,7 +37,6 @@
             <a href="#" id="cardX" class="cardUrl cardX" target="_blank"></a>
             <a href="#" id="cardInstagram" class="cardUrl cardInstagram" target="_blank"></a>
             <a href="#" id="cardTiktok" class="cardUrl cardTiktok" target="_blank"></a>
-            <a href="#" id="cardSnapchat" class="cardUrl cardSnapchat" target="_blank"></a>
         </div>
 
         <div class="cardSlotContainer">

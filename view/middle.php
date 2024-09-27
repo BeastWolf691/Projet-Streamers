@@ -28,7 +28,7 @@
             $mainCat = strtolower($d->nickname . ' ' . $d->mainCat . ' ' . $d->thematic . ' ' . $d->language);
 
 
-            //lien générer pour les réseaux sociaux
+            //lien généré pour les réseaux sociaux
             $pseudoYoutube = $d->pYoutube;
             $pseudoTwitch = $d->ptwitch;
             $pseudoKick = $d->pKick;
@@ -67,60 +67,90 @@
                 data-facttwo="<?php echo $d->factTwo; ?>"
                 data-factthree="<?php echo $d->factThree; ?>">
 
-                <i class="fa-sharp-duotone fa-solid fa-plus"></i>
-                <p> <?php echo $d->nickname; ?>
-                <i class="flag-icon flag-icon-<?php echo $flagIcon; ?>"></i>
-
-            </p>
+                
+                <div class="cardHeader">
+                    <?php echo $d->nickname; ?>
+                </div>
 
                 <!--echo !empty($d->picture) ? $d->picture cela sert à vérifier si picture contient une image, 
                 si cela n'est pas le cas alors image par défaut undefined-->
-                <img src="picture/photos/photo-<?php echo !empty($d->picture) ? $d->picture : 'undefined' ?>.jpg"
+                <img 
+                    src="picture/photos/photo-<?php echo !empty($d->picture) ? $d->picture : 'undefined' ?>.jpg"
                     alt="<?php echo $d->nickname; ?>"
-                    title="<?php echo $d->nickname; ?>">
+                    title="<?php echo $d->nickname; ?>"
+                />
 
-                <p> <?php echo $d->mainCat; ?></p>
-                <p> <?php echo $d->secondCat; ?></p>
+                <div class="cardInfoRow cardInfoUrl">
+                    <?php if ($youtubeUrl): ?>
+                        <a
+                            class="cardUrl cardYoutube"
+                            href="<?php echo $youtubeUrl; ?>"
+                            target="_blank"
+                        ></a>
+                    <?php endif; ?>
+
+                    <?php if ($twitchUrl): ?>
+                        <a
+                            class="cardUrl cardTwitch"
+                            href="<?php echo $twitchUrl; ?>"
+                            target="_blank" 
+                        ></a>
+                    <?php endif; ?>
+
+                    <?php if ($kickUrl): ?>
+                        <a
+                            class="cardUrl cardKick"
+                            href="<?php echo $kickUrl; ?>"
+                            target="_blank"
+                        ></a>
+                    <?php endif; ?>
+
+                    <?php if ($twitterUrl): ?>
+                        <a
+                            class="cardUrl cardX"
+                            href="<?php echo $twitterUrl; ?>"
+                            target="_blank"
+                        ></a>
+                    <?php endif; ?>
+
+                    <?php if ($instagramUrl): ?>
+                        <a
+                            class="cardUrl cardInstagram"
+                            href="<?php echo $instagramUrl; ?>"
+                            target="_blank"
+                        ></a>
+                    <?php endif; ?>
+
+                    <?php if ($tiktokUrl): ?>
+                        <a
+                            class="cardUrl cardTiktok"
+                            href="<?php echo $tiktokUrl; ?>"
+                            target="_blank"
+                        ></a>
+                    <?php endif; ?>
+                </div>
+
+                <div class="cardCatRow">
+                    <div class="cardMainCat">
+                        <!-- Ajouter dans la balise de div : [[ style="[php] $d->mainCat = $mainCat; getBckdColor(catRow, $mainCat)[?>]" ]] lorsque la fonction aura été créée -->
+                        <?php echo $d->mainCat; ?>
+                    </div>
+                    <div class="cardSecondCat">
+                        <!-- Ajouter dans la balise de div : [[ style="[php] $d->secondCat = $secCat; getBckdColor(catRow, $secCat)[?>]" ]] lorsque la fonction aura été créée -->
+                        <?php echo $d->secondCat; ?>
+                    </div>
+                </div>
                 <p> <?php echo $d->thematic; ?></p>
                 <p> <?php // echo $d->name; 
                     ?> </p>
                 <p> <?php echo $d->language; ?> </p>
-                <div class="cardInfoRow cardInfoUrl">
-                    <?php if ($youtubeUrl): ?>
-                        <a href="<?php echo $youtubeUrl; ?>" target="_blank" class="cardUrl cardYoutube">
-                        </a>
-                    <?php endif; ?>
-                    <?php if ($twitchUrl): ?>
-                        <a href="<?php echo $twitchUrl; ?>" target="_blank" class="cardUrl cardTwitch">
 
-                        </a>
-                    <?php endif; ?>
+                <i class="flag-icon flag-icon-<?php echo $flagIcon; ?>"></i>
 
-                    <?php if ($kickUrl): ?>
-                        <a href="<?php echo $kickUrl; ?>" target="_blank" class="cardUrl cardKick">
+                <i class="fa-sharp-duotone fa-solid fa-plus"></i>
 
-                        </a>
-                    <?php endif; ?>
+                
 
-                    <?php if ($twitterUrl): ?>
-                        <a href="<?php echo $twitterUrl; ?>" target="_blank" class="cardUrl cardTwitter">
-                            <i class="fa-brands fa-x-twitter"></i>
-                        </a>
-                    <?php endif; ?>
-
-                    <?php if ($instagramUrl): ?>
-                        <a href="<?php echo $instagramUrl; ?>" target="_blank" class="cardUrl cardInstagram">
-
-                        </a>
-                    <?php endif; ?>
-
-                    <?php if ($tiktokUrl): ?>
-                        <a href="<?php echo $tiktokUrl; ?>" target="_blank" class="cardUrl cardTiktok">
-
-                        </a>
-                    <?php endif; ?>
-
-                </div>
                 <p>Âge : <?php echo $age; ?> ans
                     <i class="fa-solid fa-magnifying-glass">
                         <a href="zoomCard.php?id=<?php echo $d->id; ?>" class="view-details"></a>

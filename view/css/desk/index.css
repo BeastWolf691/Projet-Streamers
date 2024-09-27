@@ -1,3 +1,4 @@
+@import url('./variables.css');
 @import url('./carousel.css');
 @import url('./menu_person.css');
 @import url('./menu_top.css');
@@ -5,7 +6,7 @@
 @import url('./middle-content.css');
 @import url('./footer.css');
 @import url('./dark-light.css');
-@import url('./zoom-card.css');
+@import url('./card.css');
 
 @font-face {
     font-family: 'CaviarDreams';
@@ -13,14 +14,20 @@
     font-weight: normal;
     font-style: normal;
 }
-*{
+
+/* *{
     font-family: 'CaviarDreams';
-}
+} */
+
 body {
     margin: 0;
     background: #10051d;
     height: 140vh;
     position: relative;
+}
+
+a:hover {
+    cursor: pointer;
 }
 
 header {

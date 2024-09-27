@@ -36,7 +36,7 @@
             $pseudoInstagram = $d->pInstagram;
             $pseudoTiktok = $d->pTiktok;
 
-            $youtubeUrl = !empty($pseudoYoutube) ? "https://www.youtube.com/c/{$pseudoYoutube}" : null;
+            $youtubeUrl = !empty($pseudoYoutube) ? "https://www.youtube.com/@{$pseudoYoutube}" : null;
             $twitchUrl = !empty($pseudoTwitch) ? "https://www.twitch.tv/{$pseudoTwitch}" : null;
             $kickUrl = !empty($pseudoKick) ? "https://www.kick.com/{$pseudoKick}" : null;
             $twitterUrl = !empty($pseudoTwitter) ? "https://www.twitter.com/{$pseudoTwitter}" : null;

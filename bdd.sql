@@ -2,7 +2,7 @@ USE stream;
 INSERT INTO cards (nickname, mainCat, secondCat, thematic, picture, name, language, pYoutube, pTwitch, pKick, pTwitter, pInstagram, pTiktok,
 videoOne, videoTwo, factOne, factTwo, factThree, birthdate) VALUES
 
-('AkiWizard', 'Gaming', 'Divers', 'RTS', '_default_', 'Axel', 'Français', 'AkiWizard', 'akiwizard', 'akiwizard', 'AkiWizard', 'akiwizard', 'akiwizard', '', '', 'AkiWizard a contribué à construire le site Creator Deck !', '', '', '1990-01-06'),
+('AkiWizard', 'Gaming', 'Divers', 'RTS', 'akiwizard', 'Axel', 'Français', 'AkiWizard', 'akiwizard', 'akiwizard', 'AkiWizard', 'akiwizard', 'akiwizard', '', '', 'AkiWizard a contribué à construire le site Creator Deck !', '', '', '1990-01-06'),
 ('AmineMaTué', 'Gaming','Divers', 'RPG', '_default_', 'Mohammed Amine Mahmoud', 'Français', 'Aminematue', 'Aminematue', 'kick.com/streamer1', 'twitter.com/streamer1', 'instagram.com/streamer1', 'tiktok.com/streamer1', '', '', "AmineMaTué est l'organisateur du Eleven All-Stars, le match de football qui oppose streamers français et espagnols.", 'Le 19 novembre 2022, il bat le record de viewers simultanés sur Twitch (plus de 1,1 million), détenu auparavant par Sueezie (puis repris par celui-ci depuis).', '','1994-07-21'),
 ('Anas_Off', 'Gaming', 'Divers', '', '_default_', 'Anas Morine', 'Français', 'Anas170QI', 'anas_off', '', 'anas_offf', 'anas__officiel__', '', '', '', '', '', '', '1989-10-24'),
 ('AntoineDaniel', 'Gaming', '', 'Divers', 'antoinedaniel', 'Antoine Daniel', 'Français', 'BestOfAntoineDaniel', 'AntoineDaniel', '', '', 'mr.antoinedaniel', 'mr.antoinedaniel', '', '', '', '', '', '1989-04-23'),

@@ -19,10 +19,6 @@ $(document).ready(function () {
         link: "https://www.tiktok.com"
     },
     {
-        src: "./logo-snap2neon.png",
-        link: "https://www.snapchat.com"
-    },
-    {
         src: "./logo-twitch2neon.png",
         link: "https://www.twitch.tv"
     },

@@ -1,4 +1,6 @@
+
 <div class="zoomCard" style="display:none;">
+    <span class="close">X</span>
     <div class="cardHeader">
         <div class="cardPseudo"></div>
     </div>

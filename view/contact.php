@@ -67,7 +67,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         <input type="email" name="mail" id="mail" placeholder="Mail" value="<?php echo htmlspecialchars($mail, ENT_QUOTES); ?>"><br>
 
         <label for="subject">Objet de la demande</label><br>
-        <select id="subject" name="subject" class="form-select" style="width: 98%;">
+        <select id="subject" name="subject" class="form-select" style="width: 95%; border-radius: 4px; border: 1px solid #ccc; padding:10px">
             <option value="problem" <?php if ($subject == 'problem') echo 'selected'; ?>>Problème de connexion</option>
             <option value="deck" <?php if ($subject == 'deck') echo 'selected'; ?>>Deck invalide</option>
             <option value="other" <?php if ($subject == 'other') echo 'selected'; ?>>Autres</option>

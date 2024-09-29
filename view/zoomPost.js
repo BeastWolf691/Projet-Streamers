@@ -2,13 +2,12 @@
 document.addEventListener('DOMContentLoaded', () => {
     document.querySelectorAll('.card').forEach(card => {
         card.querySelector('.fa-magnifying-glass').addEventListener('click', function (event) {
-        event.stopPropagation();
+            event.stopPropagation();
 
             const zoomCard = document.querySelector('.zoomCard');
 
             // Récupérer les données de la carte cliquée
             const data = card.dataset;
-            console.log(data);
 
             // Remplir la carte zoom avec les données
             zoomCard.querySelector('.cardPseudo').textContent = data.nickname;
@@ -31,18 +30,16 @@ document.addEventListener('DOMContentLoaded', () => {
             zoomCard.querySelector('#fact2').textContent = data.facttwo || 'Pas d\'anecdote disponible';
             zoomCard.querySelector('#fact3').textContent = data.factthree || 'Pas d\'anecdote disponible';
 
-            
+
             // Afficher la carte zoom (si elle est cachée)
             zoomCard.style.display = 'block';
         });
+        //ferme la zoomCard en cliquant sur le X
+        const closeButton = document.querySelector('.close');
+        closeButton.addEventListener('click', () => {
+            document.querySelector('.zoomCard').style.display = 'none';
+        });
     });
-});
-
-//permet que la ZoomCard se ferme si on clique en dehors
-document.addEventListener('click', function (e) {
-    if (!e.target.closest('.zoomCard') && !e.target.closest('.card')) {
-        document.querySelector('.zoomCard').style.display = 'none';
-    }
 });
 
 

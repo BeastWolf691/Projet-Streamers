@@ -83,13 +83,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         <input type="text" name="nickname" id="nickname" value="<?php echo htmlspecialchars($nickname, ENT_QUOTES); ?>" required>
 
         <label for="birthday">Anniversaire</label>
-        <input type="date" name="birthday" id="birthday" value="<?php echo htmlspecialchars($birthday, ENT_QUOTES); ?>">
+        <input type="date" name="birthday" id="birthday" style="width: 90%; border-radius: 4px; border: 1px solid #ccc; padding:10px" value="<?php echo htmlspecialchars($birthday, ENT_QUOTES); ?>">
 
         <label for="dateToSign">Date d'enregistrement</label>
-        <input type="date" name="dateToSign" id="dateToSign" value="<?php echo htmlspecialchars($dateToSign, ENT_QUOTES); ?>">
+        <input type="date" name="dateToSign" id="dateToSign" style="width: 90%; border-radius: 4px; border: 1px solid #ccc; padding:10px" value="<?php echo htmlspecialchars($dateToSign, ENT_QUOTES); ?>">
 
         <label for="password">Mot de passe</label>
-        <input type="password" name="password" id="password" required>
+        <input type="password" name="password" style="width: 90%; border-radius: 4px; border: 1px solid #ccc" id="password" required>
 
         <label for="deck">Deck</label>
         <input type="text" name="deck" id="deck" value="<?php echo htmlspecialchars($deck, ENT_QUOTES); ?>">

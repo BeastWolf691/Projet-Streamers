@@ -1,4 +1,4 @@
-@import url('./variables.css');
+@import url('../variables.css');
 
 /*  ======================================
     NOTE : Ce nouveau fichier CSS remplace
@@ -16,6 +16,13 @@
     ***   STYLES COMMUNS   ***
     ==========================
 */
+.close {
+    cursor: pointer;
+    position: relative;
+    left: 97%;
+    font-weight: bold;
+    font-size: 20px;
+}
 
 .card, .zoomCard {
     overflow: hidden;
@@ -236,7 +243,7 @@
     height: 790px;
     overflow: hidden;
     margin: auto;
-    padding: 10px;
+    padding: 0 10px;
     box-sizing: border-box;
     border-radius: 5px;
     border: 5px solid var(--color-card-border);

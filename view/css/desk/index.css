@@ -1,4 +1,4 @@
-@import url('./variables.css');
+@import url('../variables.css');
 @import url('./carousel.css');
 @import url('./menu_person.css');
 @import url('./menu_top.css');
@@ -46,5 +46,11 @@ header {
 }
 img {
     width: 100%;
+}
+#password {
+    width: 94%; 
+    border-radius: 4px; 
+    border: 1px solid #ccc;
+    padding: 10px;
 }
 

@@ -46,8 +46,10 @@ include 'bdd.php';
                 <i class="fa-regular fa-star fa-lg"></i>
             </div>
             <div id="person">
+                
                 <i class="fa-solid fa-user fa-2xl" id="menu-top"></i>
                 <div id="overlay">
+                    <span class="closed">X</span>
                     <ul id="menu-person">
                         <?php if (isset($_SESSION['compte'])) { ?>
                             <li><a href="./logout.php">Déconnexion</a></li>

@@ -3,7 +3,7 @@ $(document).ready(function () {
     const menuButton = $("#menu-top");
     const overlay = $("#overlay");
     const menu = $("#menu-person");
-    
+
 
     //Caroussel
     const images = [{
@@ -61,11 +61,10 @@ $(document).ready(function () {
         overlay.addClass("active");
     });
 
-    // Fermer le menu lorsqu'on clique sur l'extérieur
+    // Fermer le menu lorsqu'on clique sur X
     $(document).on("click", function (event) {
-        if (!menu.is(event.target) && menu.has(event.target).length === 0 && !menuButton.is(event.target) && menuButton.has(event.target).length === 0) {
+        if ($(event.target).is('.closed'))
             overlay.removeClass("active");
-        }
     });
 
     // Fermer le menu lorsqu'on clique sur les liens

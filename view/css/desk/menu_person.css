@@ -14,12 +14,20 @@
 #overlay {
     position: fixed;
     top: 0;
-    right: -250px; /* Cache le menu hors de la vue */
+    right: -260px; /* Cache le menu hors de la vue */
     width: 260px;
     height: 100px;
-    background: linear-gradient(270deg, #4747df, transparent); /* Fond légèrement bleuté/transparent */
+    background: linear-gradient(200deg, #4747df, transparent); /* Fond légèrement bleuté/transparent anciennement 270deg*/
     transition: right 0.5s ease;
     overflow: hidden; /* Pour empêcher le contenu de déborder */
+}
+#overlay .closed {
+  cursor: pointer;
+  position: absolute;
+  top: 1%;
+  left: 92%;
+  font-weight: bold;
+  font-size: 20px;
 }
 
 #person {

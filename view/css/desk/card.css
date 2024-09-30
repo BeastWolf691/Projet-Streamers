@@ -68,6 +68,12 @@
     font-weight: 600;
     color: #eee;
 }
+.cardUrl.disabled {
+    opacity: 0.5; /* Rend l'icône plus transparente pour l'effet désactivé */
+    pointer-events: none; /* Désactive le clic */
+    filter: grayscale(100%); /* Rend l'icône grise */
+}
+
 
 .cardYoutube {
     background: 

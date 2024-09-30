@@ -67,67 +67,27 @@
                 data-facttwo="<?php echo $d->factTwo; ?>"
                 data-factthree="<?php echo $d->factThree; ?>">
 
-                
+
                 <div class="cardHeader">
+                    <i class="fa-sharp-duotone fa-solid fa-plus"></i>
                     <?php echo $d->nickname; ?>
                 </div>
 
                 <!--echo !empty($d->picture) ? $d->picture cela sert à vérifier si picture contient une image, 
                 si cela n'est pas le cas alors image par défaut undefined-->
-                <img 
+                <img
                     src="picture/photos/photo-<?php echo !empty($d->picture) ? $d->picture : 'undefined' ?>.jpg"
                     alt="<?php echo $d->nickname; ?>"
-                    title="<?php echo $d->nickname; ?>"
-                />
+                    title="<?php echo $d->nickname; ?>" />
 
+                <!------Réseaux Sociaux ------->
                 <div class="cardInfoRow cardInfoUrl">
-                    <?php if ($youtubeUrl): ?>
-                        <a
-                            class="cardUrl cardYoutube"
-                            href="<?php echo $youtubeUrl; ?>"
-                            target="_blank"
-                        ></a>
-                    <?php endif; ?>
-
-                    <?php if ($twitchUrl): ?>
-                        <a
-                            class="cardUrl cardTwitch"
-                            href="<?php echo $twitchUrl; ?>"
-                            target="_blank" 
-                        ></a>
-                    <?php endif; ?>
-
-                    <?php if ($kickUrl): ?>
-                        <a
-                            class="cardUrl cardKick"
-                            href="<?php echo $kickUrl; ?>"
-                            target="_blank"
-                        ></a>
-                    <?php endif; ?>
-
-                    <?php if ($twitterUrl): ?>
-                        <a
-                            class="cardUrl cardX"
-                            href="<?php echo $twitterUrl; ?>"
-                            target="_blank"
-                        ></a>
-                    <?php endif; ?>
-
-                    <?php if ($instagramUrl): ?>
-                        <a
-                            class="cardUrl cardInstagram"
-                            href="<?php echo $instagramUrl; ?>"
-                            target="_blank"
-                        ></a>
-                    <?php endif; ?>
-
-                    <?php if ($tiktokUrl): ?>
-                        <a
-                            class="cardUrl cardTiktok"
-                            href="<?php echo $tiktokUrl; ?>"
-                            target="_blank"
-                        ></a>
-                    <?php endif; ?>
+                    <a class="cardUrl cardYoutube <?php echo $youtubeUrl ? '' : 'disabled'; ?>" href="<?php echo $youtubeUrl ?: '#'; ?>" target="_blank"></a>
+                    <a class="cardUrl cardTwitch <?php echo $twitchUrl ? '' : 'disabled'; ?>" href="<?php echo $twitchUrl ?: '#'; ?>" target="_blank"></a>
+                    <a class="cardUrl cardKick <?php echo $kickUrl ? '' : 'disabled'; ?>" href="<?php echo $kickUrl ?: '#'; ?>" target="_blank"></a>
+                    <a class="cardUrl cardX <?php echo $twitterUrl ? '' : 'disabled'; ?>" href="<?php echo $twitterUrl ?: '#'; ?>" target="_blank"></a>
+                    <a class="cardUrl cardInstagram <?php echo $instagramUrl ? '' : 'disabled'; ?>" href="<?php echo $instagramUrl ?: '#'; ?>" target="_blank"></a>
+                    <a class="cardUrl cardTiktok <?php echo $tiktokUrl ? '' : 'disabled'; ?>" href="<?php echo $tiktokUrl ?: '#'; ?>" target="_blank"></a>
                 </div>
 
                 <div class="cardCatRow">
@@ -141,15 +101,9 @@
                     </div>
                 </div>
                 <p> <?php echo $d->thematic; ?></p>
-                <p> <?php // echo $d->name; 
-                    ?> </p>
                 <p> <?php echo $d->language; ?> </p>
 
                 <i class="flag-icon flag-icon-<?php echo $flagIcon; ?>"></i>
-
-                <i class="fa-sharp-duotone fa-solid fa-plus"></i>
-
-                
 
                 <p>Âge : <?php echo $age; ?> ans
                     <i class="fa-solid fa-magnifying-glass">

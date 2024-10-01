@@ -37,24 +37,79 @@
 
         </select>
     </div>
+<!-- ----------------------- -->
 
-    <div class="filter-item">
+<div class="filter-item">
         <label id="thematics" for="thematic">Thèmes</label>
         <select id="thematic" name="thematic">
             <option value=""></option>
             <?php
-
-            $sqlThem = "SELECT DISTINCT thematic FROM cards WHERE thematic IS NOT NULL AND thematic != '' ORDER BY thematic ASC";
+            // Nouvelle requête pour récupérer les catégories principales, secondaires et les thèmes
+            $sqlThem = "SELECT DISTINCT mainCat, secondCat, thematic 
+                        FROM cards 
+                        WHERE thematic IS NOT NULL AND thematic != '' 
+                        ORDER BY mainCat ASC, secondCat ASC, thematic ASC";
             $reqThem = $pdo->query($sqlThem);
 
+            $currentMainCat = null;
+            $currentSecondCat = null;
+
             while ($d = ($reqThem->fetch(PDO::FETCH_OBJ))) {
+                // Vérifie si la catégorie principale a changé pour commencer un nouvel optgroup
+                if ($currentMainCat !== $d->mainCat) {
+                    // Fermer l'optgroup précédent s'il y en a un
+                    if ($currentMainCat !== null) {
+                        echo '</optgroup>';
+                    }
+                    // Commencer un nouvel optgroup pour la nouvelle catégorie principale
+                    echo '<optgroup label="MainCat: ' . htmlspecialchars($d->mainCat) . '">';
+                    $currentMainCat = $d->mainCat;
+                }
+
+                // Ajouter le thème dans l'optgroup de la catégorie principale
                 echo '<option value="' . htmlspecialchars($d->thematic) . '">' . htmlspecialchars($d->thematic) . '</option>';
+            }
+
+            // Fermer le dernier optgroup pour mainCat
+            if ($currentMainCat !== null) {
+                echo '</optgroup>';
+            }
+
+            // Maintenant, on fait la même chose pour secondCat
+            $sqlThemSecondary = "SELECT DISTINCT secondCat, thematic 
+                                 FROM cards 
+                                 WHERE thematic IS NOT NULL AND thematic != '' 
+                                 AND secondCat IS NOT NULL AND secondCat != ''
+                                 ORDER BY secondCat ASC, thematic ASC";
+            $reqThemSecondary = $pdo->query($sqlThemSecondary);
+
+            $currentSecondCat = null;
+
+            while ($d = ($reqThemSecondary->fetch(PDO::FETCH_OBJ))) {
+                // Vérifie si la catégorie secondaire a changé pour commencer un nouvel optgroup
+                if ($currentSecondCat !== $d->secondCat) {
+                    // Fermer l'optgroup précédent s'il y en a un
+                    if ($currentSecondCat !== null) {
+                        echo '</optgroup>';
+                    }
+                    // Commencer un nouvel optgroup pour la nouvelle catégorie secondaire
+                    echo '<optgroup label="SecondCat: ' . htmlspecialchars($d->secondCat) . '">';
+                    $currentSecondCat = $d->secondCat;
+                }
+
+                // Ajouter le thème dans l'optgroup de la catégorie secondaire
+                echo '<option value="' . htmlspecialchars($d->thematic) . '">' . htmlspecialchars($d->thematic) . '</option>';
+            }
+
+            // Fermer le dernier optgroup pour secondCat
+            if ($currentSecondCat !== null) {
+                echo '</optgroup>';
             }
             ?>
         </select>
     </div>
 
-
+<!-- ------------------------------------ -->
     <div class="filter-item">
         <label id="age" for="ages">Tranche d'âge</label>
         <select id="ages" name="age">

@@ -69,9 +69,9 @@ include 'bdd.php';
                 <input id="search-input" type="search" placeholder="Recherche">
             </div>
             <ul id="menu">
-                <li><a href="./index.php" class="neonone">Accueil</a></li>
-                <li><a href="./contact.php" class="neontwo">Contacts</a></li>
-                <li><a href="#" class="neonone">Qui sommes nous</a></li>
+                <li><a href="index.php" class="neonone">Accueil</a></li>
+                <li><a href="contact.php" class="neontwo">Contacts</a></li>
+                <li><a href="aboutUs.php" class="neonone">Qui sommes nous</a></li>
                 <li><a href="#" class="neontwo">Les plateformes</a></li>
             </ul>
             <input type="checkbox" name="" id="switch">

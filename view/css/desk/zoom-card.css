@@ -64,7 +64,7 @@
     font-family: 'CaviarDreams';
     font-size: 0.8em;
     font-weight: 800;
-    color: #57155D;
+    color: var(--color-primary-dark);
 }
 
 .cardInfoValue {
@@ -203,7 +203,7 @@
     font-family: 'CaviarDreams';
     font-size: 0.8em;
     font-weight: 800;
-    color: #57155D;
+    color: var(--color-primary-dark);
 }
 
 .slotContent {

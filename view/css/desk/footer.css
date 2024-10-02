@@ -21,7 +21,7 @@ h1, h2, h3 {
 
 /***********footer****************/
 footer {
-    background: #57155D;
+    background-color: var(--color-primary-dark);
     height: 40px;
     text-align: center;
     padding: 20px 0 0 0;

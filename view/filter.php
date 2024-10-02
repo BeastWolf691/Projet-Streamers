@@ -27,7 +27,8 @@
             <option value=""></option>
             <?php
 
-            $sqlCatSecondary = "SELECT DISTINCT secondCat FROM cards WHERE secondCat IS NOT NULL AND secondCat != '' ORDER BY secondCat ASC";
+            $sqlCatSecondary = "SELECT DISTINCT TRIM(LOWER(secondCat)) as secondCat FROM cards WHERE secondCat IS NOT NULL AND secondCat != '' ORDER BY secondCat ASC";
+            // TRIM()  vire les espaces et LOWER() obligé à afficher en minuscule
             $reqCatSecondary = $pdo->query($sqlCatSecondary);
 
             while ($d = ($reqCatSecondary->fetch(PDO::FETCH_OBJ))) {

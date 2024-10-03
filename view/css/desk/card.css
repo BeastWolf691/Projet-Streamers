@@ -173,6 +173,8 @@
     padding: 6px;
 
     border: 3px solid;
+    -webkit-box-shadow: 6px 6px 15px 3px rgba(16,5,29,0.6); 
+    box-shadow: 6px 6px 15px 3px rgba(16,5,29,0.6);
 }
 
 .card .cardHeader {

@@ -113,14 +113,16 @@
                 </div>
 
                 <p> <?php echo $d->thematic; ?></p>
-                
-            </div>
 
-            <i class="fa-solid fa-magnifying-glass">
+                <i class="fa-solid fa-magnifying-glass">
                 <a href="zoomCard.php?id=<?php echo $d->id; ?>" class="view-details"></a>
+                
             </i>
 
             <i class="fa-sharp-duotone fa-solid fa-plus"></i>
+            </div>
+
+            
         <?php } ?>
     </div>
 </div>

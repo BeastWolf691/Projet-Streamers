@@ -27,7 +27,6 @@
             $cssClass = 'cat_' . strtolower(str_replace([' ', '-', ','], '_', $mainCat));
             $mainCat = strtolower($d->nickname . ' ' . $d->mainCat . ' ' . $d->thematic . ' ' . $d->language);
 
-
             //lien généré pour les réseaux sociaux
             $pseudoYoutube = $d->pYoutube;
             $pseudoTwitch = $d->ptwitch;
@@ -69,25 +68,37 @@
 
 
                 <div class="cardHeader">
-                    <i class="fa-sharp-duotone fa-solid fa-plus"></i>
                     <?php echo $d->nickname; ?>
                 </div>
 
                 <!--echo !empty($d->picture) ? $d->picture cela sert à vérifier si picture contient une image, 
                 si cela n'est pas le cas alors image par défaut undefined-->
                 <img
+                    class="cardPicture"
                     src="picture/photos/photo-<?php echo !empty($d->picture) ? $d->picture : 'undefined' ?>.jpg"
                     alt="<?php echo $d->nickname; ?>"
                     title="<?php echo $d->nickname; ?>" />
 
                 <!------Réseaux Sociaux ------->
                 <div class="cardInfoRow cardInfoUrl">
-                    <a class="cardUrl cardYoutube <?php echo $youtubeUrl ? '' : 'disabled'; ?>" href="<?php echo $youtubeUrl ?: '#'; ?>" target="_blank"></a>
-                    <a class="cardUrl cardTwitch <?php echo $twitchUrl ? '' : 'disabled'; ?>" href="<?php echo $twitchUrl ?: '#'; ?>" target="_blank"></a>
-                    <a class="cardUrl cardKick <?php echo $kickUrl ? '' : 'disabled'; ?>" href="<?php echo $kickUrl ?: '#'; ?>" target="_blank"></a>
-                    <a class="cardUrl cardX <?php echo $twitterUrl ? '' : 'disabled'; ?>" href="<?php echo $twitterUrl ?: '#'; ?>" target="_blank"></a>
-                    <a class="cardUrl cardInstagram <?php echo $instagramUrl ? '' : 'disabled'; ?>" href="<?php echo $instagramUrl ?: '#'; ?>" target="_blank"></a>
-                    <a class="cardUrl cardTiktok <?php echo $tiktokUrl ? '' : 'disabled'; ?>" href="<?php echo $tiktokUrl ?: '#'; ?>" target="_blank"></a>
+                    <a class="cardUrl cardYoutube <?php echo $youtubeUrl ? '' : 'disabled'; ?>" href="<?php echo $youtubeUrl ?: '#'; ?>" target="_blank"><img src="./picture/icons/icon-youtube.svg" alt="YouTube" /></a>
+                    <a class="cardUrl cardTwitch <?php echo $twitchUrl ? '' : 'disabled'; ?>" href="<?php echo $twitchUrl ?: '#'; ?>" target="_blank"><img src="./picture/icons/icon-twitch.svg" alt="Twitch" /></a>
+                    <a class="cardUrl cardKick <?php echo $kickUrl ? '' : 'disabled'; ?>" href="<?php echo $kickUrl ?: '#'; ?>" target="_blank"><img src="./picture/icons/icon-kick.svg" alt="Kick" /></a>
+                    <a class="cardUrl cardX <?php echo $twitterUrl ? '' : 'disabled'; ?>" href="<?php echo $twitterUrl ?: '#'; ?>" target="_blank"><img src="./picture/icons/icon-x.svg" alt="X" /></a>
+                    <a class="cardUrl cardInstagram <?php echo $instagramUrl ? '' : 'disabled'; ?>" href="<?php echo $instagramUrl ?: '#'; ?>" target="_blank"><img src="./picture/icons/icon-instagram.svg" alt="Instagram" /></a>
+                    <a class="cardUrl cardTiktok <?php echo $tiktokUrl ? '' : 'disabled'; ?>" href="<?php echo $tiktokUrl ?: '#'; ?>" target="_blank"><img src="./picture/icons/icon-tiktok.svg" alt="TikTok" /></a>
+                </div>
+
+                <div class="cardInfoRow cardInfoPersonal">
+                    <div class="cardAge">
+                        <?php echo $age; ?> ans
+                    </div>
+                    <!-- <div class="cardCountry">
+                        <i class="flag-icon flag-icon-<?php echo $flagIcon; ?>"></i>
+                    </div> -->
+                    <div class="cardLanguage">
+                        <?php echo $d->language; ?>
+                    </div>
                 </div>
 
                 <div class="cardCatRow">
@@ -100,18 +111,16 @@
                         <?php echo $d->secondCat; ?>
                     </div>
                 </div>
+
                 <p> <?php echo $d->thematic; ?></p>
-                <p> <?php echo $d->language; ?> </p>
-
-                <i class="flag-icon flag-icon-<?php echo $flagIcon; ?>"></i>
-
-                <p>Âge : <?php echo $age; ?> ans
-                    <i class="fa-solid fa-magnifying-glass">
-                        <a href="zoomCard.php?id=<?php echo $d->id; ?>" class="view-details"></a>
-                    </i>
-                </p>
-
+                
             </div>
+
+            <i class="fa-solid fa-magnifying-glass">
+                <a href="zoomCard.php?id=<?php echo $d->id; ?>" class="view-details"></a>
+            </i>
+
+            <i class="fa-sharp-duotone fa-solid fa-plus"></i>
         <?php } ?>
     </div>
 </div>

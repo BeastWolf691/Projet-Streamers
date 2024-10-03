@@ -5,7 +5,7 @@
         <div class="cardPseudo"></div>
     </div>
 
-    <img src="" alt="" title="">
+    <img class="zoomCardPicture" src="" alt="" title="">
 
     <div class="cardInfo">
         <div class="cardInfoRow">
@@ -20,7 +20,7 @@
             </div>
         </div>
 
-        <div class="cardInfoRow">
+        <div class="cardInfoColumn">
             <div class="cardInfoCol colCountry">
                 <div class="cardInfoTitle">Nationalité</div>
                 <div class="cardInfoValue countryFlag" id="valueFromCountry"></div>

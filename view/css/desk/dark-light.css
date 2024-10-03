@@ -1,7 +1,7 @@
 #switch {
     appearance: none;
-    width: 44px;
-    height: 12px;
+    width: 30px;
+    height: 15px;
     background-color: whitesmoke;
     border-radius: 5rem;
     transition: background-color .2s;
@@ -9,6 +9,7 @@
     position: absolute;
     right: 2.5%;
     top: 25px;
+    border: 1px solid #000;
 }
 
 #switch::after {

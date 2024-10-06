@@ -59,12 +59,14 @@ nav {
 /***********concernant qui sommes nous***********/
 
 .aboutUsContainer {
-    width: 80%;
+    width: 60%;
     margin: 15px auto;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     background-color: white;
+    min-height: 55vh;
+    margin-bottom: 10vh;
 }
 
 .btn {
@@ -73,5 +75,8 @@ nav {
     display: block;
     text-align: center;
     margin: 0 auto;
+    border-radius: 5px;
     background-color: var(--color-primary-dark);
-}
+    color: var(--color-font-extralight);
+
+} 

@@ -22,7 +22,7 @@
 body {
     margin: 0;
     background: #10051d;
-    height: 140vh;
+    /*height: 100vh;  alexis: sur mon écran pas besoin de mettre de hauteur, peut etre pour vous?*/
     position: relative;
 }
 a {

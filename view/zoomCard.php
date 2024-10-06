@@ -1,4 +1,3 @@
-
 <div class="zoomCard" style="display:none;">
     <span class="close">X</span>
     <div class="cardHeader">
@@ -33,21 +32,27 @@
         </div>
 
         <div class="cardInfoRow cardInfoUrl">
-            <a href="#" id="cardYoutube" class="cardUrl cardYoutube" target="_blank"></a>
-            <a href="#" id="cardTwitch" class="cardUrl cardTwitch" target="_blank"></a>
-            <a href="#" id="cardKick" class="cardUrl cardKick" target="_blank"></a>
-            <a href="#" id="cardX" class="cardUrl cardX" target="_blank"></a>
-            <a href="#" id="cardInstagram" class="cardUrl cardInstagram" target="_blank"></a>
-            <a href="#" id="cardTiktok" class="cardUrl cardTiktok" target="_blank"></a>
+            <a href="#" id="cardYoutube" class="cardUrl cardYoutube" target="_blank">
+                <img src="./picture/icons/icon-youtube.svg" alt="YouTube" />
+            </a>
+            <a href="#" id="cardTwitch" class="cardUrl cardTwitch" target="_blank">
+                <img src="./picture/icons/icon-twitch.svg" alt="Twitch" />
+            </a>
+            <a href="#" id="cardKick" class="cardUrl cardKick" target="_blank">
+                <img src="./picture/icons/icon-kick.svg" alt="Kick" />
+            </a>
+            <a href="#" id="cardX" class="cardUrl cardX" target="_blank">
+                <img src="./picture/icons/icon-x.svg" alt="Twitter" />
+            </a>
+            <a href="#" id="cardInstagram" class="cardUrl cardInstagram" target="_blank">
+                <img src="./picture/icons/icon-instagram.svg" alt="Instagram" />
+            </a>
+            <a href="#" id="cardTiktok" class="cardUrl cardTiktok" target="_blank">
+                <img src="./picture/icons/icon-tiktok.svg" alt="Tiktok" />
+            </a>
         </div>
 
         <div class="cardSlotContainer">
-            <div class="cardSlot" id="cardSlotLatest">
-                <div class="slotTitle">ACTIVITÉ RÉCENTE</div>
-                <div class="slotContent">
-                    <!-- Activité récente à mettre à jour dynamiquement -->
-                </div>
-            </div>
 
             <div class="cardSlot cardFact" id="cardFact1">
                 <div class="cardBulletInfo"></div>

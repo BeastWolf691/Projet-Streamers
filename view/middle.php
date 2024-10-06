@@ -81,12 +81,40 @@
 
                 <!------Réseaux Sociaux ------->
                 <div class="cardInfoRow cardInfoUrl">
-                    <a class="cardUrl cardYoutube <?php echo $youtubeUrl ? '' : 'disabled'; ?>" href="<?php echo $youtubeUrl ?: '#'; ?>" target="_blank"><img src="./picture/icons/icon-youtube.svg" alt="YouTube" /></a>
-                    <a class="cardUrl cardTwitch <?php echo $twitchUrl ? '' : 'disabled'; ?>" href="<?php echo $twitchUrl ?: '#'; ?>" target="_blank"><img src="./picture/icons/icon-twitch.svg" alt="Twitch" /></a>
-                    <a class="cardUrl cardKick <?php echo $kickUrl ? '' : 'disabled'; ?>" href="<?php echo $kickUrl ?: '#'; ?>" target="_blank"><img src="./picture/icons/icon-kick.svg" alt="Kick" /></a>
-                    <a class="cardUrl cardX <?php echo $twitterUrl ? '' : 'disabled'; ?>" href="<?php echo $twitterUrl ?: '#'; ?>" target="_blank"><img src="./picture/icons/icon-x.svg" alt="X" /></a>
-                    <a class="cardUrl cardInstagram <?php echo $instagramUrl ? '' : 'disabled'; ?>" href="<?php echo $instagramUrl ?: '#'; ?>" target="_blank"><img src="./picture/icons/icon-instagram.svg" alt="Instagram" /></a>
-                    <a class="cardUrl cardTiktok <?php echo $tiktokUrl ? '' : 'disabled'; ?>" href="<?php echo $tiktokUrl ?: '#'; ?>" target="_blank"><img src="./picture/icons/icon-tiktok.svg" alt="TikTok" /></a>
+                    <?php if ($youtubeUrl): ?>
+                        <a href="<?php echo $youtubeUrl; ?>" target="_blank" class="cardUrl cardYoutube">
+                        <img src="./picture/icons/icon-youtube.svg" alt="YouTube" />
+                        </a>
+                    <?php endif; ?>
+                    <?php if ($twitchUrl): ?>
+                        <a href="<?php echo $twitchUrl; ?>" target="_blank" class="cardUrl cardTwitch">
+                        <img src="./picture/icons/icon-twitch.svg" alt="Twitch" />
+                        </a>
+                    <?php endif; ?>
+
+                    <?php if ($kickUrl): ?>
+                        <a href="<?php echo $kickUrl; ?>" target="_blank" class="cardUrl cardKick">
+                        <img src="./picture/icons/icon-kick.svg" alt="Kick" />
+                        </a>
+                    <?php endif; ?>
+
+                    <?php if ($twitterUrl): ?>
+                        <a href="<?php echo $twitterUrl; ?>" target="_blank" class="cardUrl cardX">
+                        <img src="./picture/icons/icon-x.svg" alt="Twitter" />
+                        </a>
+                    <?php endif; ?>
+
+                    <?php if ($instagramUrl): ?>
+                        <a href="<?php echo $instagramUrl; ?>" target="_blank" class="cardUrl cardInstagram">
+                        <img src="./picture/icons/icon-instagram.svg" alt="Instagram" />
+                        </a>
+                    <?php endif; ?>
+
+                    <?php if ($tiktokUrl): ?>
+                        <a href="<?php echo $tiktokUrl; ?>" target="_blank" class="cardUrl cardTiktok">
+                        <img src="./picture/icons/icon-tiktok.svg" alt="Tiktok" />
+                        </a>
+                    <?php endif; ?>
                 </div>
 
                 <div class="cardInfoRow cardInfoPersonal">

@@ -1,8 +1,6 @@
 $(document).ready(function () {
     $('.filter-item select').on('change', function () {
-
         let type = $('#type').val().toLowerCase();
-        //let categoryS = $('#categoryS').val().toLowerCase();
         let thematic = $('#thematic').val().toLowerCase();
         let age = $('#ages').val();
         let names = $('#names').val().toLowerCase();
@@ -10,20 +8,18 @@ $(document).ready(function () {
 
         $('.card').each(function () {
             let mainCat = $(this).data('info').toLowerCase();
-            //let secondCat = $(this).data('second').toLowerCase();
-            let cardThematic = $(this).data('thematic') ? $(this).data('thematic').toLowerCase() : ''; // Récupérer la thématique de la carte, avec une vérification de null/undefined
+            let secondCat = $(this).data('second').toLowerCase(); 
+            let cardThematic = $(this).data('thematic') ? $(this).data('thematic').toLowerCase() : ''; 
             let cardAge = parseInt($(this).data('age')); 
             let cardNickname = $(this).data('nickname').toLowerCase();
             let cardLanguage = $(this).data('languages').toLowerCase();
 
             let match = true;
 
-            if (type && !mainCat.includes(type)) {
+            
+            if (type && !(mainCat.includes(type) || secondCat.includes(type))) {
                 match = false;
             }
-            // if (categoryS && !secondCat.includes(categoryS)) {
-            //     match = false;
-            // }
             if (thematic && thematic !== cardThematic) {
                 match = false;
             }
@@ -39,7 +35,6 @@ $(document).ready(function () {
             if (names && !cardNickname.includes(names)) {
                 match = false;
             }
-            
             if (languages && !cardLanguage.includes(languages)) {
                 match = false;
             }
@@ -51,7 +46,7 @@ $(document).ready(function () {
             }
         });
     });
-
+    
     //------------------------réinitialiser les filtres---------------------------------------------------------
     $('#filterForm').on('reset', function () {
         // Réinitialise le contenu de middle
@@ -59,12 +54,9 @@ $(document).ready(function () {
 
         // Remise à zéro des différents filtres
         $('#type').val('');
-       // $('#categoryS').val('');
         $('#thematic').val('');
         $('#age').val('');
         $('#names').val('');
         $('#languages').val('');
-
     });
-
 });

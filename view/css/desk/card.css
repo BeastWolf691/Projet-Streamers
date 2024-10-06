@@ -379,7 +379,7 @@
     border: 1px solid #10051D;
     color: #FFFFFF;
     font-weight: 900;
-    background: center no-repeat url("icons/icon-info1.png"),
+    background: center no-repeat url("../../picture/icons/icon-info.svg"),
         content-box radial-gradient(circle, rgb(122, 38, 129) 0%, rgb(87, 21, 93) 100%);
     border-color: #10051D;
 }

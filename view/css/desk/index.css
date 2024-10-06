@@ -25,7 +25,9 @@ body {
     height: 140vh;
     position: relative;
 }
-
+a {
+    text-decoration: none;
+}
 a:hover {
     cursor: pointer;
 }
@@ -57,7 +59,3 @@ img {
     padding: 10px;
 }
 
-a {
-    text-decoration: none;
-    color: white;
-}

@@ -10,21 +10,34 @@
             <option value=""></option>
             <?php
 
-            $sql = "
-            SELECT DISTINCT TRIM(LOWER(mainCat)) AS category FROM cards WHERE mainCat IS NOT NULL AND mainCat != ''
-            UNION
-            SELECT DISTINCT TRIM(LOWER(secondCat)) AS category FROM cards WHERE secondCat IS NOT NULL AND secondCat != ''
-            ORDER BY category ASC
-        ";
-            $req = $pdo->query($sql);
+            $sqlCat = 'SELECT DISTINCT mainCat FROM cards ORDER BY mainCat ASC';
+            $reqCat = $pdo->query($sqlCat);
 
-            while ($d = ($req->fetch(PDO::FETCH_OBJ))) {
-                echo '<option value="' . $d->category . '">' . ucfirst($d->category) . '</option>';
+            while ($d = ($reqCat->fetch(PDO::FETCH_OBJ))) {
+                echo '<option value="' . $d->mainCat . '">' . $d->mainCat . '</option>';
             }
             ?>
+
         </select>
     </div>
 
+    <div class="filter-item">
+        <label id="category" for="categoryS">Categorie 2</label>
+        <select id="categoryS" name="categoryS">
+            <option value=""></option>
+            <?php
+
+            $sqlCatSecondary = "SELECT DISTINCT TRIM(LOWER(secondCat)) as secondCat FROM cards WHERE secondCat IS NOT NULL AND secondCat != '' ORDER BY secondCat ASC";
+            // TRIM()  vire les espaces et LOWER() obligé à afficher en minuscule
+            $reqCatSecondary = $pdo->query($sqlCatSecondary);
+
+            while ($d = ($reqCatSecondary->fetch(PDO::FETCH_OBJ))) {
+                echo '<option value="' . $d->secondCat . '">' . $d->secondCat . '</option>';
+            }
+            ?>
+
+        </select>
+    </div>
 
     <div class="filter-item">
         <label id="thematics" for="thematic">Thèmes</label>

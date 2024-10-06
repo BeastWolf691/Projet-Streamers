@@ -2,7 +2,7 @@ $(document).ready(function () {
     $('.filter-item select').on('change', function () {
 
         let type = $('#type').val().toLowerCase();
-        let categoryS = $('#categoryS').val().toLowerCase();
+        //let categoryS = $('#categoryS').val().toLowerCase();
         let thematic = $('#thematic').val().toLowerCase();
         let age = $('#ages').val();
         let names = $('#names').val().toLowerCase();
@@ -10,7 +10,7 @@ $(document).ready(function () {
 
         $('.card').each(function () {
             let mainCat = $(this).data('info').toLowerCase();
-            let secondCat = $(this).data('second').toLowerCase();
+            //let secondCat = $(this).data('second').toLowerCase();
             let cardThematic = $(this).data('thematic') ? $(this).data('thematic').toLowerCase() : ''; // Récupérer la thématique de la carte, avec une vérification de null/undefined
             let cardAge = parseInt($(this).data('age')); 
             let cardNickname = $(this).data('nickname').toLowerCase();
@@ -21,9 +21,9 @@ $(document).ready(function () {
             if (type && !mainCat.includes(type)) {
                 match = false;
             }
-            if (categoryS && !secondCat.includes(categoryS)) {
-                match = false;
-            }
+            // if (categoryS && !secondCat.includes(categoryS)) {
+            //     match = false;
+            // }
             if (thematic && thematic !== cardThematic) {
                 match = false;
             }
@@ -59,7 +59,7 @@ $(document).ready(function () {
 
         // Remise à zéro des différents filtres
         $('#type').val('');
-        $('#categoryS').val('');
+       // $('#categoryS').val('');
         $('#thematic').val('');
         $('#age').val('');
         $('#names').val('');

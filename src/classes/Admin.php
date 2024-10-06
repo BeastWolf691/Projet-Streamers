@@ -33,10 +33,11 @@ class Admin {
     private string  $picture;
    
     // Constructor
-    public function __construct(string $name,string $lastName,string $nickname,string $mail, string $picture) {
+    public function __construct(string $name,string $lastName,string $nickname,string $password, string $mail, string $picture) {
         $this->name = $name;
         $this->lastName = $lastName;
         $this->nickname = $nickname;
+        $this->password = $password;
         $this->mail = $mail;
         $this->picture = $picture;
     }

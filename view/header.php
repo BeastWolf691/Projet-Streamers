@@ -31,7 +31,7 @@ include 'bdd.php';
                     <?php
                     if (isset($_SESSION['compte'])) {
                         $compte = ucfirst($_SESSION['compte']);
-                       ?><p> Bonjour <?= $compte ?> ! <a href="./logout.php">Déconnexion</a></p>;
+                       ?><p> Bonjour <?= $compte ?> ! <a href="./User/logout.php">Déconnexion</a></p>;
                        <?php
                     } else {
                         echo "<p> </p>";
@@ -52,10 +52,10 @@ include 'bdd.php';
                     <span class="closed">X</span>
                     <ul id="menu-person">
                         <?php if (isset($_SESSION['compte'])) { ?>
-                            <li><a href="./logout.php">Déconnexion</a></li>
+                            <li><a href="./User/logout.php">Déconnexion</a></li>
                         <?php } else { ?>
-                            <li><a href="./logIn.php">Connexion</a></li>
-                            <li><a href="./register.php">Inscription</a></li>
+                            <li><a href="./User/logIn.php">Connexion</a></li>
+                            <li><a href="./User/register.php">Inscription</a></li>
                         <?php } ?>
 
                     </ul>

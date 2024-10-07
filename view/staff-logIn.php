@@ -20,7 +20,7 @@ if (!empty($_POST)) {
 
     if (empty($errors)) {
         // Requête préparée pour éviter les injections SQL
-        $sql = "SELECT password, name FROM admin WHERE mail=:mail";
+        $sql = "SELECT name, password, mail FROM admin WHERE mail=:mail";
         $pdoStatement = $pdo->prepare($sql);
 
         if ($pdoStatement) {
@@ -30,17 +30,24 @@ if (!empty($_POST)) {
             if ($result) {
                 // Vérification du mot de passe
                 if (password_verify($password, $result['password'])) {
-
-                    // Connexion réussie
-                    $_SESSION['name'] = $result['name']; // Récupère le prénom et le met dans la session
                     echo "<div class=\"alert alert-success\" role=\"alert\">Connexion réussie</div>";
                     sleep(1);
                     header('Location: index.php');
+                    if (!isset($_SESSION['compte'])) $_SESSION['compte'] = "";
+
+                    // Connexion réussie
+                    $_SESSION['compte'] = $_POST['mail']; // Stocker l'email dans la session 'compte'
+                    $_SESSION['name'] = $result['name'];  // Stocker le nom dans la session 'name'
+
                     exit();
                 } else {
-                    $errors['credentials'] = "Email ou mot de passe incorrect.";
+                    $errors['password'] = "Email ou mot de passe incorrect.";
                 }
+            } else {
+                $errors['mail'] = "Email ou mot de passe incorrect.";
             }
+        } else {
+            $errors['database'] = "Erreur de connexion à la base de données.";
         }
     }
 }

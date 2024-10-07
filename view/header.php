@@ -27,18 +27,26 @@ include 'bdd.php';
 <body>
     <header>
         <div id="banner">
-        <div class="bienvenue">
-                    <?php
-                    if (isset($_SESSION['compte'])) {
-                        $compte = ucfirst($_SESSION['compte']);
-                       ?><p> Bonjour <?= $compte ?> ! <a href="./logout.php">Déconnexion</a></p>;
-                       <?php
+            <div class="bienvenue">
+                <?php
+                if (isset($_SESSION['compte'])) {
+                    // Vérifier si la session 'name' est définie pour les membres du staff
+                    if (isset($_SESSION['name'])) {
+                        // Si c'est un membre du staff, on affiche le nom
+                        $compte = ucfirst($_SESSION['name']);
                     } else {
-                        echo "<p> </p>";
+                        // Si c'est un utilisateur régulier, on affiche le pseudo
+                        $compte = ucfirst($_SESSION['compte']);
                     }
+                ?>
+                    <p> Bonjour <?= $compte ?> ! <a href="./logout.php">Déconnexion</a></p>
+                <?php
+                } else {
+                    echo "<p> </p>";
+                }
 
-                    ?>
-                </div>
+                ?>
+            </div>
             <a href="#">
                 <div class="img" id="logo-container"></div>
             </a><!-- ajout du lien -->
@@ -46,7 +54,7 @@ include 'bdd.php';
                 <i class="fa-regular fa-star fa-lg"></i>
             </div>
             <div id="person">
-                
+
                 <i class="fa-solid fa-user fa-2xl" id="menu-top"></i>
                 <div id="overlay">
                     <span class="closed">X</span>
@@ -60,7 +68,7 @@ include 'bdd.php';
 
                     </ul>
                 </div>
-              
+
             </div>
         </div>
 

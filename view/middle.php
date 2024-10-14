@@ -20,7 +20,7 @@
         while ($d = $req->fetch(PDO::FETCH_OBJ)) { // pour chaque ligne dans la BDD, on crée une carte
 
             $flagIcon = getFlagIcon($d->language);
-            // Pour chaque valeur de mainCat et de thematic, j'applique un css différent
+            // Application d'un CSS spécifique pour chaque valeur de mainCat et de thematic
             $mainCat = $d->mainCat;
 
             // Remplacement des espaces et caractères spéciaux pour créer une classe CSS valide
@@ -140,14 +140,21 @@
                     </div>
                 </div>
 
-                <p> <?php echo $d->thematic; ?></p>
+                <div class="cardTheme">
+                    <?php echo $d->thematic; ?>
+                </div>
 
-                <i class="fa-solid fa-magnifying-glass">
-                <a href="zoomCard.php?id=<?php echo $d->id; ?>" class="view-details"></a>
-                
-            </i>
+                <div class="cardActions">
+                    <div class="zoomButton">
+                        <img src="./picture/icons/icon-zoom.svg" alt="Zoom sur la carte" />
+                        <p>Zoom<p>
+                    </div>
 
-            <i class="fa-sharp-duotone fa-solid fa-plus"></i>
+                    <div class="deckButton">
+                        <img src="./picture/icons/icon-deck.png" alt="Ajouter au deck" />
+                        <p>Deck<p>
+                    </div>
+                </div>
             </div>
 
             

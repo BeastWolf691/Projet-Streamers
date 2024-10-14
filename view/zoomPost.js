@@ -1,7 +1,7 @@
 
 document.addEventListener('DOMContentLoaded', () => {
     document.querySelectorAll('.card').forEach(card => {
-        card.querySelector('.fa-magnifying-glass').addEventListener('click', function (event) {
+        card.querySelector('.zoomButton').addEventListener('click', function (event) {
             event.stopPropagation();
 
             const zoomCard = document.querySelector('.zoomCard');

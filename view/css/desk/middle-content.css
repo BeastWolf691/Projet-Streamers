@@ -181,8 +181,7 @@ input[type=password],input[type=date],input[type=text],input[type=mail] {
 
 /*************test formulaire contact**************apparait que si le formulaire est faux********/
 .alert,
-.succes {
-
+.success {
     display: flex;
     justify-content: center;
     align-items: center;

@@ -14,7 +14,7 @@
         <?php
 
         $sql = 'SELECT id, nickname, mainCat, secondCat,thematic, picture, name, language, pYoutube,
-      ptwitch, pKick, pTwitter, pInstagram, pTiktok, videoOne, videoTwo, factOne, factTwo, factThree, birthdate FROM cards ORDER BY nickname ASC';
+      ptwitch, pKick, pTwitter, pInstagram, pTiktok, factOne, factTwo, factThree, birthdate FROM cards ORDER BY nickname ASC';
         $req = $pdo->query($sql);
         include 'flags.php';
         while ($d = $req->fetch(PDO::FETCH_OBJ)) { // pour chaque ligne dans la BDD, on crée une carte

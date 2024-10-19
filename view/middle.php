@@ -20,15 +20,12 @@
         while ($d = $req->fetch(PDO::FETCH_OBJ)) { // pour chaque ligne dans la BDD, on crée une carte
 
             $flagIcon = getFlagIcon($d->language);
+            // Application d'un CSS spécifique pour chaque valeur de mainCat et de thematic
+            $mainCat = $d->mainCat;
 
-            // Application d'un CSS spécifique pour chaque valeur de mainCat sur un fichier externe
-            include 'colorByCategories.php';
-            
-            //asupprimert
-            $inlineStyle = '';
-            if (!empty($backgroundColor)) {
-                $inlineStyle = 'background-color: ' . $backgroundColor . ';';
-            }
+            // Remplacement des espaces et caractères spéciaux pour créer une classe CSS valide
+            $cssClass = 'cat_' . strtolower(str_replace([' ', '-', ','], '_', $mainCat));
+            $mainCat = strtolower($d->nickname . ' ' . $d->mainCat . ' ' . $d->thematic . ' ' . $d->language);
 
             //lien généré pour les réseaux sociaux
             $pseudoYoutube = $d->pYoutube;
@@ -50,9 +47,7 @@
             $now = new DateTime();
             $age = $now->diff($birthdate)->y;
         ?>
-            <div class="card "
-                style="<?php echo $inlineStyle; ?>"
-                data-id="<?php echo $d->id; ?>"
+            <div class="card <?php echo $cssClass; ?>" data-id="<?php echo $d->id; ?>"
                 data-nickname="<?php echo $d->nickname; ?>"
                 data-info="<?php echo $d->mainCat; ?>"
                 data-second="<?php echo $d->secondCat; ?>"
@@ -80,9 +75,8 @@
                 si cela n'est pas le cas alors image par défaut undefined-->
                 <img
                     class="cardPicture"
-                    src="picture/photos/photo-<?php echo !empty($d->picture) ? $d->picture : 'undefined' ?>.jpg"
-                    alt="<?php echo $d->nickname; ?>"
-                    title="<?php echo $d->nickname; ?>" />
+                    src="<?= !empty($d->picture) ? htmlspecialchars($d->picture) : 'picture/photos/photo-alt.jpg'; ?>"
+                    alt="image de <?= htmlspecialchars($d->nickname); ?>">
 
                 <!------Réseaux Sociaux ------->
                 <div class="cardInfoRow cardInfoUrl">
@@ -166,5 +160,5 @@
 
 
         <?php } ?>
-    </div><!--  -->
+    </div>
 </div>

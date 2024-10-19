@@ -2,7 +2,6 @@
 
 ?>
 
-<div class="test"></div>
 <form id="filterForm">
     <div class="filter-item">
         <label id="category" for="type">Catégorie</label>

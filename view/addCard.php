@@ -54,8 +54,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         if (empty($errors['picture'])) {
             $uploadDir = 'picture/photos/';
             $extension = pathinfo($picture['name'], PATHINFO_EXTENSION);//extension du fichier
-            $fileName = htmlspecialchars(trim($name)) . '-' . time() . '.' . $extension;
-            //le fichier sera renommé avec le prénom + une serie de chiffre unique pour éviter les conflits
+            $fileName = 'photo-' . htmlspecialchars(trim($nickname)) . '-' . $extension;
+            //le fichier sera renommé avec le pseudo
             $uploadFile = $uploadDir . $fileName;
 
             // Déplacement du fichier vers le répertoire final
@@ -136,7 +136,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             <?php endforeach; ?>
         </div>
     <?php endif; ?>
-    <form action="" method="post" accept-charset="UTF-8" enctype="multipart/form-data">
+    <form action="addCard.php" method="post" enctype="multipart/form-data">
         <h1 style="text-align: center"> - Ajout d'une Carte - </h1>
 
         <label for="nickname">Pseudo</label>
@@ -152,7 +152,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         <input type="text" name="thematic" id="thematic"><br>
 
         <label for="picture">Photo</label><br>
-        <input type="file" name="picture" id="picture"><br>
+        <input type="file" name="picture" id="picture" accept="image/*"><br>
 
         <label for="name">Prénom</label>
         <input type="text" name="name" id="name">

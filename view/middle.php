@@ -26,9 +26,21 @@
             $backgroundColor = '';
             switch ($mainCat) {
                 case 'gaming':
-                    $backgroundColor = '#ff5733'; 
+                    $backgroundColor = '#ff8970'; 
                     break;
-                
+                case 'formation':
+                    $backgroundColor = '#5f0404'; 
+                    break;
+                case 'actualités':
+                    $backgroundColor = '#9FF0F7'; 
+                    break;
+                case 'irl':
+                    $backgroundColor = ' #47af21'; 
+                    break;
+                case 'react':
+                    $backgroundColor = ' #462e79'; 
+                    break;
+                  
             }
             //asupprimert
             $inlineStyle = '';
@@ -56,7 +68,9 @@
             $now = new DateTime();
             $age = $now->diff($birthdate)->y;
         ?>
-            <div class="card <?php echo $cssClass; ?>" data-id="<?php echo $d->id; ?>"
+            <div class="card "
+                style="<?php echo $inlineStyle; ?>"
+                data-id="<?php echo $d->id; ?>"
                 data-nickname="<?php echo $d->nickname; ?>"
                 data-info="<?php echo $d->mainCat; ?>"
                 data-second="<?php echo $d->secondCat; ?>"
@@ -92,36 +106,36 @@
                 <div class="cardInfoRow cardInfoUrl">
                     <?php if ($youtubeUrl): ?>
                         <a href="<?php echo $youtubeUrl; ?>" target="_blank" class="cardUrl cardYoutube">
-                        <img src="./picture/icons/icon-youtube.svg" alt="YouTube" />
+                            <img src="./picture/icons/icon-youtube.svg" alt="YouTube" />
                         </a>
                     <?php endif; ?>
                     <?php if ($twitchUrl): ?>
                         <a href="<?php echo $twitchUrl; ?>" target="_blank" class="cardUrl cardTwitch">
-                        <img src="./picture/icons/icon-twitch.svg" alt="Twitch" />
+                            <img src="./picture/icons/icon-twitch.svg" alt="Twitch" />
                         </a>
                     <?php endif; ?>
 
                     <?php if ($kickUrl): ?>
                         <a href="<?php echo $kickUrl; ?>" target="_blank" class="cardUrl cardKick">
-                        <img src="./picture/icons/icon-kick.svg" alt="Kick" />
+                            <img src="./picture/icons/icon-kick.svg" alt="Kick" />
                         </a>
                     <?php endif; ?>
 
                     <?php if ($twitterUrl): ?>
                         <a href="<?php echo $twitterUrl; ?>" target="_blank" class="cardUrl cardX">
-                        <img src="./picture/icons/icon-x.svg" alt="Twitter" />
+                            <img src="./picture/icons/icon-x.svg" alt="Twitter" />
                         </a>
                     <?php endif; ?>
 
                     <?php if ($instagramUrl): ?>
                         <a href="<?php echo $instagramUrl; ?>" target="_blank" class="cardUrl cardInstagram">
-                        <img src="./picture/icons/icon-instagram.svg" alt="Instagram" />
+                            <img src="./picture/icons/icon-instagram.svg" alt="Instagram" />
                         </a>
                     <?php endif; ?>
 
                     <?php if ($tiktokUrl): ?>
                         <a href="<?php echo $tiktokUrl; ?>" target="_blank" class="cardUrl cardTiktok">
-                        <img src="./picture/icons/icon-tiktok.svg" alt="Tiktok" />
+                            <img src="./picture/icons/icon-tiktok.svg" alt="Tiktok" />
                         </a>
                     <?php endif; ?>
                 </div>
@@ -156,17 +170,19 @@
                 <div class="cardActions">
                     <div class="zoomButton">
                         <img src="./picture/icons/icon-zoom.svg" alt="Zoom sur la carte" />
-                        <p>Zoom<p>
+                        <p>Zoom
+                        <p>
                     </div>
 
                     <div class="deckButton">
                         <img src="./picture/icons/icon-deck.png" alt="Ajouter au deck" />
-                        <p>Deck<p>
+                        <p>Deck
+                        <p>
                     </div>
                 </div>
             </div>
 
-            
+
         <?php } ?>
-    </div>
+    </div><!--  -->
 </div>

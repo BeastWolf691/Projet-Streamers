@@ -20,12 +20,20 @@
         while ($d = $req->fetch(PDO::FETCH_OBJ)) { // pour chaque ligne dans la BDD, on crée une carte
 
             $flagIcon = getFlagIcon($d->language);
-            // Application d'un CSS spécifique pour chaque valeur de mainCat et de thematic
-            $mainCat = $d->mainCat;
 
-            // Remplacement des espaces et caractères spéciaux pour créer une classe CSS valide
-            $cssClass = 'cat_' . strtolower(str_replace([' ', '-', ','], '_', $mainCat));
-            $mainCat = strtolower($d->nickname . ' ' . $d->mainCat . ' ' . $d->thematic . ' ' . $d->language);
+            // Application d'un CSS spécifique pour chaque valeur de mainCat 
+            $mainCat = strtolower($d->mainCat);
+            $backgroundColor = '';
+            switch ($mainCat) {
+                case 'gaming':
+                    $backgroundColor = '#ff5733'; 
+                    break;
+                
+            }
+            $inlineStyle = '';
+            if (!empty($backgroundColor)) {
+                $inlineStyle = 'background-color: ' . $backgroundColor . ';';
+            }
 
             //lien généré pour les réseaux sociaux
             $pseudoYoutube = $d->pYoutube;

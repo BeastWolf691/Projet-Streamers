@@ -2,7 +2,7 @@
 /*************************filtre pour recherche*************/
 .filter-bar {
     margin: 0 25px 0;
-    height: 220px;
+    height: 175px;
     width: 350px;
     background: #9FF0F7;
     padding: 10px 5px 0 15px;
@@ -11,14 +11,6 @@
     display: flex;
     flex-direction: column;
     border-radius: 10px;
-}
-
-.test {
-    width: 13px;
-    height: 100%;
-    background-color: rgba(255, 0, 0, 0.299);
-    position: absolute;
-    right: 0;
 }
 
 .filter-item {

@@ -42,6 +42,7 @@
                     break;
                   
             }
+            //asupprimert
             $inlineStyle = '';
             if (!empty($backgroundColor)) {
                 $inlineStyle = 'background-color: ' . $backgroundColor . ';';

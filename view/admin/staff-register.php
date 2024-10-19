@@ -1,3 +1,6 @@
+<?php
+include __DIR__ . '/../bdd.php';
+?>
 <head>
     <meta charset="utf-8">
     <title>prototype V1</title>

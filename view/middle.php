@@ -50,7 +50,8 @@
             $age = $now->diff($birthdate)->y;
         ?>
             <div class="card"
-           style="<?php echo $inlineStyle?>"
+            
+           
              data-id="<?php echo $d->id; ?>"
                 data-nickname="<?php echo $d->nickname; ?>"
                 data-info="<?php echo $d->mainCat; ?>"
@@ -133,7 +134,7 @@
                 </div>
 
                 <div class="cardCatRow">
-                    <div class="cardMainCat">
+                    <div class="cardMainCat" style="<?php echo $inlineStyle?>">
                         <!-- Ajouter dans la balise de div : [[ style="[php] $d->mainCat = $mainCat; getBckdColor(catRow, $mainCat)[?>]" ]] lorsque la fonction aura été créée -->
                         <?php echo $d->mainCat; ?>
                     </div>

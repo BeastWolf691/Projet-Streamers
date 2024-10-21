@@ -251,7 +251,12 @@
     margin-bottom: 12px;
 }
 
-.card .cardMainCat, .card .cardSecondCat {
+.card ,.card .cardSecondCat {
+    
+    background-color: var(--color-primary-light);
+    color: var(--color-font-extralight);
+}
+.cardMainCat{
     width: 48%;
     height: 30px;
     border-radius: 15px;
@@ -260,8 +265,6 @@
     text-align: center;
     font-family: var(--font-family-main);
     font-weight: 500;
-    background-color: var(--color-primary-light);
-    color: var(--color-font-extralight);
 }
 
 .card .cardTheme {

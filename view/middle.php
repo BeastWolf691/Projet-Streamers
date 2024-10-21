@@ -21,12 +21,14 @@
 
             $flagIcon = getFlagIcon($d->language);
             // Application d'un CSS spécifique pour chaque valeur de mainCat et de thematic
-            $mainCat = $d->mainCat;
+        // Application d'un CSS spécifique pour chaque valeur de mainCat et de thematic
+        include 'colorByCategories.php';
 
-            // Remplacement des espaces et caractères spéciaux pour créer une classe CSS valide
-            $cssClass = 'cat_' . strtolower(str_replace([' ', '-', ','], '_', $mainCat));
-            $mainCat = strtolower($d->nickname . ' ' . $d->mainCat . ' ' . $d->thematic . ' ' . $d->language);
-
+            $inlineStyle = '';
+            if (!empty($backgroundColor)) {
+                $inlineStyle = "background-color: " . $backgroundColor . ';';
+            } 
+            
             //lien généré pour les réseaux sociaux
             $pseudoYoutube = $d->pYoutube;
             $pseudoTwitch = $d->ptwitch;
@@ -47,7 +49,9 @@
             $now = new DateTime();
             $age = $now->diff($birthdate)->y;
         ?>
-            <div class="card <?php echo $cssClass; ?>" data-id="<?php echo $d->id; ?>"
+            <div class="card"
+           style="<?php echo $inlineStyle?>"
+             data-id="<?php echo $d->id; ?>"
                 data-nickname="<?php echo $d->nickname; ?>"
                 data-info="<?php echo $d->mainCat; ?>"
                 data-second="<?php echo $d->secondCat; ?>"
@@ -82,7 +86,7 @@
                 <div class="cardInfoRow cardInfoUrl">
                     <?php if ($youtubeUrl): ?>
                         <a href="<?php echo $youtubeUrl; ?>" target="_blank" class="cardUrl cardYoutube">
-                            <img src="./picture/icons/icon-youtube.svg" alt="YouTube" />
+                            <img src="./picture/icons/icon-youtube.svg" alt="YouTube"/>
                         </a>
                     <?php endif; ?>
                     <?php if ($twitchUrl): ?>

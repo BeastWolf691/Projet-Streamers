@@ -1,5 +1,6 @@
 <div class="zoomCard" style="display:none;">
-    <span class="close">X</span>
+    <div class="close">X</div>
+
     <div class="cardHeader">
         <div class="cardPseudo"></div>
     </div>
@@ -7,30 +8,6 @@
     <img class="zoomCardPicture" src="" alt="" title="">
 
     <div class="cardInfo">
-        <div class="cardInfoRow">
-            <div class="cardInfoCol colName">
-                <div class="cardInfoTitle">Nom civil</div>
-                <div class="cardInfoValue" id="valueCivil"></div>
-            </div>
-
-            <div class="cardInfoCol colAge">
-                <div class="cardInfoTitle">Âge</div>
-                <div class="cardInfoValue" id="valueAge"></div>
-            </div>
-        </div>
-
-        <div class="cardInfoColumn">
-            <div class="cardInfoCol colCountry">
-                <div class="cardInfoTitle">Nationalité</div>
-                <div class="cardInfoValue countryFlag" id="valueFromCountry"></div>
-            </div>
-
-            <div class="cardInfoCol colLanguage">
-                <div class="cardInfoTitle">Langue de stream</div>
-                <div class="cardInfoValue countryFlag" id="valueLanguage"></div>
-            </div>
-        </div>
-
         <div class="cardInfoRow cardInfoUrl">
             <a href="#" id="cardYoutube" class="cardUrl cardYoutube" target="_blank">
                 <img src="./picture/icons/icon-youtube.svg" alt="YouTube" />
@@ -52,8 +29,31 @@
             </a>
         </div>
 
-        <div class="cardSlotContainer">
+        <div class="cardInfoRow">
+            <div class="cardInfoCol colName">
+                <div class="cardInfoTitle">Nom civil</div>
+                <div class="cardInfoValue" id="valueCivil"></div>
+            </div>
 
+            <div class="cardInfoCol colAge">
+                <div class="cardInfoTitle">Âge</div>
+                <div class="cardInfoValue" id="valueAge"></div>
+            </div>
+        </div>
+
+        <div class="cardInfoRow">
+            <div class="cardInfoCol colCountry">
+                <div class="cardInfoTitle">Nationalité</div>
+                <div class="cardInfoValue countryFlag" id="valueFromCountry"></div>
+            </div>
+
+            <div class="cardInfoCol colLanguage">
+                <div class="cardInfoTitle">Langue de stream</div>
+                <div class="cardInfoValue countryFlag" id="valueLanguage"></div>
+            </div>
+        </div>
+
+        <div class="cardSlotContainer">
             <div class="cardSlot cardFact" id="cardFact1">
                 <div class="cardBulletInfo"></div>
                 <div class="slotContent" id="fact1"></div>

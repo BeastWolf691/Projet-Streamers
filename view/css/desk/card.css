@@ -350,9 +350,10 @@
 */
 
 .zoomCard {
+    position: relative;
     padding: 10px;
     width: 100%;
-    height: 790px;
+    height: 700px;
     overflow: hidden;
     margin: auto;
     padding: 0 10px;
@@ -361,9 +362,34 @@
     border: 5px solid var(--color-card-border);
 }
 
+.zoomCard .close {
+    display: none;
+}
+
+.zoomCard:hover .close {
+    position: absolute;
+    top: 10px;
+    left: 46%;
+    z-index: 99;
+    text-align: center;
+
+    width: 50px;
+    height: 50px;
+    padding: 5px;
+    box-sizing: border-box;
+
+    font-family: var(--font-family-main);
+    font-size: 2em;
+    font-weight: 700;
+    border-radius: 50%;
+    background: #fff;
+}
+
 .zoomCard .cardHeader {
     height: 42px;
     padding: 5px 15px;
+    box-sizing: border-box;
+    margin-top: 12px;
 
     font-family: var(--font-family-main);
     font-size: 1.4em;
@@ -374,7 +400,20 @@
     height: 35px;
 }
 
-.cardInfoColumn {
+.zoomCard .cardInfoRow {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    margin: 10px 0;
+}
+
+.zoomCard .cardInfoUrl {
+    justify-content: space-between;
+    
+}
+
+/* .cardInfoColumn {
     display: flex;
     flex-direction: column;
     align-content: space-around;
@@ -383,7 +422,12 @@
     padding: 0 3px;
     box-sizing: border-box;
     flex-wrap: wrap;
+} */
+
+.zoomCard .cardInfoCol {
+    width: 48%;
 }
+
 
 .cardInfoTitle {
     margin-bottom: 0.5em;
@@ -406,11 +450,17 @@
     height: 15px;
 }
 
+.zoomCard .cardSlotContainer {
+    margin-top: 20px;
+}
+
 .cardSlot {
     border: 2px solid #10051D;
-    margin-bottom: 10px;
+    margin: 10px 0;
     padding: 5px 8px;
     box-sizing: border-box;
+
+    height: 70px;
 }
 
 .slotContent {

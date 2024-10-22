@@ -23,7 +23,7 @@ class Cards
     private string $secondCat;
     #[ORM\Column()]
     private string $thematic;
-    #[ORM\Column()]
+    #[ORM\Column(nullable: true)]
     private string $picture;
     #[ORM\Column()]
     private string $name;
@@ -122,7 +122,7 @@ class Cards
         return $this->thematic;
     }
 
-    public function getPicture(): string
+    public function getPicture(): ? string
     {
         return $this->picture;
     }

@@ -364,10 +364,10 @@
     border-radius: 5px;
     border: 5px solid var(--color-card-border);
 }
-
+/* 
 .zoomCard .close {
     display: none;
-}
+} */
 
 .zoomCard:hover .close {
     position: absolute;

@@ -12,7 +12,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $mainCat = htmlspecialchars(trim($_POST['mainCat']));
     $secondCat = !empty($_POST['secondCat']) ? htmlspecialchars(trim($_POST['secondCat'])) : null;
     $thematic = htmlspecialchars(trim($_POST['thematic']));
-    $picture = $_FILES['picture']; // Récupération du fichier
+    $picture = !empty($_FILES['picture']) ? $_FILES['picture'] : null; // Récupération du fichier
     $name = htmlspecialchars(trim($_POST['name']));
     $language = htmlspecialchars(trim($_POST['language']));
     $pYoutube = !empty($_POST['pYoutube']) ? htmlspecialchars(trim($_POST['pYoutube'])) : null;
@@ -38,31 +38,35 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $errors['thematic'] = "le thème est requis.";
     }
 
-    if (empty($picture['name'])) {
-        $errors['picture'] = "La photo est requise.";
-    } else {
-        // Vérification du type et de la taille du fichier
-        $allowedTypes = ['image/jpeg', 'image/png', 'image/gif'];
-        if (!in_array($picture['type'], $allowedTypes)) {
-            $errors['picture'] = "Le fichier doit être une image (JPEG, PNG, GIF).";
-        }
+    if (!empty($picture['name'])) {
+        if (empty($picture['name'])) {
+            $errors['picture'] = "La photo est requise.";
+        } else {
+            // Vérification du type et de la taille du fichier
+            $allowedTypes = ['image/jpeg', 'image/png', 'image/gif'];
+            if (!in_array($picture['type'], $allowedTypes)) {
+                $errors['picture'] = "Le fichier doit être une image (JPEG, PNG, GIF).";
+            }
 
-        if ($picture['size'] > 2000000) { // Limite de 2 Mo
-            $errors['picture'] = "La taille de l'image ne doit pas dépasser 2 Mo.";
-        }
-        // Si aucun problème, on peut déplacer le fichier
-        if (empty($errors['picture'])) {
-            $uploadDir = 'picture/photos/';
-            $extension = pathinfo($picture['name'], PATHINFO_EXTENSION);//extension du fichier
-            $fileName = 'photo-' . htmlspecialchars(trim($nickname)) . '-' . $extension;
-            //le fichier sera renommé avec le pseudo
-            $uploadFile = $uploadDir . $fileName;
+            if ($picture['size'] > 2000000) { // Limite de 2 Mo
+                $errors['picture'] = "La taille de l'image ne doit pas dépasser 2 Mo.";
+            }
+            // Si aucun problème, on peut déplacer le fichier
+            if (empty($errors['picture'])) {
+                $uploadDir = 'picture/photos/';
+                $extension = pathinfo($picture['name'], PATHINFO_EXTENSION); //extension du fichier
+                $fileName = 'photo-' . htmlspecialchars(trim($nickname)) . '-' . $extension;
+                //le fichier sera renommé avec le pseudo
+                $uploadFile = $uploadDir . $fileName;
 
-            // Déplacement du fichier vers le répertoire final
-            if (!move_uploaded_file($picture['tmp_name'], $uploadFile)) {
-                $errors['picture'] = "Erreur lors de l'upload de l'image.";
+                // Déplacement du fichier vers le répertoire final
+                if (!move_uploaded_file($picture['tmp_name'], $uploadFile)) {
+                    $errors['picture'] = "Erreur lors de l'upload de l'image.";
+                }
             }
         }
+    } else {
+        $uploadFile = 'picture/photos/photo-_default_.jpg';
     }
     if (empty($name)) {
         $errors['name'] = "Le prénom est requis.";
@@ -70,7 +74,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     if (empty($language)) {
         $errors['language'] = "La langue est requise.";
     }
-    
+
     //vérifie la validité des pseudo
     if (!empty($pYoutube) && !preg_match('/^[a-zA-Z0-9_]{3,25}$/', $pYoutube)) {
         $errors['pYoutube'] = "Le pseudo Youtube doit contenir entre 3 et 25 caractères.";
@@ -107,7 +111,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             'language' => $language,
             'pYoutube' => $pYoutube,
             'pTwitch' => $pTwitch,
-            'pKick' => $pKick, 
+            'pKick' => $pKick,
             'pTwitter' => $pTwitter,
             'pInstagram' => $pInstagram,
             'pTiktok' => $pTiktok,

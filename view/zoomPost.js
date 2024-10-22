@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             // Remplir la carte zoom avec les données
             zoomCard.querySelector('.cardPseudo').textContent = data.nickname;
-            zoomCard.querySelector('img').src = data.picture !== 'undefined' ? `picture/photos/photo-${data.picture}.jpg` : 'picture/photos/default.jpg';
+            zoomCard.querySelector('img').src = data.picture ? data.picture : 'picture/photos/photo-_default_.jpg';
             zoomCard.querySelector('#valueCivil').textContent = data.name;
             zoomCard.querySelector('#valueAge').textContent = `${data.age} ans`;
             zoomCard.querySelector('#valueFromCountry').textContent = data.languages;
@@ -25,6 +25,37 @@ document.addEventListener('DOMContentLoaded', () => {
             zoomCard.querySelector('#cardInstagram').href = data.pinstagram || '#';
             zoomCard.querySelector('#cardTiktok').href = data.ptiktok || '#';
 
+            // ou sinon si on veux que les icones des RS ne soient pas visible si le streameur n'a pas de chaine
+            // // Gestion des liens URL
+            // const platforms = [
+            //     { id: 'cardYoutube', url: data.pyoutube, icon: 'icon-youtube.svg', alt: 'YouTube' },
+            //     { id: 'cardTwitch', url: data.ptwitch, icon: 'icon-twitch.svg', alt: 'Twitch' },
+            //     { id: 'cardKick', url: data.pkick, icon: 'icon-kick.svg', alt: 'Kick' },
+            //     { id: 'cardX', url: data.ptwitter, icon: 'icon-x.svg', alt: 'Twitter' },
+            //     { id: 'cardInstagram', url: data.pinstagram, icon: 'icon-instagram.svg', alt: 'Instagram' },
+            //     { id: 'cardTiktok', url: data.ptiktok, icon: 'icon-tiktok.svg', alt: 'Tiktok' },
+            // ];
+
+            // // Vider les anciennes icônes avant d'ajouter les nouvelles
+            // const cardInfoUrl = zoomCard.querySelector('.cardInfoUrl');
+            // cardInfoUrl.innerHTML = ''; // Vide le conteneur avant de le remplir
+
+            // platforms.forEach(platform => {
+            //     if (platform.url) {
+            //         const link = document.createElement('a');
+            //         link.href = platform.url;
+            //         link.id = platform.id;
+            //         link.className = 'cardUrl ' + platform.id;
+            //         link.target = '_blank';
+
+            //         const img = document.createElement('img');
+            //         img.src = `./picture/icons/${platform.icon}`;
+            //         img.alt = platform.alt;
+
+            //         link.appendChild(img);
+            //         cardInfoUrl.appendChild(link);
+            //     }
+            // });
             // Faits
             zoomCard.querySelector('#fact1').textContent = data.factone || 'Pas d\'anecdote disponible';
             zoomCard.querySelector('#fact2').textContent = data.facttwo || 'Pas d\'anecdote disponible';

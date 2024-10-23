@@ -256,7 +256,7 @@
     background-color: var(--color-primary-light);
     color: var(--color-font-extralight);
 }
-.cardMainCat{
+.cardMainCat,.cardSecondCat{
     width: 48%;
     height: 30px;
     border-radius: 15px;

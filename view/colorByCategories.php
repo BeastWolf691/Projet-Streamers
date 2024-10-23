@@ -1,20 +1,53 @@
 <?php
 $mainCat = strtolower($d->mainCat);
-$Color = '';
+$secondCat = strtolower($d->secondCat);
+
+$ColorMainCat = '';
 switch ($mainCat) {
     case 'gaming':
-        $Color = '#ff8970';
+        $ColorMainCat = '#ff8970';
         break;
     case 'formation':
-        $Color = '#5f0404';
+        $ColorMainCat = '#5f0404';
         break;
     case 'actualités':
-        $Color = '#9FF0F7';
+        $ColorMainCat = '#9FF0F7';
         break;
     case 'irl':
-        $Color = ' #47af21';
+        $ColorMainCat = ' #47af21';
         break;
     case 'react':
-        $Color = ' #462e79';
+        $ColorMainCat = ' #462e79';
+        break;
+}
+
+$ColorSecondCat = '';
+switch ($secondCat) {
+    case 'e-sport':
+        $ColorSecondCat = 'yellow';
+        break;
+    case 'fps':
+        $ColorSecondCat = 'red';
+        break;
+    case 'talk-show':
+        $ColorSecondCat = 'blue';
+        break;
+    case 'vlog':
+        $ColorSecondCat = 'green';
+        break;
+    case 'gaming':
+        $ColorSecondCat = 'purple';
+        break;
+    case 'divertissement':
+        $ColorSecondCat = 'grey';
+        break;
+    case 'variétés':
+        $ColorSecondCat = 'brown';
+        break;
+    case 'humour':
+        $ColorSecondCat = 'pink';
+        break;
+    case 'speedrunning':
+        $ColorSecondCat = 'orange';
         break;
 }

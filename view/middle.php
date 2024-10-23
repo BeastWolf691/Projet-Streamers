@@ -45,7 +45,7 @@
             $age = $now->diff($birthdate)->y;
         ?>
             <div class="card"
-            style="box-shadow:6px 6px 15px 3px <?php echo $Color ?>;"
+            style="box-shadow:6px 6px 15px 3px <?php echo $ColorMainCat ?>;"
             
            
              data-id="<?php echo $d->id; ?>"
@@ -130,11 +130,11 @@
                 </div>
 
                 <div class="cardCatRow">
-                    <div class="cardMainCat" style="background-color:<?php echo $Color?>">
+                    <div class="cardMainCat" style="background-color:<?php echo $ColorMainCat?>">
                         <!-- Ajouter dans la balise de div : [[ style="[php] $d->mainCat = $mainCat; getBckdColor(catRow, $mainCat)[?>]" ]] lorsque la fonction aura été créée -->
                         <?php echo $d->mainCat; ?>
                     </div>
-                    <div class="cardSecondCat">
+                    <div class="cardSecondCat" style="background-color:<?php echo $ColorSecondCat?>">
                         <!-- Ajouter dans la balise de div : [[ style="[php] $d->secondCat = $secCat; getBckdColor(catRow, $secCat)[?>]" ]] lorsque la fonction aura été créée -->
                         <?php echo $d->secondCat; ?>
                     </div>

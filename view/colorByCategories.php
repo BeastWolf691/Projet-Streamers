@@ -1,20 +1,20 @@
 <?php
 $mainCat = strtolower($d->mainCat);
-$backgroundColor = '';
+$Color = '';
 switch ($mainCat) {
     case 'gaming':
-        $backgroundColor = '#ff8970';
+        $Color = '#ff8970';
         break;
     case 'formation':
-        $backgroundColor = '#5f0404';
+        $Color = '#5f0404';
         break;
     case 'actualités':
-        $backgroundColor = '#9FF0F7';
+        $Color = '#9FF0F7';
         break;
     case 'irl':
-        $backgroundColor = ' #47af21';
+        $Color = ' #47af21';
         break;
     case 'react':
-        $backgroundColor = ' #462e79';
+        $Color = ' #462e79';
         break;
 }

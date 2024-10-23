@@ -24,11 +24,6 @@
         // Application d'un CSS spécifique pour chaque valeur de mainCat et de thematic
         include 'colorByCategories.php';
 
-            $inlineStyle = '';
-            if (!empty($backgroundColor)) {
-                $inlineStyle = "background-color: " . $backgroundColor . ';';
-            } 
-            
             //lien généré pour les réseaux sociaux
             $pseudoYoutube = $d->pYoutube;
             $pseudoTwitch = $d->ptwitch;
@@ -50,6 +45,7 @@
             $age = $now->diff($birthdate)->y;
         ?>
             <div class="card"
+            style="box-shadow:6px 6px 15px 3px <?php echo $Color ?>;"
             
            
              data-id="<?php echo $d->id; ?>"
@@ -134,7 +130,7 @@
                 </div>
 
                 <div class="cardCatRow">
-                    <div class="cardMainCat" style="<?php echo $inlineStyle?>">
+                    <div class="cardMainCat" style="background-color:<?php echo $Color?>">
                         <!-- Ajouter dans la balise de div : [[ style="[php] $d->mainCat = $mainCat; getBckdColor(catRow, $mainCat)[?>]" ]] lorsque la fonction aura été créée -->
                         <?php echo $d->mainCat; ?>
                     </div>

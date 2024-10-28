@@ -17,45 +17,37 @@ document.addEventListener('DOMContentLoaded', () => {
             zoomCard.querySelector('#valueFromCountry').textContent = data.languages;
             zoomCard.querySelector('#valueLanguage').textContent = data.languages;
 
-            // Liens URL
-            zoomCard.querySelector('#cardYoutube').href = data.pyoutube || '#';
-            zoomCard.querySelector('#cardTwitch').href = data.ptwitch || '#';
-            zoomCard.querySelector('#cardKick').href = data.pkick || '#';
-            zoomCard.querySelector('#cardX').href = data.ptwitter || '#';
-            zoomCard.querySelector('#cardInstagram').href = data.pinstagram || '#';
-            zoomCard.querySelector('#cardTiktok').href = data.ptiktok || '#';
 
-            // ou sinon si on veux que les icones des RS ne soient pas visible si le streameur n'a pas de chaine
-            // // Gestion des liens URL
-            // const platforms = [
-            //     { id: 'cardYoutube', url: data.pyoutube, icon: 'icon-youtube.svg', alt: 'YouTube' },
-            //     { id: 'cardTwitch', url: data.ptwitch, icon: 'icon-twitch.svg', alt: 'Twitch' },
-            //     { id: 'cardKick', url: data.pkick, icon: 'icon-kick.svg', alt: 'Kick' },
-            //     { id: 'cardX', url: data.ptwitter, icon: 'icon-x.svg', alt: 'Twitter' },
-            //     { id: 'cardInstagram', url: data.pinstagram, icon: 'icon-instagram.svg', alt: 'Instagram' },
-            //     { id: 'cardTiktok', url: data.ptiktok, icon: 'icon-tiktok.svg', alt: 'Tiktok' },
-            // ];
+            // Gestion des liens URL
+            const platforms = [
+                { id: 'cardYoutube', url: data.pyoutube, icon: 'icon-youtube.svg', alt: 'YouTube' },
+                { id: 'cardTwitch', url: data.ptwitch, icon: 'icon-twitch.svg', alt: 'Twitch' },
+                { id: 'cardKick', url: data.pkick, icon: 'icon-kick.svg', alt: 'Kick' },
+                { id: 'cardX', url: data.ptwitter, icon: 'icon-x.svg', alt: 'Twitter' },
+                { id: 'cardInstagram', url: data.pinstagram, icon: 'icon-instagram.svg', alt: 'Instagram' },
+                { id: 'cardTiktok', url: data.ptiktok, icon: 'icon-tiktok.svg', alt: 'Tiktok' },
+            ];
 
-            // // Vider les anciennes icônes avant d'ajouter les nouvelles
-            // const cardInfoUrl = zoomCard.querySelector('.cardInfoUrl');
-            // cardInfoUrl.innerHTML = ''; // Vide le conteneur avant de le remplir
+            // Vider les anciennes icônes avant d'ajouter les nouvelles
+            const cardInfoUrl = zoomCard.querySelector('.cardInfoUrl');
+            cardInfoUrl.innerHTML = ''; // Vide le conteneur avant de le remplir
 
-            // platforms.forEach(platform => {
-            //     if (platform.url) {
-            //         const link = document.createElement('a');
-            //         link.href = platform.url;
-            //         link.id = platform.id;
-            //         link.className = 'cardUrl ' + platform.id;
-            //         link.target = '_blank';
+            platforms.forEach(platform => {
+                if (platform.url) {
+                    const link = document.createElement('a');
+                    link.href = platform.url;
+                    link.id = platform.id;
+                    link.className = 'cardUrl ' + platform.id;
+                    link.target = '_blank';
 
-            //         const img = document.createElement('img');
-            //         img.src = `./picture/icons/${platform.icon}`;
-            //         img.alt = platform.alt;
+                    const img = document.createElement('img');
+                    img.src = `./picture/icons/${platform.icon}`;
+                    img.alt = platform.alt;
 
-            //         link.appendChild(img);
-            //         cardInfoUrl.appendChild(link);
-            //     }
-            // });
+                    link.appendChild(img);
+                    cardInfoUrl.appendChild(link);
+                }
+            });
             // Faits
             zoomCard.querySelector('#fact1').textContent = data.factone || 'Pas d\'anecdote disponible';
             zoomCard.querySelector('#fact2').textContent = data.facttwo || 'Pas d\'anecdote disponible';

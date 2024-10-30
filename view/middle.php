@@ -21,8 +21,8 @@
 
             $flagIcon = getFlagIcon($d->language);
             // Application d'un CSS spécifique pour chaque valeur de mainCat et de thematic
-        // Application d'un CSS spécifique pour chaque valeur de mainCat et de thematic
-        include 'colorByCategories.php';
+            // Application d'un CSS spécifique pour chaque valeur de mainCat et de thematic
+            include 'colorByCategories.php';
 
             //lien généré pour les réseaux sociaux
             $pseudoYoutube = $d->pYoutube;
@@ -45,10 +45,9 @@
             $age = $now->diff($birthdate)->y;
         ?>
             <div class="card"
-            style="box-shadow:6px 6px 15px 3px <?php echo $ColorMainCat ?>;"
             
-           
-             data-id="<?php echo $d->id; ?>"
+
+                data-id="<?php echo $d->id; ?>"
                 data-nickname="<?php echo $d->nickname; ?>"
                 data-info="<?php echo $d->mainCat; ?>"
                 data-second="<?php echo $d->secondCat; ?>"
@@ -83,7 +82,7 @@
                 <div class="cardInfoRow cardInfoUrl">
                     <?php if ($youtubeUrl): ?>
                         <a href="<?php echo $youtubeUrl; ?>" target="_blank" class="cardUrl cardYoutube">
-                            <img src="./picture/icons/icon-youtube.svg" alt="YouTube"/>
+                            <img src="./picture/icons/icon-youtube.svg" alt="YouTube" />
                         </a>
                     <?php endif; ?>
                     <?php if ($twitchUrl): ?>
@@ -130,15 +129,16 @@
                 </div>
 
                 <div class="cardCatRow">
-                    <div class="cardMainCat" style="background-color:<?php echo $ColorMainCat?>">
-                        <!-- Ajouter dans la balise de div : [[ style="[php] $d->mainCat = $mainCat; getBckdColor(catRow, $mainCat)[?>]" ]] lorsque la fonction aura été créée -->
+                    <div class="cirlLeft" style="background-color:<?php echo $ColorMainCat?>"></div>
+                    <div class="cardMainCat">
                         <?php echo $d->mainCat; ?>
                     </div>
-                    <div class="cardSecondCat" style="background-color:<?php echo $ColorSecondCat?>">
-                        <!-- Ajouter dans la balise de div : [[ style="[php] $d->secondCat = $secCat; getBckdColor(catRow, $secCat)[?>]" ]] lorsque la fonction aura été créée -->
+                    <div class="cirlRight" style="background-color:<?php echo $ColorSecondCat?>"></div>
+                    <div class="cardSecondCat"  >
                         <?php echo $d->secondCat; ?>
                     </div>
                 </div>
+
 
                 <div class="cardTheme">
                     <?php echo $d->thematic; ?>

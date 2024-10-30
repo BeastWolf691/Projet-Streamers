@@ -178,10 +178,8 @@
 
 .card {
     padding: 6px;
-
-    border: 3px solid;
-    -webkit-box-shadow: 6px 6px 15px 3px rgba(16,5,29,0.6); 
-    box-shadow: 6px 6px 15px 3px rgba(16,5,29,0.6);
+    border: 1px solid;
+    box-shadow: 1px 2px 12px 1px rgba(16, 5, 29, 0.422);
     transition-duration: 0.4s;
 }
 
@@ -221,58 +219,56 @@
 
 .card .cardInfoPersonal {
     height: 20px;
-
     font-family: var(--font-family-secondary);
     font-weight: 700;
 }
-
 .cardAge, .cardLanguage {
     width: 40%;
 }
-
 .cardAge {
     text-align: left;
 }
-
 .cardLanguage {
-    text-align: right;;
+    text-align: right;
 }
-
-.card .cardCatRow {
+.cardCatRow {
     display: flex;
-    flex-direction: row;
     justify-content: space-between;
-    flex-wrap: nowrap;
-
     width: 100%;
     height: 30px;
-    padding: 0;
-    box-sizing: border-box;
     margin-bottom: 12px;
-}
-
-.card ,.card .cardSecondCat {
-    
-    background-color: var(--color-primary-light);
-    color: var(--color-font-extralight);
-}
-.cardMainCat,.cardSecondCat{
-    width: 48%;
-    height: 30px;
-    border-radius: 15px;
+    text-transform: uppercase;
     line-height: 30px;
-    vertical-align: middle;
     text-align: center;
     font-family: var(--font-family-main);
     font-weight: 500;
+    position: relative;
 }
-
+.cardMainCat, .cardSecondCat {
+    position: relative;
+    width: 43.5%;
+    height: 30px;
+    background-color: #251432;
+    color: white;
+}
+.cardMainCat {
+    left: 12px;
+}
+.cardSecondCat {
+    right: 12px;
+}
+.cirlLeft, .cirlRight {
+    height: 30px;
+    width: 30px;
+    position: absolute;
+    border-radius: 50%;
+}
+.cirlRight{right: 0;}
 .card .cardTheme {
     width: 48%;
     height: 30px;
     margin-bottom: 6px;
     text-align: center;
-
     font-family: var(--font-family-main);
     font-size: 0.9em;
     font-weight: 500;

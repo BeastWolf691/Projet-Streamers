@@ -19,6 +19,9 @@ switch ($mainCat) {
     case 'react':
         $ColorMainCat = ' #462e79';
         break;
+     default:
+        $ColorSecondCat = 'grey'; 
+        break;
 }
 
 $ColorSecondCat = '';
@@ -49,5 +52,8 @@ switch ($secondCat) {
         break;
     case 'speedrunning':
         $ColorSecondCat = 'orange';
+        break;
+    default:
+        $ColorSecondCat = 'grey'; 
         break;
 }

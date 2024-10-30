@@ -236,36 +236,44 @@
 
 .cardLanguage {
     text-align: right;;
-}
-
-.card .cardCatRow {
+}.cardCatRow {
     display: flex;
-    flex-direction: row;
     justify-content: space-between;
-    flex-wrap: nowrap;
-
     width: 100%;
     height: 30px;
-    padding: 0;
-    box-sizing: border-box;
     margin-bottom: 12px;
-}
-
-.card ,.card .cardSecondCat {
-    
-    background-color: var(--color-primary-light);
-    color: var(--color-font-extralight);
-}
-.cardMainCat,.cardSecondCat{
-    width: 48%;
-    height: 30px;
-    border-radius: 15px;
+    text-transform: uppercase;
     line-height: 30px;
-    vertical-align: middle;
     text-align: center;
     font-family: var(--font-family-main);
     font-weight: 500;
+    position: relative;
 }
+
+.cardMainCat, .cardSecondCat {
+    position: relative;
+    width: 43.5%;
+    height: 30px;
+    background-color: #251432;
+    color: white;
+    z-index: 1;
+    overflow: visible;
+}
+
+.cardMainCat {
+    left: 12px;
+}
+
+.cardSecondCat {
+    right: 12px;
+}
+.cirlLeft, .cirlRight {
+    height: 30px;
+    width: 30px;
+    position: absolute;
+    border-radius: 50%;
+}
+.cirlRight{right: 0;}
 
 .card .cardTheme {
     width: 48%;

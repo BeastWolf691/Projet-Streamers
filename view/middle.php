@@ -2,7 +2,6 @@
     <aside class="filter-bar">
         <?php include "filter.php";
         ?>
-
     </aside>
 
     <aside class="result">
@@ -10,23 +9,18 @@
     </aside>
 
     <div class="content">
-        <!-- récupération -->
         <?php
-
         $sql = 'SELECT id, nickname, mainCat, secondCat,thematic, picture, name, language, pYoutube,
-      ptwitch, pKick, pTwitter, pInstagram, pTiktok, factOne, factTwo, factThree, birthdate FROM cards ORDER BY nickname ASC';
+        ptwitch, pKick, pTwitter, pInstagram, pTiktok, factOne, factTwo, factThree, birthdate FROM cards ORDER BY nickname ASC';
         $req = $pdo->query($sql);
+
         include 'flags.php';
+
         while ($d = $req->fetch(PDO::FETCH_OBJ)) { // pour chaque ligne dans la BDD, on crée une carte
 
             $flagIcon = getFlagIcon($d->language);
             // Application d'un CSS spécifique pour chaque valeur de mainCat et de thematic
-            // Application d'un CSS spécifique pour chaque valeur de mainCat et de thematic
-<<<<<<< HEAD
             include_once 'colorByCategories.php';
-=======
-            include 'colorByCategories.php';
->>>>>>> e0439d5fd79b959b9c5ede10525de2a99978f7cd
 
             //lien généré pour les réseaux sociaux
             $pseudoYoutube = $d->pYoutube;
@@ -35,7 +29,6 @@
             $pseudoTwitter = $d->pTwitter;
             $pseudoInstagram = $d->pInstagram;
             $pseudoTiktok = $d->pTiktok;
-
             $youtubeUrl = !empty($pseudoYoutube) ? "https://www.youtube.com/@{$pseudoYoutube}" : null;
             $twitchUrl = !empty($pseudoTwitch) ? "https://www.twitch.tv/{$pseudoTwitch}" : null;
             $kickUrl = !empty($pseudoKick) ? "https://www.kick.com/{$pseudoKick}" : null;
@@ -49,12 +42,6 @@
             $age = $now->diff($birthdate)->y;
         ?>
             <div class="card"
-<<<<<<< HEAD
-=======
-                style="box-shadow:6px 6px 15px 3px <?php echo $ColorMainCat ?>;"
-
-
->>>>>>> e0439d5fd79b959b9c5ede10525de2a99978f7cd
                 data-id="<?php echo $d->id; ?>"
                 data-nickname="<?php echo $d->nickname; ?>"
                 data-info="<?php echo $d->mainCat; ?>"
@@ -137,21 +124,14 @@
                 </div>
 
                 <div class="cardCatRow">
-<<<<<<< HEAD
+
                     <div class="cirlLeft" style="background-color:<?php echo getColorForMainCategory($d->mainCat); ?>;"></div>
                     <div class="cardMainCat">
-                        <?php echo $d->mainCat; ?>
+                        <?php echo htmlspecialchars($d->mainCat); ?>
                     </div>
-                    <div class="cirlRight" style="background-color:<?php echo getColorForSecondCategory($d->secondCat); ?>"></div>
-=======
-                    <div class="cirlLeft" style="background-color:<?php echo $ColorMainCat?>"></div>
-                    <div class="cardMainCat">
-                        <?php echo $d->mainCat; ?>
-                    </div>
-                    <div class="cirlRight" style="background-color:<?php echo $ColorSecondCat?>"></div>
->>>>>>> e0439d5fd79b959b9c5ede10525de2a99978f7cd
-                    <div class="cardSecondCat"  >
-                        <?php echo $d->secondCat; ?>
+                    <div class="cirlRight" style="background-color:<?php echo getColorForSecondCategory($d->secondCat); ?>;"></div>
+                    <div class="cardSecondCat">
+                        <?php echo htmlspecialchars($d->secondCat); ?>
                     </div>
                 </div>
 

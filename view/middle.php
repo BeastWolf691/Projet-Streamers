@@ -1,13 +1,10 @@
 <div id="middle">
     <aside class="filter-bar">
-        <?php include "filter.php";
-        ?>
+        <?php include "filter.php"; ?>
     </aside>
-
     <aside class="result">
         <?php include 'zoomCard.php' ?>
     </aside>
-
     <div class="content">
         <?php
         $sql = 'SELECT id, nickname, mainCat, secondCat,thematic, picture, name, language, pYoutube,
@@ -17,11 +14,9 @@
         include 'flags.php';
 
         while ($d = $req->fetch(PDO::FETCH_OBJ)) { // pour chaque ligne dans la BDD, on crée une carte
-
             $flagIcon = getFlagIcon($d->language);
             // Application d'un CSS spécifique pour chaque valeur de mainCat et de thematic
             include_once 'colorByCategories.php';
-
             //lien généré pour les réseaux sociaux
             $pseudoYoutube = $d->pYoutube;
             $pseudoTwitch = $d->ptwitch;
@@ -61,18 +56,15 @@
                 data-facttwo="<?php echo $d->factTwo; ?>"
                 data-factthree="<?php echo $d->factThree; ?>">
 
-
                 <div class="cardHeader">
                     <?php echo $d->nickname; ?>
                 </div>
-
                 <!--echo !empty($d->picture) ? $d->picture cela sert à vérifier si picture contient une image, 
                 si cela n'est pas le cas alors image par défaut undefined-->
                 <img
                     class="cardPicture"
                     src="<?= !empty($d->picture) ? htmlspecialchars($d->picture) : 'picture/photos/photo-alt.jpg'; ?>"
                     alt="image de <?= htmlspecialchars($d->nickname); ?>">
-
                 <!------Réseaux Sociaux ------->
                 <div class="cardInfoRow cardInfoUrl">
                     <?php if ($youtubeUrl): ?>
@@ -124,7 +116,6 @@
                 </div>
 
                 <div class="cardCatRow">
-
                     <div class="cirlLeft" style="background-color:<?php echo getColorForMainCategory($d->mainCat); ?>;"></div>
                     <div class="cardMainCat">
                         <?php echo htmlspecialchars($d->mainCat); ?>
@@ -134,7 +125,6 @@
                         <?php echo htmlspecialchars($d->secondCat); ?>
                     </div>
                 </div>
-
 
                 <div class="cardTheme">
                     <?php echo $d->thematic; ?>
@@ -154,8 +144,6 @@
                     </div>
                 </div>
             </div>
-
-
         <?php } ?>
     </div>
 </div>

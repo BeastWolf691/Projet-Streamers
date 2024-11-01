@@ -229,9 +229,14 @@
     text-align: left;
 }
 .cardLanguage {
+<<<<<<< HEAD
     text-align: right;
 }
 .cardCatRow {
+=======
+    text-align: right;;
+}.cardCatRow {
+>>>>>>> e0439d5fd79b959b9c5ede10525de2a99978f7cd
     display: flex;
     justify-content: space-between;
     width: 100%;
@@ -244,16 +249,31 @@
     font-weight: 500;
     position: relative;
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> e0439d5fd79b959b9c5ede10525de2a99978f7cd
 .cardMainCat, .cardSecondCat {
     position: relative;
     width: 43.5%;
     height: 30px;
     background-color: #251432;
     color: white;
+<<<<<<< HEAD
 }
 .cardMainCat {
     left: 12px;
 }
+=======
+    z-index: 1;
+    overflow: visible;
+}
+
+.cardMainCat {
+    left: 12px;
+}
+
+>>>>>>> e0439d5fd79b959b9c5ede10525de2a99978f7cd
 .cardSecondCat {
     right: 12px;
 }
@@ -264,6 +284,10 @@
     border-radius: 50%;
 }
 .cirlRight{right: 0;}
+<<<<<<< HEAD
+=======
+
+>>>>>>> e0439d5fd79b959b9c5ede10525de2a99978f7cd
 .card .cardTheme {
     width: 48%;
     height: 30px;

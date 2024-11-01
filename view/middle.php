@@ -22,7 +22,7 @@
             $flagIcon = getFlagIcon($d->language);
             // Application d'un CSS spécifique pour chaque valeur de mainCat et de thematic
             // Application d'un CSS spécifique pour chaque valeur de mainCat et de thematic
-            include 'colorByCategories.php';
+            include_once 'colorByCategories.php';
 
             //lien généré pour les réseaux sociaux
             $pseudoYoutube = $d->pYoutube;
@@ -45,8 +45,6 @@
             $age = $now->diff($birthdate)->y;
         ?>
             <div class="card"
-            
-
                 data-id="<?php echo $d->id; ?>"
                 data-nickname="<?php echo $d->nickname; ?>"
                 data-info="<?php echo $d->mainCat; ?>"
@@ -129,11 +127,11 @@
                 </div>
 
                 <div class="cardCatRow">
-                    <div class="cirlLeft" style="background-color:<?php echo $ColorMainCat?>"></div>
+                    <div class="cirlLeft" style="background-color:<?php echo getColorForMainCategory($d->mainCat); ?>;"></div>
                     <div class="cardMainCat">
                         <?php echo $d->mainCat; ?>
                     </div>
-                    <div class="cirlRight" style="background-color:<?php echo $ColorSecondCat?>"></div>
+                    <div class="cirlRight" style="background-color:<?php echo getColorForSecondCategory($d->secondCat); ?>"></div>
                     <div class="cardSecondCat"  >
                         <?php echo $d->secondCat; ?>
                     </div>

@@ -1,5 +1,4 @@
 <div class="zoomCard" style="display:none;">
-    <div class="close">X</div>
 
     <div class="cardHeader">
         <div class="cardPseudo"></div>
@@ -70,4 +69,10 @@
             </div>
         </div>
     </div>
+</div>
+
+<div class="closeBtnArea">
+    <button class="close" style="display: none;">
+        Fermer le zoom
+    </button>
 </div>

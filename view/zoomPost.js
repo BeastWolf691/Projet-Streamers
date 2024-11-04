@@ -5,6 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
             event.stopPropagation();
 
             const zoomCard = document.querySelector('.zoomCard');
+            const close = document.querySelector('.close');
 
             // Récupérer les données de la carte cliquée
             const data = card.dataset;
@@ -56,11 +57,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
             // Afficher la carte zoom (si elle est cachée)
             zoomCard.style.display = 'block';
+            close.style.display = 'block';
         });
         //ferme la zoomCard en cliquant sur le X
         const closeButton = document.querySelector('.close');
         closeButton.addEventListener('click', () => {
             document.querySelector('.zoomCard').style.display = 'none';
+            document.querySelector('.close').style.display = 'none';
         });
     });
 });

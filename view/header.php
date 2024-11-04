@@ -14,7 +14,7 @@ include 'bdd.php';
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
     <script src="https://kit.fontawesome.com/e2e1900fed.js" crossorigin="anonymous"></script><!--permet d'avoir accès à des icones gratuites-->
     <script type="module" src="./zoomPost.js"></script>
-    <script type="module" src="js/index.js"></script><!-- type module TRES IMPORTANTS, SINON LES IMPORT NE FONCTIONNENT PAS, c'est une norme ES6 -->
+    <script type="module" src="js/index.js"></script><!-- type module TRES IMPORTANTS, SINON LES IMPORTS NE FONCTIONNENT PAS, c'est une norme ES6 -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/css/flag-icon.min.css">
     <link rel="stylesheet" media="screen and (min-width: 981px)" href="css/desk/index.css" />
     <!-- Import police 'Cabin' : -->

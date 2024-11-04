@@ -4,7 +4,7 @@ namespace App\Classes;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 #[ORM\Entity]
-class Categories{
+class Category{
 
     #[ORM\Id]
     #[ORM\GeneratedValue]
@@ -14,19 +14,17 @@ class Categories{
     #[ORM\Column()]
     private string $name;
 
-    // #[ORM\Column()]
-    // private string $color;
+    #[ORM\Column()]
+    private string $color;
 
     #[ORM\Column()]
     private string $icon;
 
     
     // Constructor
-    public function __construct(string $name,string $icon) {
+    public function __construct(string $name, string $color, string $icon) {
         $this->name = $name;
+        $this->color = $color;
         $this->icon = $icon;
-
-     
-      
     }
 }

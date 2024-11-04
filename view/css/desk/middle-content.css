@@ -60,6 +60,7 @@
     position: absolute;
     margin: 0 0 0 110px;
 }
+
 /******************************formulaires***************************/
 input[type=password],input[type=date],input[type=text],input[type=mail] {
     width: 100%;

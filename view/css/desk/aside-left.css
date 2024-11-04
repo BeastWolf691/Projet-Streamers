@@ -2,48 +2,57 @@
 /*************************filtre pour recherche*************/
 .filter-bar {
     margin: 0 25px 0;
-    height: 175px;
-    width: 350px;
-    background: #9FF0F7;
-    padding: 10px 5px 0 15px;
     position: relative;
     top: 20px;
-    display: flex;
-    flex-direction: column;
-    border-radius: 10px;
+    height: 10vh;
 }
+
+#filterForm {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.2em;
+    width: 900px;
+    margin-left: auto; /* Aligne le formulaire à droite a enlever si cela ne plait pas*/
+    position: relative;
+}
+
 
 .filter-item {
+    flex: 1 1 130px; /* Largeur minimale de 200px, ajuste selon l’espace disponible */
     display: flex;
-    justify-content: space-between;
-    margin: 6px;
+    flex-direction: column;
 }
 
-#type,
-#categoryS,
-#thematic,
-#ages,
-#names,
-#languages {
+
+.filter-item label {
+    font-weight: bold; /* Optionnel, pour donner plus de contraste au label */
+    margin-bottom: 0.5em; /* Espacement entre le label et le champ */
+}
+
+.filter-item select {
+    padding: 0.2em;
+    font-size: 16px;
+    color: #5d5d5d;
+}
+
+
+#type, #categoryS, #thematic, #ages, #names, #languages {
     border-radius: 25px;
-    width: 210px;
+    width: 140px;
 }
 
 input[type=reset] {
-    width: 345px;
-    margin: 10px 0;
+    width: 150px;
+    margin: 25px 0 0;
     border-radius: 25px;
 }
-
 /*********************affichage streameurs*******************/
 .result {
-    position: relative;
     width: 370px;
-    height: 760px;
-    top: 35px;
+    height: 700px;
+    position: relative;
+    top: 56px;
     margin: 0 0 0 25px;
-    border-radius: 10px;
-    background-color: var(--color-primary-dark);
 }
 
 .btn-primary {

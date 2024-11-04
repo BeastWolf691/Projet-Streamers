@@ -3,6 +3,7 @@
         <?php include "filter.php"; ?>
     </aside>
     <aside class="result">
+        <p class="zoom">Toi aussi fait ton deck<br>Clique sur Zoom pour afficher une carte</p>
         <?php include 'zoomCard.php' ?>
     </aside>
     <div class="content">
@@ -11,13 +12,13 @@
         ptwitch, pKick, pTwitter, pInstagram, pTiktok, factOne, factTwo, factThree, birthdate FROM cards ORDER BY nickname ASC';
         $req = $pdo->query($sql);
 
-        include 'flags.php';
+        // include 'flags.php';
         include '../src/functions/getCatIcon.php';
 
         while ($d = $req->fetch(PDO::FETCH_OBJ)) { // pour chaque ligne dans la BDD, on crée une carte
-            $flagIcon = getFlagIcon($d->language);
+            // $flagIcon = getFlagIcon($d->language);
             // Application d'un CSS spécifique pour chaque valeur de mainCat et de thematic
-            include_once 'colorByCategories.php';
+            include_once '../admin/colorByCategories.php';
             //lien généré pour les réseaux sociaux
             $pseudoYoutube = $d->pYoutube;
             $pseudoTwitch = $d->ptwitch;
@@ -67,45 +68,46 @@
                 si cela n'est pas le cas alors image par défaut undefined-->
                 <img
                     class="cardPicture"
-                    src="<?= !empty($d->picture) ? htmlspecialchars($d->picture) : 'picture/photos/photo-alt.jpg'; ?>"
+                    src="<?= !empty($d->picture) ? htmlspecialchars($d->picture) : '../picture/photos/photo-alt.jpg'; ?>"
                     alt="image de <?= htmlspecialchars($d->nickname); ?>">
                 <!------Réseaux Sociaux ------->
                 <div class="cardInfoRow cardInfoUrl">
                     <?php if ($youtubeUrl): ?>
                         <a href="<?php echo $youtubeUrl; ?>" target="_blank" class="cardUrl cardYoutube">
-                            <img src="./picture/icons/icon-youtube.svg" alt="YouTube" />
+                            <img src="../picture/icons/icon-youtube.svg" alt="YouTube" />
                         </a>
                     <?php endif; ?>
                     <?php if ($twitchUrl): ?>
                         <a href="<?php echo $twitchUrl; ?>" target="_blank" class="cardUrl cardTwitch">
-                            <img src="./picture/icons/icon-twitch.svg" alt="Twitch" />
+                            <img src="../picture/icons/icon-twitch.svg" alt="Twitch" />
                         </a>
                     <?php endif; ?>
 
                     <?php if ($kickUrl): ?>
                         <a href="<?php echo $kickUrl; ?>" target="_blank" class="cardUrl cardKick">
-                            <img src="./picture/icons/icon-kick.svg" alt="Kick" />
+                            <img src="../picture/icons/icon-kick.svg" alt="Kick" />
                         </a>
                     <?php endif; ?>
 
                     <?php if ($twitterUrl): ?>
                         <a href="<?php echo $twitterUrl; ?>" target="_blank" class="cardUrl cardX">
-                            <img src="./picture/icons/icon-x.svg" alt="Twitter" />
+                            <img src="../picture/icons/icon-x.svg" alt="Twitter" />
                         </a>
                     <?php endif; ?>
 
                     <?php if ($instagramUrl): ?>
                         <a href="<?php echo $instagramUrl; ?>" target="_blank" class="cardUrl cardInstagram">
-                            <img src="./picture/icons/icon-instagram.svg" alt="Instagram" />
+                            <img src="../picture/icons/icon-instagram.svg" alt="Instagram" />
                         </a>
                     <?php endif; ?>
 
                     <?php if ($tiktokUrl): ?>
                         <a href="<?php echo $tiktokUrl; ?>" target="_blank" class="cardUrl cardTiktok">
-                            <img src="./picture/icons/icon-tiktok.svg" alt="Tiktok" />
+                            <img src="../picture/icons/icon-tiktok.svg" alt="Tiktok" />
                         </a>
                     <?php endif; ?>
                 </div>
+
 
                 <div class="cardInfoRow cardInfoPersonal">
                     <div class="cardAge">
@@ -136,13 +138,13 @@
 
                 <div class="cardActions">
                     <div class="zoomButton">
-                        <img src="./picture/icons/icon-zoom.svg" alt="Zoom sur la carte" />
+                        <img src="../picture/icons/icon-zoom.svg" alt="Zoom sur la carte" />
                         <p>Zoom
                         <p>
                     </div>
 
                     <div class="deckButton">
-                        <img src="./picture/icons/icon-deck.png" alt="Ajouter au deck" />
+                        <img src="../picture/icons/icon-deck.png" alt="Ajouter au deck" />
                         <p>Deck
                         <p>
                     </div>

@@ -1,8 +1,9 @@
 $(document).ready(function () {
     const logoContainer = $('#logo-container');
-    const menuButton = $("#menu-top");
+    const menuButton = $("#persona");
     const overlay = $("#overlay");
     const menu = $("#menu-person");
+    const menuTop = $("#menu-top");
 
 
     //Caroussel
@@ -46,7 +47,7 @@ $(document).ready(function () {
     $.each(images, function (i, image) {
         const $item = $('<div>').addClass('item');
         const $link = $('<a>').attr('href', image.link).attr('target', '_blank');
-        const $img = $('<img>').attr('src', `picture/${image.src}`);
+        const $img = $('<img>').attr('src', `../picture/${image.src}`);
         $link.append($img);
         $item.append($link);
         $list.append($item);
@@ -54,7 +55,7 @@ $(document).ready(function () {
 
     $slider.append($list);
     $carousel.append($slider);
-    $('#banner').append($carousel);
+    $('#logo').append($carousel);
 
     // Ouvrir le menu
     menuButton.on("click", function () {
@@ -75,8 +76,10 @@ $(document).ready(function () {
     });
 
     // changement thème logo avec action sombre clair
-    const themeDark = "./picture/logo-cd-light.png"; // Logo for light theme
-    const themeLight = "./picture/logo-cd-dark.png"; // Logo for dark theme
+    const themeDark = "../picture/logo-cd-light.png"; // Logo for light theme
+    const themeLight = "../picture/logo-cd-dark.png"; // Logo for dark theme
+    const iconMoon = $("#sunny");
+    const iconSun = $("#darkness");
 
     function appliquerMode() {
         const theme = localStorage.getItem('theme');
@@ -85,25 +88,24 @@ $(document).ready(function () {
             $('body').addClass('darker').removeClass('light');
             $('.content').addClass('dark');
             $('#menu-person').addClass('dark');
-            $('#switch').prop('checked', true);
+            $('menu-top').addClass('menu-top-dark').removeClass('menu-top-light');
             logoContainer.html(`<img src="${themeLight}" alt="Logo dark">`);
+            iconMoon.replaceWith(iconSun);
         } else {
             $('body').addClass('light').removeClass('darker');
             $('.content').removeClass('dark');
             $('#menu-person').removeClass('dark');
-            $('#switch').prop('checked', false);
+            $('menu-top').addClass('menu-top-light').removeClass('menu-top-dark');
             logoContainer.html(`<img src="${themeDark}" alt="Logo light">`);
+            iconSun.replaceWith(iconMoon);
         }
     }
 
     appliquerMode();
 
-    $('#switch').on('change', function () {
-        if (this.checked) {
-            localStorage.setItem('theme', 'dark');
-        } else {
-            localStorage.setItem('theme', 'light');
-        }
+    $(document).on("click", "#sunny, #darkness", function () {
+        const newTheme = localStorage.getItem('theme') === 'dark' ? 'light' : 'dark';
+        localStorage.setItem('theme', newTheme);
         appliquerMode();
     });
 
@@ -116,13 +118,8 @@ $(document).ready(function () {
 
     window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', function (e) {
         if (!localStorage.getItem('theme')) {
-            if (e.matches) {
-                localStorage.setItem('theme', 'dark');
-                $('#switch').prop('checked', true);
-            } else {
-                localStorage.setItem('theme', 'light');
-                $('#switch').prop('checked', false);
-            }
+            const newTheme = e.matches ? 'dark' : 'light';
+            localStorage.setItem('theme', newTheme);
             appliquerMode();
         }
     });

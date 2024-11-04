@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             // Remplir la carte zoom avec les données
             zoomCard.querySelector('.cardPseudo').textContent = data.nickname;
-            zoomCard.querySelector('img').src = data.picture ? data.picture : 'picture/photos/photo-_default_.jpg';
+            zoomCard.querySelector('img').src = data.picture ? data.picture : '../picture/photos/photo-_default_.jpg';
             zoomCard.querySelector('#valueCivil').textContent = data.name;
             zoomCard.querySelector('#valueAge').textContent = `${data.age} ans`;
             zoomCard.querySelector('#valueFromCountry').textContent = data.languages;
@@ -42,7 +42,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     link.target = '_blank';
 
                     const img = document.createElement('img');
-                    img.src = `./picture/icons/${platform.icon}`;
+                    img.src = `../picture/icons/${platform.icon}`;
                     img.alt = platform.alt;
 
                     link.appendChild(img);
@@ -57,13 +57,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
             // Afficher la carte zoom (si elle est cachée)
             zoomCard.style.display = 'block';
-            close.style.display = 'block';
         });
         //ferme la zoomCard en cliquant sur le X
         const closeButton = document.querySelector('.close');
         closeButton.addEventListener('click', () => {
             document.querySelector('.zoomCard').style.display = 'none';
-            document.querySelector('.close').style.display = 'none';
         });
     });
 });

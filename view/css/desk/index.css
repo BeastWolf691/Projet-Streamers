@@ -7,6 +7,7 @@
 @import url('./footer.css');
 @import url('./dark-light.css');
 @import url('./card.css');
+@import url('./zoomCard.css');
 
 @font-face {
     font-family: 'CaviarDreams';
@@ -15,15 +16,11 @@
     font-style: normal;
 }
 
-/* *{
-    font-family: 'CaviarDreams';
-} */
-
 body {
     margin: 0;
     background: #10051d;
-    /*height: 100vh;  alexis: sur mon écran pas besoin de mettre de hauteur, peut etre pour vous?*/
     position: relative;
+    min-height: 100vh;
 }
 a {
     text-decoration: none;
@@ -31,16 +28,13 @@ a {
 a:hover {
     cursor: pointer;
 }
-
 header {
-    height: 170px;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    height: 15vh;
 }
-
-#banner {
-    align-content: center;
-    position: relative;
-}
-
+ 
 .img {
     width: 175px;
     position: absolute;
@@ -51,11 +45,3 @@ header {
 img {
     width: 100%;
 }
-
-#password {
-    width: 94%;
-    border-radius: 4px;
-    border: 1px solid #ccc;
-    padding: 10px;
-}
-

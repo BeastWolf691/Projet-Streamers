@@ -1,0 +1,111 @@
+@import url('../variables.css');
+
+.zoomCard {
+    position: relative;
+    width: 100%;
+    height: 700px;
+    overflow: hidden;
+    margin: auto;
+    padding: 0 10px;
+    box-sizing: border-box;
+    border-radius: 5px;
+    border: 5px solid var(--color-card-border);
+}
+
+.zoomCard .cardHeader {
+    height: 42px;
+    padding: 5px 15px;
+    box-sizing: border-box;
+    margin-top: 12px;
+    font-family: var(--font-family-main);
+    font-size: 1.4em;
+}
+
+.zoomCard .cardUrl {
+    width: 35px;
+    height: 35px;
+}
+
+.zoomCard .cardInfoRow {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 10px 0;
+}
+
+.zoomCard .cardInfoUrl {
+    justify-content: space-between; 
+}
+
+.zoomCard .cardInfoCol {
+    width: 48%;
+}
+
+.cardInfoTitle {
+    margin-bottom: 0.5em;
+    font-family: 'CaviarDreams';
+    font-size: 0.8em;
+    font-weight: 800;
+    color: #57155D;
+}
+
+.cardInfoValue {
+    font-family: 'Caviar Dreams';
+    font-size: 1em;
+    font-weight: 900;
+    color: #10051D;
+}
+
+.countryFlag img {
+    width: 15px;
+    height: 15px;
+}
+
+.zoomCard .cardSlotContainer {
+    margin-top: 20px;
+}
+
+.cardSlot {
+    border: 2px solid #10051D;
+    margin: 10px 0;
+    padding: 5px 8px;
+    box-sizing: border-box;
+    height: 70px;
+}
+
+.slotContent {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    font-family: 'Caviar Dreams';
+    font-size: 0.9em;
+    font-weight: 800;
+}
+
+.cardFact {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.cardBulletInfo {
+    margin: 4px 8px 4px 0;
+    width: 35px;
+    height: 35px;
+    box-sizing: border-box;
+    border-radius: 35px;
+    border: 1px solid #10051D;
+    color: #FFFFFF;
+    font-weight: 900;
+    background: center no-repeat url("../../picture/icons/icon-info.svg"),
+        content-box radial-gradient(circle, rgb(122, 38, 129) 0%, rgb(87, 21, 93) 100%);
+    border-color: #10051D;
+}
+
+.closeBtnArea {
+    position: absolute;
+    left: 35px;
+    bottom: 10px;
+    width: 300px;
+    height: 40px;
+}

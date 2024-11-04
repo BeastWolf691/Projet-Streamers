@@ -20,7 +20,7 @@ include 'header.php';
     </p>
     <p>Venez compléter votre deck en choisissant parmis vos streamers préférés grâce à Stream.dev – votre portail ludique vers le monde du streaming !</p>
 
-   <a href="./register.php" class="btn">S'inscrire</a>
+   <a href="register.php" class="btn">S'inscrire</a>
 </div>
 <?php
 include 'footer.php';

@@ -25,3 +25,5 @@ Copier-coller l'entièreté du fichier <b>bdd.sql</b> dans l'onglet "SQL"
 
 modif alexis: nouvelle div dans minicard
 dans middle.php ligne 117,  ajout d'une div qui prend le changement de background en php( le demi cercle) avant la div maincat et secondcat qui  (cardcss ligne 237) . Pour maincat et secondCat j'ai gardé le code,juste changé la couleur
+fusion; refont du fichier colorBt.php
+et dans middle.php, changement de lignes 119 et 123

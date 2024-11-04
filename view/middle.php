@@ -120,11 +120,11 @@
                 </div>
 
                 <div class="cardCatRow">
-                    <div class="cirlLeft" style="background-color:<?php echo getColorForMainCategory($d->mainCat); ?>;"></div>
+                    <div class="cirlLeft" style="background-color:<?php echo getColorForCategory($d->mainCat); ?>;"></div>
                     <div class="cardMainCat">
                         <?php echo htmlspecialchars($d->mainCat); ?>
                     </div>
-                    <div class="cirlRight" style="background-color:<?php echo getColorForSecondCategory($d->secondCat); ?>;"></div>
+                    <div class="cirlRight" style="background-color:<?php echo getColorForCategory($d->secondCat); ?>;"></div>
                     <div class="cardSecondCat">
                         <?php echo htmlspecialchars($d->secondCat); ?>
                     </div>

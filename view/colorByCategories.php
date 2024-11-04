@@ -1,7 +1,8 @@
 <?php
-function getColorForMainCategory($mainCat) {
-    $mainCat = strtolower(trim($mainCat));
-    switch ($mainCat) {
+function getColorForCategory($category) {
+    $category = strtolower(trim($category));
+    
+    switch ($category) {
         case 'gaming':
             return 'var(--color-primary-dark)';
         case 'formation':
@@ -12,14 +13,6 @@ function getColorForMainCategory($mainCat) {
             return '#47af21';
         case 'react':
             return '#462e79';
-        default:
-            return 'grey';
-    }
-}
-
-function getColorForSecondCategory($secondCat) {
-    $secondCat = strtolower(trim($secondCat));
-    switch ($secondCat) {
         case 'e-sport':
             return 'yellow';
         case 'fps':
@@ -28,8 +21,6 @@ function getColorForSecondCategory($secondCat) {
             return 'blue';
         case 'vlog':
             return 'green';
-        case 'gaming':
-            return 'purple';
         case 'divertissement':
             return 'grey';
         case 'variétés':

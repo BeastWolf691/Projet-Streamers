@@ -59,7 +59,7 @@
 
                 <div class="cardHeader">
                     <?php echo $d->nickname; ?>
-                    <div class="cardCatIcon" style="background-color:<?php echo getColorForMainCategory($d->mainCat); ?>;">
+                    <div class="cardCatIcon" style="background-color:<?php echo getColorForCategory($d->mainCat); ?>;">
                         <img src="./picture/icons/icon-cat-<?php echo getCatIcon($d->mainCat); ?>.svg" alt="<?php echo $d->mainCat; ?>" />
                     </div>
                 </div>

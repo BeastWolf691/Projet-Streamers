@@ -16,13 +16,11 @@
     position: relative;
 }
 
-
 .filter-item {
     flex: 1 1 130px; /* Largeur minimale de 200px, ajuste selon l’espace disponible */
     display: flex;
     flex-direction: column;
 }
-
 
 .filter-item label {
     font-weight: bold; /* Optionnel, pour donner plus de contraste au label */
@@ -34,7 +32,6 @@
     font-size: 16px;
     color: #5d5d5d;
 }
-
 
 #type, #categoryS, #thematic, #ages, #names, #languages {
     border-radius: 25px;
@@ -49,7 +46,7 @@ input[type=reset] {
 /*********************affichage streameurs*******************/
 .result {
     width: 370px;
-    height: 700px;
+    height: 810px;
     position: relative;
     top: 56px;
     margin: 0 0 0 25px;

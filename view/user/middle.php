@@ -13,7 +13,7 @@
         $req = $pdo->query($sql);
 
         // include 'flags.php';
-        include '../src/functions/getCatIcon.php';
+        include '../../src/functions/getCatIcon.php';
 
         while ($d = $req->fetch(PDO::FETCH_OBJ)) { // pour chaque ligne dans la BDD, on crée une carte
             // $flagIcon = getFlagIcon($d->language);
@@ -61,7 +61,7 @@
                 <div class="cardHeader">
                     <?php echo $d->nickname; ?>
                     <div class="cardCatIcon" style="background-color:<?php echo getColorForCategory($d->mainCat); ?>;">
-                        <img src="./picture/icons/icon-cat-<?php echo getCatIcon($d->mainCat); ?>.svg" alt="<?php echo $d->mainCat; ?>" />
+                        <img src="../picture/icons/icon-cat-<?php echo getCatIcon($d->mainCat); ?>.svg" alt="<?php echo $d->mainCat; ?>" />
                     </div>
                 </div>
                 <!--echo !empty($d->picture) ? $d->picture cela sert à vérifier si picture contient une image, 

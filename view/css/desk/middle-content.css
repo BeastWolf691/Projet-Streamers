@@ -8,9 +8,9 @@
 .content {
     display: grid;
     position: absolute;
-    top: 195px;
+    top: 250px;
     left: 410px;
-    right: 40px;
+    right: 20px;
     border-radius: 10px;
     height: 955px;
     overflow-x: auto;

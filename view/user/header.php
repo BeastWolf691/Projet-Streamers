@@ -1,6 +1,6 @@
 <?php
 session_start();
-include 'bdd.php';
+include '../bdd.php';
 ?>
 
 <!DOCTYPE html>
@@ -15,7 +15,7 @@ include 'bdd.php';
     <script src="https://kit.fontawesome.com/e2e1900fed.js" crossorigin="anonymous"></script><!--permet d'avoir accès à des icones gratuites-->
     <script type="module" src="../js/zoomPost.js"></script>
     <script type="module" src="../js/index.js"></script><!-- type module TRES IMPORTANTS, SINON LES IMPORTS NE FONCTIONNENT PAS, c'est une norme ES6 -->
-    <link rel="stylesheet" media="screen and (min-width: 981px)" href="css/desk/index.css" />
+    <link rel="stylesheet" media="screen and (min-width: 981px)" href="../css/desk/index.css" />
     <link href="https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
     <!-- ---- -->
 </head>

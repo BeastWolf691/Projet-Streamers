@@ -26,12 +26,12 @@
             $pseudoTwitter = $d->pTwitter;
             $pseudoInstagram = $d->pInstagram;
             $pseudoTiktok = $d->pTiktok;
-            $youtubeUrl = !empty($pseudoYoutube) ? "https://www.youtube.com/@{$pseudoYoutube}" : null;
-            $twitchUrl = !empty($pseudoTwitch) ? "https://www.twitch.tv/{$pseudoTwitch}" : null;
-            $kickUrl = !empty($pseudoKick) ? "https://www.kick.com/{$pseudoKick}" : null;
-            $twitterUrl = !empty($pseudoTwitter) ? "https://www.twitter.com/{$pseudoTwitter}" : null;
-            $instagramUrl = !empty($pseudoInstagram) ? "https://www.instagram.com/{$pseudoInstagram}" : null;
-            $tiktokUrl = !empty($pseudoTiktok) ? "https://www.tiktok.com/{$pseudoTiktok}" : null;
+            $youtubeUrl = !empty($pseudoYoutube) ? "https://www.youtube.com/@{$pseudoYoutube}" : '';
+            $twitchUrl = !empty($pseudoTwitch) ? "https://www.twitch.tv/{$pseudoTwitch}" : '';
+            $kickUrl = !empty($pseudoKick) ? "https://www.kick.com/{$pseudoKick}" : '';
+            $twitterUrl = !empty($pseudoTwitter) ? "https://www.twitter.com/{$pseudoTwitter}" : '';
+            $instagramUrl = !empty($pseudoInstagram) ? "https://www.instagram.com/{$pseudoInstagram}" : '';
+            $tiktokUrl = !empty($pseudoTiktok) ? "https://www.tiktok.com/@{$pseudoTiktok}" : '';
 
             // Calcul de l'âge à partir de la date de naissance
             $birthdate = new DateTime($d->birthdate);

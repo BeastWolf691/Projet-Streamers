@@ -10,20 +10,20 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     // Récupération et sanitisation des données du formulaire
     $nickname = htmlspecialchars(trim($_POST['nickname']));
     $mainCat = htmlspecialchars(trim($_POST['mainCat']));
-    $secondCat = !empty($_POST['secondCat']) ? htmlspecialchars(trim($_POST['secondCat'])) : null;
+    $secondCat = !empty($_POST['secondCat']) ? htmlspecialchars(trim($_POST['secondCat'])) : "";
     $thematic = htmlspecialchars(trim($_POST['thematic']));
-    $picture = !empty($_FILES['picture']) ? $_FILES['picture'] : null; // Récupération du fichier
+    $picture = !empty($_FILES['picture']) ? $_FILES['picture'] : ""; // Récupération du fichier
     $name = htmlspecialchars(trim($_POST['name']));
     $language = htmlspecialchars(trim($_POST['language']));
-    $pYoutube = !empty($_POST['pYoutube']) ? htmlspecialchars(trim($_POST['pYoutube'])) : null;
-    $pTwitch = !empty($_POST['pTwitch']) ? htmlspecialchars(trim($_POST['pTwitch'])) : null;
-    $pKick = !empty($_POST['pKick']) ? htmlspecialchars(trim($_POST['pKick'])) : null;
-    $pTwitter = !empty($_POST['pTwitter']) ? htmlspecialchars(trim($_POST['pTwitter'])) : null;
-    $pInstagram = !empty($_POST['pInstagram']) ? htmlspecialchars(trim($_POST['pInstagram'])) : null;
-    $pTiktok = !empty($_POST['pTiktok']) ? htmlspecialchars(trim($_POST['pTiktok'])) : null;
-    $factOne = !empty($_POST['factOne']) ? htmlspecialchars(trim($_POST['factOne'])) : null;
-    $factTwo = !empty($_POST['factTwo']) ? htmlspecialchars(trim($_POST['factTwo'])) : null;
-    $factThree = !empty($_POST['factThree']) ? htmlspecialchars(trim($_POST['factThree'])) : null;
+    $pYoutube = !empty($_POST['pYoutube']) ? htmlspecialchars(trim($_POST['pYoutube'])) : "";
+    $pTwitch = !empty($_POST['pTwitch']) ? htmlspecialchars(trim($_POST['pTwitch'])) : "";
+    $pKick = !empty($_POST['pKick']) ? htmlspecialchars(trim($_POST['pKick'])) : "";
+    $pTwitter = !empty($_POST['pTwitter']) ? htmlspecialchars(trim($_POST['pTwitter'])) : "";
+    $pInstagram = !empty($_POST['pInstagram']) ? htmlspecialchars(trim($_POST['pInstagram'])) : "";
+    $pTiktok = !empty($_POST['pTiktok']) ? htmlspecialchars(trim($_POST['pTiktok'])) : "";
+    $factOne = !empty($_POST['factOne']) ? htmlspecialchars(trim($_POST['factOne'])) : "";
+    $factTwo = !empty($_POST['factTwo']) ? htmlspecialchars(trim($_POST['factTwo'])) : "";
+    $factThree = !empty($_POST['factThree']) ? htmlspecialchars(trim($_POST['factThree'])) : "";
     $birthdate = htmlspecialchars(trim($_POST['birthdate']));
 
 
@@ -53,7 +53,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             }
             // Si aucun problème, on peut déplacer le fichier
             if (empty($errors['picture'])) {
-                $uploadDir = 'picture/photos/';
+                $uploadDir = '../picture/photos/';
                 $extension = pathinfo($picture['name'], PATHINFO_EXTENSION); //extension du fichier
                 $fileName = 'photo-' . htmlspecialchars(trim($nickname)) . '-' . $extension;
                 //le fichier sera renommé avec le pseudo
@@ -66,7 +66,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             }
         }
     } else {
-        $uploadFile = 'picture/photos/photo-_default_.jpg';
+        $uploadFile = '../picture/photos/photo-_default_.jpg';
     }
     if (empty($name)) {
         $errors['name'] = "Le prénom est requis.";

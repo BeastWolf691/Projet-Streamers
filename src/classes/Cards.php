@@ -20,39 +20,39 @@ class Cards
     #[ORM\Column()]
     private string $mainCat;
     #[ORM\Column(nullable: true)]
-    private string $secondCat;
+    private string $secondCat = "";
     #[ORM\Column()]
     private string $thematic;
     #[ORM\Column(nullable: true)]
-    private string $picture;
+    private string $picture = "";
     #[ORM\Column()]
     private string $name;
     #[ORM\Column()]
     private string $language;
     #[ORM\Column(nullable: true)]
-    private string $pYoutube;
+    private string $pYoutube = "";
     #[ORM\Column(nullable: true)]
-    private string $pTwitch;
+    private string $pTwitch = "";
     #[ORM\Column(nullable: true)]
-    private string $pKick;
+    private string $pKick = "";
     #[ORM\Column(nullable: true)]
-    private string $pTwitter;
+    private string $pTwitter = "";
     #[ORM\Column(nullable: true)]
-    private string $pInstagram;
+    private string $pInstagram = "";
     #[ORM\Column(nullable: true)]
-    private string $pTiktok;
+    private string $pTiktok = "";
     #[ORM\Column(nullable: true)]
-    private string $factOne;
+    private string $factOne = "";
     #[ORM\Column(nullable: true)]
-    private string $factTwo;
+    private string $factTwo = "";
     #[ORM\Column(nullable: true)]
-    private string $factThree;
+    private string $factThree = "";
     #[ORM\Column()]
     private DateTime $birthdate;
 
 
     // 1 carte peut avoir plusieurs catégories 
-    #[ORM\OneToMany(targetEntity: Categories::class, mappedBy: 'cards')]
+    #[ORM\OneToMany(targetEntity: Category::class, mappedBy: 'cards')]
     private Collection $Thematic;
 
 
@@ -63,20 +63,20 @@ class Cards
         int $id,
         string $nickname,
         string $mainCat,
-        string $secondCat,
+        string $secondCat = "",
         string $thematic,
-        string $picture,
+        string $picture = "",
         string $name,
         string $language,
-        string $pYoutube,
-        string $pTwitch,
-        string $pKick,
-        string $pTwitter,
-        string $pInstagram,
-        string $pTiktok,
-        string $factOne,
-        string $factTwo,
-        string $factThree
+        string $pYoutube = "",
+        string $pTwitch = "",
+        string $pKick = "",
+        string $pTwitter = "",
+        string $pInstagram = "",
+        string $pTiktok = "",
+        string $factOne = "",
+        string $factTwo = "",
+        string $factThree = ""
     ) {
         $this->id = $id;
         $this->nickname = $nickname;

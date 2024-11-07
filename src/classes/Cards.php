@@ -3,6 +3,7 @@
 namespace App\Classes;
 
 use DateTime;
+use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 
@@ -50,12 +51,10 @@ class Cards
     #[ORM\Column()]
     private DateTime $birthdate;
 
-
-    // 1 carte peut avoir plusieurs catégories 
-    #[ORM\OneToMany(targetEntity: Category::class, mappedBy: 'cards')]
-    private Collection $Thematic;
-
-
+   // Relation ManyToMany avec Users via l'entité de jointure
+   #[ORM\ManyToMany(targetEntity: Users::class, inversedBy: 'cards')]
+   #[ORM\JoinTable(name: "UserCards")]
+   private Collection $users;
 
 
     // Constructor
@@ -76,7 +75,8 @@ class Cards
         string $pTiktok = "",
         string $factOne = "",
         string $factTwo = "",
-        string $factThree = ""
+        string $factThree = "",
+        DateTime $birthdate = new DateTime()
     ) {
         $this->id = $id;
         $this->nickname = $nickname;
@@ -95,6 +95,8 @@ class Cards
         $this->factOne = $factOne;
         $this->factTwo = $factTwo;
         $this->factThree = $factThree;
+        $this->birthdate = $birthdate;
+        $this->users = new ArrayCollection();
     }
     // Getters
     public function getId(): int
@@ -185,6 +187,10 @@ class Cards
     public function getBirthdate(): DateTime
     {
         return $this->birthdate;
+    }
+    public function getUsers(): Collection
+    {
+        return $this->users;
     }
 
     // Setters

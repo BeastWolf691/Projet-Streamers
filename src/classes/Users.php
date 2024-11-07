@@ -2,6 +2,7 @@
 namespace App\Classes;
 
 use DateTime;
+use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 
@@ -34,12 +35,8 @@ class Users
     #[ORM\Column()]
     private   DateTime $dateToSign;
 
-    // 1 carte peut avoir plusieurs catégories 
-    #[ORM\OneToMany(targetEntity: Category::class, mappedBy: 'Users')]
-    private Collection $thematic;
-
-    // 1 carte peut avoir plusieurs catégories 
-    #[ORM\OneToMany(targetEntity: Cards::class, mappedBy: 'Users')]
+    // Relation ManyToMany avec Cards via l'entité de jointure
+    #[ORM\ManyToMany(targetEntity: Cards::class, mappedBy: 'users')]
     private Collection $cards;
 
     #[ORM\Column()]
@@ -53,9 +50,7 @@ class Users
         string $mail,
         DateTime $birthday,
         DateTime $dateToSign,
-        Collection $thematic,
         string $deck,
-        Collection $cards
     ) {
         $this->name = $name;
         $this->lastName = $lastName;
@@ -63,8 +58,18 @@ class Users
         $this->mail = $mail;
         $this->birthday = $birthday;
         $this->dateToSign = $dateToSign;
-        $this->thematic = $thematic;
         $this->deck = $deck;
-        $this->cards = $cards;
+        $this->cards = new ArrayCollection();
     }
+    public function getCards(): Collection
+    {
+        return $this->cards;
+    }
+    public function addCard(Cards $card): void
+{
+    if (!$this->cards->contains($card)) {
+        $this->cards->add($card);
+    }
+}
+
 }

@@ -29,7 +29,7 @@ class Creator{
     private DateTime $birthday;
 
     //1 creator peut avoirplusieurs categories 
-    #[ORM\OneToMany(targetEntity : Categories::class, mappedBy : 'creator')]
+    #[ORM\OneToMany(targetEntity : Category::class, mappedBy : 'creator')]
     private Collection $thematic;        
 
      //1 createur peut avoir plusieurs cartes

@@ -35,7 +35,7 @@ class Users
     private   DateTime $dateToSign;
 
     // 1 carte peut avoir plusieurs catégories 
-    #[ORM\OneToMany(targetEntity: Categories::class, mappedBy: 'Users')]
+    #[ORM\OneToMany(targetEntity: Category::class, mappedBy: 'Users')]
     private Collection $thematic;
 
     // 1 carte peut avoir plusieurs catégories 

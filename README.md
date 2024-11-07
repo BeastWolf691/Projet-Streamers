@@ -22,7 +22,6 @@ Inclure <b>/vendor/</b> dans le .gitignore
 #### 6) Remplir la BDD :
 Copier-coller l'entièreté du fichier <b>bdd.sql</b> dans l'onglet "SQL"
 
-
 ## Dernières modifications
 ### Alexis
 * Nouvelle div dans minicard

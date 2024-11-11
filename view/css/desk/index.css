@@ -8,6 +8,7 @@
 @import url('./dark-light.css');
 @import url('./card.css');
 @import url('./zoomCard.css');
+@import url('./modal.css');
 
 @font-face {
     font-family: 'CaviarDreams';

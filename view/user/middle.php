@@ -1,9 +1,80 @@
 <div id="middle">
+    <div class="modal">
+        <div class="modal-content">
+            <div class="close-button">x</div>
+            <form action="" method="post" accept-charset="UTF-8" enctype="multipart/form-data">
+                <h1 style="text-align: center"> - Ajout d'une Carte - </h1>
+
+                <label for="nickname">Pseudo</label>
+                <input type="text" name="nickname" id="nickname">
+
+                <label for="mainCat">Catégorie principale</label>
+                <input type="text" name="mainCat" id="mainCat">
+
+                <label for="secondCat">Catégorie secondaire</label>
+                <input type="text" name="secondCat" id="secondCat">
+
+                <label for="thematic">thème</label><br>
+                <input type="text" name="thematic" id="thematic"><br>
+
+                <label for="picture">Photo</label><br>
+                <input type="file" name="picture" id="picture"><br>
+
+                <label for="name">Prénom</label>
+                <input type="text" name="name" id="name">
+
+                <label for="language">Langue </label>
+                <input type="text" name="language" id="language">
+
+                <label for="pYoutube">Pseudo YouTube</label>
+                <input type="text" name="pYoutube" id="pYoutube">
+
+                <label for="pTwitch">Pseudo Twitch</label>
+                <input type="text" name="pTwitch" id="pTwitch">
+
+                <label for="pKick">Pseudo Kick</label>
+                <input type="text" name="pKick" id="pKick">
+
+                <label for="pTwitter">Pseudo Twitter</label>
+                <input type="text" name="pTwitter" id="pTwitter">
+
+                <label for="pInstagram">Pseudo Instagram</label>
+                <input type="text" name="pInstagram" id="pInstagram">
+
+                <label for="pTiktok">Pseudo Tiktok</label>
+                <input type="text" name="pTiktok" id="pTiktok">
+
+                <label for="factOne">Fait 1</label>
+                <input type="text" name="factOne" id="factOne">
+
+                <label for="factTwo">Fait 2</label>
+                <input type="text" name="factTwo" id="factTwo">
+
+                <label for="factThree">Fait 3</label>
+                <input type="text" name="factThree" id="factThree">
+
+                <label for="birthdate">Anniversaire</label>
+                <input type="date" name="birthdate" id="birthdate">
+
+                <input type="submit" value="Ajouter">
+
+            </form>
+        </div>
+    </div>
+
     <aside class="filter-bar">
         <?php include "filter.php"; ?>
+        <?php
+        // Vérifie si le script appelant est 'admin/index.php'
+        if (basename($_SERVER['SCRIPT_NAME']) === 'index.php' && strpos($_SERVER['PHP_SELF'], 'admin') !== false): ?>
+
+            <button class="create-button" style="background-color: blue;" >
+                <i class="fa-solid fa-circle-plus"></i>
+            </button>
+        <?php endif; ?>
     </aside>
     <aside class="result">
-        <p class="zoom">Toi aussi fait ton deck<br>Clique sur Zoom pour afficher une carte</p>
+        <p class="zoom">Toi aussi fais ton deck<br>Clique sur Zoom pour afficher une carte</p>
         <?php include 'zoomCard.php' ?>
     </aside>
     <div class="content">
@@ -63,6 +134,20 @@
                     <div class="cardCatIcon" style="background-color:<?php echo getColorForCategory($d->mainCat); ?>;">
                         <img src="../picture/icons/icon-cat-<?php echo getCatIcon($d->mainCat); ?>.svg" alt="<?php echo $d->mainCat; ?>" />
                     </div>
+
+                    <?php
+                    // Vérifie si le script appelant est 'admin/index.php'
+                    if (basename($_SERVER['SCRIPT_NAME']) === 'index.php' && strpos($_SERVER['PHP_SELF'], 'admin') !== false): ?>
+                        <button class="edit-button" style="background-color: green;">
+                            <i class="fa-solid fa-pen"></i>
+                        </button>
+                        <button class="delete-button" style="background-color: red;">
+                            <i class="fa-solid fa-trash-can"></i>
+                        </button>
+
+                    <?php endif; ?>
+
+
                 </div>
                 <!--echo !empty($d->picture) ? $d->picture cela sert à vérifier si picture contient une image, 
                 si cela n'est pas le cas alors image par défaut undefined-->

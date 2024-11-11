@@ -10,7 +10,6 @@
 }
 
 .card, .zoomCard {
-    overflow: hidden;
     box-sizing: border-box;
     border-radius: 5px;
     border-color: var(--color-card-border);

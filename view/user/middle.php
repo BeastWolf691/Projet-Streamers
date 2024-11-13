@@ -1,9 +1,28 @@
+<?php
+////////////////suppression//////////////////////////
+
+///////////////////////////////////////////////
+?>
 <div id="middle">
-    <div class="modal">
+    <?php
+    if (isset($_GET['id'])) {
+        $id = intval($_GET['id']);
+        $stmt = $pdo->prepare("SELECT * FROM cards WHERE id = :id");
+        $stmt->execute(['id' => $id]);
+        $card = $stmt->fetch(PDO::FETCH_ASSOC);
+    
+        if ($card) {
+            echo json_encode($card);
+        } else {
+            echo json_encode(['error' => 'Carte non trouvée']);
+        }
+    }
+    ?>
+    <div class="modal" id="edit-modal">
         <div class="modal-content">
             <div class="close-button">x</div>
             <form action="" method="post" accept-charset="UTF-8" enctype="multipart/form-data">
-                <h1 style="text-align: center"> - Ajout d'une Carte - </h1>
+                <h2 style="text-align: center"> - Modification d'une Carte - </h2>
 
                 <label for="nickname">Pseudo</label>
                 <input type="text" name="nickname" id="nickname">
@@ -56,7 +75,7 @@
                 <label for="birthdate">Anniversaire</label>
                 <input type="date" name="birthdate" id="birthdate">
 
-                <input type="submit" value="Ajouter">
+                <input type="submit" value="Modifier">
 
             </form>
         </div>
@@ -138,10 +157,10 @@
                     <?php
                     // Vérifie si le script appelant est 'admin/index.php'
                     if (basename($_SERVER['SCRIPT_NAME']) === 'index.php' && strpos($_SERVER['PHP_SELF'], 'admin') !== false): ?>
-                        <button class="edit-button" style="background-color: green;">
+                        <button class="edit-button" style="background-color: green;" data-id="<?php echo $d->id; ?>">
                             <i class="fa-solid fa-pen"></i>
                         </button>
-                        <button class="delete-button" style="background-color: red;">
+                        <button class="delete-button" style="background-color: red;" data-id="<?php echo $d->id; ?>">
                             <i class="fa-solid fa-trash-can"></i>
                         </button>
 

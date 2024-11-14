@@ -127,12 +127,26 @@ $(document).ready(function () {
     //Systeme de filtre par searchbar
     $('#search-input').on('input', function () {
         let searchTerm = $(this).val().toLowerCase();
+        // Parcours toutes les cartes
         $('.card').each(function () {
-            let mainCat = $(this).data('info');
-            if (mainCat.includes(searchTerm)) {
-                $(this).show();
+            let mainCat = $(this).data('info').toLowerCase(); // Catégorie principale
+            let secondCat = $(this).data('second').toLowerCase(); // Autres catégories
+            let thematic = $(this).data('thematic').toLowerCase(); // Thématique
+            let name = $(this).data('name').toLowerCase(); // Nom
+            let nickname = $(this).data('nickname').toLowerCase(); // Surnom
+            let languages = $(this).data('languages').toLowerCase(); // Langues
+            let factOne = $(this).data('factone').toLowerCase(); // Fact One
+            let factTwo = $(this).data('facttwo').toLowerCase(); // Fact Two
+            let factThree = $(this).data('factthree').toLowerCase(); // Fact Three
+
+            // Concatenate all the data fields into one string for easier searching
+            let combinedData = mainCat + ' ' + secondCat + ' ' + thematic + ' ' + name + ' ' + nickname + ' ' + languages + ' ' + factOne + ' ' + factTwo + ' ' + factThree;
+
+            // Vérifie si le terme de recherche est présent dans les données concaténées
+            if (combinedData.indexOf(searchTerm) !== -1) {
+                $(this).show(); // Affiche la carte si correspondance exate (respecte l'ordre des lettres)
             } else {
-                $(this).hide();
+                $(this).hide(); // Cache la carte si pas de correspondance
             }
         });
     });

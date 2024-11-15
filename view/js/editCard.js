@@ -1,41 +1,51 @@
-
 $(document).ready(function () {
     $('.modal').hide();
+
     $('.edit-button').click(function () {
+        // Récupérer les données de la carte associée
+        const card = $(this).closest('.card'); // Trouve la carte parente
+
+        const nickname=card.data("nickname");
+        const maincat=card.data("info");
+        const seconcat=card.data("second");
+        const thematic=card.data("thematic");
+        //const picture=card.data("picture");
+        const name=card.data("name");
+        const languages=card.data("languages");
+        const pyoutube=card.data("pyoutube");
+        const ptwitch=card.data("ptwitch");
+        const pkick=card.data("pkick");
+        const ptwitter=card.data("ptwitter");
+        const pinstagram=card.data("pinstagram");
+        const ptiktok=card.data("ptiktok");
+        const factone=card.data("factone");
+        const facttwo=card.data("facttwo");
+        const factthree=card.data("factthree");
+        
+        // Remplir les champs du formulaire
+        $('#nickname').val(nickname);
+        $('#mainCat').val(maincat);
+        $('#secondCat').val(seconcat);
+        $('#thematic').val(thematic);
+        //$('#picture').val(picture);
+        $('#name').val(name);
+        $('#language').val(languages);
+        $('#pYoutube').val(pyoutube);
+        $('#pTwitch').val(ptwitch);
+        $('#pKick').val(pkick);
+        $('#pTwitter').val(ptwitter);
+        $('#pInstagram').val(pinstagram);
+        $('#pTiktok').val(ptiktok);
+        $('#factOne').val(factone);
+        $('#factTwo').val(facttwo);
+        $('#factThree').val(factthree);
+        
         $('.modal').show();
     });
+
     $('.close-button').click(function () {
         $('.modal').hide();
     });
 });
-// Attache un écouteur d'événement sur chaque bouton d'édition
-document.querySelectorAll('.edit-button').forEach(button => {
-    button.addEventListener('click', function() {
-        const cardId = this.getAttribute('data-id');
-        fetchCardDetails(cardId); // Appel à la fonction pour charger les données de la carte
-    });
-});
 
-// Fonction pour récupérer les informations de la carte
-function fetchCardDetails(id) {
-    fetch(`getCard.php?id=${id}`)
-        .then(response => {
-            console.log("Réponse brute reçue :", response); // Affiche la réponse
-            return response.json();
-        })
-        .then(data => {
-            console.log("Données JSON reçues :", data); // Affiche les données pour le debug
-            if (data.error) {
-                console.error('Erreur de chargement des données :', data.error);
-                return;
-            }
-            // Remplissez les champs de la modal avec les données récupérées
-            document.getElementById('nickname').value = data.nickname;
-            document.getElementById('factone').value = data.factone;
-            document.getElementById('facttwo').value = data.facttwo;
-            document.getElementById('factthree').value = data.factthree;
-            // Affichez la modal
-            document.getElementById('editModal').style.display = 'block';
-        })
-        .catch(error => console.error('Erreur :', error));
-}
+

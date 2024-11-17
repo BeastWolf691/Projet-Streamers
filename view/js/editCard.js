@@ -23,7 +23,7 @@ $(document).ready(function () {
         const factone=card.data("factone");
         const facttwo=card.data("facttwo");
         const factthree=card.data("factthree");
-        
+         
         // Remplir les champs du formulaire
         $('#nickname').val(nickname);
         $('#mainCat').val(maincat);

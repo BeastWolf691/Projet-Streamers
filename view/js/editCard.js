@@ -3,8 +3,10 @@ $(document).ready(function () {
 
     $('.edit-button').click(function () {
         // Récupérer les données de la carte associée
-        const card = $(this).closest('.card'); // Trouve la carte parente
-
+        const card = $(this).closest('.card'); 
+        const cardId = card.data("id"); 
+        $('#cardId').val(cardId);
+        
         const nickname=card.data("nickname");
         const maincat=card.data("info");
         const seconcat=card.data("second");
@@ -47,5 +49,3 @@ $(document).ready(function () {
         $('.modal').hide();
     });
 });
-
-

@@ -1,8 +1,4 @@
-<?php
-////////////////suppression//////////////////////////
 
-///////////////////////////////////////////////
-?>
 <div id="middle">
     <?php
     if (isset($_GET['id'])) {
@@ -10,7 +6,7 @@
         $stmt = $pdo->prepare("SELECT * FROM cards WHERE id = :id");
         $stmt->execute(['id' => $id]);
         $card = $stmt->fetch(PDO::FETCH_ASSOC);
-    
+
         if ($card) {
             echo json_encode($card);
         } else {
@@ -24,6 +20,8 @@
             <form action="" method="post" accept-charset="UTF-8" enctype="multipart/form-data">
                 <h2 style="text-align: center"> - Modification d'une Carte - </h2>
 
+                <input type="hidden" name="cardId" id="cardId">
+
                 <label for="nickname">Pseudo</label>
                 <input type="text" name="nickname" id="nickname">
 
@@ -35,9 +33,9 @@
 
                 <label for="thematic">thème</label><br>
                 <input type="text" name="thematic" id="thematic"><br>
-
+                <!-- 
                 <label for="picture">Photo</label><br>
-                <input type="file" name="picture" id="picture"><br>
+                <input type="file" name="picture" id="picture"><br> -->
 
                 <label for="name">Prénom</label>
                 <input type="text" name="name" id="name">
@@ -72,8 +70,9 @@
                 <label for="factThree">Fait 3</label>
                 <input type="text" name="factThree" id="factThree">
 
-                <label for="birthdate">Anniversaire</label>
+                <!--  <label for="birthdate">Anniversaire</label>
                 <input type="date" name="birthdate" id="birthdate">
+                 -->
 
                 <input type="submit" value="Modifier">
 
@@ -87,7 +86,7 @@
         // Vérifie si le script appelant est 'admin/index.php'
         if (basename($_SERVER['SCRIPT_NAME']) === 'index.php' && strpos($_SERVER['PHP_SELF'], 'admin') !== false): ?>
 
-            <button class="create-button" style="background-color: blue;" >
+            <button class="create-button" style="background-color: blue;">
                 <i class="fa-solid fa-circle-plus"></i>
             </button>
         <?php endif; ?>

@@ -32,7 +32,7 @@
 
                 <label for="picture">Photo</label><br>
                 <input type="file" name="picture" id="picture"><br>
-
+ 
                 <label for="name">Prénom</label>
                 <input type="text" name="name" id="name">
 

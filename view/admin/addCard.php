@@ -94,8 +94,17 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     if (!empty($pTiktok) && !preg_match('/^[a-zA-Z0-9_]{3,25}$/', $pTiktok)) {
         $errors['pTiktok'] = "Le pseudo Tiktok doit contenir entre 3 et 25 caractères.";
     }
-    if (empty($birthdate)) {
-        $errors['birthdate'] = "La date de naissance est requise.";
+    if (!empty($birthdate)) {
+        // Vérification du format général (YYYY-MM-DD)
+        if (!preg_match('/^\d{4}-\d{2}-\d{2}$/', $birthdate)) {
+            $errors['birthdate'] = "Le format de la date doit être YYYY-MM-DD.";
+        } else {
+            // Découpe de la date et vérification de la validité réelle de la date ex : pas de 30 février
+            $dateParts = explode('-', $birthdate);
+            if (count($dateParts) === 3 && !checkdate((int)$dateParts[1], (int)$dateParts[2], (int)$dateParts[0])) {
+                $errors['birthdate'] = "La date de naissance est invalide.";
+            }
+        }
     }
 
 

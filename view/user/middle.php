@@ -28,12 +28,12 @@
         $req = $pdo->query($sql);
 
         // include 'flags.php';
-        include '../../src/functions/getCatIcon.php';
+        include '../../src/functions/getIconForCategory.php';
 
         while ($d = $req->fetch(PDO::FETCH_OBJ)) { // pour chaque ligne dans la BDD, on crée une carte
             // $flagIcon = getFlagIcon($d->language);
             // Application d'un CSS spécifique pour chaque valeur de mainCat et de thematic
-            include_once '../admin/colorByCategories.php';
+            include_once '../../src/functions/getColorForCategory.php';
             //lien généré pour les réseaux sociaux
             $pseudoYoutube = $d->pYoutube;
             $pseudoTwitch = $d->ptwitch;
@@ -76,7 +76,7 @@
                 <div class="cardHeader">
                     <?php echo $d->nickname; ?>
                     <div class="cardCatIcon" style="background-color:<?php echo getColorForCategory($d->mainCat); ?>;">
-                        <img src="../picture/icons/icon-cat-<?php echo getCatIcon($d->mainCat); ?>.svg" alt="<?php echo $d->mainCat; ?>" />
+                        <img src="../picture/icons/icon-cat-<?php echo getIconForCategory($d->mainCat); ?>.svg" alt="<?php echo $d->mainCat; ?>" />
                     </div>
 
                     <?php

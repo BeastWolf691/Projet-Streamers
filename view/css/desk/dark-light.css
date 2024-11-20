@@ -1,0 +1,54 @@
+
+/*******************************effet sombre clair***********************/
+/* Fond du menu pour le thème clair */
+.light #menu-top li a, .light #menu-person li :visited, #menu-person li :link {
+    color: #5d5d5d; /* Texte en noir pour contraste */
+}
+
+/* Fond du menu pour le thème sombre */
+.darker #menu-top li a , .darker #menu-person li :visited, #menu-person li :link, .darker .zoom, .darker #middle label {
+    color: #c5c5c5; /* Texte en noir pour contraste */
+}
+.darker label {
+    color: #52525b;
+}
+.darker .result {
+    color: #4d4a4a;
+}
+.darker {
+    background-color: #10051D;
+    color: #736f6f;
+}
+
+.light, .light header {
+    background-color: #f1f1f1;
+    color: #5d5d5d;
+}
+
+.darker .content {
+    background-color: #10051D;
+    color: black;
+}
+
+.light .item img {
+    filter: brightness(2.55);
+}
+
+.darker .item img {
+    filter: brightness(4);
+}
+.darker .card, .darker .zoomCard {
+    background-color: #ffffff;
+}
+.darker header {
+    background-color: #10051D;
+    border-bottom: 1px solid #2f2f2f;
+}
+.light header {
+    border-bottom: 1px solid #dcdcdc;
+}
+
+.darker footer {
+    background-color: #9FF0F7;
+    color: #52525b;
+}

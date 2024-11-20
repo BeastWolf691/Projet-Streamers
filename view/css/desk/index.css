@@ -1,0 +1,48 @@
+@import url('../variables.css');
+@import url('./carousel.css');
+@import url('./menu_person.css');
+@import url('./menu_top.css');
+@import url('./aside-left.css');
+@import url('./middle-content.css');
+@import url('./footer.css');
+@import url('./dark-light.css');
+@import url('./card.css');
+@import url('./zoomCard.css');
+@import url('./modal.css');
+
+@font-face {
+    font-family: 'CaviarDreams';
+    src: url('../../font/CaviarDreams.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    margin: 0;
+    background: #10051d;
+    position: relative;
+    min-height: 100vh;
+}
+a {
+    text-decoration: none;
+}
+a:hover {
+    cursor: pointer;
+}
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    height: 15vh;
+}
+ 
+.img {
+    width: 175px;
+    position: absolute;
+    z-index: 1;
+    margin: 15px 0 0 15px;
+}
+
+img {
+    width: 100%;
+}

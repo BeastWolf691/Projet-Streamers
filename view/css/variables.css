@@ -1,0 +1,38 @@
+:root {
+
+    /* === Couleurs principales du thème == */
+
+    --color-primary-extradark: #10051D;
+    --color-primary-dark: #57155D;
+    --color-primary-light: #eC60CB;
+    --color-primary-extralight: #E9CEF4;
+
+    --color-secondary-extradark: #09585e;
+    --color-secondary-dark: #3FE0ED;
+    --color-secondary-light: #9FF0F7;
+
+    --color-font-extralight: #FFFFFF;
+
+    /* === Polices d'écriture == */
+
+    --font-family-main: 'Cabin', 'Montserrat', sans-serif;
+    --font-family-secondary: 'Caviar Dreams', sans-serif;
+
+
+    /* === Couleurs d'info == */
+
+    --color-success-dark: rgba(32, 118, 8, 0.449);
+    --color-success-light: green;
+
+    --color-alert-dark: rgba(255, 0, 0, 0.449);
+    --color-alert-light: red;
+
+
+    /* === Couleurs des Cards et Zoom Cards === */
+
+    --color-card-border: #10051D;
+
+    --color-cat-gaming-light: #7C24A2;
+
+    /*=== Categories===*/
+}

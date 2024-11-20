@@ -1,0 +1,40 @@
+/***********concernant les obligations***********/
+.cgu, .mention {
+    width: 80%;
+    margin: 15px auto;
+    overflow: hidden;
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+h1, h2, h3 {
+    color: #333;
+}
+.cgu a {
+    color: #007bff;
+}
+.cgu a:hover {
+    text-decoration: underline;
+}
+
+/***********footer****************/
+footer {
+    background-color: var(--color-primary-dark);
+    height: 40px;
+    text-align: center;
+    padding: 20px 0 0 0;
+    margin: 0 0 0 0;
+
+}
+
+footer a {
+    text-decoration: none;
+    margin: 2%;
+    color: white;
+}
+
+.team {
+    margin: 10px;
+}

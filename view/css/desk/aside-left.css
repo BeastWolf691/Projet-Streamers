@@ -1,0 +1,57 @@
+
+/*************************filtre pour recherche*************/
+.filter-bar {
+    margin: 0 25px 0;
+    position: relative;
+    top: 20px;
+    height: 10vh;
+}
+
+#filterForm {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.2em;
+    width: 900px;
+    margin-left: auto; /* Aligne le formulaire à droite a enlever si cela ne plait pas*/
+    position: relative;
+}
+
+.filter-item {
+    flex: 1 1 130px; /* Largeur minimale de 200px, ajuste selon l’espace disponible */
+    display: flex;
+    flex-direction: column;
+}
+
+.filter-item label {
+    font-weight: bold; /* Optionnel, pour donner plus de contraste au label */
+    margin-bottom: 0.5em; /* Espacement entre le label et le champ */
+}
+
+.filter-item select {
+    padding: 0.2em;
+    font-size: 16px;
+    color: #5d5d5d;
+}
+
+#type, #categoryS, #thematic, #ages, #names, #languages {
+    border-radius: 25px;
+    width: 140px;
+}
+
+input[type=reset] {
+    width: 150px;
+    margin: 25px 0 0;
+    border-radius: 25px;
+}
+/*********************affichage streameurs*******************/
+.result {
+    width: 370px;
+    height: 810px;
+    position: relative;
+    top: 56px;
+    margin: 0 0 0 25px;
+}
+
+.btn-primary {
+    width: 340px;
+}

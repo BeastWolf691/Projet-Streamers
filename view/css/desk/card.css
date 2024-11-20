@@ -1,0 +1,293 @@
+@import url('../variables.css');
+
+.close {
+    cursor: pointer;
+    position: relative;
+    left: 21%;
+    font-weight: bold;
+    font-size: 20px;
+    color: black;
+}
+
+.card, .zoomCard {
+    box-sizing: border-box;
+    border-radius: 5px;
+    border-color: var(--color-card-border);
+    background-color: rgb(233, 216, 240);
+    color: var(--color-font-main);
+    transition: transform 0.3s ease-in-out;
+    cursor: pointer;
+}
+.card {
+    padding: 6px;
+    border: 1px solid;
+    box-shadow: 1px 2px 12px 1px rgba(16, 5, 29, 0.422);
+    transition-duration: 0.4s;
+    width: 240px;
+    height: 400px;
+    margin: 20px 11px;
+}
+.card:hover{
+    transform: scale(1.1);
+}
+
+.cardHeader {
+    width: 100%;
+    box-sizing: border-box;
+    margin-bottom: 6px;
+    font-family: var(--font-family-main);
+    font-weight: 600;
+    color: var(--color-font-extralight);
+    border-radius: 0 20px 20px 0;
+    background: var(--color-primary-extradark);
+    height: 28px;
+    padding: 3px 10px;
+    font-size: 1.1em;
+}
+
+.cardPicture, .zoomCardPicture {
+    width: 100%;
+    border: 1px solid var(--color-primary-extradark);
+}
+
+.cardInfoUrl {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.cardUrl {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    margin: 0;
+    box-sizing: border-box;
+    border-radius: 30px;
+    border: 1px solid;
+    font-weight: 600;
+    color: #eee;
+    width: 30px;
+    height: 30px;
+}
+
+.cardUrl img, .zoomCardUrl img {  
+    width: 70%;
+    vertical-align: middle;
+}
+.cardYoutube {
+    background: content-box radial-gradient(circle, rgb(255, 0, 0) 0%, rgb(180, 4, 4) 100%);
+    border-color: #5f0404;
+}
+
+.cardYoutube:hover {
+    background: content-box radial-gradient(circle, rgb(255, 56, 56) 0%, rgb(212, 37, 37) 100%);
+    border-color: #922323;
+}
+
+.cardTwitch {
+    background: content-box radial-gradient(circle, rgb(134, 82, 246) 0%, rgb(73, 44, 135) 100%);
+    border-color: #311e5b;
+}
+
+.cardTwitch:hover {
+    background: content-box radial-gradient(circle, rgb(151, 107, 247) 0%, rgb(106, 71, 180) 100%);
+    border-color: #462e79;
+}
+
+.cardKick {
+    background: content-box radial-gradient(circle, rgb(83, 252, 24) 0%, rgb(55, 167, 15) 100%);
+    border-color: #2e8b0c;
+}
+
+.cardKick:hover {
+    background: content-box radial-gradient(circle, rgb(131, 255, 86) 0%, rgb(80, 180, 44) 100%);
+    border-color: #47af21;
+}
+
+.cardX {
+    background: content-box radial-gradient(circle, rgb(27, 27, 27) 0%, rgb(0, 0, 0) 100%);
+    border-color: #000000;
+}
+
+.cardX:hover {
+    background: content-box radial-gradient(circle, rgb(44, 44, 44) 0%, rgb(22, 22, 22) 100%);
+    border-color: #000000;
+}
+
+.fa-x-twitter {
+    margin: 7px 0 0 6px;
+    font-size: 20px;
+}
+
+.cardInstagram {
+    background: content-box radial-gradient(circle, rgb(222, 40, 120) 0%, rgb(168, 29, 90) 100%);
+    border-color: #8F184E;
+}
+
+.cardInstagram:hover {
+    background: content-box radial-gradient(circle, rgb(226, 67, 136) 0%, rgb(179, 39, 100) 100%);
+    border-color: #a82560;
+}
+
+.cardTiktok {
+    background: content-box radial-gradient(circle, rgb(101, 195, 201) 0%, rgb(64, 136, 141) 100%);
+    border-color: #22696e;
+}
+
+.cardTiktok:hover {
+    background: content-box radial-gradient(circle, rgb(126, 219, 226) 0%, rgb(66, 138, 143) 100%);
+    border-color: #32858b;
+}
+
+.card .cardHeader {
+    position: relative;
+    height: 28px;
+    padding: 3px 10px;
+    font-size: 1.1em;
+}
+
+.card .cardCatIcon {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%; 
+}
+
+.card .cardCatIcon img {
+    width: 20px;
+    height: 20px;
+}
+
+.card .cardInfoRow {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    width: 100%;
+    height: 30px;
+    padding: 0;
+    box-sizing: border-box;
+    margin-bottom: 8px;
+    color: var(--color-font-main);
+}
+
+.card .cardInfoPersonal {
+    height: 20px;
+    font-family: var(--font-family-secondary);
+    font-weight: 700;
+}
+.cardAge, .cardLanguage {
+    width: 40%;
+}
+.cardAge {
+    text-align: left;
+}
+.cardLanguage {
+    text-align: right;
+}
+.cardCatRow {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 30px;
+    margin-bottom: 12px;
+    text-transform: uppercase;
+    line-height: 30px;
+    text-align: center;
+    font-family: var(--font-family-main);
+    font-weight: 500;
+    position: relative;
+}
+.cardMainCat, .cardSecondCat {
+    position: relative;
+    width: 43.5%;
+    height: 30px;
+    background-color: #251432;
+    color: white;
+}
+.cardMainCat {
+    left: 12px;
+}
+.cardSecondCat {
+    right: 12px;
+}
+.cirlLeft, .cirlRight {
+    height: 30px;
+    width: 30px;
+    position: absolute;
+    border-radius: 50%;
+}
+.cirlRight{right: 0;}
+.card .cardTheme {
+    width: 48%;
+    height: 30px;
+    margin-bottom: 6px;
+    text-align: center;
+    font-family: var(--font-family-main);
+    font-size: 0.9em;
+    font-weight: 500;
+}
+.card .cardActions {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.zoomButton, .deckButton {
+    width: 64px;
+    height: 64px;
+    margin: 0 10px;
+    text-align: center; 
+    border-radius: 50%;
+}
+
+.zoomButton:hover, .deckButton:hover {
+    cursor: pointer;
+}
+
+.zoomButton img, .deckButton img {
+    width: 30px;
+    height: 30px;
+    margin-top: 5px;
+}
+
+.zoomButton p, .deckButton p {
+    margin: 0;
+    font-family: var(--font-family-secondary);
+    font-size: 0.85em;
+    font-weight: 900;
+}
+
+.zoomButton {
+    border: 2px solid var(--color-secondary-extradark);
+    background: rgb(159,240,247);
+    background: radial-gradient(circle, rgba(159,240,247,1) 0%, rgba(63,224,237,1) 100%);
+    color: var(--color-secondary-extradark);
+    transition-duration: 0.8s;
+}
+
+.zoomButton:hover {
+    border-color: var(--color-secondary-dark);
+    background: var(--color-secondary-light);
+    background: radial-gradient(circle, rgb(215, 242, 245) 0%, rgba(159,240,247,1) 100%);
+    transition-duration: 0.4s;
+}
+
+.deckButton {
+    border: 2px solid var(--color-primary-extradark);
+    background: var(--color-primary-light);
+    background: radial-gradient(circle, rgb(233, 206, 244) 0%, rgba(236,96,203,1) 100%);
+    color: var(--color-primary-extradark);
+    transition-duration: 0.8s;
+}
+.deckButton:hover {
+    border-color: var(--color-primary-light);
+    background: var(--color-primary-extralight);
+    background: radial-gradient(circle, rgb(249, 241, 252) 0%, rgb(233, 206, 244) 100%);
+    transition-duration: 0.4s;
+}

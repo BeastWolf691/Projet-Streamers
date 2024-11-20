@@ -1,0 +1,67 @@
+@import url('../variables.css');
+
+/*********************contenu streameurs*******************/
+#middle {
+    height: 120vh;
+}
+
+.content {
+    display: grid;
+    position: absolute;
+    top: 250px;
+    left: 410px;
+    right: 20px;
+    border-radius: 10px;
+    height: 955px;
+    overflow-x: auto;
+    justify-content: start;
+    grid-template-columns: repeat(60, 1fr); /* 60 colonnes de largeur égale */
+    grid-template-rows: repeat(2, auto); /* 2 rangées avec une hauteur automatique */
+}
+::-webkit-scrollbar {
+    height: 12px;
+}
+
+/* La partie de la barre de défilement où le curseur glisse */
+::-webkit-scrollbar-track {
+    background: var(--color-secondary-light);
+}
+
+/* La partie de la barre de défilement qui déplace le contenu */
+::-webkit-scrollbar-thumb {
+    background: var(--color-primary-dark);
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--color-primary-light);
+}
+
+/******************************formulaires***************************/
+input[type=password],input[type=date],input[type=text],input[type=mail] {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+/*************test formulaire contact**************apparait que si le formulaire est faux********/
+.alert,
+.success {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    height: 50px;
+    margin: 0 auto;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.success {
+    background-color: var(--color-success-dark);
+    border: 1px solid var(--color-success-light);
+}
+
+.alert {
+    background-color: var(--color-alert-dark);
+    border: 1px solid var(--color-alert-light);
+}

@@ -24,7 +24,7 @@ try {
 
         $stmt = $pdo->prepare($sql);
 
-        $result = $stmt->execute([
+        $result = $stmt->execute([ 
             'nickname' => $_POST['nickname'],
             'mainCat' => $_POST['mainCat'],
             'secondCat' => $_POST['secondCat'],

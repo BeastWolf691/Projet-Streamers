@@ -1,7 +1,6 @@
 $(document).ready(function () {
     $('.modal').hide();
 
-    // Fonction pour calculer l'âge à partir de la date de naissance
     function calculateAge(birthdate) {
         const birth = new Date(birthdate);
         const today = new Date();
@@ -12,7 +11,7 @@ $(document).ready(function () {
             age--;
         }
         
-        return age;
+        return age; 
     }
 
     $('.edit-button').click(function () {
@@ -20,7 +19,6 @@ $(document).ready(function () {
         const cardId = card.data("id");
         $('#cardId').val(cardId);
         
-        // Récupérer toutes les données de la carte
         const nickname = card.data("nickname");
         const maincat = card.data("info");
         const seconcat = card.data("second");
@@ -38,7 +36,6 @@ $(document).ready(function () {
         const factthree = card.data("factthree");
         const birthdate = card.data("birthdate");
         
-        // Remplir les champs du formulaire
         $('#nickname').val(nickname);
         $('#mainCat').val(maincat);
         $('#secondCat').val(seconcat);
@@ -76,7 +73,6 @@ $(document).ready(function () {
                     const cardId = $('#cardId').val();
                     const card = $(`.card[data-id="${cardId}"]`);
                     
-                    // Mettre à jour les données de la carte
                     card.data('nickname', $('#nickname').val());
                     card.data('info', $('#mainCat').val());
                     card.data('second', $('#secondCat').val());
@@ -94,10 +90,8 @@ $(document).ready(function () {
                     card.data('factthree', $('#factThree').val());
                     card.data('birthdate', birthdate);
                     
-                    // Mettre à jour l'affichage de l'âge
                     card.find('.cardAge').text(age + ' ans');
-                    
-                    // Mettre à jour l'affichage du nickname
+
                     card.find('.cardHeader').first().contents().filter(function() {
                         return this.nodeType === 3;
                     }).first().replaceWith($('#nickname').val());

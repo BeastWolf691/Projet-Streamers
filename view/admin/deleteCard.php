@@ -2,7 +2,7 @@
 include '../bdd.php';
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['id'])) {
-    $id = intval($_POST['id']);
+    $id = intval($_POST['id']); 
     
     try {
         $stmt = $pdo->prepare("DELETE FROM cards WHERE id = :id");

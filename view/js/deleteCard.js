@@ -4,7 +4,7 @@ document.querySelectorAll('.delete-button').forEach(button => {
         const cardId = this.getAttribute('data-id');
         
         if (confirm('Êtes-vous sûr de vouloir supprimer cette carte ?')) {
-            const formData = new FormData();
+            const formData = new FormData(); 
             formData.append('id', cardId);
             
             fetch('../admin/deleteCard.php', {

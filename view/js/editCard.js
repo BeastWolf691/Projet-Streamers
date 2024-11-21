@@ -7,6 +7,10 @@ $(document).ready(function () {
         const cardId = card.data("id"); 
         $('#cardId').val(cardId);
         
+        const card = $(this).closest('.card'); 
+        const cardId = card.data("id"); 
+        $('#cardId').val(cardId);
+        
         const nickname=card.data("nickname");
         const maincat=card.data("info");
         const seconcat=card.data("second");

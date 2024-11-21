@@ -5,7 +5,7 @@
 //     return $color;
 // }
 
-function getCatIcon(string $category) {
+function getIconForCategory(string $category) {
     $category = strtolower(trim($category));
     switch($category) {
         case "actualités" :

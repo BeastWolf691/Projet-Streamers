@@ -31,8 +31,19 @@
     /* === Couleurs des Cards et Zoom Cards === */
 
     --color-card-border: #10051D;
-
-    --color-cat-gaming-light: #7C24A2;
+    
 
     /*=== Categories===*/
+
+    --color-cat-actualites: #113C9F;
+    --color-cat-bdmanga: #5E6566;
+    --color-cat-divertissement: #EFDE10;
+    --color-cat-esport: #DA529C;
+    --color-cat-formation: #484540;
+    --color-cat-gaming: #B054D8;
+    --color-cat-lifestyle: #329494;
+    --color-cat-musique: #FF9396;
+    --color-cat-react: #E78518;
+    --color-cat-talkshow: #334493;
+    --color-cat-vlog: #BE050A;
 }

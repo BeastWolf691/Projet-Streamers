@@ -15,7 +15,7 @@
     <div class="modal" id="edit-modal">
         <div class="modal-content">
             <div class="close-button">x</div>
-            <form action="" method="post" accept-charset="UTF-8" enctype="multipart/form-data">
+            <form action="" id="editCardForm" method="post" accept-charset="UTF-8" enctype="multipart/form-data">
                 <h2 style="text-align: center"> - Modification d'une Carte - </h2>
 
                 <label for="nickname">Pseudo</label>

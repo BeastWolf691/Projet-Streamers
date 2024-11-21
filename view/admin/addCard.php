@@ -1,7 +1,6 @@
 <?php
 include 'header.php';
 
-
 // Initialisation des variables d'erreurs et de saisie
 $errors = [];
 $nickname = $mainCat = $secondCat = $thematic = $name = $language = $pYoutube = $pTwitch = $pKick = $pTwitter = $pInstagram = $pTiktok = $factOne = $factTwo = $factThree = $birthday = '';
@@ -25,7 +24,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $factTwo = !empty($_POST['factTwo']) ? htmlspecialchars(trim($_POST['factTwo'])) : "";
     $factThree = !empty($_POST['factThree']) ? htmlspecialchars(trim($_POST['factThree'])) : "";
     $birthdate = htmlspecialchars(trim($_POST['birthdate']));
-
 
     // Validation des champs
     if (empty($nickname)) {
@@ -106,7 +104,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             }
         }
     }
-
 
     if (empty($errors)) {
         $req = $pdo->prepare("INSERT INTO cards (nickname, mainCat, secondCat, thematic, picture, name, language, pYoutube, pTwitch, pKick, pTwitter, pInstagram, pTiktok, factOne, factTwo, factThree, birthdate) VALUES (:nickname, :mainCat, :secondCat, :thematic, :picture, :name, :language, :pYoutube, :pTwitch, :pKick, :pTwitter, :pInstagram, :pTiktok, :factOne, :factTwo, :factThree, :birthdate)");

@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
             event.stopPropagation();
 
             const zoomCard = document.querySelector('.zoomCard');
-            const close = document.querySelector('.close');
+            const closeButton = document.querySelector('.close');
 
             // Récupérer les données de la carte cliquée
             const data = card.dataset;
@@ -17,7 +17,6 @@ document.addEventListener('DOMContentLoaded', () => {
             zoomCard.querySelector('#valueAge').textContent = `${data.age} ans`;
             zoomCard.querySelector('#valueFromCountry').textContent = data.languages;
             zoomCard.querySelector('#valueLanguage').textContent = data.languages;
-
 
             // Gestion des liens URL
             const platforms = [
@@ -49,21 +48,24 @@ document.addEventListener('DOMContentLoaded', () => {
                     cardInfoUrl.appendChild(link);
                 }
             });
+
             // Faits
             zoomCard.querySelector('#fact1').textContent = data.factone || 'Pas d\'anecdote disponible';
             zoomCard.querySelector('#fact2').textContent = data.facttwo || 'Pas d\'anecdote disponible';
             zoomCard.querySelector('#fact3').textContent = data.factthree || 'Pas d\'anecdote disponible';
 
-
             // Afficher la carte zoom (si elle est cachée)
             zoomCard.style.display = 'block';
-        });
-        //ferme la zoomCard en cliquant sur le X
-        const closeButton = document.querySelector('.close');
-        closeButton.addEventListener('click', () => {
-            document.querySelector('.zoomCard').style.display = 'none';
+
+            // Afficher le bouton de fermeture de la Zoom Card
+            closeButton.style.display = 'block';
         });
     });
 });
 
-
+document.querySelectorAll('.close').forEach(closeButton => {
+    closeButton.addEventListener('click', function () {
+        document.querySelector('.zoomCard').style.display = 'none';
+        this.style.display = 'none';
+    });
+});

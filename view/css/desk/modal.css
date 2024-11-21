@@ -1,15 +1,34 @@
 .delete-button,
 .edit-button,
-.create-button
- {
+.create-button {
     color: white;
     border: none;
     border-radius: 5px;
-    padding: 5px 10px;
-    margin-left: 10px;
+    position: absolute;
     cursor: pointer;
-
+    font-size: 14px;
 }
+
+.delete-button {
+    top: 40px;
+    left: 50px;
+    height: 35px;
+    width: 35px;
+}
+
+.edit-button {
+    top: 40px;
+    left: 10px;
+    height: 35px;
+    width: 35px;
+}
+
+.create-button {
+    top: 0;
+    left: 0;
+    padding: 3px;
+}
+
 .modal {
     position: absolute;
     top: 0;

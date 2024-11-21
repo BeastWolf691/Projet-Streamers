@@ -1,20 +1,18 @@
 $(document).ready(function () {
     $('.filter-item select').on('change', function () {
-        let type = $('#type').val().toLowerCase().trim();
-        let thematic = $('#thematic').val().toLowerCase().trim();
-        console.log('selected thematic filtrer:', thematic);
+        let type = $('#type').val().toLowerCase();
+        let thematic = $('#thematic').val().toLowerCase();
         let age = $('#ages').val();
-        let names = $('#names').val().toLowerCase().trim();
-        let languages = $('#languages').val().toLowerCase().trim();
+        let names = $('#names').val().toLowerCase();
+        let languages = $('#languages').val().toLowerCase();
 
         $('.card').each(function () {
-            let mainCat = $(this).data('info').toLowerCase().trim();
-            let secondCat = $(this).data('second').toLowerCase().trim(); 
-            let cardThematic = $(this).data('thematic') ? $(this).data('thematic').toLowerCase().trim() : '';
-            console.log('Card Thematic:', cardThematic);
+            let mainCat = $(this).data('info').toLowerCase();
+            let secondCat = $(this).data('second').toLowerCase(); 
+            let cardThematic = $(this).data('thematic') ? $(this).data('thematic').toLowerCase() : ''; 
             let cardAge = parseInt($(this).data('age')); 
-            let cardNickname = $(this).data('nickname').toLowerCase().trim();
-            let cardLanguage = $(this).data('languages').toLowerCase().trim();
+            let cardNickname = $(this).data('nickname').toLowerCase();
+            let cardLanguage = $(this).data('languages').toLowerCase();
 
             let match = true;
 

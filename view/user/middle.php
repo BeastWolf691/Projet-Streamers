@@ -1,8 +1,3 @@
-<?php
-////////////////suppression//////////////////////////
-
-///////////////////////////////////////////////
-?> 
 <div id="middle">
     <?php include_once '../admin/readUpdateDataCard.php';
     ?>

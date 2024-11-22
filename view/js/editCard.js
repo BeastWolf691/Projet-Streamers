@@ -64,7 +64,7 @@ $(document).ready(function () {
         const age = calculateAge(birthdate);
         
         $.ajax({
-            url: 'update_card.php',
+            url: 'editCard.php',
             method: 'POST',
             data: formData,
             dataType: 'json',

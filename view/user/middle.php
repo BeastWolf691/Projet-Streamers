@@ -103,7 +103,7 @@
     <aside class="result">
 
         <?php
-        // Vérifiez si le script actuel est 'admin/index.php'
+        // masque zoom si c'est 'admin/index.php'
         if ($_SERVER['SCRIPT_NAME'] !== '/admin/index.php') {
         ?>
             <p class="zoom">Toi aussi fais ton deck<br>Clique sur Zoom pour afficher une carte</p>

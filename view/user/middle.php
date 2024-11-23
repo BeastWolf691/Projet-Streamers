@@ -13,8 +13,8 @@
         }
     }
     ?>
-    <div class="edit-modal" id="edit-modal">
-        <div class="edit-modal-content">
+    <div class="modal" id="edit-modal">
+        <div class="modal-content">
             <div class="close-button">x</div>
             <form action="" id="editCardForm" method="post" accept-charset="UTF-8" enctype="multipart/form-data">
                 <h2 style="text-align: center"> - Modification d'une Carte - </h2>
@@ -70,7 +70,7 @@
                 <input type="text" name="factThree" id="factThree">
 
                 <label for="birthdate">Anniversaire</label>
-                <input type="date" name="birthdate" id="birthdate">
+                <input type="date" name="birthdate" id="birthdate">          
 
                 <input type="submit" value="Modifier">
 
@@ -85,7 +85,7 @@
         if (basename($_SERVER['SCRIPT_NAME']) === 'index.php' && strpos($_SERVER['PHP_SELF'], 'admin') !== false): ?>
 
             <button class="create-button" style="background-color: blue;">
-                <i class="fa-solid fa-circle-plus"></i>Créer une carte
+                <i class="fa-solid fa-circle-plus"></i>
             </button>
         <?php endif; ?>
         <div class="create-modal" id="create-modal">
@@ -98,6 +98,7 @@
         </div>
     </aside>
     <aside class="result">
+        
         <p class="zoom">Toi aussi fais ton deck<br>Clique sur Zoom pour afficher une carte</p>
         <?php include 'zoomCard.php' ?>
     </aside>
@@ -108,12 +109,12 @@
         $req = $pdo->query($sql);
 
         // include 'flags.php';
-        include '../../src/functions/getCatIcon.php';
+        include '../../src/functions/getIconForCategory.php';
 
         while ($d = $req->fetch(PDO::FETCH_OBJ)) { // pour chaque ligne dans la BDD, on crée une carte
             // $flagIcon = getFlagIcon($d->language);
             // Application d'un CSS spécifique pour chaque valeur de mainCat et de thematic
-            include_once '../admin/colorByCategories.php';
+            include_once '../../src/functions/getColorForCategory.php';
             //lien généré pour les réseaux sociaux
             $pseudoYoutube = $d->pYoutube;
             $pseudoTwitch = $d->ptwitch;
@@ -157,7 +158,7 @@
                     <?php echo $d->nickname; ?>
                     <div class="cardCatIcon" style="background-color:<?php echo getColorForCategory($d->mainCat); ?>;">
                         <img src="../picture/icons/icon-cat-<?php echo getCatIcon($d->mainCat); ?>.svg" alt="<?php echo $d->mainCat; ?>" />
-                    </div>
+                    </div> 
 
                     <?php
                     // Vérifie si le script appelant est 'admin/index.php'
@@ -170,7 +171,6 @@
                         </button>
 
                     <?php endif; ?>
-
 
                 </div>
                 <!--echo !empty($d->picture) ? $d->picture cela sert à vérifier si picture contient une image, 

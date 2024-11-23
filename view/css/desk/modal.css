@@ -1,5 +1,6 @@
 .delete-button,
-.edit-button {
+.edit-button,
+.create-button {
     color: white;
     border: none;
     border-radius: 5px;
@@ -21,9 +22,13 @@
     height: 35px;
     width: 35px;
 
+.create-button {
+    top: 0;
+    left: 0;
+    padding: 3px;
 }
 
-.edit-modal {
+.modal {
     position: absolute;
     top: 0;
     right: 0;
@@ -46,56 +51,6 @@
 }
 
 .close-button {
-    color: #aaa;
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    font-size: 28px;
-    font-weight: bold;
-    cursor: pointer;
-}
-
-/*---------------------------------*/
-.create-button {
-    top: 0;
-    left: 0;
-    padding: 3px;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    position: absolute;
-    cursor: pointer;
-    font-size: 14px;
-}
-.create-modal {
-    position: fixed;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    z-index: 9999;
-    width: 100vw;
-    height: 150vh;
-    background-color: #10051d9a;
-    display: none;
-    overflow-y: auto;
-}
-
-.create-modal-content {
-    background-color: #fff;
-    width: 600px;
-    margin: 0 auto;
-    padding: 20px;
-    border-radius: 18px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-    position: relative;
-    max-height: 90vh;
-    overflow-y: auto;
-}
-.create-modal-content .form-container{
-    margin: 0 auto;
-}
-.close-create-button {
     color: #aaa;
     position: absolute;
     top: 10px;

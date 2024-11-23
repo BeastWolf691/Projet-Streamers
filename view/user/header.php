@@ -18,7 +18,6 @@ include '../bdd.php';
     
     <link rel="stylesheet" media="screen and (min-width: 981px)" href="../css/desk/index.css" />
     <link href="https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
-    <script src="../js/editCard.js"></script>
 </head>
 
 <body>

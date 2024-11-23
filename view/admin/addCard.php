@@ -1,6 +1,5 @@
 <?php
 
-
 // Initialisation des variables d'erreurs et de saisie
 $errors = [];
 $nickname = $mainCat = $secondCat = $thematic = $name = $language = $pYoutube = $pTwitch = $pKick = $pTwitter = $pInstagram = $pTiktok = $factOne = $factTwo = $factThree = $birthday = '';

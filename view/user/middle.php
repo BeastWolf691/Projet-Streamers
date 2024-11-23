@@ -7,7 +7,7 @@
         // Vérifie si le script appelant est 'admin/index.php'
         if (basename($_SERVER['SCRIPT_NAME']) === 'index.php' && strpos($_SERVER['PHP_SELF'], 'admin') !== false): ?>
 
-            <button class="create-button" style="background-color: blue;" >
+            <button class="create-button" style="background-color: blue;" >Créer votre carte
                 <i class="fa-solid fa-circle-plus"></i>
             </button>
         <?php endif; ?>

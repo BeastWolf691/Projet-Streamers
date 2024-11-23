@@ -157,8 +157,8 @@
                 <div class="cardHeader">
                     <?php echo $d->nickname; ?>
                     <div class="cardCatIcon" style="background-color:<?php echo getColorForCategory($d->mainCat); ?>;">
-                        <img src="../picture/icons/icon-cat-<?php echo getCatIcon($d->mainCat); ?>.svg" alt="<?php echo $d->mainCat; ?>" />
-                    </div> 
+                        <img src="../picture/icons/icon-cat-<?php echo getIconForCategory($d->mainCat); ?>.svg" alt="<?php echo $d->mainCat; ?>" />
+                    </div>
 
                     <?php
                     // Vérifie si le script appelant est 'admin/index.php'

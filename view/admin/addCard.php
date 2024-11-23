@@ -1,5 +1,4 @@
 <?php
-include 'header.php';
 
 // Initialisation des variables d'erreurs et de saisie
 $errors = [];

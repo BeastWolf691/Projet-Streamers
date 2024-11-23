@@ -1,5 +1,5 @@
 <div id="middle">
-    <?php include_once '../admin/readUpdateDataCard.php';
+    <?php include '../admin/readUpdateDataCard.php';
     ?>
     <aside class="filter-bar">
         <?php include "filter.php"; ?>
@@ -11,8 +11,17 @@
                 <i class="fa-solid fa-circle-plus"></i>
             </button>
         <?php endif; ?>
+        <div class="create-modal" id="create-modal">
+            <div class="create-modal-content">
+                <div class="close-create-button">x</div>
+                <?php
+                include '../admin/addCard.php'
+                ?>
+            </div>
+        </div>
     </aside>
     <aside class="result">
+        
         <p class="zoom">Toi aussi fais ton deck<br>Clique sur Zoom pour afficher une carte</p>
         <?php include 'zoomCard.php' ?>
     </aside>
@@ -85,7 +94,6 @@
                         </button>
 
                     <?php endif; ?>
-
 
                 </div>
                 <!--echo !empty($d->picture) ? $d->picture cela sert à vérifier si picture contient une image, 

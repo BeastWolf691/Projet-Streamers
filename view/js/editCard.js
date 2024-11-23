@@ -1,5 +1,5 @@
 $(document).ready(function () {
-    $('.modal').hide();
+    $('.edit-modal').hide();
 
     function calculateAge(birthdate) {
         const birth = new Date(birthdate);
@@ -53,7 +53,7 @@ $(document).ready(function () {
         $('#factThree').val(factthree);
         $('#birthdate').val(birthdate);
         
-        $('.modal').show();
+        $('.edit-modal').show();
     });
 
     $('#editCardForm').on('submit', function(e) {
@@ -64,7 +64,7 @@ $(document).ready(function () {
         const age = calculateAge(birthdate);
         
         $.ajax({
-            url: 'update_card.php',
+            url: 'editCard.php',
             method: 'POST',
             data: formData,
             dataType: 'json',
@@ -96,7 +96,7 @@ $(document).ready(function () {
                         return this.nodeType === 3;
                     }).first().replaceWith($('#nickname').val());
                     
-                    $('.modal').hide();
+                    $('.edit-modal').hide();
                     location.reload();
                 } else {
                     alert('Erreur lors de la mise à jour de la carte');
@@ -109,6 +109,6 @@ $(document).ready(function () {
     });
 
     $('.close-button').click(function () {
-        $('.modal').hide();
+        $('.edit-modal').hide();
     });
 });

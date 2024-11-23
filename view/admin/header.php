@@ -18,7 +18,6 @@ include '../bdd.php';
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/css/flag-icon.min.css">
     <link rel="stylesheet" media="screen and (min-width: 981px)" href="../css/desk/index.css" />
     <link href="https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
-    <!-- ---- -->
 </head>
 
 <body>
@@ -74,7 +73,6 @@ include '../bdd.php';
             </div>
 
         </div>
-        <!-- <div id="logo"></div> -->
     </header>
 </body>
 

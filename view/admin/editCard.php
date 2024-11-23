@@ -2,7 +2,7 @@
 include '../bdd.php';
 try {
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
-        
+
         $sql = "UPDATE cards SET 
             nickname = :nickname,
             mainCat = :mainCat,

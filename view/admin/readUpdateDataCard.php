@@ -12,8 +12,8 @@
         }
     }
     ?>
-    <div class="modal" id="edit-modal">
-        <div class="modal-content">
+    <div class="edit-modal" id="edit-modal">
+        <div class="edit-modal-content">
             <div class="close-button">x</div>
             <form action="" id="editCardForm" method="post" accept-charset="UTF-8" enctype="multipart/form-data">
                 <h2 style="text-align: center"> - Modification d'une Carte - </h2>
@@ -30,9 +30,9 @@
                 <label for="thematics">thème</label><br>
                 <input type="text" name="thematics" id="thematics"><br>
 
-                <label for="picture">Photo</label><br>
+                <!-- <label for="picture">Photo</label><br>
                 <input type="file" name="picture" id="picture"><br>
- 
+  -->
                 <label for="name">Prénom</label>
                 <input type="text" name="name" id="name">
 

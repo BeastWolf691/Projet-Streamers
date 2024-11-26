@@ -84,18 +84,12 @@
         // Vérifie si le script appelant est 'admin/index.php'
         if (basename($_SERVER['SCRIPT_NAME']) === 'index.php' && strpos($_SERVER['PHP_SELF'], 'admin') !== false): ?>
 
-            <button class="create-button" style="background-color: blue;">Créer une carte
+            <a href="../admin/addCard.php">
+                <button class="create-button" style="background-color: blue;">
+                    Créer une carte
                 <i class="fa-solid fa-circle-plus"></i>
-            </button>
+            </button></a>
         <?php endif; ?>
-        <div class="create-modal" id="create-modal">
-            <div class="create-modal-content">
-                <div class="close-create-button">x</div>
-                <?php
-                include '../admin/addCard.php'
-                ?>
-            </div>
-        </div>
     </aside>
     <aside class="result">
         

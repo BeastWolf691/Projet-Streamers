@@ -33,7 +33,7 @@
     color: #5d5d5d;
 }
 
-#type, #categoryS, #thematic, #ages, #names, #languages {
+#type, #categoryS, #theme, #ages, #names, #languages {
     border-radius: 25px;
     width: 140px;
 }

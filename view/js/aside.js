@@ -1,7 +1,7 @@
 $(document).ready(function () {
     $('.filter-item select').on('change', function () {
         let type = $('#type').val().toLowerCase();
-        let thematic = $('#thematic').val().toLowerCase();
+        let thematic = $('#theme').val().toLowerCase();
         let age = $('#ages').val();
         let names = $('#names').val().toLowerCase();
         let languages = $('#languages').val().toLowerCase();
@@ -54,7 +54,7 @@ $(document).ready(function () {
 
         // Remise à zéro des différents filtres
         $('#type').val('');
-        $('#thematic').val('');
+        $('#theme').val('');
         $('#age').val('');
         $('#names').val('');
         $('#languages').val('');

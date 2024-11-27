@@ -21,7 +21,7 @@
 
     <div class="filter-item">
         <label id="thematics" for="thematic">Thèmes</label>
-        <select id="thematic" name="thematic">
+        <select id="theme" name="thematic">
             <option value=""></option>
             <?php
             $sqlThem = "SELECT DISTINCT thematic FROM cards WHERE thematic IS NOT NULL AND thematic != '' ORDER BY thematic ASC";

@@ -43,22 +43,22 @@
                 <input type="text" name="language" id="language">
 
                 <label for="pYoutube">Pseudo YouTube</label>
-                <input type="text" name="pYoutube" id="pYoutube" value="<?php echo isset($card['pYoutube']) ? htmlspecialchars($card['pYoutube']) : ''; ?>">
+                <input type="text" name="pYoutube" id="pYoutube">
 
                 <label for="pTwitch">Pseudo Twitch</label>
-                <input type="text" name="pTwitch" id="pTwitch" value="<?php echo isset($card['pTwitch']) ? htmlspecialchars($card['pTwitch']) : ''; ?>">
+                <input type="text" name="pTwitch" id="pTwitch">
 
                 <label for="pKick">Pseudo Kick</label>
-                <input type="text" name="pKick" id="pKick" value="<?php echo isset($card['pKick']) ? htmlspecialchars($card['pKick']) : ''; ?>">
+                <input type="text" name="pKick" id="pKick">
 
                 <label for="pTwitter">Pseudo Twitter</label>
-                <input type="text" name="pTwitter" id="pTwitter" value="<?php echo isset($card['pTwitter']) ? htmlspecialchars($card['pTwitter']) : ''; ?>">
+                <input type="text" name="pTwitter" id="pTwitter">
 
                 <label for="pInstagram">Pseudo Instagram</label>
-                <input type="text" name="pInstagram" id="pInstagram" value="<?php echo isset($card['pInstagram']) ? htmlspecialchars($card['pInstagram']) : ''; ?>">
+                <input type="text" name="pInstagram" id="pInstagram">
 
                 <label for="pTiktok">Pseudo Tiktok</label>
-                <input type="text" name="pTiktok" id="pTiktok" value="<?php echo isset($card['pTiktok']) ? htmlspecialchars($card['pTiktok']) : ''; ?>">
+                <input type="text" name="pTiktok" id="pTiktok">
 
                 <label for="factOne">Fait 1</label>
                 <input type="text" name="factOne" id="factOne">

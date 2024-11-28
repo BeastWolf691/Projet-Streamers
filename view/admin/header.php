@@ -52,7 +52,7 @@ include '../bdd.php';
                         $compte = ucfirst($_SESSION['compte']);
                     }
                 ?>
-                    <p> Bonjour <?= $compte ?> ! <a href="./logout.php">Déconnexion</a></p>
+                    <p> Bonjour <?= $compte ?> ! <a href="../user/logout.php">Déconnexion</a></p>
                 <?php
                 } else {
                     echo "<p> </p>";
@@ -63,7 +63,6 @@ include '../bdd.php';
             <div id="person">
                 <ul id="menu-person">
                     <?php if (isset($_SESSION['compte'])) { ?>
-                        <li><a href="./logout.php">Déconnexion</a></li>
                     <?php } else { ?>
                         <li><a href="staff-logIn.php">Connexion</a></li>
                         <li><a href="staff-register.php">Inscription</a></li>

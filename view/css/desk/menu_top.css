@@ -24,7 +24,10 @@ nav {
     display: flex;
     position: relative;
 }
-
+#menu-persona {
+    top: 20px;
+    position: relative;
+}
 #menu-top li {
     display: inline-block;
     margin: 0 auto;

@@ -32,7 +32,7 @@ if (!empty($_POST)) {
                 if (password_verify($password, $result['password'])) {
                     echo "<div class=\"alert alert-success\" role=\"alert\">Connexion réussie</div>";
                     sleep(1);
-                    header('Location: ../index.php');
+                    header('Location: index.php');
                     if (!isset($_SESSION['compte'])) $_SESSION['compte'] = "";
 
                     // Connexion réussie

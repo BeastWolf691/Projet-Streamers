@@ -1,13 +1,13 @@
 .icones {
   position: absolute;
-  top: 10px;
+  top: 15px;
   right: 15px;
   margin: 5px 0 0;
 }
 #person {
   position: absolute;
   right: 2%;
-  top: 0%;
+  top: 5px;
 }
 
 #menu-person {
@@ -74,8 +74,8 @@ body {
   .form-container input[type="submit"]:hover {
     background-color: #218838;
   }
-  .bienvenue{
+  .bienvenue {
     position: absolute;
-    right:37px;
-    top: 59px;
-  }
+    right: 15px;
+    top: 80px;
+}

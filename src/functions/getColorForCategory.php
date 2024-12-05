@@ -9,7 +9,7 @@ function getColorForCategory($category) {
             return 'var(--color-cat-bdmanga)';
         case 'divertissement':
             return 'var(--color-cat-divertissement)';
-        case 'esport':
+        case 'e-sport':
             return 'var(--color-cat-esport)';
         case 'formation':
             return 'var(--color-cat-formation)';

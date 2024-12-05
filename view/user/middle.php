@@ -42,9 +42,51 @@
                 <label for="language">Langue </label>
                 <input type="text" name="language" id="language">
 
-                <label for="pYoutube">Pseudo YouTube</label>
-                <input type="text" name="pYoutube" id="pYoutube">
-
+                <!-- <label for="pYoutube">Pseudo YouTube</label>
+                <input type="text" name="pYoutube" id="pYoutube"> -->
+                <div class="form-group">
+                    <label for="pYoutube">Pseudo YouTube</label>
+                    <div style="display: flex; align-items: center;">
+                        <span style="margin-right: 5px;">https://www.youtube.com/@</span>
+                        <input type="text" id="pYoutube" name="pYoutube" placeholder="Entrez le pseudo" value="<?= htmlspecialchars($pseudoYoutube ?? '') ?>">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="pTwich">Pseudo Twitch</label>
+                    <div style="display: flex; align-items: center;">
+                        <span style="margin-right: 5px;">https://www.twitch.tv/</span>
+                        <input type="text" id="pTwitch" name="pTwitch" placeholder="Entrez le pseudo" value="<?= htmlspecialchars($pseudoYoutube ?? '') ?>">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="pKick">Pseudo Kick</label>
+                    <div style="display: flex; align-items: center;">
+                        <span style="margin-right: 5px;">https://www.kick.com/</span>
+                        <input type="text" id="pKick" name="pKick" placeholder="Entrez le pseudo" value="<?= htmlspecialchars($pseudoYoutube ?? '') ?>">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="pTwitter">Pseudo Twitter</label>
+                    <div style="display: flex; align-items: center;">
+                        <span style="margin-right: 5px;">https://www.twitter.com/</span>
+                        <input type="text" id="pTwitter" name="pTwitter" placeholder="Entrez le pseudo" value="<?= htmlspecialchars($pseudoYoutube ?? '') ?>">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="pInstagram">Pseudo Instagram</label>
+                    <div style="display: flex; align-items: center;">
+                        <span style="margin-right: 5px;">https://www.instagram.com/</span>
+                        <input type="text" id="pInstagram" name="pInstagram" placeholder="Entrez le pseudo" value="<?= htmlspecialchars($pseudoYoutube ?? '') ?>">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="pTiktok">Pseudo Tiktok</label>
+                    <div style="display: flex; align-items: center;">
+                        <span style="margin-right: 5px;">https://www.tiktok.com/@</span>
+                        <input type="text" id="pTiktok" name="pTiktok" placeholder="Entrez le pseudo" value="<?= htmlspecialchars($pseudoYoutube ?? '') ?>">
+                    </div>
+                </div>
+                <!-- 
                 <label for="pTwitch">Pseudo Twitch</label>
                 <input type="text" name="pTwitch" id="pTwitch">
 
@@ -58,7 +100,7 @@
                 <input type="text" name="pInstagram" id="pInstagram">
 
                 <label for="pTiktok">Pseudo Tiktok</label>
-                <input type="text" name="pTiktok" id="pTiktok">
+                <input type="text" name="pTiktok" id="pTiktok"> -->
 
                 <label for="factOne">Fait 1</label>
                 <input type="text" name="factOne" id="factOne">
@@ -70,7 +112,7 @@
                 <input type="text" name="factThree" id="factThree">
 
                 <label for="birthdate">Anniversaire</label>
-                <input type="date" name="birthdate" id="birthdate">          
+                <input type="date" name="birthdate" id="birthdate">
 
                 <input type="submit" value="Modifier">
 
@@ -87,12 +129,12 @@
             <a href="../admin/addCard.php">
                 <button class="create-button" style="background-color: blue;">
                     Créer une carte
-                <i class="fa-solid fa-circle-plus"></i>
-            </button></a>
+                    <i class="fa-solid fa-circle-plus"></i>
+                </button></a>
         <?php endif; ?>
     </aside>
     <aside class="result">
-        
+
         <p class="zoom">Toi aussi fais ton deck<br>Clique sur Zoom pour afficher une carte</p>
         <?php include 'zoomCard.php' ?>
     </aside>
@@ -116,12 +158,12 @@
             $pseudoTwitter = $d->pTwitter;
             $pseudoInstagram = $d->pInstagram;
             $pseudoTiktok = $d->pTiktok;
-            $youtubeUrl = !empty($pseudoYoutube) ? "https://www.youtube.com/@{$pseudoYoutube}" : '';
-            $twitchUrl = !empty($pseudoTwitch) ? "https://www.twitch.tv/{$pseudoTwitch}" : '';
-            $kickUrl = !empty($pseudoKick) ? "https://www.kick.com/{$pseudoKick}" : '';
-            $twitterUrl = !empty($pseudoTwitter) ? "https://www.twitter.com/{$pseudoTwitter}" : '';
-            $instagramUrl = !empty($pseudoInstagram) ? "https://www.instagram.com/{$pseudoInstagram}" : '';
-            $tiktokUrl = !empty($pseudoTiktok) ? "https://www.tiktok.com/@{$pseudoTiktok}" : '';
+            $youtubeUrl = $pseudoYoutube;
+            $twitchUrl = $pseudoTwitch;
+            $kickUrl = $pseudoKick;
+            $twitterUrl = $pseudoTwitter;
+            $instagramUrl = $pseudoInstagram;
+            $tiktokUrl = $pseudoTiktok;
 
             // Calcul de l'âge à partir de la date de naissance
             $birthdate = new DateTime($d->birthdate);
@@ -176,36 +218,36 @@
                 <!------Réseaux Sociaux ------->
                 <div class="cardInfoRow cardInfoUrl">
                     <?php if ($youtubeUrl): ?>
-                        <a href="<?php echo $youtubeUrl; ?>" target="_blank" class="cardUrl cardYoutube">
+                        <a href="<?php echo "https://www.youtube.com/@{$pseudoYoutube}"; ?>" target="_blank" class="cardUrl cardYoutube">
                             <img src="../picture/icons/icon-youtube.svg" alt="YouTube" />
                         </a>
                     <?php endif; ?>
                     <?php if ($twitchUrl): ?>
-                        <a href="<?php echo $twitchUrl; ?>" target="_blank" class="cardUrl cardTwitch">
+                        <a href="<?php echo "https://www.twitch.tv/{$pseudoTwitch}"; ?>" target="_blank" class="cardUrl cardTwitch">
                             <img src="../picture/icons/icon-twitch.svg" alt="Twitch" />
                         </a>
                     <?php endif; ?>
 
                     <?php if ($kickUrl): ?>
-                        <a href="<?php echo $kickUrl; ?>" target="_blank" class="cardUrl cardKick">
+                        <a href="<?php echo "https://www.kick.com/{$pseudoKick}"; ?>" target="_blank" class="cardUrl cardKick">
                             <img src="../picture/icons/icon-kick.svg" alt="Kick" />
                         </a>
                     <?php endif; ?>
 
                     <?php if ($twitterUrl): ?>
-                        <a href="<?php echo $twitterUrl; ?>" target="_blank" class="cardUrl cardX">
+                        <a href="<?php echo "https://www.twitter.com/{$pseudoTwitter}"; ?>" target="_blank" class="cardUrl cardX">
                             <img src="../picture/icons/icon-x.svg" alt="Twitter" />
                         </a>
                     <?php endif; ?>
 
                     <?php if ($instagramUrl): ?>
-                        <a href="<?php echo $instagramUrl; ?>" target="_blank" class="cardUrl cardInstagram">
+                        <a href="<?php echo "https://www.instagram.com/{$pseudoInstagram}"; ?>" target="_blank" class="cardUrl cardInstagram">
                             <img src="../picture/icons/icon-instagram.svg" alt="Instagram" />
                         </a>
                     <?php endif; ?>
 
                     <?php if ($tiktokUrl): ?>
-                        <a href="<?php echo $tiktokUrl; ?>" target="_blank" class="cardUrl cardTiktok">
+                        <a href="<?php echo "https://www.tiktok.com/@{$pseudoTiktok}"; ?>" target="_blank" class="cardUrl cardTiktok">
                             <img src="../picture/icons/icon-tiktok.svg" alt="Tiktok" />
                         </a>
                     <?php endif; ?>

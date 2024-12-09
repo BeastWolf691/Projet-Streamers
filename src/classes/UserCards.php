@@ -38,4 +38,28 @@ class UserCards
     {
         return $this->card;
     }
+     /**
+     * Ajouter une liaison entre un utilisateur et une carte
+     */
+    public static function addLink($user, $card, $entityManager)
+    {
+        $link = new self($user, $card);
+        $entityManager->persist($link);
+        $entityManager->flush();
+    }
+
+    /**
+     * Supprimer une liaison entre un utilisateur et une carte
+     */
+    public static function removeLink($user, $card, $entityManager)
+    {
+        $repository = $entityManager->getRepository(self::class);
+        $link = $repository->findOneBy(['user' => $user, 'card' => $card]);
+
+        if ($link) {
+            $entityManager->remove($link);
+            $entityManager->flush();
+        }
+    }
 }
+

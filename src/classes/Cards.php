@@ -50,11 +50,14 @@ class Cards
     private string $factThree = "";
     #[ORM\Column()]
     private DateTime $birthdate;
+    #[ORM\Column(type: 'boolean', options: ['default' => false])]
+    private bool $isInDeck = false;
 
-   // Relation ManyToMany avec Users via l'entité de jointure
-   #[ORM\ManyToMany(targetEntity: Users::class, inversedBy: 'cards')]
-   #[ORM\JoinTable(name: "UserCards")]
-   private Collection $users;
+
+    // Relation ManyToMany avec Users via l'entité de jointure
+    #[ORM\ManyToMany(targetEntity: Users::class, inversedBy: 'cards')]
+    #[ORM\JoinTable(name: "UserCards")]
+    private Collection $users;
 
 
     // Constructor
@@ -76,7 +79,8 @@ class Cards
         string $factOne = "",
         string $factTwo = "",
         string $factThree = "",
-        DateTime $birthdate = new DateTime()
+        DateTime $birthdate = new DateTime(),
+        bool $isInDeck = false // Nouvelle propriété
     ) {
         $this->id = $id;
         $this->nickname = $nickname;
@@ -97,7 +101,9 @@ class Cards
         $this->factThree = $factThree;
         $this->birthdate = $birthdate;
         $this->users = new ArrayCollection();
+        $this->isInDeck = $isInDeck; // Initialisation
     }
+    
     // Getters
     public function getId(): int
     {
@@ -124,7 +130,7 @@ class Cards
         return $this->thematic;
     }
 
-    public function getPicture(): ? string
+    public function getPicture(): ?string
     {
         return $this->picture;
     }
@@ -192,6 +198,11 @@ class Cards
     {
         return $this->users;
     }
+    public function getIsInDeck(): bool
+    {
+        return $this->isInDeck;
+    }
+
 
     // Setters
     public function setNickname(string $nickname): self
@@ -293,6 +304,11 @@ class Cards
     public function setBirthdate(DateTime $birthdate): self
     {
         $this->birthdate = $birthdate;
+        return $this;
+    }
+    public function setIsInDeck(bool $isInDeck): self
+    {
+        $this->isInDeck = $isInDeck;
         return $this;
     }
 }

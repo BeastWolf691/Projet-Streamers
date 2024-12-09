@@ -27,11 +27,4 @@ Copier-coller l'entièreté du fichier <b>bdd.sql</b> dans l'onglet "SQL"
 * Nouvelle div dans minicard
 * Dans middle.php ligne 117,  ajout d'une div qui prend le changement de background en php( le demi cercle) avant la div maincat et secondcat qui  (cardcss ligne 237) . Pour maincat et secondCat j'ai gardé le code,juste changé la couleur
 * Fusion ; refonte du fichier colorBt.php et dans middle.php, changement de lignes 119 et 123 - > souci niveau ligne, je comprends pas ce qui a changé
-###### 7/ pour la sécurité avec .env :
-il faut installer "composer require vlucas/phpdotenv" c'est une bibliothèque.
-faire un fichier .env et mettre les informations de connexion a la bdd dedans, voir ci dessous, c'est vide il faut donc remplir avec vos informations
-    DB_HOST= '',
-    DB_USER= '',
-    DB_PASSWORD= '',
-    DB_DB= '',
-    DB_PORT= '',
+

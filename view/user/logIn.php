@@ -1,8 +1,6 @@
 <?php
-
 include 'header.php';
 
-// Initialisation de la variable d'erreurs
 $errors = array();
 
 if (!empty($_POST)) {
@@ -57,7 +55,6 @@ if (!empty($_POST)) {
             <div class="alert alert-secondary" role="alert">
                 Vous n'avez pas rempli le formulaire correctement
             </div>
-
             <?php foreach ($errors as $error) : ?>
                 <div><?php echo "<div class=\"alert alert-danger\" role=\"alert\">$error</div>"; ?></div>
             <?php endforeach; ?>
@@ -69,7 +66,6 @@ if (!empty($_POST)) {
 
         <label for="password">Mot de passe :</label><br>
         <input type="password" id="password" name="password" required placeholder="Mot de passe"><br>
-
         <input type="submit" value="Soumettre"><br>
     </form>
 </div>

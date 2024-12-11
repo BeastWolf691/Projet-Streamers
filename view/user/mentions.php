@@ -1,7 +1,6 @@
 <?php
 include "header.php";
 ?>
-
 <div class="mention">
     <h1>Définitions</h1>
     <p><strong>Client :</strong> tout professionnel ou personne physique capable au sens des articles 1123 et suivants du Code civil, ou personne morale, qui visite le Site objet des présentes conditions générales.</p>

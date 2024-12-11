@@ -1,7 +1,6 @@
 <?php
 include 'header.php';
 
-// Initialisation des variables
 $errors = [];
 $nickname = '';
 $mail = '';
@@ -9,13 +8,12 @@ $subject = '';
 $feedback = '';
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    // Récupérer et sanitiser les données du formulaire
+
     $nickname = htmlspecialchars(trim($_POST['nickname']));
     $mail = filter_var(trim($_POST['mail']), FILTER_SANITIZE_EMAIL);//nettoyer les email
     $subject = htmlspecialchars(trim($_POST['subject']));
     $feedback = htmlspecialchars(trim($_POST['feedback']));
 
-    // Vérifier que tous les champs obligatoires sont remplis
     if (empty($nickname)) {
         $errors['nickname'] = "Le pseudo est obligatoire.";
     }
@@ -32,7 +30,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     }
 
     if (empty($errors)) {
-        // Vérifie si le pseudo et l'email existent dans la table users
         //requetes préparées
         $checkUser = $pdo->prepare("SELECT * FROM users WHERE nickname = :nickname AND mail = :mail");
         $checkUser->execute(['nickname' => $nickname, 'mail' => $mail]);
@@ -79,7 +76,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         <input type="submit" value="Soumettre"><br>
     </form>
 </div>
-
 <?php
 include 'footer.php';
 ?>

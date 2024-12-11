@@ -5,14 +5,13 @@ include '../bdd.php';
 
 <!DOCTYPE html>
 <html lang="fr">
-
 <head>
     <meta charset="utf-8">
     <title>prototype V1</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
-    <script src="https://kit.fontawesome.com/e2e1900fed.js" crossorigin="anonymous"></script><!--permet d'avoir accès à des icones gratuites-->
+    <script src="https://kit.fontawesome.com/e2e1900fed.js" crossorigin="anonymous"></script>
     <script type="module" src="../js/zoomPost.js"></script>
     <script type="module" src="../js/index.js"></script><!-- type module TRES IMPORTANTS, SINON LES IMPORTS NE FONCTIONNENT PAS, c'est une norme ES6 -->
 
@@ -23,14 +22,14 @@ include '../bdd.php';
 <body>
     <header>
         <div id="banner">
-            <a href="#">
+            <a href="./">
                 <div class="img" id="logo-container"></div>
-            </a><!-- ajout du lien -->
+            </a>
             <nav>
                 <ul id="menu-top">
-                    <li><a href="index.php" class="neonone">Accueil</a></li>
-                    <li><a href="contact.php" class="neontwo">Contacts</a></li>
-                    <li><a href="aboutUs.php" class="neonone">Qui sommes nous</a></li>
+                    <li><a href="index.php" >Accueil</a></li>
+                    <li><a href="contact.php" >Contacts</a></li>
+                    <li><a href="aboutUs.php" >Qui sommes nous</a></li>
                 </ul>
             </nav>
             <div class="icones">
@@ -43,12 +42,9 @@ include '../bdd.php';
             <div class="bienvenue">
                 <?php
                 if (isset($_SESSION['compte'])) {
-                    // Vérifier si la session 'name' est définie pour les membres du staff
                     if (isset($_SESSION['name'])) {
-                        // Si c'est un membre du staff, on affiche le nom
                         $compte = ucfirst($_SESSION['name']);
                     } else {
-                        // Si c'est un utilisateur régulier, on affiche le pseudo
                         $compte = ucfirst($_SESSION['compte']);
                     }
                 ?>
@@ -57,11 +53,7 @@ include '../bdd.php';
                 } else {
                     echo "<p> </p>";
                 }
-
                 ?>
-            </div>
-            <div id="star">
-                <!-- <i class="fa-regular fa-star fa-lg"></i> -->
             </div>
             <div id="person">
                 <div id="overlay">
@@ -72,12 +64,9 @@ include '../bdd.php';
                             <li><a href="./logIn.php">Connexion</a></li>
                             <li><a href="./register.php">Inscription</a></li>
                         <?php } ?>
-
                     </ul>
                 </div>
-
             </div>
         </div>
-
         </div>
     </header>

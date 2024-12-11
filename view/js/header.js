@@ -1,10 +1,5 @@
 $(document).ready(function () {
     const logoContainer = $('#logo-container');
-    const menuButton = $("#persona");
-    const overlay = $("#overlay");
-    const menu = $("#menu-person");
-    const menuTop = $("#menu-top");
-
 
     //Caroussel
     const images = [{
@@ -57,34 +52,17 @@ $(document).ready(function () {
     $carousel.append($slider);
     $('#logo').append($carousel);
 
-    // Ouvrir le menu
-    menuButton.on("click", function () {
-        overlay.addClass("active");
-    });
-
-    // Fermer le menu lorsqu'on clique sur X
-    $(document).on("click", function (event) {
-        if ($(event.target).is('.closed'))
-            overlay.removeClass("active");
-    });
-
-    // Fermer le menu lorsqu'on clique sur les liens
-    $("#menu-person a").on("click", function (event) {
-        event.preventDefault();
-        // Actualise la page
-        window.location.href = $(this).attr("href");
-    });
 
     // changement thème logo avec action sombre clair
-    const themeDark = "../picture/logo-cd-light.png"; // Logo for light theme
-    const themeLight = "../picture/logo-cd-dark.png"; // Logo for dark theme
+    const themeDark = "../picture/logo-cd-light.png";
+    const themeLight = "../picture/logo-cd-dark.png"; 
     const iconMoon = $("#sunny");
     const iconSun = $("#darkness");
 
-    function appliquerMode() {
+    function applyMod() {
         const theme = localStorage.getItem('theme');
         if (theme === 'dark') {
-            //localStorage permet d'enregistrer directement dans le navigateur de l'utilisateur s'il a choisi sombre ou clair sur une page et répercute sur les autres son choix
+            //localStorage permet d'enregistrer directement dans le navigateur 
             $('body').addClass('darker').removeClass('light');
             $('.content').addClass('dark');
             $('#menu-person').addClass('dark');
@@ -101,12 +79,12 @@ $(document).ready(function () {
         }
     }
 
-    appliquerMode();
+    applyMod();
 
     $(document).on("click", "#sunny, #darkness", function () {
         const newTheme = localStorage.getItem('theme') === 'dark' ? 'light' : 'dark';
         localStorage.setItem('theme', newTheme);
-        appliquerMode();
+        applyMod();
     });
 
     if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
@@ -120,7 +98,7 @@ $(document).ready(function () {
         if (!localStorage.getItem('theme')) {
             const newTheme = e.matches ? 'dark' : 'light';
             localStorage.setItem('theme', newTheme);
-            appliquerMode();
+            applyMod();
         }
     });
 
@@ -129,24 +107,23 @@ $(document).ready(function () {
         let searchTerm = $(this).val().toLowerCase();
         // Parcours toutes les cartes
         $('.card').each(function () {
-            let mainCat = $(this).data('info').toLowerCase(); // Catégorie principale
-            let secondCat = $(this).data('second').toLowerCase(); // Autres catégories
-            let thematic = $(this).data('thematic').toLowerCase(); // Thématique
-            let name = $(this).data('name').toLowerCase(); // Nom
-            let nickname = $(this).data('nickname').toLowerCase(); // Surnom
-            let languages = $(this).data('languages').toLowerCase(); // Langues
-            let factOne = $(this).data('factone').toLowerCase(); // Fact One
-            let factTwo = $(this).data('facttwo').toLowerCase(); // Fact Two
-            let factThree = $(this).data('factthree').toLowerCase(); // Fact Three
+            let mainCat = $(this).data('info').toLowerCase();
+            let secondCat = $(this).data('second').toLowerCase(); 
+            let thematic = $(this).data('thematic').toLowerCase(); 
+            let name = $(this).data('name').toLowerCase();
+            let nickname = $(this).data('nickname').toLowerCase(); 
+            let languages = $(this).data('languages').toLowerCase(); 
+            let factOne = $(this).data('factone').toLowerCase();
+            let factTwo = $(this).data('facttwo').toLowerCase(); 
+            let factThree = $(this).data('factthree').toLowerCase(); 
 
-            // Concatenate all the data fields into one string for easier searching
             let combinedData = mainCat + ' ' + secondCat + ' ' + thematic + ' ' + name + ' ' + nickname + ' ' + languages + ' ' + factOne + ' ' + factTwo + ' ' + factThree;
 
-            // Vérifie si le terme de recherche est présent dans les données concaténées
+            // Vérifie si le terme de recherche est présent dans les données 
             if (combinedData.indexOf(searchTerm) !== -1) {
-                $(this).show(); // Affiche la carte si correspondance exate (respecte l'ordre des lettres)
+                $(this).show();
             } else {
-                $(this).hide(); // Cache la carte si pas de correspondance
+                $(this).hide(); 
             }
         });
     });

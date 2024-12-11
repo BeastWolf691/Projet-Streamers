@@ -1,14 +1,6 @@
 <?php
 include 'header.php';
-
 ?>
-
-<!DOCTYPE html>
-<html lang="fr">
-
-<body>
-
-
     <div class="cgu">
         <h1>Conditions Générales d'Utilisation</h1>
         <p><strong>Dernière mise à jour : 26/07/2024</strong></p>

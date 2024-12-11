@@ -51,7 +51,6 @@
             $reqNick = $pdo->query($sqlNick);
 
             while ($d = $reqNick->fetch(PDO::FETCH_OBJ)) {
-                // Supprimer les caractères speciaux du nickname
                 $nicknameCleaned = str_replace(['.', '/', '@', '#'], '', $d->nickname);
                 echo '<option value="' . $nicknameCleaned . '">' . $nicknameCleaned . '</option>';
             }?>

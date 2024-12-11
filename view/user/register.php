@@ -1,7 +1,6 @@
 <?php
 include 'header.php';
 
-// Initialisation des variables d'erreurs et de saisie
 $errors = [];
 $name = $lastName = $nickname = $mail = $birthday = $dateToSign = $deck = '';
 
@@ -51,7 +50,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             'deck' => $deck
         ]);
 
-        // Redirection après insertion
         header('Location: logIn.php');
         exit();
     }
@@ -98,8 +96,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         <label for="cgu">J'accepte les <a href="cgu.php">Conditions Générales d'Utilisation</a></label>
        
         <input type="submit" value="Soumettre">
-
-  
 
     </form>
 </div>

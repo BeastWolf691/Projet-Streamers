@@ -32,9 +32,6 @@
 
                 <label for="thematic">thème</label><br>
                 <input type="text" name="thematic" id="thematic"><br>
-                <!-- 
-                <label for="picture">Photo</label><br>
-                <input type="file" name="picture" id="picture"><br> -->
 
                 <label for="name">Prénom</label>
                 <input type="text" name="name" id="name">
@@ -42,8 +39,6 @@
                 <label for="language">Langue </label>
                 <input type="text" name="language" id="language">
 
-                <!-- <label for="pYoutube">Pseudo YouTube</label>
-                <input type="text" name="pYoutube" id="pYoutube"> -->
                 <div class="form-group">
                     <label for="pYoutube">Pseudo YouTube</label>
                     <div style="display: flex; align-items: center;">
@@ -86,21 +81,6 @@
                         <input type="text" id="pTiktok" name="pTiktok" placeholder="Entrez le pseudo" value="<?= htmlspecialchars($pseudoYoutube ?? '') ?>">
                     </div>
                 </div>
-                <!-- 
-                <label for="pTwitch">Pseudo Twitch</label>
-                <input type="text" name="pTwitch" id="pTwitch">
-
-                <label for="pKick">Pseudo Kick</label>
-                <input type="text" name="pKick" id="pKick">
-
-                <label for="pTwitter">Pseudo Twitter</label>
-                <input type="text" name="pTwitter" id="pTwitter">
-
-                <label for="pInstagram">Pseudo Instagram</label>
-                <input type="text" name="pInstagram" id="pInstagram">
-
-                <label for="pTiktok">Pseudo Tiktok</label>
-                <input type="text" name="pTiktok" id="pTiktok"> -->
 
                 <label for="factOne">Fait 1</label>
                 <input type="text" name="factOne" id="factOne">
@@ -123,9 +103,7 @@
     <aside class="filter-bar">
         <?php include "filter.php"; ?>
         <?php
-        // Vérifie si le script appelant est 'admin/index.php'
         if (basename($_SERVER['SCRIPT_NAME']) === 'index.php' && strpos($_SERVER['PHP_SELF'], 'admin') !== false): ?>
-
             <a href="../admin/addCard.php">
                 <button class="create-button" style="background-color: blue;">
                     Créer une carte
@@ -144,15 +122,12 @@
         ptwitch, pKick, pTwitter, pInstagram, pTiktok, factOne, factTwo, factThree, birthdate FROM cards ORDER BY nickname ASC';
         $req = $pdo->query($sql);
 
-        // include 'flags.php';
         include '../../src/functions/getIconForCategory.php';
         require_once '../../src/functions/deckFunctions.php';
 
-        while ($d = $req->fetch(PDO::FETCH_OBJ)) { // pour chaque ligne dans la BDD, on crée une carte
-            // $flagIcon = getFlagIcon($d->language);
-            // Application d'un CSS spécifique pour chaque valeur de mainCat et de thematic
+        while ($d = $req->fetch(PDO::FETCH_OBJ)) { 
+
             include_once '../../src/functions/getColorForCategory.php';
-            //lien généré pour les réseaux sociaux
             $pseudoYoutube = $d->pYoutube;
             $pseudoTwitch = $d->ptwitch;
             $pseudoKick = $d->pKick;
@@ -210,13 +185,12 @@
                     <?php endif; ?>
 
                 </div>
-                <!--echo !empty($d->picture) ? $d->picture cela sert à vérifier si picture contient une image, 
-                si cela n'est pas le cas alors image par défaut undefined-->
+                <!-- vérifier si picture contient une image, si cela n'est pas le cas alors image par défaut undefined-->
                 <img
                     class="cardPicture"
                     src="<?= !empty($d->picture) ? htmlspecialchars($d->picture) : '../picture/photos/photo-alt.jpg'; ?>"
                     alt="image de <?= htmlspecialchars($d->nickname); ?>">
-                <!------Réseaux Sociaux ------->
+
                 <div class="cardInfoRow cardInfoUrl">
                     <?php if ($youtubeUrl): ?>
                         <a href="<?php echo "https://www.youtube.com/@{$pseudoYoutube}"; ?>" target="_blank" class="cardUrl cardYoutube">
@@ -259,9 +233,6 @@
                     <div class="cardAge">
                         <?php echo $age; ?> ans
                     </div>
-                    <!-- <div class="cardCountry">
-                        <i class="flag-icon flag-icon-<?php echo $flagIcon; ?>"></i>
-                    </div> -->
                     <div class="cardLanguage">
                         <?php echo $d->language; ?>
                     </div>

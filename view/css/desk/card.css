@@ -22,7 +22,6 @@
     padding: 6px;
     border: 1px solid;
     box-shadow: 1px 2px 12px 1px rgba(16, 5, 29, 0.422);
-    transition-duration: 0.4s;
     width: 240px;
     height: 400px;
     margin: 20px 11px;
@@ -245,7 +244,13 @@
     text-align: center; 
     border-radius: 50%;
 }
+.zoomButton {
+    border: 2px solid var(--color-secondary-extradark);
 
+    background: radial-gradient(circle, rgba(159,240,247,1) 0%, rgba(63,224,237,1) 100%);
+    color: var(--color-secondary-extradark);
+    transition-duration: 0.8s;
+}
 .zoomButton:hover, .deckButton:hover {
     cursor: pointer;
 }
@@ -263,13 +268,7 @@
     font-weight: 900;
 }
 
-.zoomButton {
-    border: 2px solid var(--color-secondary-extradark);
-    background: rgb(159,240,247);
-    background: radial-gradient(circle, rgba(159,240,247,1) 0%, rgba(63,224,237,1) 100%);
-    color: var(--color-secondary-extradark);
-    transition-duration: 0.8s;
-}
+
 
 .zoomButton:hover {
     border-color: var(--color-secondary-dark);

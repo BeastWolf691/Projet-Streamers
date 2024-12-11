@@ -14,7 +14,6 @@
     border-radius: 10px;
     height: 955px;
     overflow-x: auto;
-    justify-content: start;
     grid-template-columns: repeat(31, 1fr); 
     grid-template-rows: repeat(2, auto); 
 }

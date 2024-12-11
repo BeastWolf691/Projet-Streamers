@@ -1,4 +1,4 @@
-@import url('../variables.css');
+
 
 /*********************contenu streameurs*******************/
 #middle {
@@ -15,24 +15,20 @@
     height: 955px;
     overflow-x: auto;
     justify-content: start;
-    grid-template-columns: repeat(60, 1fr); /* 60 colonnes de largeur égale */
-    grid-template-rows: repeat(2, auto); /* 2 rangées avec une hauteur automatique */
+    grid-template-columns: repeat(31, 1fr); 
+    grid-template-rows: repeat(2, auto); 
 }
+
 ::-webkit-scrollbar {
     height: 12px;
 }
-
-/* La partie de la barre de défilement où le curseur glisse */
 ::-webkit-scrollbar-track {
     background: var(--color-secondary-light);
 }
-
-/* La partie de la barre de défilement qui déplace le contenu */
 ::-webkit-scrollbar-thumb {
     background: var(--color-primary-dark);
     border-radius: 10px;
 }
-
 ::-webkit-scrollbar-thumb:hover {
     background: var(--color-primary-light);
 }

@@ -5,6 +5,7 @@ include '../bdd.php';
 
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="utf-8">
     <title>prototype V1</title>
@@ -26,10 +27,30 @@ include '../bdd.php';
                 <div class="img" id="logo-container"></div>
             </a>
             <nav>
+                <?php
+                $currentUrl = $_SERVER['REQUEST_URI'];
+                if (strpos($currentUrl, '/Projet-Streamers/view/user/') !== false) {
+                    // Si dans "user", lien relatif
+                    $linkContact = 'contact.php';
+                } elseif (strpos($currentUrl, '/Projet-Streamers/view/admin/') !== false) {
+                    // Si dans "admin", lien vers "user/contact.php"
+                    $linkContact = '../user/contact.php';
+                } else {
+                    $linkContact = '#';
+                }
+
+                if (strpos($currentUrl, '/Projet-Streamers/view/user/') !== false) {
+                    $linkAbout = 'contact.php';
+                } elseif (strpos($currentUrl, '/Projet-Streamers/view/admin/') !== false) {
+                    $linkAbout = '../user/contact.php';
+                } else {
+                    $linkAbout = '#';
+                }
+                ?>
                 <ul id="menu-top">
-                    <li><a href="index.php" >Accueil</a></li>
-                    <li><a href="contact.php" >Contacts</a></li>
-                    <li><a href="aboutUs.php" >Qui sommes nous</a></li>
+                    <li><a href="index.php">Accueil</a></li>
+                    <li><a href="<?php echo $linkContact; ?>">Contacts</a></li>
+                    <li><a href="<?php echo $linkAbout; ?>">Qui sommes nous</a></li>
                 </ul>
             </nav>
             <div class="icones">

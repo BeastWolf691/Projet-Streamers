@@ -63,7 +63,7 @@ include '../bdd.php';
             <div id="star">
                 <!-- <i class="fa-regular fa-star fa-lg"></i> -->
             </div>
-            <div id="person">
+            <!-- <div id="person">
                 <div id="overlay">
                     <ul id="menu-person">
                         <?php if (isset($_SESSION['compte'])) { ?>
@@ -76,7 +76,7 @@ include '../bdd.php';
                     </ul>
                 </div>
 
-            </div>
+            </div> -->
         </div>
 
         </div>

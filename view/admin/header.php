@@ -12,10 +12,10 @@ include '../bdd.php';
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
-    <script src="https://kit.fontawesome.com/e2e1900fed.js" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/e2e1900fed.js" crossorigin="anonymous"></script><!--permet d'avoir accès à des icones gratuites-->
     <script type="module" src="../js/zoomPost.js"></script>
-    <script type="module" src="../js/index.js"></script><!-- type module TRES IMPORTANTS, SINON LES IMPORTS NE FONCTIONNENT PAS, c'est une norme ES6 -->
-
+    <script type="module" src="../js/index.js"></script><!-- type module TRES IMPORTANTS, SINON LES IMPORT NE FONCTIONNENT PAS, c'est une norme ES6 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/css/flag-icon.min.css">
     <link rel="stylesheet" media="screen and (min-width: 981px)" href="../css/desk/index.css" />
     <link href="https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
 </head>
@@ -23,14 +23,14 @@ include '../bdd.php';
 <body>
     <header>
         <div id="banner">
-            <a href="./">
+            <a href="#">
                 <div class="img" id="logo-container"></div>
-            </a>
+            </a><!-- ajout du lien -->
             <nav>
                 <ul id="menu-top">
-                    <li><a href="index.php" >Accueil</a></li>
-                    <li><a href="contact.php" >Contacts</a></li>
-                    <li><a href="aboutUs.php" >Qui sommes nous</a></li>
+                    <li><a href="index.php" class="neonone">Accueil</a></li>
+                    <li><a href="../user/contact.php" class="neontwo">Contacts</a></li>
+                    <li><a href="../user/aboutUs.php" class="neonone">Qui sommes nous</a></li>
                 </ul>
             </nav>
             <div class="icones">
@@ -43,31 +43,36 @@ include '../bdd.php';
             <div class="bienvenue">
                 <?php
                 if (isset($_SESSION['compte'])) {
+                    // Vérifier si la session 'name' est définie pour les membres du staff
                     if (isset($_SESSION['name'])) {
+                        // Si c'est un membre du staff, on affiche le nom
                         $compte = ucfirst($_SESSION['name']);
                     } else {
+                        // Si c'est un utilisateur régulier, on affiche le pseudo
                         $compte = ucfirst($_SESSION['compte']);
                     }
                 ?>
-                    <p> Bonjour <?= $compte ?> ! <a href="./logout.php">Déconnexion</a></p>
+                    <p> Bonjour <?= $compte ?> ! <a href="../user/logout.php">Déconnexion</a></p>
                 <?php
                 } else {
                     echo "<p> </p>";
                 }
+
                 ?>
             </div>
             <div id="person">
-                <div id="overlay">
-                    <ul id="menu-person">
-                        <?php if (isset($_SESSION['compte'])) { ?>
-                            <i class="fa-solid fa-user fa-2xl" id="menu-persona"></i>
-                        <?php } else { ?>
-                            <li><a href="./logIn.php">Connexion</a></li>
-                            <li><a href="./register.php">Inscription</a></li>
-                        <?php } ?>
-                    </ul>
-                </div>
+                <ul id="menu-person">
+                    <?php if (isset($_SESSION['compte'])) { ?>
+                    <?php } else { ?>
+                        <li><a href="staff-logIn.php">Connexion</a></li>
+                        <li><a href="staff-register.php">Inscription</a></li>
+                    <?php } ?>
+
+                </ul>
             </div>
-        </div>
+
         </div>
     </header>
+</body>
+
+</html>

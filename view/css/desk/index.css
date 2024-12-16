@@ -1,8 +1,7 @@
 @import url('../variables.css');
-@import url('./carousel.css');
 @import url('./menu_person.css');
 @import url('./menu_top.css');
-@import url('./aside-left.css');
+@import url('./filter.css');
 @import url('./middle-content.css');
 @import url('./footer.css');
 @import url('./dark-light.css');

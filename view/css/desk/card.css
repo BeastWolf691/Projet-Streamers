@@ -246,7 +246,6 @@
 }
 .zoomButton {
     border: 2px solid var(--color-secondary-extradark);
-
     background: radial-gradient(circle, rgba(159,240,247,1) 0%, rgba(63,224,237,1) 100%);
     color: var(--color-secondary-extradark);
     transition-duration: 0.8s;

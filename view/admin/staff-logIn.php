@@ -71,7 +71,7 @@ if (!empty($_POST)) {
         <input type="email" id="mail" name="mail" required placeholder="mail" value="<?php echo htmlspecialchars($mail ?? '', ENT_QUOTES); ?>"><br>
 
         <label for="password">Mot de passe :</label><br>
-        <input type="password" id="password" name="password" required placeholder="Mot de passe"><br>
+        <input type="text" id="password" name="password" required placeholder="Mot de passe"><br>
 
         <input type="submit" value="Se connecter"><br>
     </form>

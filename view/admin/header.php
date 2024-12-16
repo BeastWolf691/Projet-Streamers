@@ -25,7 +25,7 @@ include '../bdd.php';
         <div id="banner">
             <a href="#">
                 <div class="img" id="logo-container"></div>
-            </a><!-- ajout du lien -->
+            </a>
             <nav>
                 <ul id="menu-top">
                     <li><a href="index.php" class="neonone">Accueil</a></li>
@@ -55,10 +55,12 @@ include '../bdd.php';
                     <p> Bonjour <?= $compte ?> ! <a href="../user/logout.php">Déconnexion</a></p>
                 <?php
                 } else {
-                    echo "<p> </p>";
-                }
-
                 ?>
+                    <p> </p>
+                <?php
+                }
+                ?>
+                
             </div>
             <div id="person">
                 <ul id="menu-person">

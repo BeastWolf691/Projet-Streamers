@@ -40,24 +40,21 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         if (empty($picture['name'])) {
             $errors['picture'] = "La photo est requise.";
         } else {
-            // Vérification du type et de la taille du fichier
             $allowedTypes = ['image/jpeg', 'image/png', 'image/gif'];
             if (!in_array($picture['type'], $allowedTypes)) {
                 $errors['picture'] = "Le fichier doit être une image (JPEG, PNG, GIF).";
             }
-
-            if ($picture['size'] > 2000000) { // Limite de 2 Mo
+            if ($picture['size'] > 2000000) {
                 $errors['picture'] = "La taille de l'image ne doit pas dépasser 2 Mo.";
             }
-            // Si aucun problème, on peut déplacer le fichier
+            // Si valide, on peut déplacer le fichier
             if (empty($errors['picture'])) {
                 $uploadDir = '../picture/photos/';
-                $extension = pathinfo($picture['name'], PATHINFO_EXTENSION); //extension du fichier
+                $extension = pathinfo($picture['name'], PATHINFO_EXTENSION);
                 $fileName = 'photo-' . htmlspecialchars(trim($nickname)) . '-' . $extension;
-                //le fichier sera renommé avec le pseudo
+                // Le fichier sera renommé avec le pseudo
                 $uploadFile = $uploadDir . $fileName;
 
-                // Déplacement du fichier vers le répertoire final
                 if (!move_uploaded_file($picture['tmp_name'], $uploadFile)) {
                     $errors['picture'] = "Erreur lors de l'upload de l'image.";
                 }
@@ -73,7 +70,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $errors['language'] = "La langue est requise.";
     }
 
-    //vérifie la validité des pseudo
+    // Vérification de la validité des pseudo
     if (!empty($pYoutube) && !preg_match('/^[a-zA-Z0-9_]{3,25}$/', $pYoutube)) {
         $errors['pYoutube'] = "Le pseudo Youtube doit contenir entre 3 et 25 caractères.";
     }
@@ -126,8 +123,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             'factThree' => $factThree,
             'birthdate' => $birthdate
         ]);
-
-        //Retour a la page d'accueil
+        
         header('Location: index.php');
         exit();
     }

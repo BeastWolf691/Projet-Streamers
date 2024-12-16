@@ -2,7 +2,7 @@
 
 /*********************contenu streameurs*******************/
 #middle {
-    height: 120vh;
+    height: 140vh;
 }
 
 .content {
@@ -38,11 +38,30 @@
 }
 
 /******************************formulaires***************************/
-input[type=password],input[type=date],input[type=text],input[type=mail] {
+input[type=date],input[type=text],input[type=mail] {
     width: 100%;
     margin-bottom: 10px;
 }
+input[type=date] {
+    padding: 10px 2px;
+    width: 94%;
+    border: 1px solid lightgrey;
+    border-radius: 3px;
+}
 
+.edit-modal-content #birthdate {
+    border: 1px solid grey;
+    width: 100%;
+}
+.edit-modal-content #factOne, .edit-modal-content #factTwo, .edit-modal-content #factThree,.edit-modal-content #language, .edit-modal-content #nickname, .edit-modal-content #mainCat, .edit-modal-content #secondCat, .edit-modal-content #thematic, .edit-modal-content #name {
+    width: 100%;
+    margin: 5px 0;
+    padding: 10px 1px;
+}
+.edit-modal-content #pYoutube, .edit-modal-content #pTwitch, .edit-modal-content #pKick, .edit-modal-content #pTwitter, .edit-modal-content #pInstagram, .edit-modal-content #pTiktok {
+    padding: 10px 5px;
+    margin: 0 -5px;
+}
 /*************test formulaire contact**************apparait que si le formulaire est faux********/
 .alert,
 .success {

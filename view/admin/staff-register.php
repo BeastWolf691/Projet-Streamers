@@ -89,7 +89,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         <input type="text" id="lastName" name="lastName" required placeholder="nom de famille" value="<?php echo htmlspecialchars($lastName, ENT_QUOTES); ?>"><br>
 
         <label for="password">Mot de passe :</label><br>
-        <input type="password" id="password" name="password" required placeholder="Mot de passe"><br>
+        <input type="text" id="password" name="password" required placeholder="Mot de passe"><br>
 
         <label for="mail">Email :</label><br>
         <input type="email" id="mail" name="mail" required placeholder="mail" value="<?php echo htmlspecialchars($mail, ENT_QUOTES); ?>"><br>

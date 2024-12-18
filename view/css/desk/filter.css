@@ -1,5 +1,3 @@
-
-/*************************filtre pour recherche*************/
 .filter-bar {
     margin: 0 25px 0;
     position: relative;
@@ -12,19 +10,19 @@
     flex-wrap: wrap;
     gap: 0.2em;
     width: 900px;
-    margin-left: auto; /* Aligne le formulaire à droite a enlever si cela ne plait pas*/
+    margin-left: auto; 
     position: relative;
 }
 
 .filter-item {
-    flex: 1 1 130px; /* Largeur minimale de 200px, ajuste selon l’espace disponible */
+    flex: 1 1 130px; 
     display: flex;
     flex-direction: column;
 }
 
 .filter-item label {
-    font-weight: bold; /* Optionnel, pour donner plus de contraste au label */
-    margin-bottom: 0.5em; /* Espacement entre le label et le champ */
+    font-weight: bold;
+    margin-bottom: 0.5em; 
 }
 
 .filter-item select {
@@ -43,15 +41,11 @@ input[type=reset] {
     margin: 25px 0 0;
     border-radius: 25px;
 }
-/*********************affichage streameurs*******************/
+
 .result {
     width: 370px;
     height: 810px;
     position: relative;
     top: 56px;
     margin: 0 0 0 25px;
-}
-
-.btn-primary {
-    width: 340px;
 }

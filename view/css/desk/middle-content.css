@@ -32,13 +32,11 @@
     background: var(--color-primary-light);
 }
 
-/******************************formulaires***************************/
 input[type=password],input[type=date],input[type=text],input[type=mail] {
     width: 100%;
     margin-bottom: 10px;
 }
 
-/*************test formulaire contact**************apparait que si le formulaire est faux********/
 .alert,
 .success {
     display: flex;

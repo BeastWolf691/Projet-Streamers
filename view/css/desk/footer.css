@@ -1,4 +1,3 @@
-/***********concernant les obligations***********/
 .cgu, .mention {
     width: 80%;
     margin: 15px auto;
@@ -19,7 +18,6 @@ h1, h2, h3 {
     text-decoration: underline;
 }
 
-/***********footer****************/
 footer {
     background-color: var(--color-primary-dark);
     height: 40px;

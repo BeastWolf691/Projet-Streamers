@@ -260,16 +260,9 @@
                         <p>
                     </div>
 
-                    <div class="deckButton <?php echo isCardInUserCards($d->id, $pdo) ? 'added' : ''; ?>" data-id="<?php echo $d->id; ?>">
-                        <?php if (isCardInUserCards($d->id, $pdo)): ?>
-                            <!-- Image pour "Enlever du deck" -->
-                            <img src="../picture/icons/icon-cat-gaming.svg" alt="Enlever du deck" />
-                            <p>Enlever du deck</p>
-                        <?php else: ?>
-                            <!-- Image pour "Ajouter au deck" -->
+                    <div class="deckButton">
                             <img src="../picture/icons/icon-deck.png" alt="Ajouter au deck" />
                             <p>Deck</p>
-                        <?php endif; ?>
                     </div>
                 </div>
             </div>

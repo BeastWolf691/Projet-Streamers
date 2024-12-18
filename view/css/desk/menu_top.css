@@ -47,8 +47,6 @@ nav {
     color: hsl(0, 35%, 55%);
 }
 
-/***********concernant qui sommes nous***********/
-
 .aboutUsContainer {
     width: 60%;
     margin: 85px auto;
@@ -59,7 +57,6 @@ nav {
     min-height: 55vh;
     margin-bottom: 10vh;
 }
-
 .btn {
     padding: 5px;
     width: 100px;
@@ -69,5 +66,4 @@ nav {
     border-radius: 5px;
     background-color: var(--color-primary-dark);
     color: var(--color-font-extralight);
-
 } 

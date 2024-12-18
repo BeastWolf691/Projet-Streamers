@@ -1,13 +1,9 @@
-
-/*******************************effet sombre clair***********************/
-/* Fond du menu pour le thème clair */
 .light #menu-top li a, .light #menu-person li :visited, #menu-person li :link {
     color: #5d5d5d; /* Texte en noir pour contraste */
 }
 
-/* Fond du menu pour le thème sombre */
 .darker #menu-top li a , .darker #menu-person li :visited, #menu-person li :link, .darker .zoom, .darker #middle label {
-    color: #c5c5c5; /* Texte en noir pour contraste */
+    color: #c5c5c5; 
 }
 .darker label {
     color: #52525b;
